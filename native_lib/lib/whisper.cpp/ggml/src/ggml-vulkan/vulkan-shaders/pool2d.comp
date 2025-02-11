@@ -1,0 +1,108 @@
+/* <!-- START LICENSE -->
+
+
+This Software / Program / Source Code Created By Developer From Company GLOBAL CORPORATION
+Social Media:
+
+   - Youtube: https://youtube.com/@Global_Corporation 
+   - Github: https://github.com/globalcorporation
+   - TELEGRAM: https://t.me/GLOBAL_CORP_ORG_BOT
+
+All code script in here created 100% original without copy / steal from other code if we copy we add description source at from top code
+
+If you wan't edit you must add credit me (don't change)
+
+If this Software / Program / Source Code has you
+
+Jika Program ini milik anda dari hasil beli jasa developer di (Global Corporation / apapun itu dari turunan itu jika ada kesalahan / bug / ingin update segera lapor ke sub)
+
+Misal anda beli Beli source code di Slebew CORPORATION anda lapor dahulu di slebew jangan lapor di GLOBAL CORPORATION!
+
+Jika ada kendala program ini (Pastikan sebelum deal project tidak ada negosiasi harga)
+Karena jika ada negosiasi harga kemungkinan
+
+1. Software Ada yang di kurangin
+2. Informasi tidak lengkap
+3. Bantuan Tidak Bisa remote / full time (Ada jeda)
+
+Sebelum program ini sampai ke pembeli developer kami sudah melakukan testing
+
+jadi sebelum nego kami sudah melakukan berbagai konsekuensi jika nego tidak sesuai ? 
+Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba tiba di potong akhirnya bantuan / software kadang tidak lengkap
+
+
+<!-- END LICENSE --> */
+#version 450
+
+#include "types.comp"
+
+#extension GL_EXT_shader_16bit_storage : require
+
+layout(push_constant) uniform parameter {
+    uint IW; uint IH;
+    uint OW; uint OH;
+    uint OC;
+    uint pelements;
+    uint op;
+    int k0; int k1;
+    int s0; int s1;
+    int p0; int p1;
+} p;
+
+#define BLOCK_SIZE 512
+#define FLT_MAX 3.402823466e+38F
+#define OP_POOL_MAX 0u
+#define OP_POOL_AVG 1u
+
+layout (local_size_x = BLOCK_SIZE, local_size_y = 1, local_size_z = 1) in;
+
+layout(binding = 0) readonly buffer X {A_TYPE data_a[];};
+layout(binding = 1) writeonly buffer D {D_TYPE data_d[];};
+
+void main() {
+    const uint idx = gl_GlobalInvocationID.x;
+    if (idx >= p.pelements) {
+        return;
+    }
+
+    const uint O_HW = p.OW * p.OH;
+
+    const uint nc = idx / O_HW;
+    const uint cur_oh = (idx % O_HW) / p.OW;
+    const uint cur_ow = (idx % O_HW) % p.OW;
+
+    const int start_h = int(cur_oh) * p.s0 - p.p0;
+    const uint bh = max(start_h, 0);
+    const uint eh = min(start_h + p.k0, p.IH);
+
+    const int start_w = int(cur_ow) * p.s1 - p.p1;
+    const uint bw = max(start_w, 0);
+    const uint ew = min(start_w + p.k1, p.IW);
+
+    const float scale = 1.0 / float(p.k0 * p.k1);
+    float res;
+
+    if (p.op == OP_POOL_AVG) {
+        res = 0.0;
+    } else if (p.op == OP_POOL_MAX) {
+        res = -FLT_MAX;
+    } else {
+        return;
+    }
+
+    #pragma unroll
+    for (uint i = bh; i < eh; i++) {
+        #pragma unroll
+        for (uint j = bw; j < ew; j++) {
+            const float cur = D_TYPE(data_a[nc * p.IH * p.IW + i * p.IW + j]);
+
+            if (p.op == OP_POOL_AVG) {
+                res += cur * scale;
+            } else if (p.op == OP_POOL_MAX) {
+                res = max(res, cur);
+            }
+        }
+    }
+
+    data_d[nc * O_HW + cur_oh * p.OW + cur_ow] = res;
+}

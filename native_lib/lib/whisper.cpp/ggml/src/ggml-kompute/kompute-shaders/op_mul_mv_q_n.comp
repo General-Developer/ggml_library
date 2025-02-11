@@ -1,0 +1,86 @@
+/* <!-- START LICENSE -->
+
+
+This Software / Program / Source Code Created By Developer From Company GLOBAL CORPORATION
+Social Media:
+
+   - Youtube: https://youtube.com/@Global_Corporation 
+   - Github: https://github.com/globalcorporation
+   - TELEGRAM: https://t.me/GLOBAL_CORP_ORG_BOT
+
+All code script in here created 100% original without copy / steal from other code if we copy we add description source at from top code
+
+If you wan't edit you must add credit me (don't change)
+
+If this Software / Program / Source Code has you
+
+Jika Program ini milik anda dari hasil beli jasa developer di (Global Corporation / apapun itu dari turunan itu jika ada kesalahan / bug / ingin update segera lapor ke sub)
+
+Misal anda beli Beli source code di Slebew CORPORATION anda lapor dahulu di slebew jangan lapor di GLOBAL CORPORATION!
+
+Jika ada kendala program ini (Pastikan sebelum deal project tidak ada negosiasi harga)
+Karena jika ada negosiasi harga kemungkinan
+
+1. Software Ada yang di kurangin
+2. Informasi tidak lengkap
+3. Bantuan Tidak Bisa remote / full time (Ada jeda)
+
+Sebelum program ini sampai ke pembeli developer kami sudah melakukan testing
+
+jadi sebelum nego kami sudah melakukan berbagai konsekuensi jika nego tidak sesuai ? 
+Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba tiba di potong akhirnya bantuan / software kadang tidak lengkap
+
+
+<!-- END LICENSE --> */
+void main() {
+    // NB: hack to make compatible with AMD GPUs that have a subgroup size of 64
+    if (gl_SubgroupInvocationID > 31)
+        return;
+
+    const uint nb = uint(pcs.ne00/BLOCKS_IN_QUANT);
+
+    const uint r0 = gl_WorkGroupID.x;
+    const uint r1 = gl_WorkGroupID.y;
+    const uint im = gl_WorkGroupID.z;
+
+    const uint first_row = (r0 * gl_NumSubgroups + gl_SubgroupID) * N_ROWS;
+
+    const uint i12 = im%pcs.ne12;
+    const uint i13 = im/pcs.ne12;
+
+    // pointers to src0 rows
+    uint ax[N_ROWS];
+    for (int row = 0; row < N_ROWS; ++row) {
+        const uint offset0 = (first_row + row)*(pcs.nb01/SIZE_OF_BLOCK) + (i12/pcs.r2)*(pcs.nb02/SIZE_OF_BLOCK) + (i13/pcs.r3)*(pcs.nb03/SIZE_OF_BLOCK);
+
+        ax[row] = offset0 + pcs.inAOff;
+    }
+
+    const uint y = (r1*pcs.nb11 + i12*pcs.nb12 + i13*pcs.nb13) / 4 + pcs.inBOff;
+
+    float sumf[N_ROWS] = {0.0f, 0.0f, 0.0f, 0.0f};
+
+    const uint ix = gl_SubgroupInvocationID/2;
+    const uint il = (BLOCKS_IN_QUANT/4)*(gl_SubgroupInvocationID%2);
+
+    uint yb = y + ix * BLOCKS_IN_QUANT + il;
+
+    //debugPrintfEXT("gl_NumSubgroups=%d, gl_SubgroupID=%d, gl_SubgroupInvocationID=%d, glSubgroupSize=%d, gl_WorkGroupSize.x=%d, gl_WorkGroupSize.y=%d, gl_WorkGroupSize.z=%d\n",
+    //    gl_NumSubgroups, gl_SubgroupID, gl_SubgroupInvocationID, gl_SubgroupSize,
+    //    gl_WorkGroupSize.x, gl_WorkGroupSize.y, gl_WorkGroupSize.z);
+
+    for (uint ib = ix; ib < nb; ib += 16) {
+        for (int row = 0; row < N_ROWS; row++) {
+            sumf[row] += block_q_n_dot_y(ax[row] + ib, yb, il);
+        }
+
+        yb += BLOCKS_IN_QUANT * 16;
+    }
+
+    for (int row = 0; row < N_ROWS; ++row) {
+        const float tot = subgroupAdd(sumf[row]);
+        if (first_row + row < pcs.ne01 && subgroupElect()) {
+            out_[r1*pcs.ne0 + im*pcs.ne0*pcs.ne1 + first_row + row + pcs.outOff] = tot;
+        }
+    }
+}
