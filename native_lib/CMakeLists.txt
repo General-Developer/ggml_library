@@ -36,10 +36,10 @@
 cmake_minimum_required(VERSION 3.16)
 
 project(
-  general_developer_whisper_shared_library
+  general_developer_ggml_shared_library
 )
 
-set(WHISPER_LIBRARY_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/lib/whisper.cpp")
+set(GGML_LIBRARY_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/lib/ggml")
 
 if(ANDROID)
   set(GGML_OPENMP OFF)
@@ -51,4 +51,11 @@ if(UNIX)
   set(CMAKE_BUILD_RPATH "$ORIGIN")
 endif()
 
-add_subdirectory(${WHISPER_LIBRARY_DIRECTORY} "whisper.cpp")
+if(ANDROID)
+  set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../package/ggml_library_flutter/android/jniLibs/${ANDROID_ABI})
+elseif(UNIX)
+  set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../package/ggml_library_flutter/linux)
+endif()
+
+add_subdirectory(${GGML_LIBRARY_DIRECTORY} "ggml")
+

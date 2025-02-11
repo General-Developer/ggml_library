@@ -27,3 +27,4 @@ build-*/
 prebuilt
 
 compile
+compile-android

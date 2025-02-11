@@ -16,14 +16,5 @@ set(ggml_library_flutter_bundled_libraries
   "${CMAKE_CURRENT_SOURCE_DIR}/libggml-base.so"
   "${CMAKE_CURRENT_SOURCE_DIR}/libggml-cpu.so"
   "${CMAKE_CURRENT_SOURCE_DIR}/libggml.so"
-  "${CMAKE_CURRENT_SOURCE_DIR}/libwhisper.so"
-  "${CMAKE_CURRENT_SOURCE_DIR}/libwhisper.so.1"
-  "${CMAKE_CURRENT_SOURCE_DIR}/libwhisper.so.1.7.4"
   PARENT_SCOPE
 )
-
-# package/ggml_library_flutter/linux/libgeneral_ai_fast_text_to_speech.so
-# package/ggml_library_flutter/linux/libonnxruntime_providers_shared.so
-# package/ggml_library_flutter/linux/libonnxruntime.so
-# package/ggml_library_flutter/linux/libonnxruntime.so.1
-# package/ggml_library_flutter/linux/libonnxruntime.so.1.20.1
