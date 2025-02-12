@@ -1,6 +1,21 @@
 name: 'ggml_library'
-description: 'Whisper Is Library for transcribe sound wav AKA Speech To Text Or Extract Text From Audio'
-version: '0.0.4'
+description: 'GGML Is Library machine learning in dart with special feature speed up inference model in cpu only or any gpu'
+version: '0.0.0'
+homepage: 'https://www.youtube.com/@general_dev'
+repository: 'https://github.com/General-Developer/ggml_library'
+issue_tracker: 'https://t.me/DEVELOPER_GLOBAL_PUBLIC'
+documentation: 'https://www.youtube.com/@general_dev'
+funding:
+  - 'https://github.com/sponsors/azkadev'
+  - 'https://github.com/sponsors/generalfoss'
+  - 'https://github.com/sponsors/general-developer'
+platforms:
+  android: null
+  ios: null
+  linux: null
+  macos: null
+  web: null
+  windows: null
 environment:
   sdk: '>=3.6.0 <4.0.0'
 dependencies:
@@ -18,14 +33,6 @@ dependency_overrides:
   mime: '^2.0.0'
 flutter:
   uses-material-design: true
-funding:
-  - 'https://github.com/sponsors/azkadev'
-  - 'https://github.com/sponsors/generalfoss'
-  - 'https://github.com/sponsors/general-developer'
-homepage: 'https://www.youtube.com/@general_dev'
-repository: 'https://github.com/General-Developer/ggml_library'
-issue_tracker: 'https://t.me/DEVELOPER_GLOBAL_PUBLIC'
-documentation: 'https://www.youtube.com/@general_dev'
 ffigen:
   name: 'GgmlLibrarySharedBindingsByGeneralDeveloper'
   description: 'GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer'
@@ -37,12 +44,5 @@ ffigen:
       - '../../native_lib/lib/ggml/include/ggml-backend.h'
   compiler-opts:
     - '-I/usr/lib/clang/19.1.7/include'
-platforms:
-  android: null
-  ios: null
-  linux: null
-  macos: null
-  web: null
-  windows: null
 project:
   type: ''
