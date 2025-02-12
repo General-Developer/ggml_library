@@ -1,0 +1,4 @@
+
+dependency_overrides:
+  ggml_library:
+    path: ../ggml_library

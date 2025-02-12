@@ -32,40 +32,24 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 
 
 <!-- END LICENSE --> */
-import 'dart:async';
 
 import 'package:general_lib/dynamic_library/core.dart';
 
 /// Check Out: https://www.youtube.com/@GENERAL_DEV
 abstract class GgmlLibraryBaseCore extends GeneralLibraryDynamicLibraryBase {
-  /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  bool loadWhisperModel({
-    String openVinoEncoderDevice = "CPU",
-    required String whisperModelPath,
-    bool isUseGpu = false,
-    int gpuDevice = 0,
-  });
-
-  /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  Future<Map> transcribeToJson({
-    required final dynamic fileWav,
-    final bool isTranslate = false,
-    final String language = "auto",
-    final int useCountThread = 0,
-    final int useCountProccecors = 0,
-  });
+  
 }
 
 /// Check Out: https://www.youtube.com/@GENERAL_DEV
 abstract class GgmlLibraryBase implements GgmlLibraryBaseCore {
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  final String libraryWhisperPath;
+  final String libraryGgmlPath;
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   GgmlLibraryBase({
-    String? libraryWhisperPath,
-  }) : libraryWhisperPath =
-            libraryWhisperPath ?? getLibraryWhisperPathDefault();
+    String? libraryGgmlPath,
+  }) : libraryGgmlPath =
+            libraryGgmlPath ?? getLibraryWhisperPathDefault();
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   static String getLibraryWhisperPathDefault() {

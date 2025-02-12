@@ -34,37 +34,13 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 <!-- END LICENSE --> */
 
 import 'dart:io';
-import 'package:general_lib/general_lib.dart';
 import 'package:ggml_library_dart/ggml_library_dart.dart';
 
 void main(List<String> args) async {
   print("start");
-
-  /// make sure you have downloaded model
-  final String whisperModelPath =
-      "../../../../../big-data/ai/whisper-ggml/ggml-small.bin";
   final GgmlLibrary ggmlLibrary = GgmlLibrary(
-    libraryWhisperPath: "../ggml_library_flutter/linux/libwhisper.so",
+    libraryGgmlPath: "libggml.so",
   );
   await ggmlLibrary.ensureInitialized();
-  final isLoadedModel = ggmlLibrary.loadWhisperModel(
-    whisperModelPath: whisperModelPath,
-  );
-  if (isLoadedModel == false) {
-    print("cant loaded");
-    exit(1);
-  }
-  final File fileWav = File(
-    "../../native_lib/lib/whisper.cpp/samples/jfk.wav",
-  );
-  await Future.delayed(Duration(seconds: 2));
-  DateTime dateTime = DateTime.now();
-  final result = await ggmlLibrary.transcribeToJson(
-    fileWav: fileWav,
-    useCountProccecors: 1,
-    useCountThread: (Platform.numberOfProcessors / 2).toInt(),
-  );
-  print("seconds: ${DateTime.now().difference(dateTime)}");
-  result.printPretty();
   exit(0);
 }

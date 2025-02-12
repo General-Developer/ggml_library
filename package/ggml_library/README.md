@@ -1,6 +1,6 @@
 # Ggml Library
  
-**Ggml Library** Is library for transcribe sound to wav
+**Ggml Library** Is library Machine Learning
 
 [![](https://raw.githubusercontent.com/General-Developer/ggml_library/refs/heads/main/assets/demo_background.png)](https://youtu.be/drlqUwJEOg4)
 
@@ -43,7 +43,7 @@
 1. **Dart**
 
 ```bash
-dart pub add ggml_library
+dart pub add ggml_library_dart
 ```
 
 2. **Flutter**
@@ -57,63 +57,29 @@ flutter pub add ggml_library_flutter
 Example Quickstart script minimal for insight you or make you use this library because very simple
 
 ```dart
-
 import 'dart:io';
-import 'package:general_lib/general_lib.dart';
+import 'package:ffi/ffi.dart';
+import "dart:ffi";
+import 'package:ggml_library/core/ggml/ffi/bindings.dart';
 import 'package:ggml_library/ggml_library.dart';
 
 void main(List<String> args) async {
   print("start");
-
-  /// make sure you have downloaded model
-  final String whisperModelPath =
-      "../../../../../big-data/ai/whisper-ggml/ggml-small.bin";
   final GgmlLibrary ggmlLibrary = GgmlLibrary(
-    libraryWhisperPath: "../ggml_library_flutter/linux/libwhisper.so",
+    libraryGgmlPath: "libggml.so",
   );
   await ggmlLibrary.ensureInitialized();
-  final isLoadedModel = ggmlLibrary.loadWhisperModel(
-    whisperModelPath: whisperModelPath,
-  );
-  if (isLoadedModel == false) {
-    print("cant loaded");
-    exit(1);
-  }
-  final File fileWav = File(
-    "../../native_lib/lib/whisper.cpp/samples/jfk.wav",
-  );
-  await Future.delayed(Duration(seconds: 2));
-  DateTime dateTime = DateTime.now();
-  final result = await ggmlLibrary.transcribeToJson(
-    fileWav: fileWav,
-    useCountProccecors: 1,
-    useCountThread: (Platform.numberOfProcessors / 2).toInt(),
-  );
-  print("seconds: ${DateTime.now().difference(dateTime)}");
-  result.printPretty();
+  final Pointer<ggml_init_params> params = calloc<ggml_init_params>();
+  params.ref.no_alloc = false;
+  final Pointer<ggml_context> ggmlContext = ggmlLibrary.ggmlLibrarySharedBindingsByGeneralDeveloper.ggml_init(params.ref);
+  ggmlLibrary.ggmlLibrarySharedBindingsByGeneralDeveloper.ggml_free(ggmlContext);
   exit(0);
 }
-
 ```
 
-## Reference
+## Examples
 
-1. [Azkadev-Whisper](https://github.com/azkadev/whisper)
-  Original Idea and concept library + Developer Maintance this library
-2. [Ggerganov-whisper.cpp](https://github.com/ggerganov/whisper.cpp)
-  ffi bridge main script so that this program can run
-
-
+1. [Whisper Speech To Text / Transcribe From Audio Or Video](https://github.com/general-developer/whisper_library)
+2. [LLAMA](https://github.com/general-developer/llama_library)
+   
 **Copyright (c) 2024 GLOBAL CORPORATION - GENERAL DEVELOPER**
-
-
-## Example Project Use This Library
-
-
-1. [AZKA GRAM](https://github.com/azkadev/azkagram) / [Global GRAM](https://github.com/globalcorporation/global_gram_app)
-    
- **Telegram Application** with **redesign** with new some features userbot and other **features which is not officially provided on Telegram** First this project open source but we closed it to **close source** because our program is easy to read and allows other people to edit the source code and then use it for criminal acts
- 
-|                                                 CHAT PAGE                                                  |                                                SIGN UP PAGE                                                |                                                                                                  HOME PAGE |                                          GUIDE PAGE                                           |
-|:----------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------:|-----------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------:|
-| ![](https://user-images.githubusercontent.com/82513502/205481759-b6815e2f-bd5d-4d72-9570-becd3829dd36.png) | ![](https://user-images.githubusercontent.com/82513502/173319331-9e96fbe7-3e66-44b2-8577-f6685d86a368.png) | ![](https://user-images.githubusercontent.com/82513502/173319541-19a60407-f410-4e95-8ac0-d0da2eaf2457.png) | ![](https://raw.githubusercontent.com/GLXCORP/glx_bot_app/main/screenshots/home_telegram.png) |

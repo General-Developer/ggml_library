@@ -40,38 +40,12 @@ import 'base.dart';
 class GgmlLibrary extends GgmlLibraryBase {
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   GgmlLibrary({
-    super.libraryWhisperPath,
+    super.libraryGgmlPath,
   });
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   @override
-  bool loadWhisperModel(
-      {String openVinoEncoderDevice = "CPU",
-      required String whisperModelPath,
-      bool isUseGpu = false,
-      int gpuDevice = 0}) {
-    // TODO: implement loadWhisperModel
-    throw UnimplementedError();
-  }
-
-  /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  @override
-  Future<Map> transcribeToJson({
-    required fileWav,
-    bool isTranslate = false,
-    String language = "auto",
-    int useCountThread = 0,
-    int useCountProccecors = 0,
-  }) {
-    // TODO: implement transcribeToJson
-    throw UnimplementedError();
-  }
-
-  /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  @override
-  void close() {
-    // TODO: implement close
-  }
+  void close() {}
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   final bool _isCrash = false;
