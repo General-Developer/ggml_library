@@ -27,16 +27,11 @@
 ## ❔️ Fun Fact
 
 **This library 100%** use on every my create project (**App, Server, Bot, Userbot**)
-**This library 100%** support all models from [whisper.cpp](https://github.com/ggerganov/whisper.cpp) (depending on your device specs, if high then it can be up to turbo, but if low, just choose tiny/small)
  
 ## 📈️ Proggres
  
 - **10-02-2025**
   Starting **Release Stable** With core Features
-
-## Resources
-
-1. [MODEL](https://huggingface.co/ggerganov/whisper.cpp/tree/main)
 
 ### 📥️ Install Library
 
