@@ -47,7 +47,10 @@ void main(List<String> args) async {
   await ggmlLibrary.ensureInitialized();
   final Pointer<ggml_init_params> params = calloc<ggml_init_params>();
   params.ref.no_alloc = false;
-  final Pointer<ggml_context> ggmlContext = ggmlLibrary.ggmlLibrarySharedBindingsByGeneralDeveloper.ggml_init(params.ref);
-  ggmlLibrary.ggmlLibrarySharedBindingsByGeneralDeveloper.ggml_free(ggmlContext);
+  final Pointer<ggml_context> ggmlContext = ggmlLibrary
+      .ggmlLibrarySharedBindingsByGeneralDeveloper
+      .ggml_init(params.ref);
+  ggmlLibrary.ggmlLibrarySharedBindingsByGeneralDeveloper
+      .ggml_free(ggmlContext);
   exit(0);
 }

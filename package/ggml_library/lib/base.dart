@@ -36,9 +36,7 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 import 'package:general_lib/dynamic_library/core.dart';
 
 /// Check Out: https://www.youtube.com/@GENERAL_DEV
-abstract class GgmlLibraryBaseCore extends GeneralLibraryDynamicLibraryBase {
-  
-}
+abstract class GgmlLibraryBaseCore extends GeneralLibraryDynamicLibraryBase {}
 
 /// Check Out: https://www.youtube.com/@GENERAL_DEV
 abstract class GgmlLibraryBase implements GgmlLibraryBaseCore {
@@ -48,8 +46,7 @@ abstract class GgmlLibraryBase implements GgmlLibraryBaseCore {
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   GgmlLibraryBase({
     String? libraryGgmlPath,
-  }) : libraryGgmlPath =
-            libraryGgmlPath ?? getLibraryWhisperPathDefault();
+  }) : libraryGgmlPath = libraryGgmlPath ?? getLibraryWhisperPathDefault();
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   static String getLibraryWhisperPathDefault() {

@@ -38,7 +38,6 @@ import 'package:flutter/cupertino.dart';
 
 /// CHECK MORE: https://www.youtube.com/@GENERAL_DEV
 class GgmlLibraryFlutter {
-  
   /// CHECK MORE: https://www.youtube.com/@GENERAL_DEV
   static void ensureInitialized() {
     WidgetsFlutterBinding.ensureInitialized();

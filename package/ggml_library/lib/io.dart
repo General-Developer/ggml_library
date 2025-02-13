@@ -42,17 +42,17 @@ import 'base.dart';
 
 /// Check Out: https://www.youtube.com/@GENERAL_DEV
 class GgmlLibrary extends GgmlLibraryBase {
-  
-
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   GgmlLibrary({
     String? libraryGgmlPath,
   }) : super(
-          libraryGgmlPath: libraryGgmlPath ?? GgmlLibraryBase.getLibraryWhisperPathDefault(),
+          libraryGgmlPath:
+              libraryGgmlPath ?? GgmlLibraryBase.getLibraryWhisperPathDefault(),
         );
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  static late final GgmlLibrarySharedBindingsByGeneralDeveloper _ggmlLibrarySharedBindingsByGeneralDeveloper;
+  static late final GgmlLibrarySharedBindingsByGeneralDeveloper
+      _ggmlLibrarySharedBindingsByGeneralDeveloper;
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   static bool _isEnsureInitialized = false;
@@ -64,7 +64,8 @@ class GgmlLibrary extends GgmlLibraryBase {
       return;
     }
     try {
-      _ggmlLibrarySharedBindingsByGeneralDeveloper = GgmlLibrarySharedBindingsByGeneralDeveloper(
+      _ggmlLibrarySharedBindingsByGeneralDeveloper =
+          GgmlLibrarySharedBindingsByGeneralDeveloper(
         DynamicLibrary.open(
           libraryGgmlPath,
         ),
@@ -101,9 +102,7 @@ class GgmlLibrary extends GgmlLibraryBase {
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   @override
-  void close() {
-    
-  }
+  void close() {}
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   @override
@@ -112,7 +111,8 @@ class GgmlLibrary extends GgmlLibraryBase {
   }
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  GgmlLibrarySharedBindingsByGeneralDeveloper get ggmlLibrarySharedBindingsByGeneralDeveloper {
+  GgmlLibrarySharedBindingsByGeneralDeveloper
+      get ggmlLibrarySharedBindingsByGeneralDeveloper {
     return GgmlLibrary._ggmlLibrarySharedBindingsByGeneralDeveloper;
   }
 }

@@ -7,27 +7,35 @@ import 'dart:ffi' as ffi;
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 class GgmlLibrarySharedBindingsByGeneralDeveloper {
   /// Holds the symbol lookup function.
-  final ffi.Pointer<T> Function<T extends ffi.NativeType>(String symbolName) _lookup;
+  final ffi.Pointer<T> Function<T extends ffi.NativeType>(String symbolName)
+      _lookup;
 
   /// The symbols are looked up in [dynamicLibrary].
-  GgmlLibrarySharedBindingsByGeneralDeveloper(ffi.DynamicLibrary dynamicLibrary) : _lookup = dynamicLibrary.lookup;
+  GgmlLibrarySharedBindingsByGeneralDeveloper(ffi.DynamicLibrary dynamicLibrary)
+      : _lookup = dynamicLibrary.lookup;
 
   /// The symbols are looked up with [lookup].
-  GgmlLibrarySharedBindingsByGeneralDeveloper.fromLookup(ffi.Pointer<T> Function<T extends ffi.NativeType>(String symbolName) lookup) : _lookup = lookup;
+  GgmlLibrarySharedBindingsByGeneralDeveloper.fromLookup(
+      ffi.Pointer<T> Function<T extends ffi.NativeType>(String symbolName)
+          lookup)
+      : _lookup = lookup;
 
-  late final ffi.Pointer<ffi.Pointer<FILE>> _stdin = _lookup<ffi.Pointer<FILE>>('stdin');
+  late final ffi.Pointer<ffi.Pointer<FILE>> _stdin =
+      _lookup<ffi.Pointer<FILE>>('stdin');
 
   ffi.Pointer<FILE> get stdin => _stdin.value;
 
   set stdin(ffi.Pointer<FILE> value) => _stdin.value = value;
 
-  late final ffi.Pointer<ffi.Pointer<FILE>> _stdout = _lookup<ffi.Pointer<FILE>>('stdout');
+  late final ffi.Pointer<ffi.Pointer<FILE>> _stdout =
+      _lookup<ffi.Pointer<FILE>>('stdout');
 
   ffi.Pointer<FILE> get stdout => _stdout.value;
 
   set stdout(ffi.Pointer<FILE> value) => _stdout.value = value;
 
-  late final ffi.Pointer<ffi.Pointer<FILE>> _stderr = _lookup<ffi.Pointer<FILE>>('stderr');
+  late final ffi.Pointer<ffi.Pointer<FILE>> _stderr =
+      _lookup<ffi.Pointer<FILE>>('stderr');
 
   ffi.Pointer<FILE> get stderr => _stderr.value;
 
@@ -41,8 +49,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _removePtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>)>>('remove');
-  late final _remove = _removePtr.asFunction<int Function(ffi.Pointer<ffi.Char>)>();
+  late final _removePtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>)>>(
+          'remove');
+  late final _remove =
+      _removePtr.asFunction<int Function(ffi.Pointer<ffi.Char>)>();
 
   int rename(
     ffi.Pointer<ffi.Char> __old,
@@ -54,8 +65,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _renamePtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('rename');
-  late final _rename = _renamePtr.asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
+  late final _renamePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('rename');
+  late final _rename = _renamePtr
+      .asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
 
   int renameat(
     int __oldfd,
@@ -71,8 +86,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _renameatPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<ffi.Char>, ffi.Int, ffi.Pointer<ffi.Char>)>>('renameat');
-  late final _renameat = _renameatPtr.asFunction<int Function(int, ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>)>();
+  late final _renameatPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Int, ffi.Pointer<ffi.Char>, ffi.Int,
+              ffi.Pointer<ffi.Char>)>>('renameat');
+  late final _renameat = _renameatPtr.asFunction<
+      int Function(int, ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>)>();
 
   int fclose(
     ffi.Pointer<FILE> __stream,
@@ -82,14 +101,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fclosePtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('fclose');
+  late final _fclosePtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
+          'fclose');
   late final _fclose = _fclosePtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   ffi.Pointer<FILE> tmpfile() {
     return _tmpfile();
   }
 
-  late final _tmpfilePtr = _lookup<ffi.NativeFunction<ffi.Pointer<FILE> Function()>>('tmpfile');
+  late final _tmpfilePtr =
+      _lookup<ffi.NativeFunction<ffi.Pointer<FILE> Function()>>('tmpfile');
   late final _tmpfile = _tmpfilePtr.asFunction<ffi.Pointer<FILE> Function()>();
 
   ffi.Pointer<ffi.Char> tmpnam(
@@ -100,8 +122,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _tmpnamPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>>('tmpnam');
-  late final _tmpnam = _tmpnamPtr.asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>();
+  late final _tmpnamPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>>('tmpnam');
+  late final _tmpnam = _tmpnamPtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>();
 
   ffi.Pointer<ffi.Char> tmpnam_r(
     ffi.Pointer<ffi.Char> __s,
@@ -111,8 +136,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _tmpnam_rPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>>('tmpnam_r');
-  late final _tmpnam_r = _tmpnam_rPtr.asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>();
+  late final _tmpnam_rPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>>('tmpnam_r');
+  late final _tmpnam_r = _tmpnam_rPtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>();
 
   ffi.Pointer<ffi.Char> tempnam(
     ffi.Pointer<ffi.Char> __dir,
@@ -124,8 +152,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _tempnamPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('tempnam');
-  late final _tempnam = _tempnamPtr.asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
+  late final _tempnamPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('tempnam');
+  late final _tempnam = _tempnamPtr.asFunction<
+      ffi.Pointer<ffi.Char> Function(
+          ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
 
   int fflush(
     ffi.Pointer<FILE> __stream,
@@ -135,7 +168,9 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fflushPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('fflush');
+  late final _fflushPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
+          'fflush');
   late final _fflush = _fflushPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   int fflush_unlocked(
@@ -146,8 +181,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fflush_unlockedPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('fflush_unlocked');
-  late final _fflush_unlocked = _fflush_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
+  late final _fflush_unlockedPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
+          'fflush_unlocked');
+  late final _fflush_unlocked =
+      _fflush_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   ffi.Pointer<FILE> fopen(
     ffi.Pointer<ffi.Char> __filename,
@@ -159,8 +197,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fopenPtr = _lookup<ffi.NativeFunction<ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('fopen');
-  late final _fopen = _fopenPtr.asFunction<ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
+  late final _fopenPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('fopen');
+  late final _fopen = _fopenPtr.asFunction<
+      ffi.Pointer<FILE> Function(
+          ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
 
   ffi.Pointer<FILE> freopen(
     ffi.Pointer<ffi.Char> __filename,
@@ -174,8 +217,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _freopenPtr = _lookup<ffi.NativeFunction<ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>, ffi.Pointer<FILE>)>>('freopen');
-  late final _freopen = _freopenPtr.asFunction<ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>, ffi.Pointer<FILE>)>();
+  late final _freopenPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Char>,
+              ffi.Pointer<ffi.Char>, ffi.Pointer<FILE>)>>('freopen');
+  late final _freopen = _freopenPtr.asFunction<
+      ffi.Pointer<FILE> Function(
+          ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>, ffi.Pointer<FILE>)>();
 
   ffi.Pointer<FILE> fdopen(
     int __fd,
@@ -187,8 +235,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fdopenPtr = _lookup<ffi.NativeFunction<ffi.Pointer<FILE> Function(ffi.Int, ffi.Pointer<ffi.Char>)>>('fdopen');
-  late final _fdopen = _fdopenPtr.asFunction<ffi.Pointer<FILE> Function(int, ffi.Pointer<ffi.Char>)>();
+  late final _fdopenPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(
+              ffi.Int, ffi.Pointer<ffi.Char>)>>('fdopen');
+  late final _fdopen = _fdopenPtr
+      .asFunction<ffi.Pointer<FILE> Function(int, ffi.Pointer<ffi.Char>)>();
 
   ffi.Pointer<FILE> fopencookie(
     ffi.Pointer<ffi.Void> __magic_cookie,
@@ -202,8 +254,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fopencookiePtr = _lookup<ffi.NativeFunction<ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Char>, cookie_io_functions_t)>>('fopencookie');
-  late final _fopencookie = _fopencookiePtr.asFunction<ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Char>, cookie_io_functions_t)>();
+  late final _fopencookiePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Void>,
+              ffi.Pointer<ffi.Char>, cookie_io_functions_t)>>('fopencookie');
+  late final _fopencookie = _fopencookiePtr.asFunction<
+      ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Char>,
+          cookie_io_functions_t)>();
 
   ffi.Pointer<FILE> fmemopen(
     ffi.Pointer<ffi.Void> __s,
@@ -217,8 +274,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fmemopenPtr = _lookup<ffi.NativeFunction<ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Void>, ffi.Size, ffi.Pointer<ffi.Char>)>>('fmemopen');
-  late final _fmemopen = _fmemopenPtr.asFunction<ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Void>, int, ffi.Pointer<ffi.Char>)>();
+  late final _fmemopenPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Void>, ffi.Size,
+              ffi.Pointer<ffi.Char>)>>('fmemopen');
+  late final _fmemopen = _fmemopenPtr.asFunction<
+      ffi.Pointer<FILE> Function(
+          ffi.Pointer<ffi.Void>, int, ffi.Pointer<ffi.Char>)>();
 
   ffi.Pointer<FILE> open_memstream(
     ffi.Pointer<ffi.Pointer<ffi.Char>> __bufloc,
@@ -230,8 +292,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _open_memstreamPtr = _lookup<ffi.NativeFunction<ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Size>)>>('open_memstream');
-  late final _open_memstream = _open_memstreamPtr.asFunction<ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Size>)>();
+  late final _open_memstreamPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Pointer<ffi.Char>>,
+              ffi.Pointer<ffi.Size>)>>('open_memstream');
+  late final _open_memstream = _open_memstreamPtr.asFunction<
+      ffi.Pointer<FILE> Function(
+          ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Size>)>();
 
   void setbuf(
     ffi.Pointer<FILE> __stream,
@@ -243,8 +310,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _setbufPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>>('setbuf');
-  late final _setbuf = _setbufPtr.asFunction<void Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>();
+  late final _setbufPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>>('setbuf');
+  late final _setbuf = _setbufPtr
+      .asFunction<void Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>();
 
   int setvbuf(
     ffi.Pointer<FILE> __stream,
@@ -260,8 +331,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _setvbufPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, ffi.Int, ffi.Size)>>('setvbuf');
-  late final _setvbuf = _setvbufPtr.asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, int, int)>();
+  late final _setvbufPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, ffi.Int,
+              ffi.Size)>>('setvbuf');
+  late final _setvbuf = _setvbufPtr.asFunction<
+      int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, int, int)>();
 
   void setbuffer(
     ffi.Pointer<FILE> __stream,
@@ -275,8 +350,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _setbufferPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, ffi.Size)>>('setbuffer');
-  late final _setbuffer = _setbufferPtr.asFunction<void Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, int)>();
+  late final _setbufferPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>,
+              ffi.Size)>>('setbuffer');
+  late final _setbuffer = _setbufferPtr.asFunction<
+      void Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, int)>();
 
   void setlinebuf(
     ffi.Pointer<FILE> __stream,
@@ -286,8 +365,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _setlinebufPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>('setlinebuf');
-  late final _setlinebuf = _setlinebufPtr.asFunction<void Function(ffi.Pointer<FILE>)>();
+  late final _setlinebufPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>(
+          'setlinebuf');
+  late final _setlinebuf =
+      _setlinebufPtr.asFunction<void Function(ffi.Pointer<FILE>)>();
 
   int fprintf(
     ffi.Pointer<FILE> __stream,
@@ -299,8 +381,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fprintfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>>('fprintf');
-  late final _fprintf = _fprintfPtr.asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>();
+  late final _fprintfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(
+              ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>>('fprintf');
+  late final _fprintf = _fprintfPtr
+      .asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>();
 
   int printf(
     ffi.Pointer<ffi.Char> __format,
@@ -310,8 +396,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _printfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>)>>('printf');
-  late final _printf = _printfPtr.asFunction<int Function(ffi.Pointer<ffi.Char>)>();
+  late final _printfPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>)>>(
+          'printf');
+  late final _printf =
+      _printfPtr.asFunction<int Function(ffi.Pointer<ffi.Char>)>();
 
   int sprintf(
     ffi.Pointer<ffi.Char> __s,
@@ -323,8 +412,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _sprintfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('sprintf');
-  late final _sprintf = _sprintfPtr.asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
+  late final _sprintfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('sprintf');
+  late final _sprintf = _sprintfPtr
+      .asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
 
   int vfprintf(
     ffi.Pointer<FILE> __s,
@@ -338,8 +431,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _vfprintfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vfprintf');
-  late final _vfprintf = _vfprintfPtr.asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
+  late final _vfprintfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>,
+              ffi.Pointer<__va_list_tag>)>>('vfprintf');
+  late final _vfprintf = _vfprintfPtr.asFunction<
+      int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>,
+          ffi.Pointer<__va_list_tag>)>();
 
   int vprintf(
     ffi.Pointer<ffi.Char> __format,
@@ -351,8 +449,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _vprintfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vprintf');
-  late final _vprintf = _vprintfPtr.asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
+  late final _vprintfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vprintf');
+  late final _vprintf = _vprintfPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
 
   int vsprintf(
     ffi.Pointer<ffi.Char> __s,
@@ -366,8 +468,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _vsprintfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vsprintf');
-  late final _vsprintf = _vsprintfPtr.asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
+  late final _vsprintfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>,
+              ffi.Pointer<__va_list_tag>)>>('vsprintf');
+  late final _vsprintf = _vsprintfPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>,
+          ffi.Pointer<__va_list_tag>)>();
 
   int snprintf(
     ffi.Pointer<ffi.Char> __s,
@@ -381,8 +488,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _snprintfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Size, ffi.Pointer<ffi.Char>)>>('snprintf');
-  late final _snprintf = _snprintfPtr.asFunction<int Function(ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>)>();
+  late final _snprintfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Size,
+              ffi.Pointer<ffi.Char>)>>('snprintf');
+  late final _snprintf = _snprintfPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>)>();
 
   int vsnprintf(
     ffi.Pointer<ffi.Char> __s,
@@ -398,8 +509,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _vsnprintfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Size, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vsnprintf');
-  late final _vsnprintf = _vsnprintfPtr.asFunction<int Function(ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
+  late final _vsnprintfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Size,
+              ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vsnprintf');
+  late final _vsnprintf = _vsnprintfPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>,
+          ffi.Pointer<__va_list_tag>)>();
 
   int vasprintf(
     ffi.Pointer<ffi.Pointer<ffi.Char>> __ptr,
@@ -413,8 +529,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _vasprintfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vasprintf');
-  late final _vasprintf = _vasprintfPtr.asFunction<int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
+  late final _vasprintfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>,
+              ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vasprintf');
+  late final _vasprintf = _vasprintfPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Char>,
+          ffi.Pointer<__va_list_tag>)>();
 
   int __asprintf(
     ffi.Pointer<ffi.Pointer<ffi.Char>> __ptr,
@@ -426,8 +547,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final ___asprintfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Char>)>>('__asprintf');
-  late final ___asprintf = ___asprintfPtr.asFunction<int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Char>)>();
+  late final ___asprintfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>,
+              ffi.Pointer<ffi.Char>)>>('__asprintf');
+  late final ___asprintf = ___asprintfPtr.asFunction<
+      int Function(
+          ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Char>)>();
 
   int asprintf(
     ffi.Pointer<ffi.Pointer<ffi.Char>> __ptr,
@@ -439,8 +565,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _asprintfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Char>)>>('asprintf');
-  late final _asprintf = _asprintfPtr.asFunction<int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Char>)>();
+  late final _asprintfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>,
+              ffi.Pointer<ffi.Char>)>>('asprintf');
+  late final _asprintf = _asprintfPtr.asFunction<
+      int Function(
+          ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Char>)>();
 
   int vdprintf(
     int __fd,
@@ -454,8 +585,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _vdprintfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vdprintf');
-  late final _vdprintf = _vdprintfPtr.asFunction<int Function(int, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
+  late final _vdprintfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Int, ffi.Pointer<ffi.Char>,
+              ffi.Pointer<__va_list_tag>)>>('vdprintf');
+  late final _vdprintf = _vdprintfPtr.asFunction<
+      int Function(int, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
 
   int dprintf(
     int __fd,
@@ -467,8 +602,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _dprintfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<ffi.Char>)>>('dprintf');
-  late final _dprintf = _dprintfPtr.asFunction<int Function(int, ffi.Pointer<ffi.Char>)>();
+  late final _dprintfPtr = _lookup<
+          ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<ffi.Char>)>>(
+      'dprintf');
+  late final _dprintf =
+      _dprintfPtr.asFunction<int Function(int, ffi.Pointer<ffi.Char>)>();
 
   int fscanf(
     ffi.Pointer<FILE> __stream,
@@ -480,8 +618,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fscanfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>>('fscanf');
-  late final _fscanf = _fscanfPtr.asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>();
+  late final _fscanfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(
+              ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>>('fscanf');
+  late final _fscanf = _fscanfPtr
+      .asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>();
 
   int scanf(
     ffi.Pointer<ffi.Char> __format,
@@ -491,8 +633,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _scanfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>)>>('scanf');
-  late final _scanf = _scanfPtr.asFunction<int Function(ffi.Pointer<ffi.Char>)>();
+  late final _scanfPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>)>>(
+          'scanf');
+  late final _scanf =
+      _scanfPtr.asFunction<int Function(ffi.Pointer<ffi.Char>)>();
 
   int sscanf(
     ffi.Pointer<ffi.Char> __s,
@@ -504,8 +649,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _sscanfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('sscanf');
-  late final _sscanf = _sscanfPtr.asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
+  late final _sscanfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('sscanf');
+  late final _sscanf = _sscanfPtr
+      .asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
 
   int vfscanf(
     ffi.Pointer<FILE> __s,
@@ -519,8 +668,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _vfscanfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vfscanf');
-  late final _vfscanf = _vfscanfPtr.asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
+  late final _vfscanfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>,
+              ffi.Pointer<__va_list_tag>)>>('vfscanf');
+  late final _vfscanf = _vfscanfPtr.asFunction<
+      int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>,
+          ffi.Pointer<__va_list_tag>)>();
 
   int vscanf(
     ffi.Pointer<ffi.Char> __format,
@@ -532,8 +686,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _vscanfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vscanf');
-  late final _vscanf = _vscanfPtr.asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
+  late final _vscanfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vscanf');
+  late final _vscanf = _vscanfPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
 
   int vsscanf(
     ffi.Pointer<ffi.Char> __s,
@@ -547,8 +705,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _vsscanfPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vsscanf');
-  late final _vsscanf = _vsscanfPtr.asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
+  late final _vsscanfPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>,
+              ffi.Pointer<__va_list_tag>)>>('vsscanf');
+  late final _vsscanf = _vsscanfPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>,
+          ffi.Pointer<__va_list_tag>)>();
 
   int fgetc(
     ffi.Pointer<FILE> __stream,
@@ -558,7 +721,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fgetcPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('fgetc');
+  late final _fgetcPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('fgetc');
   late final _fgetc = _fgetcPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   int getc(
@@ -569,14 +733,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _getcPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('getc');
+  late final _getcPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('getc');
   late final _getc = _getcPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   int getchar() {
     return _getchar();
   }
 
-  late final _getcharPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('getchar');
+  late final _getcharPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('getchar');
   late final _getchar = _getcharPtr.asFunction<int Function()>();
 
   int getc_unlocked(
@@ -587,15 +753,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _getc_unlockedPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('getc_unlocked');
-  late final _getc_unlocked = _getc_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
+  late final _getc_unlockedPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
+          'getc_unlocked');
+  late final _getc_unlocked =
+      _getc_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   int getchar_unlocked() {
     return _getchar_unlocked();
   }
 
-  late final _getchar_unlockedPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('getchar_unlocked');
-  late final _getchar_unlocked = _getchar_unlockedPtr.asFunction<int Function()>();
+  late final _getchar_unlockedPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('getchar_unlocked');
+  late final _getchar_unlocked =
+      _getchar_unlockedPtr.asFunction<int Function()>();
 
   int fgetc_unlocked(
     ffi.Pointer<FILE> __stream,
@@ -605,8 +776,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fgetc_unlockedPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('fgetc_unlocked');
-  late final _fgetc_unlocked = _fgetc_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
+  late final _fgetc_unlockedPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
+          'fgetc_unlocked');
+  late final _fgetc_unlocked =
+      _fgetc_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   int fputc(
     int __c,
@@ -618,8 +792,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fputcPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>('fputc');
-  late final _fputc = _fputcPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
+  late final _fputcPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>(
+          'fputc');
+  late final _fputc =
+      _fputcPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
 
   int putc(
     int __c,
@@ -631,8 +808,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _putcPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>('putc');
-  late final _putc = _putcPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
+  late final _putcPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>(
+          'putc');
+  late final _putc =
+      _putcPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
 
   int putchar(
     int __c,
@@ -642,7 +822,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _putcharPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int)>>('putchar');
+  late final _putcharPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int)>>('putchar');
   late final _putchar = _putcharPtr.asFunction<int Function(int)>();
 
   int fputc_unlocked(
@@ -655,8 +836,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fputc_unlockedPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>('fputc_unlocked');
-  late final _fputc_unlocked = _fputc_unlockedPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
+  late final _fputc_unlockedPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>(
+          'fputc_unlocked');
+  late final _fputc_unlocked =
+      _fputc_unlockedPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
 
   int putc_unlocked(
     int __c,
@@ -668,8 +852,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _putc_unlockedPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>('putc_unlocked');
-  late final _putc_unlocked = _putc_unlockedPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
+  late final _putc_unlockedPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>(
+          'putc_unlocked');
+  late final _putc_unlocked =
+      _putc_unlockedPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
 
   int putchar_unlocked(
     int __c,
@@ -679,8 +866,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _putchar_unlockedPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int)>>('putchar_unlocked');
-  late final _putchar_unlocked = _putchar_unlockedPtr.asFunction<int Function(int)>();
+  late final _putchar_unlockedPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int)>>(
+          'putchar_unlocked');
+  late final _putchar_unlocked =
+      _putchar_unlockedPtr.asFunction<int Function(int)>();
 
   int getw(
     ffi.Pointer<FILE> __stream,
@@ -690,7 +880,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _getwPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('getw');
+  late final _getwPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('getw');
   late final _getw = _getwPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   int putw(
@@ -703,8 +894,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _putwPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>('putw');
-  late final _putw = _putwPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
+  late final _putwPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>(
+          'putw');
+  late final _putw =
+      _putwPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
 
   ffi.Pointer<ffi.Char> fgets(
     ffi.Pointer<ffi.Char> __s,
@@ -718,8 +912,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fgetsPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>, ffi.Int, ffi.Pointer<FILE>)>>('fgets');
-  late final _fgets = _fgetsPtr.asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>, int, ffi.Pointer<FILE>)>();
+  late final _fgetsPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(
+              ffi.Pointer<ffi.Char>, ffi.Int, ffi.Pointer<FILE>)>>('fgets');
+  late final _fgets = _fgetsPtr.asFunction<
+      ffi.Pointer<ffi.Char> Function(
+          ffi.Pointer<ffi.Char>, int, ffi.Pointer<FILE>)>();
 
   int __getdelim(
     ffi.Pointer<ffi.Pointer<ffi.Char>> __lineptr,
@@ -735,8 +934,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final ___getdelimPtr = _lookup<ffi.NativeFunction<__ssize_t Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Size>, ffi.Int, ffi.Pointer<FILE>)>>('__getdelim');
-  late final ___getdelim = ___getdelimPtr.asFunction<int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Size>, int, ffi.Pointer<FILE>)>();
+  late final ___getdelimPtr = _lookup<
+      ffi.NativeFunction<
+          __ssize_t Function(
+              ffi.Pointer<ffi.Pointer<ffi.Char>>,
+              ffi.Pointer<ffi.Size>,
+              ffi.Int,
+              ffi.Pointer<FILE>)>>('__getdelim');
+  late final ___getdelim = ___getdelimPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Size>,
+          int, ffi.Pointer<FILE>)>();
 
   int getdelim(
     ffi.Pointer<ffi.Pointer<ffi.Char>> __lineptr,
@@ -752,8 +959,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _getdelimPtr = _lookup<ffi.NativeFunction<__ssize_t Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Size>, ffi.Int, ffi.Pointer<FILE>)>>('getdelim');
-  late final _getdelim = _getdelimPtr.asFunction<int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Size>, int, ffi.Pointer<FILE>)>();
+  late final _getdelimPtr = _lookup<
+      ffi.NativeFunction<
+          __ssize_t Function(ffi.Pointer<ffi.Pointer<ffi.Char>>,
+              ffi.Pointer<ffi.Size>, ffi.Int, ffi.Pointer<FILE>)>>('getdelim');
+  late final _getdelim = _getdelimPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Size>,
+          int, ffi.Pointer<FILE>)>();
 
   int getline(
     ffi.Pointer<ffi.Pointer<ffi.Char>> __lineptr,
@@ -767,8 +979,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _getlinePtr = _lookup<ffi.NativeFunction<__ssize_t Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Size>, ffi.Pointer<FILE>)>>('getline');
-  late final _getline = _getlinePtr.asFunction<int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Size>, ffi.Pointer<FILE>)>();
+  late final _getlinePtr = _lookup<
+      ffi.NativeFunction<
+          __ssize_t Function(ffi.Pointer<ffi.Pointer<ffi.Char>>,
+              ffi.Pointer<ffi.Size>, ffi.Pointer<FILE>)>>('getline');
+  late final _getline = _getlinePtr.asFunction<
+      int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Size>,
+          ffi.Pointer<FILE>)>();
 
   int fputs(
     ffi.Pointer<ffi.Char> __s,
@@ -780,8 +997,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fputsPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<FILE>)>>('fputs');
-  late final _fputs = _fputsPtr.asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<FILE>)>();
+  late final _fputsPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<FILE>)>>('fputs');
+  late final _fputs = _fputsPtr
+      .asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<FILE>)>();
 
   int puts(
     ffi.Pointer<ffi.Char> __s,
@@ -791,7 +1011,9 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _putsPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>)>>('puts');
+  late final _putsPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>)>>(
+          'puts');
   late final _puts = _putsPtr.asFunction<int Function(ffi.Pointer<ffi.Char>)>();
 
   int ungetc(
@@ -804,8 +1026,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ungetcPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>('ungetc');
-  late final _ungetc = _ungetcPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
+  late final _ungetcPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>(
+          'ungetc');
+  late final _ungetc =
+      _ungetcPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
 
   int fread(
     ffi.Pointer<ffi.Void> __ptr,
@@ -821,8 +1046,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _freadPtr = _lookup<ffi.NativeFunction<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, ffi.Size, ffi.Size, ffi.Pointer<FILE>)>>('fread');
-  late final _fread = _freadPtr.asFunction<int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)>();
+  late final _freadPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, ffi.Size, ffi.Size,
+              ffi.Pointer<FILE>)>>('fread');
+  late final _fread = _freadPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)>();
 
   int fwrite(
     ffi.Pointer<ffi.Void> __ptr,
@@ -838,8 +1067,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fwritePtr = _lookup<ffi.NativeFunction<ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, ffi.Size, ffi.Size, ffi.Pointer<FILE>)>>('fwrite');
-  late final _fwrite = _fwritePtr.asFunction<int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)>();
+  late final _fwritePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.UnsignedLong Function(ffi.Pointer<ffi.Void>, ffi.Size, ffi.Size,
+              ffi.Pointer<FILE>)>>('fwrite');
+  late final _fwrite = _fwritePtr.asFunction<
+      int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)>();
 
   int fread_unlocked(
     ffi.Pointer<ffi.Void> __ptr,
@@ -855,8 +1088,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fread_unlockedPtr = _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ffi.Void>, ffi.Size, ffi.Size, ffi.Pointer<FILE>)>>('fread_unlocked');
-  late final _fread_unlocked = _fread_unlockedPtr.asFunction<int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)>();
+  late final _fread_unlockedPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Size Function(ffi.Pointer<ffi.Void>, ffi.Size, ffi.Size,
+              ffi.Pointer<FILE>)>>('fread_unlocked');
+  late final _fread_unlocked = _fread_unlockedPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)>();
 
   int fwrite_unlocked(
     ffi.Pointer<ffi.Void> __ptr,
@@ -872,8 +1109,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fwrite_unlockedPtr = _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ffi.Void>, ffi.Size, ffi.Size, ffi.Pointer<FILE>)>>('fwrite_unlocked');
-  late final _fwrite_unlocked = _fwrite_unlockedPtr.asFunction<int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)>();
+  late final _fwrite_unlockedPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Size Function(ffi.Pointer<ffi.Void>, ffi.Size, ffi.Size,
+              ffi.Pointer<FILE>)>>('fwrite_unlocked');
+  late final _fwrite_unlocked = _fwrite_unlockedPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)>();
 
   int fseek(
     ffi.Pointer<FILE> __stream,
@@ -887,8 +1128,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fseekPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Long, ffi.Int)>>('fseek');
-  late final _fseek = _fseekPtr.asFunction<int Function(ffi.Pointer<FILE>, int, int)>();
+  late final _fseekPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<FILE>, ffi.Long, ffi.Int)>>('fseek');
+  late final _fseek =
+      _fseekPtr.asFunction<int Function(ffi.Pointer<FILE>, int, int)>();
 
   int ftell(
     ffi.Pointer<FILE> __stream,
@@ -898,7 +1142,9 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ftellPtr = _lookup<ffi.NativeFunction<ffi.Long Function(ffi.Pointer<FILE>)>>('ftell');
+  late final _ftellPtr =
+      _lookup<ffi.NativeFunction<ffi.Long Function(ffi.Pointer<FILE>)>>(
+          'ftell');
   late final _ftell = _ftellPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   void rewind(
@@ -909,8 +1155,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _rewindPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>('rewind');
-  late final _rewind = _rewindPtr.asFunction<void Function(ffi.Pointer<FILE>)>();
+  late final _rewindPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>(
+          'rewind');
+  late final _rewind =
+      _rewindPtr.asFunction<void Function(ffi.Pointer<FILE>)>();
 
   int fseeko(
     ffi.Pointer<FILE> __stream,
@@ -924,8 +1173,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fseekoPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, __off_t, ffi.Int)>>('fseeko');
-  late final _fseeko = _fseekoPtr.asFunction<int Function(ffi.Pointer<FILE>, int, int)>();
+  late final _fseekoPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<FILE>, __off_t, ffi.Int)>>('fseeko');
+  late final _fseeko =
+      _fseekoPtr.asFunction<int Function(ffi.Pointer<FILE>, int, int)>();
 
   int ftello(
     ffi.Pointer<FILE> __stream,
@@ -935,7 +1187,9 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ftelloPtr = _lookup<ffi.NativeFunction<__off_t Function(ffi.Pointer<FILE>)>>('ftello');
+  late final _ftelloPtr =
+      _lookup<ffi.NativeFunction<__off_t Function(ffi.Pointer<FILE>)>>(
+          'ftello');
   late final _ftello = _ftelloPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   int fgetpos(
@@ -948,8 +1202,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fgetposPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>>('fgetpos');
-  late final _fgetpos = _fgetposPtr.asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>();
+  late final _fgetposPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>>('fgetpos');
+  late final _fgetpos = _fgetposPtr
+      .asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>();
 
   int fsetpos(
     ffi.Pointer<FILE> __stream,
@@ -961,8 +1218,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fsetposPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>>('fsetpos');
-  late final _fsetpos = _fsetposPtr.asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>();
+  late final _fsetposPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>>('fsetpos');
+  late final _fsetpos = _fsetposPtr
+      .asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>();
 
   void clearerr(
     ffi.Pointer<FILE> __stream,
@@ -972,8 +1232,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _clearerrPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>('clearerr');
-  late final _clearerr = _clearerrPtr.asFunction<void Function(ffi.Pointer<FILE>)>();
+  late final _clearerrPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>(
+          'clearerr');
+  late final _clearerr =
+      _clearerrPtr.asFunction<void Function(ffi.Pointer<FILE>)>();
 
   int feof(
     ffi.Pointer<FILE> __stream,
@@ -983,7 +1246,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _feofPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('feof');
+  late final _feofPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('feof');
   late final _feof = _feofPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   int ferror(
@@ -994,7 +1258,9 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ferrorPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('ferror');
+  late final _ferrorPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
+          'ferror');
   late final _ferror = _ferrorPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   void clearerr_unlocked(
@@ -1005,8 +1271,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _clearerr_unlockedPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>('clearerr_unlocked');
-  late final _clearerr_unlocked = _clearerr_unlockedPtr.asFunction<void Function(ffi.Pointer<FILE>)>();
+  late final _clearerr_unlockedPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>(
+          'clearerr_unlocked');
+  late final _clearerr_unlocked =
+      _clearerr_unlockedPtr.asFunction<void Function(ffi.Pointer<FILE>)>();
 
   int feof_unlocked(
     ffi.Pointer<FILE> __stream,
@@ -1016,8 +1285,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _feof_unlockedPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('feof_unlocked');
-  late final _feof_unlocked = _feof_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
+  late final _feof_unlockedPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
+          'feof_unlocked');
+  late final _feof_unlocked =
+      _feof_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   int ferror_unlocked(
     ffi.Pointer<FILE> __stream,
@@ -1027,8 +1299,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ferror_unlockedPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('ferror_unlocked');
-  late final _ferror_unlocked = _ferror_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
+  late final _ferror_unlockedPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
+          'ferror_unlocked');
+  late final _ferror_unlocked =
+      _ferror_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   void perror(
     ffi.Pointer<ffi.Char> __s,
@@ -1038,8 +1313,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _perrorPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ffi.Char>)>>('perror');
-  late final _perror = _perrorPtr.asFunction<void Function(ffi.Pointer<ffi.Char>)>();
+  late final _perrorPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ffi.Char>)>>(
+          'perror');
+  late final _perror =
+      _perrorPtr.asFunction<void Function(ffi.Pointer<ffi.Char>)>();
 
   int fileno(
     ffi.Pointer<FILE> __stream,
@@ -1049,7 +1327,9 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _filenoPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('fileno');
+  late final _filenoPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
+          'fileno');
   late final _fileno = _filenoPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   int fileno_unlocked(
@@ -1060,8 +1340,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _fileno_unlockedPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('fileno_unlocked');
-  late final _fileno_unlocked = _fileno_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
+  late final _fileno_unlockedPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
+          'fileno_unlocked');
+  late final _fileno_unlocked =
+      _fileno_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   int pclose(
     ffi.Pointer<FILE> __stream,
@@ -1071,7 +1354,9 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _pclosePtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('pclose');
+  late final _pclosePtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
+          'pclose');
   late final _pclose = _pclosePtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   ffi.Pointer<FILE> popen(
@@ -1084,8 +1369,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _popenPtr = _lookup<ffi.NativeFunction<ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('popen');
-  late final _popen = _popenPtr.asFunction<ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
+  late final _popenPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('popen');
+  late final _popen = _popenPtr.asFunction<
+      ffi.Pointer<FILE> Function(
+          ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
 
   ffi.Pointer<ffi.Char> ctermid(
     ffi.Pointer<ffi.Char> __s,
@@ -1095,8 +1385,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ctermidPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>>('ctermid');
-  late final _ctermid = _ctermidPtr.asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>();
+  late final _ctermidPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>>('ctermid');
+  late final _ctermid = _ctermidPtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>();
 
   void flockfile(
     ffi.Pointer<FILE> __stream,
@@ -1106,8 +1399,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _flockfilePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>('flockfile');
-  late final _flockfile = _flockfilePtr.asFunction<void Function(ffi.Pointer<FILE>)>();
+  late final _flockfilePtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>(
+          'flockfile');
+  late final _flockfile =
+      _flockfilePtr.asFunction<void Function(ffi.Pointer<FILE>)>();
 
   int ftrylockfile(
     ffi.Pointer<FILE> __stream,
@@ -1117,8 +1413,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ftrylockfilePtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('ftrylockfile');
-  late final _ftrylockfile = _ftrylockfilePtr.asFunction<int Function(ffi.Pointer<FILE>)>();
+  late final _ftrylockfilePtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
+          'ftrylockfile');
+  late final _ftrylockfile =
+      _ftrylockfilePtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   void funlockfile(
     ffi.Pointer<FILE> __stream,
@@ -1128,8 +1427,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _funlockfilePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>('funlockfile');
-  late final _funlockfile = _funlockfilePtr.asFunction<void Function(ffi.Pointer<FILE>)>();
+  late final _funlockfilePtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>(
+          'funlockfile');
+  late final _funlockfile =
+      _funlockfilePtr.asFunction<void Function(ffi.Pointer<FILE>)>();
 
   int __uflow(
     ffi.Pointer<FILE> arg0,
@@ -1139,8 +1441,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final ___uflowPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>('__uflow');
-  late final ___uflow = ___uflowPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
+  late final ___uflowPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
+          '__uflow');
+  late final ___uflow =
+      ___uflowPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   int __overflow(
     ffi.Pointer<FILE> arg0,
@@ -1152,8 +1457,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final ___overflowPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Int)>>('__overflow');
-  late final ___overflow = ___overflowPtr.asFunction<int Function(ffi.Pointer<FILE>, int)>();
+  late final ___overflowPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Int)>>(
+          '__overflow');
+  late final ___overflow =
+      ___overflowPtr.asFunction<int Function(ffi.Pointer<FILE>, int)>();
 
   void ggml_abort(
     ffi.Pointer<ffi.Char> file,
@@ -1167,8 +1475,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_abortPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ffi.Char>, ffi.Int, ffi.Pointer<ffi.Char>)>>('ggml_abort');
-  late final _ggml_abort = _ggml_abortPtr.asFunction<void Function(ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>)>();
+  late final _ggml_abortPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ffi.Char>, ffi.Int,
+              ffi.Pointer<ffi.Char>)>>('ggml_abort');
+  late final _ggml_abort = _ggml_abortPtr.asFunction<
+      void Function(ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>)>();
 
   ffi.Pointer<ffi.Char> ggml_status_to_string(
     ggml_status status,
@@ -1178,8 +1490,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_status_to_stringPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Int)>>('ggml_status_to_string');
-  late final _ggml_status_to_string = _ggml_status_to_stringPtr.asFunction<ffi.Pointer<ffi.Char> Function(int)>();
+  late final _ggml_status_to_stringPtr =
+      _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Int)>>(
+          'ggml_status_to_string');
+  late final _ggml_status_to_string = _ggml_status_to_stringPtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(int)>();
 
   double ggml_fp16_to_fp32(
     int arg0,
@@ -1189,8 +1504,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_fp16_to_fp32Ptr = _lookup<ffi.NativeFunction<ffi.Float Function(ggml_fp16_t)>>('ggml_fp16_to_fp32');
-  late final _ggml_fp16_to_fp32 = _ggml_fp16_to_fp32Ptr.asFunction<double Function(int)>();
+  late final _ggml_fp16_to_fp32Ptr =
+      _lookup<ffi.NativeFunction<ffi.Float Function(ggml_fp16_t)>>(
+          'ggml_fp16_to_fp32');
+  late final _ggml_fp16_to_fp32 =
+      _ggml_fp16_to_fp32Ptr.asFunction<double Function(int)>();
 
   int ggml_fp32_to_fp16(
     double arg0,
@@ -1200,8 +1518,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_fp32_to_fp16Ptr = _lookup<ffi.NativeFunction<ggml_fp16_t Function(ffi.Float)>>('ggml_fp32_to_fp16');
-  late final _ggml_fp32_to_fp16 = _ggml_fp32_to_fp16Ptr.asFunction<int Function(double)>();
+  late final _ggml_fp32_to_fp16Ptr =
+      _lookup<ffi.NativeFunction<ggml_fp16_t Function(ffi.Float)>>(
+          'ggml_fp32_to_fp16');
+  late final _ggml_fp32_to_fp16 =
+      _ggml_fp32_to_fp16Ptr.asFunction<int Function(double)>();
 
   void ggml_fp16_to_fp32_row(
     ffi.Pointer<ggml_fp16_t> arg0,
@@ -1215,8 +1536,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_fp16_to_fp32_rowPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_fp16_t>, ffi.Pointer<ffi.Float>, ffi.Int64)>>('ggml_fp16_to_fp32_row');
-  late final _ggml_fp16_to_fp32_row = _ggml_fp16_to_fp32_rowPtr.asFunction<void Function(ffi.Pointer<ggml_fp16_t>, ffi.Pointer<ffi.Float>, int)>();
+  late final _ggml_fp16_to_fp32_rowPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_fp16_t>, ffi.Pointer<ffi.Float>,
+              ffi.Int64)>>('ggml_fp16_to_fp32_row');
+  late final _ggml_fp16_to_fp32_row = _ggml_fp16_to_fp32_rowPtr.asFunction<
+      void Function(ffi.Pointer<ggml_fp16_t>, ffi.Pointer<ffi.Float>, int)>();
 
   void ggml_fp32_to_fp16_row(
     ffi.Pointer<ffi.Float> arg0,
@@ -1230,8 +1555,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_fp32_to_fp16_rowPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_fp16_t>, ffi.Int64)>>('ggml_fp32_to_fp16_row');
-  late final _ggml_fp32_to_fp16_row = _ggml_fp32_to_fp16_rowPtr.asFunction<void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_fp16_t>, int)>();
+  late final _ggml_fp32_to_fp16_rowPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_fp16_t>,
+              ffi.Int64)>>('ggml_fp32_to_fp16_row');
+  late final _ggml_fp32_to_fp16_row = _ggml_fp32_to_fp16_rowPtr.asFunction<
+      void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_fp16_t>, int)>();
 
   ggml_bf16_t ggml_fp32_to_bf16(
     double arg0,
@@ -1241,8 +1570,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_fp32_to_bf16Ptr = _lookup<ffi.NativeFunction<ggml_bf16_t Function(ffi.Float)>>('ggml_fp32_to_bf16');
-  late final _ggml_fp32_to_bf16 = _ggml_fp32_to_bf16Ptr.asFunction<ggml_bf16_t Function(double)>();
+  late final _ggml_fp32_to_bf16Ptr =
+      _lookup<ffi.NativeFunction<ggml_bf16_t Function(ffi.Float)>>(
+          'ggml_fp32_to_bf16');
+  late final _ggml_fp32_to_bf16 =
+      _ggml_fp32_to_bf16Ptr.asFunction<ggml_bf16_t Function(double)>();
 
   double ggml_bf16_to_fp32(
     ggml_bf16_t arg0,
@@ -1252,8 +1584,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_bf16_to_fp32Ptr = _lookup<ffi.NativeFunction<ffi.Float Function(ggml_bf16_t)>>('ggml_bf16_to_fp32');
-  late final _ggml_bf16_to_fp32 = _ggml_bf16_to_fp32Ptr.asFunction<double Function(ggml_bf16_t)>();
+  late final _ggml_bf16_to_fp32Ptr =
+      _lookup<ffi.NativeFunction<ffi.Float Function(ggml_bf16_t)>>(
+          'ggml_bf16_to_fp32');
+  late final _ggml_bf16_to_fp32 =
+      _ggml_bf16_to_fp32Ptr.asFunction<double Function(ggml_bf16_t)>();
 
   void ggml_bf16_to_fp32_row(
     ffi.Pointer<ggml_bf16_t> arg0,
@@ -1267,8 +1602,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_bf16_to_fp32_rowPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_bf16_t>, ffi.Pointer<ffi.Float>, ffi.Int64)>>('ggml_bf16_to_fp32_row');
-  late final _ggml_bf16_to_fp32_row = _ggml_bf16_to_fp32_rowPtr.asFunction<void Function(ffi.Pointer<ggml_bf16_t>, ffi.Pointer<ffi.Float>, int)>();
+  late final _ggml_bf16_to_fp32_rowPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_bf16_t>, ffi.Pointer<ffi.Float>,
+              ffi.Int64)>>('ggml_bf16_to_fp32_row');
+  late final _ggml_bf16_to_fp32_row = _ggml_bf16_to_fp32_rowPtr.asFunction<
+      void Function(ffi.Pointer<ggml_bf16_t>, ffi.Pointer<ffi.Float>, int)>();
 
   void ggml_fp32_to_bf16_row_ref(
     ffi.Pointer<ffi.Float> arg0,
@@ -1282,8 +1621,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_fp32_to_bf16_row_refPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_bf16_t>, ffi.Int64)>>('ggml_fp32_to_bf16_row_ref');
-  late final _ggml_fp32_to_bf16_row_ref = _ggml_fp32_to_bf16_row_refPtr.asFunction<void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_bf16_t>, int)>();
+  late final _ggml_fp32_to_bf16_row_refPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_bf16_t>,
+              ffi.Int64)>>('ggml_fp32_to_bf16_row_ref');
+  late final _ggml_fp32_to_bf16_row_ref =
+      _ggml_fp32_to_bf16_row_refPtr.asFunction<
+          void Function(
+              ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_bf16_t>, int)>();
 
   void ggml_fp32_to_bf16_row(
     ffi.Pointer<ffi.Float> arg0,
@@ -1297,10 +1642,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_fp32_to_bf16_rowPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_bf16_t>, ffi.Int64)>>('ggml_fp32_to_bf16_row');
-  late final _ggml_fp32_to_bf16_row = _ggml_fp32_to_bf16_rowPtr.asFunction<void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_bf16_t>, int)>();
+  late final _ggml_fp32_to_bf16_rowPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_bf16_t>,
+              ffi.Int64)>>('ggml_fp32_to_bf16_row');
+  late final _ggml_fp32_to_bf16_row = _ggml_fp32_to_bf16_rowPtr.asFunction<
+      void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_bf16_t>, int)>();
 
-  late final ffi.Pointer<ffi.Size> _GGML_TENSOR_SIZE = _lookup<ffi.Size>('GGML_TENSOR_SIZE');
+  late final ffi.Pointer<ffi.Size> _GGML_TENSOR_SIZE =
+      _lookup<ffi.Size>('GGML_TENSOR_SIZE');
 
   int get GGML_TENSOR_SIZE => _GGML_TENSOR_SIZE.value;
 
@@ -1314,43 +1664,52 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_guid_matchesPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_guid_t, ggml_guid_t)>>('ggml_guid_matches');
-  late final _ggml_guid_matches = _ggml_guid_matchesPtr.asFunction<bool Function(ggml_guid_t, ggml_guid_t)>();
+  late final _ggml_guid_matchesPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_guid_t, ggml_guid_t)>>(
+          'ggml_guid_matches');
+  late final _ggml_guid_matches = _ggml_guid_matchesPtr
+      .asFunction<bool Function(ggml_guid_t, ggml_guid_t)>();
 
   void ggml_time_init() {
     return _ggml_time_init();
   }
 
-  late final _ggml_time_initPtr = _lookup<ffi.NativeFunction<ffi.Void Function()>>('ggml_time_init');
+  late final _ggml_time_initPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function()>>('ggml_time_init');
   late final _ggml_time_init = _ggml_time_initPtr.asFunction<void Function()>();
 
   int ggml_time_ms() {
     return _ggml_time_ms();
   }
 
-  late final _ggml_time_msPtr = _lookup<ffi.NativeFunction<ffi.Int64 Function()>>('ggml_time_ms');
+  late final _ggml_time_msPtr =
+      _lookup<ffi.NativeFunction<ffi.Int64 Function()>>('ggml_time_ms');
   late final _ggml_time_ms = _ggml_time_msPtr.asFunction<int Function()>();
 
   int ggml_time_us() {
     return _ggml_time_us();
   }
 
-  late final _ggml_time_usPtr = _lookup<ffi.NativeFunction<ffi.Int64 Function()>>('ggml_time_us');
+  late final _ggml_time_usPtr =
+      _lookup<ffi.NativeFunction<ffi.Int64 Function()>>('ggml_time_us');
   late final _ggml_time_us = _ggml_time_usPtr.asFunction<int Function()>();
 
   int ggml_cycles() {
     return _ggml_cycles();
   }
 
-  late final _ggml_cyclesPtr = _lookup<ffi.NativeFunction<ffi.Int64 Function()>>('ggml_cycles');
+  late final _ggml_cyclesPtr =
+      _lookup<ffi.NativeFunction<ffi.Int64 Function()>>('ggml_cycles');
   late final _ggml_cycles = _ggml_cyclesPtr.asFunction<int Function()>();
 
   int ggml_cycles_per_ms() {
     return _ggml_cycles_per_ms();
   }
 
-  late final _ggml_cycles_per_msPtr = _lookup<ffi.NativeFunction<ffi.Int64 Function()>>('ggml_cycles_per_ms');
-  late final _ggml_cycles_per_ms = _ggml_cycles_per_msPtr.asFunction<int Function()>();
+  late final _ggml_cycles_per_msPtr =
+      _lookup<ffi.NativeFunction<ffi.Int64 Function()>>('ggml_cycles_per_ms');
+  late final _ggml_cycles_per_ms =
+      _ggml_cycles_per_msPtr.asFunction<int Function()>();
 
   ffi.Pointer<FILE> ggml_fopen(
     ffi.Pointer<ffi.Char> fname,
@@ -1362,8 +1721,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_fopenPtr = _lookup<ffi.NativeFunction<ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('ggml_fopen');
-  late final _ggml_fopen = _ggml_fopenPtr.asFunction<ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
+  late final _ggml_fopenPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('ggml_fopen');
+  late final _ggml_fopen = _ggml_fopenPtr.asFunction<
+      ffi.Pointer<FILE> Function(
+          ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
 
   void ggml_print_object(
     ffi.Pointer<ggml_object> obj,
@@ -1373,8 +1737,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_print_objectPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_object>)>>('ggml_print_object');
-  late final _ggml_print_object = _ggml_print_objectPtr.asFunction<void Function(ffi.Pointer<ggml_object>)>();
+  late final _ggml_print_objectPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_object>)>>(
+          'ggml_print_object');
+  late final _ggml_print_object = _ggml_print_objectPtr
+      .asFunction<void Function(ffi.Pointer<ggml_object>)>();
 
   void ggml_print_objects(
     ffi.Pointer<ggml_context> ctx,
@@ -1384,8 +1751,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_print_objectsPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_context>)>>('ggml_print_objects');
-  late final _ggml_print_objects = _ggml_print_objectsPtr.asFunction<void Function(ffi.Pointer<ggml_context>)>();
+  late final _ggml_print_objectsPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_context>)>>(
+          'ggml_print_objects');
+  late final _ggml_print_objects = _ggml_print_objectsPtr
+      .asFunction<void Function(ffi.Pointer<ggml_context>)>();
 
   int ggml_nelements(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1395,8 +1765,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_nelementsPtr = _lookup<ffi.NativeFunction<ffi.Int64 Function(ffi.Pointer<ggml_tensor>)>>('ggml_nelements');
-  late final _ggml_nelements = _ggml_nelementsPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_nelementsPtr =
+      _lookup<ffi.NativeFunction<ffi.Int64 Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_nelements');
+  late final _ggml_nelements =
+      _ggml_nelementsPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
   int ggml_nrows(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1406,8 +1779,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_nrowsPtr = _lookup<ffi.NativeFunction<ffi.Int64 Function(ffi.Pointer<ggml_tensor>)>>('ggml_nrows');
-  late final _ggml_nrows = _ggml_nrowsPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_nrowsPtr =
+      _lookup<ffi.NativeFunction<ffi.Int64 Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_nrows');
+  late final _ggml_nrows =
+      _ggml_nrowsPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
   int ggml_nbytes(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1417,8 +1793,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_nbytesPtr = _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_tensor>)>>('ggml_nbytes');
-  late final _ggml_nbytes = _ggml_nbytesPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_nbytesPtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_nbytes');
+  late final _ggml_nbytes =
+      _ggml_nbytesPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
   int ggml_nbytes_pad(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1428,8 +1807,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_nbytes_padPtr = _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_tensor>)>>('ggml_nbytes_pad');
-  late final _ggml_nbytes_pad = _ggml_nbytes_padPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_nbytes_padPtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_nbytes_pad');
+  late final _ggml_nbytes_pad =
+      _ggml_nbytes_padPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
   int ggml_blck_size(
     ggml_type type,
@@ -1439,8 +1821,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_blck_sizePtr = _lookup<ffi.NativeFunction<ffi.Int64 Function(ffi.UnsignedInt)>>('ggml_blck_size');
-  late final _ggml_blck_size = _ggml_blck_sizePtr.asFunction<int Function(int)>();
+  late final _ggml_blck_sizePtr =
+      _lookup<ffi.NativeFunction<ffi.Int64 Function(ffi.UnsignedInt)>>(
+          'ggml_blck_size');
+  late final _ggml_blck_size =
+      _ggml_blck_sizePtr.asFunction<int Function(int)>();
 
   int ggml_type_size(
     ggml_type type,
@@ -1450,8 +1835,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_type_sizePtr = _lookup<ffi.NativeFunction<ffi.Size Function(ffi.UnsignedInt)>>('ggml_type_size');
-  late final _ggml_type_size = _ggml_type_sizePtr.asFunction<int Function(int)>();
+  late final _ggml_type_sizePtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ffi.UnsignedInt)>>(
+          'ggml_type_size');
+  late final _ggml_type_size =
+      _ggml_type_sizePtr.asFunction<int Function(int)>();
 
   int ggml_row_size(
     ggml_type type,
@@ -1463,8 +1851,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_row_sizePtr = _lookup<ffi.NativeFunction<ffi.Size Function(ffi.UnsignedInt, ffi.Int64)>>('ggml_row_size');
-  late final _ggml_row_size = _ggml_row_sizePtr.asFunction<int Function(int, int)>();
+  late final _ggml_row_sizePtr = _lookup<
+          ffi.NativeFunction<ffi.Size Function(ffi.UnsignedInt, ffi.Int64)>>(
+      'ggml_row_size');
+  late final _ggml_row_size =
+      _ggml_row_sizePtr.asFunction<int Function(int, int)>();
 
   double ggml_type_sizef(
     ggml_type type,
@@ -1474,8 +1865,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_type_sizefPtr = _lookup<ffi.NativeFunction<ffi.Double Function(ffi.UnsignedInt)>>('ggml_type_sizef');
-  late final _ggml_type_sizef = _ggml_type_sizefPtr.asFunction<double Function(int)>();
+  late final _ggml_type_sizefPtr =
+      _lookup<ffi.NativeFunction<ffi.Double Function(ffi.UnsignedInt)>>(
+          'ggml_type_sizef');
+  late final _ggml_type_sizef =
+      _ggml_type_sizefPtr.asFunction<double Function(int)>();
 
   ffi.Pointer<ffi.Char> ggml_type_name(
     ggml_type type,
@@ -1485,8 +1879,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_type_namePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>>('ggml_type_name');
-  late final _ggml_type_name = _ggml_type_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(int)>();
+  late final _ggml_type_namePtr = _lookup<
+          ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>>(
+      'ggml_type_name');
+  late final _ggml_type_name =
+      _ggml_type_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(int)>();
 
   ffi.Pointer<ffi.Char> ggml_op_name(
     ggml_op op,
@@ -1496,8 +1893,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_op_namePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>>('ggml_op_name');
-  late final _ggml_op_name = _ggml_op_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(int)>();
+  late final _ggml_op_namePtr = _lookup<
+          ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>>(
+      'ggml_op_name');
+  late final _ggml_op_name =
+      _ggml_op_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(int)>();
 
   ffi.Pointer<ffi.Char> ggml_op_symbol(
     ggml_op op,
@@ -1507,8 +1907,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_op_symbolPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>>('ggml_op_symbol');
-  late final _ggml_op_symbol = _ggml_op_symbolPtr.asFunction<ffi.Pointer<ffi.Char> Function(int)>();
+  late final _ggml_op_symbolPtr = _lookup<
+          ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>>(
+      'ggml_op_symbol');
+  late final _ggml_op_symbol =
+      _ggml_op_symbolPtr.asFunction<ffi.Pointer<ffi.Char> Function(int)>();
 
   ffi.Pointer<ffi.Char> ggml_unary_op_name(
     ggml_unary_op op,
@@ -1518,8 +1921,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_unary_op_namePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>>('ggml_unary_op_name');
-  late final _ggml_unary_op_name = _ggml_unary_op_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(int)>();
+  late final _ggml_unary_op_namePtr = _lookup<
+          ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>>(
+      'ggml_unary_op_name');
+  late final _ggml_unary_op_name =
+      _ggml_unary_op_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(int)>();
 
   ffi.Pointer<ffi.Char> ggml_op_desc(
     ffi.Pointer<ggml_tensor> t,
@@ -1529,8 +1935,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_op_descPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ggml_tensor>)>>('ggml_op_desc');
-  late final _ggml_op_desc = _ggml_op_descPtr.asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_op_descPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(
+              ffi.Pointer<ggml_tensor>)>>('ggml_op_desc');
+  late final _ggml_op_desc = _ggml_op_descPtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ggml_tensor>)>();
 
   int ggml_element_size(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1540,8 +1950,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_element_sizePtr = _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_tensor>)>>('ggml_element_size');
-  late final _ggml_element_size = _ggml_element_sizePtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_element_sizePtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_element_size');
+  late final _ggml_element_size = _ggml_element_sizePtr
+      .asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_is_quantized(
     ggml_type type,
@@ -1551,8 +1964,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_is_quantizedPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.UnsignedInt)>>('ggml_is_quantized');
-  late final _ggml_is_quantized = _ggml_is_quantizedPtr.asFunction<bool Function(int)>();
+  late final _ggml_is_quantizedPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.UnsignedInt)>>(
+          'ggml_is_quantized');
+  late final _ggml_is_quantized =
+      _ggml_is_quantizedPtr.asFunction<bool Function(int)>();
 
   ggml_type ggml_ftype_to_ggml_type(
     ggml_ftype ftype,
@@ -1562,8 +1978,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     ));
   }
 
-  late final _ggml_ftype_to_ggml_typePtr = _lookup<ffi.NativeFunction<ffi.UnsignedInt Function(ffi.Int)>>('ggml_ftype_to_ggml_type');
-  late final _ggml_ftype_to_ggml_type = _ggml_ftype_to_ggml_typePtr.asFunction<int Function(int)>();
+  late final _ggml_ftype_to_ggml_typePtr =
+      _lookup<ffi.NativeFunction<ffi.UnsignedInt Function(ffi.Int)>>(
+          'ggml_ftype_to_ggml_type');
+  late final _ggml_ftype_to_ggml_type =
+      _ggml_ftype_to_ggml_typePtr.asFunction<int Function(int)>();
 
   bool ggml_is_transposed(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1573,8 +1992,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_is_transposedPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>('ggml_is_transposed');
-  late final _ggml_is_transposed = _ggml_is_transposedPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_is_transposedPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_is_transposed');
+  late final _ggml_is_transposed = _ggml_is_transposedPtr
+      .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_is_permuted(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1584,8 +2006,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_is_permutedPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>('ggml_is_permuted');
-  late final _ggml_is_permuted = _ggml_is_permutedPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_is_permutedPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_is_permuted');
+  late final _ggml_is_permuted = _ggml_is_permutedPtr
+      .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_is_empty(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1595,8 +2020,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_is_emptyPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>('ggml_is_empty');
-  late final _ggml_is_empty = _ggml_is_emptyPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_is_emptyPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_is_empty');
+  late final _ggml_is_empty =
+      _ggml_is_emptyPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_is_scalar(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1606,8 +2034,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_is_scalarPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>('ggml_is_scalar');
-  late final _ggml_is_scalar = _ggml_is_scalarPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_is_scalarPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_is_scalar');
+  late final _ggml_is_scalar =
+      _ggml_is_scalarPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_is_vector(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1617,8 +2048,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_is_vectorPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>('ggml_is_vector');
-  late final _ggml_is_vector = _ggml_is_vectorPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_is_vectorPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_is_vector');
+  late final _ggml_is_vector =
+      _ggml_is_vectorPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_is_matrix(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1628,8 +2062,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_is_matrixPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>('ggml_is_matrix');
-  late final _ggml_is_matrix = _ggml_is_matrixPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_is_matrixPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_is_matrix');
+  late final _ggml_is_matrix =
+      _ggml_is_matrixPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_is_3d(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1639,8 +2076,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_is_3dPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>('ggml_is_3d');
-  late final _ggml_is_3d = _ggml_is_3dPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_is_3dPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_is_3d');
+  late final _ggml_is_3d =
+      _ggml_is_3dPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   int ggml_n_dims(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1650,8 +2090,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_n_dimsPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_tensor>)>>('ggml_n_dims');
-  late final _ggml_n_dims = _ggml_n_dimsPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_n_dimsPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_n_dims');
+  late final _ggml_n_dims =
+      _ggml_n_dimsPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_is_contiguous(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1661,8 +2104,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_is_contiguousPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>('ggml_is_contiguous');
-  late final _ggml_is_contiguous = _ggml_is_contiguousPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_is_contiguousPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_is_contiguous');
+  late final _ggml_is_contiguous = _ggml_is_contiguousPtr
+      .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_is_contiguous_0(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1672,8 +2118,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_is_contiguous_0Ptr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>('ggml_is_contiguous_0');
-  late final _ggml_is_contiguous_0 = _ggml_is_contiguous_0Ptr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_is_contiguous_0Ptr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_is_contiguous_0');
+  late final _ggml_is_contiguous_0 = _ggml_is_contiguous_0Ptr
+      .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_is_contiguous_1(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1683,8 +2132,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_is_contiguous_1Ptr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>('ggml_is_contiguous_1');
-  late final _ggml_is_contiguous_1 = _ggml_is_contiguous_1Ptr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_is_contiguous_1Ptr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_is_contiguous_1');
+  late final _ggml_is_contiguous_1 = _ggml_is_contiguous_1Ptr
+      .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_is_contiguous_2(
     ffi.Pointer<ggml_tensor> tensor,
@@ -1694,8 +2146,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_is_contiguous_2Ptr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>('ggml_is_contiguous_2');
-  late final _ggml_is_contiguous_2 = _ggml_is_contiguous_2Ptr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_is_contiguous_2Ptr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_is_contiguous_2');
+  late final _ggml_is_contiguous_2 = _ggml_is_contiguous_2Ptr
+      .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_are_same_shape(
     ffi.Pointer<ggml_tensor> t0,
@@ -1707,8 +2162,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_are_same_shapePtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_are_same_shape');
-  late final _ggml_are_same_shape = _ggml_are_same_shapePtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_are_same_shapePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_are_same_shape');
+  late final _ggml_are_same_shape = _ggml_are_same_shapePtr.asFunction<
+      bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_are_same_stride(
     ffi.Pointer<ggml_tensor> t0,
@@ -1720,8 +2179,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_are_same_stridePtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_are_same_stride');
-  late final _ggml_are_same_stride = _ggml_are_same_stridePtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_are_same_stridePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_are_same_stride');
+  late final _ggml_are_same_stride = _ggml_are_same_stridePtr.asFunction<
+      bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_can_repeat(
     ffi.Pointer<ggml_tensor> t0,
@@ -1733,15 +2196,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_can_repeatPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_can_repeat');
-  late final _ggml_can_repeat = _ggml_can_repeatPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_can_repeatPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_can_repeat');
+  late final _ggml_can_repeat = _ggml_can_repeatPtr.asFunction<
+      bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   int ggml_tensor_overhead() {
     return _ggml_tensor_overhead();
   }
 
-  late final _ggml_tensor_overheadPtr = _lookup<ffi.NativeFunction<ffi.Size Function()>>('ggml_tensor_overhead');
-  late final _ggml_tensor_overhead = _ggml_tensor_overheadPtr.asFunction<int Function()>();
+  late final _ggml_tensor_overheadPtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function()>>('ggml_tensor_overhead');
+  late final _ggml_tensor_overhead =
+      _ggml_tensor_overheadPtr.asFunction<int Function()>();
 
   bool ggml_validate_row_data(
     ggml_type type,
@@ -1755,8 +2224,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_validate_row_dataPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.UnsignedInt, ffi.Pointer<ffi.Void>, ffi.Size)>>('ggml_validate_row_data');
-  late final _ggml_validate_row_data = _ggml_validate_row_dataPtr.asFunction<bool Function(int, ffi.Pointer<ffi.Void>, int)>();
+  late final _ggml_validate_row_dataPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.UnsignedInt, ffi.Pointer<ffi.Void>,
+              ffi.Size)>>('ggml_validate_row_data');
+  late final _ggml_validate_row_data = _ggml_validate_row_dataPtr
+      .asFunction<bool Function(int, ffi.Pointer<ffi.Void>, int)>();
 
   ffi.Pointer<ggml_context> ggml_init(
     ggml_init_params params,
@@ -1766,8 +2239,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_initPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_context> Function(ggml_init_params)>>('ggml_init');
-  late final _ggml_init = _ggml_initPtr.asFunction<ffi.Pointer<ggml_context> Function(ggml_init_params)>();
+  late final _ggml_initPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_context> Function(ggml_init_params)>>('ggml_init');
+  late final _ggml_init = _ggml_initPtr
+      .asFunction<ffi.Pointer<ggml_context> Function(ggml_init_params)>();
 
   void ggml_reset(
     ffi.Pointer<ggml_context> ctx,
@@ -1777,8 +2253,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_resetPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_context>)>>('ggml_reset');
-  late final _ggml_reset = _ggml_resetPtr.asFunction<void Function(ffi.Pointer<ggml_context>)>();
+  late final _ggml_resetPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_context>)>>(
+          'ggml_reset');
+  late final _ggml_reset =
+      _ggml_resetPtr.asFunction<void Function(ffi.Pointer<ggml_context>)>();
 
   void ggml_free(
     ffi.Pointer<ggml_context> ctx,
@@ -1788,8 +2267,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_freePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_context>)>>('ggml_free');
-  late final _ggml_free = _ggml_freePtr.asFunction<void Function(ffi.Pointer<ggml_context>)>();
+  late final _ggml_freePtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_context>)>>(
+          'ggml_free');
+  late final _ggml_free =
+      _ggml_freePtr.asFunction<void Function(ffi.Pointer<ggml_context>)>();
 
   int ggml_used_mem(
     ffi.Pointer<ggml_context> ctx,
@@ -1799,8 +2281,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_used_memPtr = _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_context>)>>('ggml_used_mem');
-  late final _ggml_used_mem = _ggml_used_memPtr.asFunction<int Function(ffi.Pointer<ggml_context>)>();
+  late final _ggml_used_memPtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_context>)>>(
+          'ggml_used_mem');
+  late final _ggml_used_mem =
+      _ggml_used_memPtr.asFunction<int Function(ffi.Pointer<ggml_context>)>();
 
   bool ggml_get_no_alloc(
     ffi.Pointer<ggml_context> ctx,
@@ -1810,8 +2295,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_no_allocPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_context>)>>('ggml_get_no_alloc');
-  late final _ggml_get_no_alloc = _ggml_get_no_allocPtr.asFunction<bool Function(ffi.Pointer<ggml_context>)>();
+  late final _ggml_get_no_allocPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_context>)>>(
+          'ggml_get_no_alloc');
+  late final _ggml_get_no_alloc = _ggml_get_no_allocPtr
+      .asFunction<bool Function(ffi.Pointer<ggml_context>)>();
 
   void ggml_set_no_alloc(
     ffi.Pointer<ggml_context> ctx,
@@ -1823,8 +2311,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_no_allocPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_context>, ffi.Bool)>>('ggml_set_no_alloc');
-  late final _ggml_set_no_alloc = _ggml_set_no_allocPtr.asFunction<void Function(ffi.Pointer<ggml_context>, bool)>();
+  late final _ggml_set_no_allocPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<ggml_context>, ffi.Bool)>>('ggml_set_no_alloc');
+  late final _ggml_set_no_alloc = _ggml_set_no_allocPtr
+      .asFunction<void Function(ffi.Pointer<ggml_context>, bool)>();
 
   ffi.Pointer<ffi.Void> ggml_get_mem_buffer(
     ffi.Pointer<ggml_context> ctx,
@@ -1834,8 +2326,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_mem_bufferPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_context>)>>('ggml_get_mem_buffer');
-  late final _ggml_get_mem_buffer = _ggml_get_mem_bufferPtr.asFunction<ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_context>)>();
+  late final _ggml_get_mem_bufferPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Void> Function(
+              ffi.Pointer<ggml_context>)>>('ggml_get_mem_buffer');
+  late final _ggml_get_mem_buffer = _ggml_get_mem_bufferPtr
+      .asFunction<ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_context>)>();
 
   int ggml_get_mem_size(
     ffi.Pointer<ggml_context> ctx,
@@ -1845,8 +2341,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_mem_sizePtr = _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_context>)>>('ggml_get_mem_size');
-  late final _ggml_get_mem_size = _ggml_get_mem_sizePtr.asFunction<int Function(ffi.Pointer<ggml_context>)>();
+  late final _ggml_get_mem_sizePtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_context>)>>(
+          'ggml_get_mem_size');
+  late final _ggml_get_mem_size = _ggml_get_mem_sizePtr
+      .asFunction<int Function(ffi.Pointer<ggml_context>)>();
 
   int ggml_get_max_tensor_size(
     ffi.Pointer<ggml_context> ctx,
@@ -1856,8 +2355,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_max_tensor_sizePtr = _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_context>)>>('ggml_get_max_tensor_size');
-  late final _ggml_get_max_tensor_size = _ggml_get_max_tensor_sizePtr.asFunction<int Function(ffi.Pointer<ggml_context>)>();
+  late final _ggml_get_max_tensor_sizePtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_context>)>>(
+          'ggml_get_max_tensor_size');
+  late final _ggml_get_max_tensor_size = _ggml_get_max_tensor_sizePtr
+      .asFunction<int Function(ffi.Pointer<ggml_context>)>();
 
   ffi.Pointer<ggml_tensor> ggml_new_tensor(
     ffi.Pointer<ggml_context> ctx,
@@ -1873,8 +2375,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_new_tensorPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.UnsignedInt, ffi.Int, ffi.Pointer<ffi.Int64>)>>('ggml_new_tensor');
-  late final _ggml_new_tensor = _ggml_new_tensorPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, int, int, ffi.Pointer<ffi.Int64>)>();
+  late final _ggml_new_tensorPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.UnsignedInt,
+              ffi.Int,
+              ffi.Pointer<ffi.Int64>)>>('ggml_new_tensor');
+  late final _ggml_new_tensor = _ggml_new_tensorPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, int, int, ffi.Pointer<ffi.Int64>)>();
 
   ffi.Pointer<ggml_tensor> ggml_new_tensor_1d(
     ffi.Pointer<ggml_context> ctx,
@@ -1888,8 +2398,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_new_tensor_1dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.UnsignedInt, ffi.Int64)>>('ggml_new_tensor_1d');
-  late final _ggml_new_tensor_1d = _ggml_new_tensor_1dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, int, int)>();
+  late final _ggml_new_tensor_1dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.UnsignedInt, ffi.Int64)>>('ggml_new_tensor_1d');
+  late final _ggml_new_tensor_1d = _ggml_new_tensor_1dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_new_tensor_2d(
     ffi.Pointer<ggml_context> ctx,
@@ -1905,8 +2419,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_new_tensor_2dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.UnsignedInt, ffi.Int64, ffi.Int64)>>('ggml_new_tensor_2d');
-  late final _ggml_new_tensor_2d = _ggml_new_tensor_2dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, int, int, int)>();
+  late final _ggml_new_tensor_2dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.UnsignedInt, ffi.Int64, ffi.Int64)>>('ggml_new_tensor_2d');
+  late final _ggml_new_tensor_2d = _ggml_new_tensor_2dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_new_tensor_3d(
     ffi.Pointer<ggml_context> ctx,
@@ -1924,8 +2443,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_new_tensor_3dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.UnsignedInt, ffi.Int64, ffi.Int64, ffi.Int64)>>('ggml_new_tensor_3d');
-  late final _ggml_new_tensor_3d = _ggml_new_tensor_3dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, int, int, int, int)>();
+  late final _ggml_new_tensor_3dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.UnsignedInt,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Int64)>>('ggml_new_tensor_3d');
+  late final _ggml_new_tensor_3d = _ggml_new_tensor_3dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, int, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_new_tensor_4d(
     ffi.Pointer<ggml_context> ctx,
@@ -1945,8 +2473,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_new_tensor_4dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.UnsignedInt, ffi.Int64, ffi.Int64, ffi.Int64, ffi.Int64)>>('ggml_new_tensor_4d');
-  late final _ggml_new_tensor_4d = _ggml_new_tensor_4dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, int, int, int, int, int)>();
+  late final _ggml_new_tensor_4dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.UnsignedInt,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Int64)>>('ggml_new_tensor_4d');
+  late final _ggml_new_tensor_4d = _ggml_new_tensor_4dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, int, int, int, int, int)>();
 
   ffi.Pointer<ffi.Void> ggml_new_buffer(
     ffi.Pointer<ggml_context> ctx,
@@ -1958,8 +2496,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_new_bufferPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_context>, ffi.Size)>>('ggml_new_buffer');
-  late final _ggml_new_buffer = _ggml_new_bufferPtr.asFunction<ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_context>, int)>();
+  late final _ggml_new_bufferPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Void> Function(
+              ffi.Pointer<ggml_context>, ffi.Size)>>('ggml_new_buffer');
+  late final _ggml_new_buffer = _ggml_new_bufferPtr.asFunction<
+      ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_context>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_dup_tensor(
     ffi.Pointer<ggml_context> ctx,
@@ -1971,8 +2513,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_dup_tensorPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_dup_tensor');
-  late final _ggml_dup_tensor = _ggml_dup_tensorPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_dup_tensorPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_dup_tensor');
+  late final _ggml_dup_tensor = _ggml_dup_tensorPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_view_tensor(
     ffi.Pointer<ggml_context> ctx,
@@ -1984,8 +2531,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_view_tensorPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_view_tensor');
-  late final _ggml_view_tensor = _ggml_view_tensorPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_view_tensorPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_view_tensor');
+  late final _ggml_view_tensor = _ggml_view_tensorPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_get_first_tensor(
     ffi.Pointer<ggml_context> ctx,
@@ -1995,8 +2547,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_first_tensorPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>)>>('ggml_get_first_tensor');
-  late final _ggml_get_first_tensor = _ggml_get_first_tensorPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>)>();
+  late final _ggml_get_first_tensorPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>)>>('ggml_get_first_tensor');
+  late final _ggml_get_first_tensor = _ggml_get_first_tensorPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>)>();
 
   ffi.Pointer<ggml_tensor> ggml_get_next_tensor(
     ffi.Pointer<ggml_context> ctx,
@@ -2008,8 +2564,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_next_tensorPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_get_next_tensor');
-  late final _ggml_get_next_tensor = _ggml_get_next_tensorPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_get_next_tensorPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_get_next_tensor');
+  late final _ggml_get_next_tensor = _ggml_get_next_tensorPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_get_tensor(
     ffi.Pointer<ggml_context> ctx,
@@ -2021,8 +2582,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_tensorPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ffi.Char>)>>('ggml_get_tensor');
-  late final _ggml_get_tensor = _ggml_get_tensorPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ffi.Char>)>();
+  late final _ggml_get_tensorPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ffi.Char>)>>('ggml_get_tensor');
+  late final _ggml_get_tensor = _ggml_get_tensorPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ffi.Char>)>();
 
   void ggml_unravel_index(
     ffi.Pointer<ggml_tensor> tensor,
@@ -2042,8 +2608,23 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_unravel_indexPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Int64, ffi.Pointer<ffi.Int64>, ffi.Pointer<ffi.Int64>, ffi.Pointer<ffi.Int64>, ffi.Pointer<ffi.Int64>)>>('ggml_unravel_index');
-  late final _ggml_unravel_index = _ggml_unravel_indexPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>, int, ffi.Pointer<ffi.Int64>, ffi.Pointer<ffi.Int64>, ffi.Pointer<ffi.Int64>, ffi.Pointer<ffi.Int64>)>();
+  late final _ggml_unravel_indexPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int64,
+              ffi.Pointer<ffi.Int64>,
+              ffi.Pointer<ffi.Int64>,
+              ffi.Pointer<ffi.Int64>,
+              ffi.Pointer<ffi.Int64>)>>('ggml_unravel_index');
+  late final _ggml_unravel_index = _ggml_unravel_indexPtr.asFunction<
+      void Function(
+          ffi.Pointer<ggml_tensor>,
+          int,
+          ffi.Pointer<ffi.Int64>,
+          ffi.Pointer<ffi.Int64>,
+          ffi.Pointer<ffi.Int64>,
+          ffi.Pointer<ffi.Int64>)>();
 
   ggml_unary_op ggml_get_unary_op(
     ffi.Pointer<ggml_tensor> tensor,
@@ -2053,8 +2634,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     ));
   }
 
-  late final _ggml_get_unary_opPtr = _lookup<ffi.NativeFunction<ffi.UnsignedInt Function(ffi.Pointer<ggml_tensor>)>>('ggml_get_unary_op');
-  late final _ggml_get_unary_op = _ggml_get_unary_opPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_get_unary_opPtr = _lookup<
+          ffi
+          .NativeFunction<ffi.UnsignedInt Function(ffi.Pointer<ggml_tensor>)>>(
+      'ggml_get_unary_op');
+  late final _ggml_get_unary_op = _ggml_get_unary_opPtr
+      .asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ffi.Void> ggml_get_data(
     ffi.Pointer<ggml_tensor> tensor,
@@ -2064,8 +2649,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_dataPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_tensor>)>>('ggml_get_data');
-  late final _ggml_get_data = _ggml_get_dataPtr.asFunction<ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_get_dataPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Void> Function(
+              ffi.Pointer<ggml_tensor>)>>('ggml_get_data');
+  late final _ggml_get_data = _ggml_get_dataPtr
+      .asFunction<ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ffi.Float> ggml_get_data_f32(
     ffi.Pointer<ggml_tensor> tensor,
@@ -2075,8 +2664,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_data_f32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Float> Function(ffi.Pointer<ggml_tensor>)>>('ggml_get_data_f32');
-  late final _ggml_get_data_f32 = _ggml_get_data_f32Ptr.asFunction<ffi.Pointer<ffi.Float> Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_get_data_f32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Float> Function(
+              ffi.Pointer<ggml_tensor>)>>('ggml_get_data_f32');
+  late final _ggml_get_data_f32 = _ggml_get_data_f32Ptr
+      .asFunction<ffi.Pointer<ffi.Float> Function(ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ffi.Char> ggml_get_name(
     ffi.Pointer<ggml_tensor> tensor,
@@ -2086,8 +2679,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_namePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ggml_tensor>)>>('ggml_get_name');
-  late final _ggml_get_name = _ggml_get_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_get_namePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(
+              ffi.Pointer<ggml_tensor>)>>('ggml_get_name');
+  late final _ggml_get_name = _ggml_get_namePtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_set_name(
     ffi.Pointer<ggml_tensor> tensor,
@@ -2099,8 +2696,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_namePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Char>)>>('ggml_set_name');
-  late final _ggml_set_name = _ggml_set_namePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Char>)>();
+  late final _ggml_set_namePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ffi.Char>)>>('ggml_set_name');
+  late final _ggml_set_name = _ggml_set_namePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Char>)>();
 
   ffi.Pointer<ggml_tensor> ggml_format_name(
     ffi.Pointer<ggml_tensor> tensor,
@@ -2112,8 +2714,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_format_namePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Char>)>>('ggml_format_name');
-  late final _ggml_format_name = _ggml_format_namePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Char>)>();
+  late final _ggml_format_namePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ffi.Char>)>>('ggml_format_name');
+  late final _ggml_format_name = _ggml_format_namePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Char>)>();
 
   void ggml_set_input(
     ffi.Pointer<ggml_tensor> tensor,
@@ -2123,8 +2730,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_inputPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>)>>('ggml_set_input');
-  late final _ggml_set_input = _ggml_set_inputPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_set_inputPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_set_input');
+  late final _ggml_set_input =
+      _ggml_set_inputPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>)>();
 
   void ggml_set_output(
     ffi.Pointer<ggml_tensor> tensor,
@@ -2134,8 +2744,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_outputPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>)>>('ggml_set_output');
-  late final _ggml_set_output = _ggml_set_outputPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_set_outputPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_set_output');
+  late final _ggml_set_output =
+      _ggml_set_outputPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>)>();
 
   void ggml_set_param(
     ffi.Pointer<ggml_context> ctx,
@@ -2147,8 +2760,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_paramPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_set_param');
-  late final _ggml_set_param = _ggml_set_paramPtr.asFunction<void Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_set_paramPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_set_param');
+  late final _ggml_set_param = _ggml_set_paramPtr.asFunction<
+      void Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   void ggml_set_loss(
     ffi.Pointer<ggml_tensor> tensor,
@@ -2158,8 +2775,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_lossPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>)>>('ggml_set_loss');
-  late final _ggml_set_loss = _ggml_set_lossPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_set_lossPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_set_loss');
+  late final _ggml_set_loss =
+      _ggml_set_lossPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_dup(
     ffi.Pointer<ggml_context> ctx,
@@ -2171,8 +2791,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_dupPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_dup');
-  late final _ggml_dup = _ggml_dupPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_dupPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_dup');
+  late final _ggml_dup = _ggml_dupPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_dup_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2184,8 +2809,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_dup_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_dup_inplace');
-  late final _ggml_dup_inplace = _ggml_dup_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_dup_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_dup_inplace');
+  late final _ggml_dup_inplace = _ggml_dup_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_add(
     ffi.Pointer<ggml_context> ctx,
@@ -2199,8 +2829,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_addPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_add');
-  late final _ggml_add = _ggml_addPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_addPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_add');
+  late final _ggml_add = _ggml_addPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_add_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2214,8 +2849,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_add_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_add_inplace');
-  late final _ggml_add_inplace = _ggml_add_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_add_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_add_inplace');
+  late final _ggml_add_inplace = _ggml_add_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_add_cast(
     ffi.Pointer<ggml_context> ctx,
@@ -2231,8 +2873,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_add_castPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.UnsignedInt)>>('ggml_add_cast');
-  late final _ggml_add_cast = _ggml_add_castPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_add_castPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.UnsignedInt)>>('ggml_add_cast');
+  late final _ggml_add_cast = _ggml_add_castPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_add1(
     ffi.Pointer<ggml_context> ctx,
@@ -2246,8 +2896,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_add1Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_add1');
-  late final _ggml_add1 = _ggml_add1Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_add1Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_add1');
+  late final _ggml_add1 = _ggml_add1Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_add1_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2261,8 +2918,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_add1_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_add1_inplace');
-  late final _ggml_add1_inplace = _ggml_add1_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_add1_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_add1_inplace');
+  late final _ggml_add1_inplace = _ggml_add1_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_acc(
     ffi.Pointer<ggml_context> ctx,
@@ -2284,8 +2948,25 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_accPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Size, ffi.Size, ffi.Size, ffi.Size)>>('ggml_acc');
-  late final _ggml_acc = _ggml_accPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int, int)>();
+  late final _ggml_accPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Size,
+              ffi.Size,
+              ffi.Size,
+              ffi.Size)>>('ggml_acc');
+  late final _ggml_acc = _ggml_accPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          int,
+          int,
+          int,
+          int)>();
 
   ffi.Pointer<ggml_tensor> ggml_acc_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2307,8 +2988,25 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_acc_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Size, ffi.Size, ffi.Size, ffi.Size)>>('ggml_acc_inplace');
-  late final _ggml_acc_inplace = _ggml_acc_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int, int)>();
+  late final _ggml_acc_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Size,
+              ffi.Size,
+              ffi.Size,
+              ffi.Size)>>('ggml_acc_inplace');
+  late final _ggml_acc_inplace = _ggml_acc_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          int,
+          int,
+          int,
+          int)>();
 
   ffi.Pointer<ggml_tensor> ggml_sub(
     ffi.Pointer<ggml_context> ctx,
@@ -2322,8 +3020,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_subPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_sub');
-  late final _ggml_sub = _ggml_subPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_subPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_sub');
+  late final _ggml_sub = _ggml_subPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_sub_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2337,8 +3040,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_sub_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_sub_inplace');
-  late final _ggml_sub_inplace = _ggml_sub_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_sub_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_sub_inplace');
+  late final _ggml_sub_inplace = _ggml_sub_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_mul(
     ffi.Pointer<ggml_context> ctx,
@@ -2352,8 +3062,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_mulPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_mul');
-  late final _ggml_mul = _ggml_mulPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_mulPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_mul');
+  late final _ggml_mul = _ggml_mulPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_mul_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2367,8 +3082,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_mul_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_mul_inplace');
-  late final _ggml_mul_inplace = _ggml_mul_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_mul_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_mul_inplace');
+  late final _ggml_mul_inplace = _ggml_mul_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_div(
     ffi.Pointer<ggml_context> ctx,
@@ -2382,8 +3104,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_divPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_div');
-  late final _ggml_div = _ggml_divPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_divPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_div');
+  late final _ggml_div = _ggml_divPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_div_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2397,8 +3124,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_div_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_div_inplace');
-  late final _ggml_div_inplace = _ggml_div_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_div_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_div_inplace');
+  late final _ggml_div_inplace = _ggml_div_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_sqr(
     ffi.Pointer<ggml_context> ctx,
@@ -2410,8 +3144,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_sqrPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_sqr');
-  late final _ggml_sqr = _ggml_sqrPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_sqrPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_sqr');
+  late final _ggml_sqr = _ggml_sqrPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_sqr_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2423,8 +3162,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_sqr_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_sqr_inplace');
-  late final _ggml_sqr_inplace = _ggml_sqr_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_sqr_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_sqr_inplace');
+  late final _ggml_sqr_inplace = _ggml_sqr_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_sqrt(
     ffi.Pointer<ggml_context> ctx,
@@ -2436,8 +3180,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_sqrtPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_sqrt');
-  late final _ggml_sqrt = _ggml_sqrtPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_sqrtPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_sqrt');
+  late final _ggml_sqrt = _ggml_sqrtPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_sqrt_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2449,8 +3198,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_sqrt_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_sqrt_inplace');
-  late final _ggml_sqrt_inplace = _ggml_sqrt_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_sqrt_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_sqrt_inplace');
+  late final _ggml_sqrt_inplace = _ggml_sqrt_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_log(
     ffi.Pointer<ggml_context> ctx,
@@ -2462,8 +3216,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_logPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_log');
-  late final _ggml_log = _ggml_logPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_logPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_log');
+  late final _ggml_log = _ggml_logPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_log_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2475,8 +3234,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_log_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_log_inplace');
-  late final _ggml_log_inplace = _ggml_log_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_log_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_log_inplace');
+  late final _ggml_log_inplace = _ggml_log_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_sin(
     ffi.Pointer<ggml_context> ctx,
@@ -2488,8 +3252,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_sinPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_sin');
-  late final _ggml_sin = _ggml_sinPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_sinPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_sin');
+  late final _ggml_sin = _ggml_sinPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_sin_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2501,8 +3270,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_sin_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_sin_inplace');
-  late final _ggml_sin_inplace = _ggml_sin_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_sin_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_sin_inplace');
+  late final _ggml_sin_inplace = _ggml_sin_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_cos(
     ffi.Pointer<ggml_context> ctx,
@@ -2514,8 +3288,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_cosPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_cos');
-  late final _ggml_cos = _ggml_cosPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_cosPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_cos');
+  late final _ggml_cos = _ggml_cosPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_cos_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2527,8 +3306,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_cos_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_cos_inplace');
-  late final _ggml_cos_inplace = _ggml_cos_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_cos_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_cos_inplace');
+  late final _ggml_cos_inplace = _ggml_cos_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_sum(
     ffi.Pointer<ggml_context> ctx,
@@ -2540,8 +3324,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_sumPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_sum');
-  late final _ggml_sum = _ggml_sumPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_sumPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_sum');
+  late final _ggml_sum = _ggml_sumPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_sum_rows(
     ffi.Pointer<ggml_context> ctx,
@@ -2553,8 +3342,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_sum_rowsPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_sum_rows');
-  late final _ggml_sum_rows = _ggml_sum_rowsPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_sum_rowsPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_sum_rows');
+  late final _ggml_sum_rows = _ggml_sum_rowsPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_mean(
     ffi.Pointer<ggml_context> ctx,
@@ -2566,8 +3360,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_meanPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_mean');
-  late final _ggml_mean = _ggml_meanPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_meanPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_mean');
+  late final _ggml_mean = _ggml_meanPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_argmax(
     ffi.Pointer<ggml_context> ctx,
@@ -2579,8 +3378,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_argmaxPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_argmax');
-  late final _ggml_argmax = _ggml_argmaxPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_argmaxPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_argmax');
+  late final _ggml_argmax = _ggml_argmaxPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_count_equal(
     ffi.Pointer<ggml_context> ctx,
@@ -2594,8 +3398,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_count_equalPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_count_equal');
-  late final _ggml_count_equal = _ggml_count_equalPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_count_equalPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_count_equal');
+  late final _ggml_count_equal = _ggml_count_equalPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_repeat(
     ffi.Pointer<ggml_context> ctx,
@@ -2609,8 +3420,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_repeatPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_repeat');
-  late final _ggml_repeat = _ggml_repeatPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_repeatPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_repeat');
+  late final _ggml_repeat = _ggml_repeatPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_repeat_back(
     ffi.Pointer<ggml_context> ctx,
@@ -2624,8 +3442,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_repeat_backPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_repeat_back');
-  late final _ggml_repeat_back = _ggml_repeat_backPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_repeat_backPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_repeat_back');
+  late final _ggml_repeat_back = _ggml_repeat_backPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_concat(
     ffi.Pointer<ggml_context> ctx,
@@ -2641,8 +3466,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_concatPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_concat');
-  late final _ggml_concat = _ggml_concatPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_concatPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int)>>('ggml_concat');
+  late final _ggml_concat = _ggml_concatPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_abs(
     ffi.Pointer<ggml_context> ctx,
@@ -2654,8 +3487,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_absPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_abs');
-  late final _ggml_abs = _ggml_absPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_absPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_abs');
+  late final _ggml_abs = _ggml_absPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_abs_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2667,8 +3505,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_abs_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_abs_inplace');
-  late final _ggml_abs_inplace = _ggml_abs_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_abs_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_abs_inplace');
+  late final _ggml_abs_inplace = _ggml_abs_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_sgn(
     ffi.Pointer<ggml_context> ctx,
@@ -2680,8 +3523,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_sgnPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_sgn');
-  late final _ggml_sgn = _ggml_sgnPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_sgnPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_sgn');
+  late final _ggml_sgn = _ggml_sgnPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_sgn_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2693,8 +3541,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_sgn_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_sgn_inplace');
-  late final _ggml_sgn_inplace = _ggml_sgn_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_sgn_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_sgn_inplace');
+  late final _ggml_sgn_inplace = _ggml_sgn_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_neg(
     ffi.Pointer<ggml_context> ctx,
@@ -2706,8 +3559,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_negPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_neg');
-  late final _ggml_neg = _ggml_negPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_negPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_neg');
+  late final _ggml_neg = _ggml_negPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_neg_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2719,8 +3577,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_neg_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_neg_inplace');
-  late final _ggml_neg_inplace = _ggml_neg_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_neg_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_neg_inplace');
+  late final _ggml_neg_inplace = _ggml_neg_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_step(
     ffi.Pointer<ggml_context> ctx,
@@ -2732,8 +3595,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_stepPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_step');
-  late final _ggml_step = _ggml_stepPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_stepPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_step');
+  late final _ggml_step = _ggml_stepPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_step_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2745,8 +3613,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_step_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_step_inplace');
-  late final _ggml_step_inplace = _ggml_step_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_step_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_step_inplace');
+  late final _ggml_step_inplace = _ggml_step_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_tanh(
     ffi.Pointer<ggml_context> ctx,
@@ -2758,8 +3631,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_tanhPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_tanh');
-  late final _ggml_tanh = _ggml_tanhPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_tanhPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_tanh');
+  late final _ggml_tanh = _ggml_tanhPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_tanh_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2771,8 +3649,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_tanh_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_tanh_inplace');
-  late final _ggml_tanh_inplace = _ggml_tanh_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_tanh_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_tanh_inplace');
+  late final _ggml_tanh_inplace = _ggml_tanh_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_elu(
     ffi.Pointer<ggml_context> ctx,
@@ -2784,8 +3667,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_eluPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_elu');
-  late final _ggml_elu = _ggml_eluPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_eluPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_elu');
+  late final _ggml_elu = _ggml_eluPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_elu_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2797,8 +3685,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_elu_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_elu_inplace');
-  late final _ggml_elu_inplace = _ggml_elu_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_elu_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_elu_inplace');
+  late final _ggml_elu_inplace = _ggml_elu_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_relu(
     ffi.Pointer<ggml_context> ctx,
@@ -2810,8 +3703,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_reluPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_relu');
-  late final _ggml_relu = _ggml_reluPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_reluPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_relu');
+  late final _ggml_relu = _ggml_reluPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_leaky_relu(
     ffi.Pointer<ggml_context> ctx,
@@ -2827,8 +3725,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_leaky_reluPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Float, ffi.Bool)>>('ggml_leaky_relu');
-  late final _ggml_leaky_relu = _ggml_leaky_reluPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double, bool)>();
+  late final _ggml_leaky_reluPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Float,
+              ffi.Bool)>>('ggml_leaky_relu');
+  late final _ggml_leaky_relu = _ggml_leaky_reluPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double, bool)>();
 
   ffi.Pointer<ggml_tensor> ggml_relu_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2840,8 +3746,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_relu_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_relu_inplace');
-  late final _ggml_relu_inplace = _ggml_relu_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_relu_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_relu_inplace');
+  late final _ggml_relu_inplace = _ggml_relu_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_sigmoid(
     ffi.Pointer<ggml_context> ctx,
@@ -2853,8 +3764,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_sigmoidPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_sigmoid');
-  late final _ggml_sigmoid = _ggml_sigmoidPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_sigmoidPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_sigmoid');
+  late final _ggml_sigmoid = _ggml_sigmoidPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_sigmoid_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2866,8 +3782,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_sigmoid_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_sigmoid_inplace');
-  late final _ggml_sigmoid_inplace = _ggml_sigmoid_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_sigmoid_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_sigmoid_inplace');
+  late final _ggml_sigmoid_inplace = _ggml_sigmoid_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_gelu(
     ffi.Pointer<ggml_context> ctx,
@@ -2879,8 +3800,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_geluPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_gelu');
-  late final _ggml_gelu = _ggml_geluPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_geluPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_gelu');
+  late final _ggml_gelu = _ggml_geluPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_gelu_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2892,8 +3818,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_gelu_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_gelu_inplace');
-  late final _ggml_gelu_inplace = _ggml_gelu_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_gelu_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_gelu_inplace');
+  late final _ggml_gelu_inplace = _ggml_gelu_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_gelu_quick(
     ffi.Pointer<ggml_context> ctx,
@@ -2905,8 +3836,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_gelu_quickPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_gelu_quick');
-  late final _ggml_gelu_quick = _ggml_gelu_quickPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_gelu_quickPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_gelu_quick');
+  late final _ggml_gelu_quick = _ggml_gelu_quickPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_gelu_quick_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2918,8 +3854,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_gelu_quick_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_gelu_quick_inplace');
-  late final _ggml_gelu_quick_inplace = _ggml_gelu_quick_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_gelu_quick_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_gelu_quick_inplace');
+  late final _ggml_gelu_quick_inplace = _ggml_gelu_quick_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_silu(
     ffi.Pointer<ggml_context> ctx,
@@ -2931,8 +3872,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_siluPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_silu');
-  late final _ggml_silu = _ggml_siluPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_siluPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_silu');
+  late final _ggml_silu = _ggml_siluPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_silu_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -2944,8 +3890,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_silu_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_silu_inplace');
-  late final _ggml_silu_inplace = _ggml_silu_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_silu_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_silu_inplace');
+  late final _ggml_silu_inplace = _ggml_silu_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_silu_back(
     ffi.Pointer<ggml_context> ctx,
@@ -2959,8 +3910,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_silu_backPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_silu_back');
-  late final _ggml_silu_back = _ggml_silu_backPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_silu_backPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_silu_back');
+  late final _ggml_silu_back = _ggml_silu_backPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_hardswish(
     ffi.Pointer<ggml_context> ctx,
@@ -2972,8 +3930,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_hardswishPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_hardswish');
-  late final _ggml_hardswish = _ggml_hardswishPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_hardswishPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_hardswish');
+  late final _ggml_hardswish = _ggml_hardswishPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_hardsigmoid(
     ffi.Pointer<ggml_context> ctx,
@@ -2985,8 +3948,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_hardsigmoidPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_hardsigmoid');
-  late final _ggml_hardsigmoid = _ggml_hardsigmoidPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_hardsigmoidPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_hardsigmoid');
+  late final _ggml_hardsigmoid = _ggml_hardsigmoidPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_exp(
     ffi.Pointer<ggml_context> ctx,
@@ -2998,8 +3966,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_expPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_exp');
-  late final _ggml_exp = _ggml_expPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_expPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_exp');
+  late final _ggml_exp = _ggml_expPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_exp_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -3011,8 +3984,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_exp_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_exp_inplace');
-  late final _ggml_exp_inplace = _ggml_exp_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_exp_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_exp_inplace');
+  late final _ggml_exp_inplace = _ggml_exp_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_norm(
     ffi.Pointer<ggml_context> ctx,
@@ -3026,8 +4004,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_normPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_norm');
-  late final _ggml_norm = _ggml_normPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double)>();
+  late final _ggml_normPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_norm');
+  late final _ggml_norm = _ggml_normPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double)>();
 
   ffi.Pointer<ggml_tensor> ggml_norm_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -3041,8 +4024,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_norm_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_norm_inplace');
-  late final _ggml_norm_inplace = _ggml_norm_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double)>();
+  late final _ggml_norm_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_norm_inplace');
+  late final _ggml_norm_inplace = _ggml_norm_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double)>();
 
   ffi.Pointer<ggml_tensor> ggml_rms_norm(
     ffi.Pointer<ggml_context> ctx,
@@ -3056,8 +4044,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_rms_normPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_rms_norm');
-  late final _ggml_rms_norm = _ggml_rms_normPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double)>();
+  late final _ggml_rms_normPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_rms_norm');
+  late final _ggml_rms_norm = _ggml_rms_normPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double)>();
 
   ffi.Pointer<ggml_tensor> ggml_rms_norm_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -3071,8 +4064,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_rms_norm_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_rms_norm_inplace');
-  late final _ggml_rms_norm_inplace = _ggml_rms_norm_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double)>();
+  late final _ggml_rms_norm_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_rms_norm_inplace');
+  late final _ggml_rms_norm_inplace = _ggml_rms_norm_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double)>();
 
   ffi.Pointer<ggml_tensor> ggml_group_norm(
     ffi.Pointer<ggml_context> ctx,
@@ -3088,8 +4086,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_group_normPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Float)>>('ggml_group_norm');
-  late final _ggml_group_norm = _ggml_group_normPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, double)>();
+  late final _ggml_group_normPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Float)>>('ggml_group_norm');
+  late final _ggml_group_norm = _ggml_group_normPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, double)>();
 
   ffi.Pointer<ggml_tensor> ggml_group_norm_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -3105,8 +4111,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_group_norm_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Float)>>('ggml_group_norm_inplace');
-  late final _ggml_group_norm_inplace = _ggml_group_norm_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, double)>();
+  late final _ggml_group_norm_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Float)>>('ggml_group_norm_inplace');
+  late final _ggml_group_norm_inplace = _ggml_group_norm_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, double)>();
 
   ffi.Pointer<ggml_tensor> ggml_rms_norm_back(
     ffi.Pointer<ggml_context> ctx,
@@ -3122,8 +4136,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_rms_norm_backPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_rms_norm_back');
-  late final _ggml_rms_norm_back = _ggml_rms_norm_backPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, double)>();
+  late final _ggml_rms_norm_backPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Float)>>('ggml_rms_norm_back');
+  late final _ggml_rms_norm_back = _ggml_rms_norm_backPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, double)>();
 
   ffi.Pointer<ggml_tensor> ggml_mul_mat(
     ffi.Pointer<ggml_context> ctx,
@@ -3137,8 +4159,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_mul_matPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_mul_mat');
-  late final _ggml_mul_mat = _ggml_mul_matPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_mul_matPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_mul_mat');
+  late final _ggml_mul_mat = _ggml_mul_matPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   void ggml_mul_mat_set_prec(
     ffi.Pointer<ggml_tensor> a,
@@ -3150,8 +4179,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_mul_mat_set_precPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.UnsignedInt)>>('ggml_mul_mat_set_prec');
-  late final _ggml_mul_mat_set_prec = _ggml_mul_mat_set_precPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_mul_mat_set_precPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>,
+              ffi.UnsignedInt)>>('ggml_mul_mat_set_prec');
+  late final _ggml_mul_mat_set_prec = _ggml_mul_mat_set_precPtr
+      .asFunction<void Function(ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_mul_mat_id(
     ffi.Pointer<ggml_context> ctx,
@@ -3167,8 +4200,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_mul_mat_idPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_mul_mat_id');
-  late final _ggml_mul_mat_id = _ggml_mul_mat_idPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_mul_mat_idPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_mul_mat_id');
+  late final _ggml_mul_mat_id = _ggml_mul_mat_idPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_out_prod(
     ffi.Pointer<ggml_context> ctx,
@@ -3182,8 +4226,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_out_prodPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_out_prod');
-  late final _ggml_out_prod = _ggml_out_prodPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_out_prodPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_out_prod');
+  late final _ggml_out_prod = _ggml_out_prodPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_scale(
     ffi.Pointer<ggml_context> ctx,
@@ -3197,8 +4248,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_scalePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_scale');
-  late final _ggml_scale = _ggml_scalePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double)>();
+  late final _ggml_scalePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_scale');
+  late final _ggml_scale = _ggml_scalePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double)>();
 
   ffi.Pointer<ggml_tensor> ggml_scale_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -3212,8 +4268,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_scale_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_scale_inplace');
-  late final _ggml_scale_inplace = _ggml_scale_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double)>();
+  late final _ggml_scale_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_scale_inplace');
+  late final _ggml_scale_inplace = _ggml_scale_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double)>();
 
   ffi.Pointer<ggml_tensor> ggml_set(
     ffi.Pointer<ggml_context> ctx,
@@ -3235,8 +4296,25 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_setPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Size, ffi.Size, ffi.Size, ffi.Size)>>('ggml_set');
-  late final _ggml_set = _ggml_setPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int, int)>();
+  late final _ggml_setPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Size,
+              ffi.Size,
+              ffi.Size,
+              ffi.Size)>>('ggml_set');
+  late final _ggml_set = _ggml_setPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          int,
+          int,
+          int,
+          int)>();
 
   ffi.Pointer<ggml_tensor> ggml_set_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -3258,8 +4336,25 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Size, ffi.Size, ffi.Size, ffi.Size)>>('ggml_set_inplace');
-  late final _ggml_set_inplace = _ggml_set_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int, int)>();
+  late final _ggml_set_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Size,
+              ffi.Size,
+              ffi.Size,
+              ffi.Size)>>('ggml_set_inplace');
+  late final _ggml_set_inplace = _ggml_set_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          int,
+          int,
+          int,
+          int)>();
 
   ffi.Pointer<ggml_tensor> ggml_set_1d(
     ffi.Pointer<ggml_context> ctx,
@@ -3275,8 +4370,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_1dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Size)>>('ggml_set_1d');
-  late final _ggml_set_1d = _ggml_set_1dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_set_1dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Size)>>('ggml_set_1d');
+  late final _ggml_set_1d = _ggml_set_1dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_set_1d_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -3292,8 +4395,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_1d_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Size)>>('ggml_set_1d_inplace');
-  late final _ggml_set_1d_inplace = _ggml_set_1d_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_set_1d_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Size)>>('ggml_set_1d_inplace');
+  late final _ggml_set_1d_inplace = _ggml_set_1d_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_set_2d(
     ffi.Pointer<ggml_context> ctx,
@@ -3311,8 +4422,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_2dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Size, ffi.Size)>>('ggml_set_2d');
-  late final _ggml_set_2d = _ggml_set_2dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int)>();
+  late final _ggml_set_2dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Size,
+              ffi.Size)>>('ggml_set_2d');
+  late final _ggml_set_2d = _ggml_set_2dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_set_2d_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -3330,8 +4450,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_2d_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Size, ffi.Size)>>('ggml_set_2d_inplace');
-  late final _ggml_set_2d_inplace = _ggml_set_2d_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int)>();
+  late final _ggml_set_2d_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Size,
+              ffi.Size)>>('ggml_set_2d_inplace');
+  late final _ggml_set_2d_inplace = _ggml_set_2d_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_cpy(
     ffi.Pointer<ggml_context> ctx,
@@ -3345,8 +4474,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_cpyPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_cpy');
-  late final _ggml_cpy = _ggml_cpyPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_cpyPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_cpy');
+  late final _ggml_cpy = _ggml_cpyPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_cast(
     ffi.Pointer<ggml_context> ctx,
@@ -3360,8 +4494,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_castPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.UnsignedInt)>>('ggml_cast');
-  late final _ggml_cast = _ggml_castPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_castPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.UnsignedInt)>>('ggml_cast');
+  late final _ggml_cast = _ggml_castPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_cont(
     ffi.Pointer<ggml_context> ctx,
@@ -3373,8 +4512,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_contPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_cont');
-  late final _ggml_cont = _ggml_contPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_contPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_cont');
+  late final _ggml_cont = _ggml_contPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_cont_1d(
     ffi.Pointer<ggml_context> ctx,
@@ -3388,8 +4532,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_cont_1dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int64)>>('ggml_cont_1d');
-  late final _ggml_cont_1d = _ggml_cont_1dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_cont_1dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Int64)>>('ggml_cont_1d');
+  late final _ggml_cont_1d = _ggml_cont_1dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_cont_2d(
     ffi.Pointer<ggml_context> ctx,
@@ -3405,8 +4554,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_cont_2dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int64, ffi.Int64)>>('ggml_cont_2d');
-  late final _ggml_cont_2d = _ggml_cont_2dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int)>();
+  late final _ggml_cont_2dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Int64, ffi.Int64)>>('ggml_cont_2d');
+  late final _ggml_cont_2d = _ggml_cont_2dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_cont_3d(
     ffi.Pointer<ggml_context> ctx,
@@ -3424,8 +4578,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_cont_3dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int64, ffi.Int64, ffi.Int64)>>('ggml_cont_3d');
-  late final _ggml_cont_3d = _ggml_cont_3dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int, int)>();
+  late final _ggml_cont_3dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Int64)>>('ggml_cont_3d');
+  late final _ggml_cont_3d = _ggml_cont_3dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_cont_4d(
     ffi.Pointer<ggml_context> ctx,
@@ -3445,8 +4608,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_cont_4dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int64, ffi.Int64, ffi.Int64, ffi.Int64)>>('ggml_cont_4d');
-  late final _ggml_cont_4d = _ggml_cont_4dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int, int, int)>();
+  late final _ggml_cont_4dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Int64)>>('ggml_cont_4d');
+  late final _ggml_cont_4d = _ggml_cont_4dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, int, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_reshape(
     ffi.Pointer<ggml_context> ctx,
@@ -3460,8 +4633,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_reshapePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_reshape');
-  late final _ggml_reshape = _ggml_reshapePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_reshapePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_reshape');
+  late final _ggml_reshape = _ggml_reshapePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_reshape_1d(
     ffi.Pointer<ggml_context> ctx,
@@ -3475,8 +4655,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_reshape_1dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int64)>>('ggml_reshape_1d');
-  late final _ggml_reshape_1d = _ggml_reshape_1dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_reshape_1dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Int64)>>('ggml_reshape_1d');
+  late final _ggml_reshape_1d = _ggml_reshape_1dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_reshape_2d(
     ffi.Pointer<ggml_context> ctx,
@@ -3492,8 +4677,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_reshape_2dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int64, ffi.Int64)>>('ggml_reshape_2d');
-  late final _ggml_reshape_2d = _ggml_reshape_2dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int)>();
+  late final _ggml_reshape_2dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int64,
+              ffi.Int64)>>('ggml_reshape_2d');
+  late final _ggml_reshape_2d = _ggml_reshape_2dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_reshape_3d(
     ffi.Pointer<ggml_context> ctx,
@@ -3511,8 +4704,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_reshape_3dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int64, ffi.Int64, ffi.Int64)>>('ggml_reshape_3d');
-  late final _ggml_reshape_3d = _ggml_reshape_3dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int, int)>();
+  late final _ggml_reshape_3dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Int64)>>('ggml_reshape_3d');
+  late final _ggml_reshape_3d = _ggml_reshape_3dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_reshape_4d(
     ffi.Pointer<ggml_context> ctx,
@@ -3532,8 +4734,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_reshape_4dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int64, ffi.Int64, ffi.Int64, ffi.Int64)>>('ggml_reshape_4d');
-  late final _ggml_reshape_4d = _ggml_reshape_4dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int, int, int)>();
+  late final _ggml_reshape_4dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Int64)>>('ggml_reshape_4d');
+  late final _ggml_reshape_4d = _ggml_reshape_4dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, int, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_view_1d(
     ffi.Pointer<ggml_context> ctx,
@@ -3549,8 +4761,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_view_1dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int64, ffi.Size)>>('ggml_view_1d');
-  late final _ggml_view_1d = _ggml_view_1dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int)>();
+  late final _ggml_view_1dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Int64, ffi.Size)>>('ggml_view_1d');
+  late final _ggml_view_1d = _ggml_view_1dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_view_2d(
     ffi.Pointer<ggml_context> ctx,
@@ -3570,8 +4787,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_view_2dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int64, ffi.Int64, ffi.Size, ffi.Size)>>('ggml_view_2d');
-  late final _ggml_view_2d = _ggml_view_2dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int, int, int)>();
+  late final _ggml_view_2dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Size,
+              ffi.Size)>>('ggml_view_2d');
+  late final _ggml_view_2d = _ggml_view_2dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, int, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_view_3d(
     ffi.Pointer<ggml_context> ctx,
@@ -3595,8 +4822,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_view_3dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int64, ffi.Int64, ffi.Int64, ffi.Size, ffi.Size, ffi.Size)>>('ggml_view_3d');
-  late final _ggml_view_3d = _ggml_view_3dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int, int, int, int, int)>();
+  late final _ggml_view_3dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Size,
+              ffi.Size,
+              ffi.Size)>>('ggml_view_3d');
+  late final _ggml_view_3d = _ggml_view_3dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, int, int, int, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_view_4d(
     ffi.Pointer<ggml_context> ctx,
@@ -3624,8 +4863,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_view_4dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int64, ffi.Int64, ffi.Int64, ffi.Int64, ffi.Size, ffi.Size, ffi.Size, ffi.Size)>>('ggml_view_4d');
-  late final _ggml_view_4d = _ggml_view_4dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int, int, int, int, int, int, int)>();
+  late final _ggml_view_4dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Size,
+              ffi.Size,
+              ffi.Size,
+              ffi.Size)>>('ggml_view_4d');
+  late final _ggml_view_4d = _ggml_view_4dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, int, int, int, int, int, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_permute(
     ffi.Pointer<ggml_context> ctx,
@@ -3645,8 +4898,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_permutePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Int)>>('ggml_permute');
-  late final _ggml_permute = _ggml_permutePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int, int, int)>();
+  late final _ggml_permutePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int)>>('ggml_permute');
+  late final _ggml_permute = _ggml_permutePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, int, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_transpose(
     ffi.Pointer<ggml_context> ctx,
@@ -3658,8 +4921,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_transposePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_transpose');
-  late final _ggml_transpose = _ggml_transposePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_transposePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_transpose');
+  late final _ggml_transpose = _ggml_transposePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_get_rows(
     ffi.Pointer<ggml_context> ctx,
@@ -3673,8 +4941,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_rowsPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_get_rows');
-  late final _ggml_get_rows = _ggml_get_rowsPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_get_rowsPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_get_rows');
+  late final _ggml_get_rows = _ggml_get_rowsPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_get_rows_back(
     ffi.Pointer<ggml_context> ctx,
@@ -3690,8 +4965,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_rows_backPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_get_rows_back');
-  late final _ggml_get_rows_back = _ggml_get_rows_backPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_get_rows_backPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_get_rows_back');
+  late final _ggml_get_rows_back = _ggml_get_rows_backPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_diag(
     ffi.Pointer<ggml_context> ctx,
@@ -3703,8 +4989,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_diagPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_diag');
-  late final _ggml_diag = _ggml_diagPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_diagPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_diag');
+  late final _ggml_diag = _ggml_diagPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_diag_mask_inf(
     ffi.Pointer<ggml_context> ctx,
@@ -3718,8 +5009,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_diag_mask_infPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_diag_mask_inf');
-  late final _ggml_diag_mask_inf = _ggml_diag_mask_infPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_diag_mask_infPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_diag_mask_inf');
+  late final _ggml_diag_mask_inf = _ggml_diag_mask_infPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_diag_mask_inf_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -3733,8 +5029,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_diag_mask_inf_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_diag_mask_inf_inplace');
-  late final _ggml_diag_mask_inf_inplace = _ggml_diag_mask_inf_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_diag_mask_inf_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int)>>('ggml_diag_mask_inf_inplace');
+  late final _ggml_diag_mask_inf_inplace =
+      _ggml_diag_mask_inf_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_diag_mask_zero(
     ffi.Pointer<ggml_context> ctx,
@@ -3748,8 +5052,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_diag_mask_zeroPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_diag_mask_zero');
-  late final _ggml_diag_mask_zero = _ggml_diag_mask_zeroPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_diag_mask_zeroPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_diag_mask_zero');
+  late final _ggml_diag_mask_zero = _ggml_diag_mask_zeroPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_diag_mask_zero_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -3763,8 +5072,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_diag_mask_zero_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_diag_mask_zero_inplace');
-  late final _ggml_diag_mask_zero_inplace = _ggml_diag_mask_zero_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_diag_mask_zero_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int)>>('ggml_diag_mask_zero_inplace');
+  late final _ggml_diag_mask_zero_inplace =
+      _ggml_diag_mask_zero_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_soft_max(
     ffi.Pointer<ggml_context> ctx,
@@ -3776,8 +5093,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_soft_maxPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_soft_max');
-  late final _ggml_soft_max = _ggml_soft_maxPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_soft_maxPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_soft_max');
+  late final _ggml_soft_max = _ggml_soft_maxPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_soft_max_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -3789,8 +5111,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_soft_max_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>>('ggml_soft_max_inplace');
-  late final _ggml_soft_max_inplace = _ggml_soft_max_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_soft_max_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_soft_max_inplace');
+  late final _ggml_soft_max_inplace = _ggml_soft_max_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_soft_max_ext(
     ffi.Pointer<ggml_context> ctx,
@@ -3808,8 +5135,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_soft_max_extPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Float, ffi.Float)>>('ggml_soft_max_ext');
-  late final _ggml_soft_max_ext = _ggml_soft_max_extPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, double, double)>();
+  late final _ggml_soft_max_extPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Float,
+              ffi.Float)>>('ggml_soft_max_ext');
+  late final _ggml_soft_max_ext = _ggml_soft_max_extPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          double,
+          double)>();
 
   ffi.Pointer<ggml_tensor> ggml_soft_max_ext_back(
     ffi.Pointer<ggml_context> ctx,
@@ -3827,8 +5167,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_soft_max_ext_backPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Float, ffi.Float)>>('ggml_soft_max_ext_back');
-  late final _ggml_soft_max_ext_back = _ggml_soft_max_ext_backPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, double, double)>();
+  late final _ggml_soft_max_ext_backPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Float,
+              ffi.Float)>>('ggml_soft_max_ext_back');
+  late final _ggml_soft_max_ext_back = _ggml_soft_max_ext_backPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          double,
+          double)>();
 
   ffi.Pointer<ggml_tensor> ggml_soft_max_ext_back_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -3846,8 +5199,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_soft_max_ext_back_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Float, ffi.Float)>>('ggml_soft_max_ext_back_inplace');
-  late final _ggml_soft_max_ext_back_inplace = _ggml_soft_max_ext_back_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, double, double)>();
+  late final _ggml_soft_max_ext_back_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Float,
+              ffi.Float)>>('ggml_soft_max_ext_back_inplace');
+  late final _ggml_soft_max_ext_back_inplace =
+      _ggml_soft_max_ext_back_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              double,
+              double)>();
 
   ffi.Pointer<ggml_tensor> ggml_rope(
     ffi.Pointer<ggml_context> ctx,
@@ -3865,8 +5232,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_ropePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int)>>('ggml_rope');
-  late final _ggml_rope = _ggml_ropePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int)>();
+  late final _ggml_ropePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int)>>('ggml_rope');
+  late final _ggml_rope = _ggml_ropePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_rope_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -3884,8 +5260,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_rope_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int)>>('ggml_rope_inplace');
-  late final _ggml_rope_inplace = _ggml_rope_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int)>();
+  late final _ggml_rope_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int)>>('ggml_rope_inplace');
+  late final _ggml_rope_inplace = _ggml_rope_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_rope_ext(
     ffi.Pointer<ggml_context> ctx,
@@ -3919,8 +5304,37 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_rope_extPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Float, ffi.Float, ffi.Float, ffi.Float, ffi.Float, ffi.Float)>>('ggml_rope_ext');
-  late final _ggml_rope_ext = _ggml_rope_extPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int, double, double, double, double, double, double)>();
+  late final _ggml_rope_extPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float)>>('ggml_rope_ext');
+  late final _ggml_rope_ext = _ggml_rope_extPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          int,
+          int,
+          int,
+          double,
+          double,
+          double,
+          double,
+          double,
+          double)>();
 
   ffi.Pointer<ggml_tensor> ggml_rope_multi(
     ffi.Pointer<ggml_context> ctx,
@@ -3956,8 +5370,39 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_rope_multiPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Pointer<ffi.Int>, ffi.Int, ffi.Int, ffi.Float, ffi.Float, ffi.Float, ffi.Float, ffi.Float, ffi.Float)>>('ggml_rope_multi');
-  late final _ggml_rope_multi = _ggml_rope_multiPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, ffi.Pointer<ffi.Int>, int, int, double, double, double, double, double, double)>();
+  late final _ggml_rope_multiPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Pointer<ffi.Int>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float)>>('ggml_rope_multi');
+  late final _ggml_rope_multi = _ggml_rope_multiPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          int,
+          ffi.Pointer<ffi.Int>,
+          int,
+          int,
+          double,
+          double,
+          double,
+          double,
+          double,
+          double)>();
 
   ffi.Pointer<ggml_tensor> ggml_rope_ext_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -3991,8 +5436,37 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_rope_ext_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Float, ffi.Float, ffi.Float, ffi.Float, ffi.Float, ffi.Float)>>('ggml_rope_ext_inplace');
-  late final _ggml_rope_ext_inplace = _ggml_rope_ext_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int, double, double, double, double, double, double)>();
+  late final _ggml_rope_ext_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float)>>('ggml_rope_ext_inplace');
+  late final _ggml_rope_ext_inplace = _ggml_rope_ext_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          int,
+          int,
+          int,
+          double,
+          double,
+          double,
+          double,
+          double,
+          double)>();
 
   ffi.Pointer<ggml_tensor> ggml_rope_custom(
     ffi.Pointer<ggml_context> ctx,
@@ -4024,8 +5498,35 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_rope_customPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Float, ffi.Float, ffi.Float, ffi.Float, ffi.Float, ffi.Float)>>('ggml_rope_custom');
-  late final _ggml_rope_custom = _ggml_rope_customPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int, double, double, double, double, double, double)>();
+  late final _ggml_rope_customPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float)>>('ggml_rope_custom');
+  late final _ggml_rope_custom = _ggml_rope_customPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          int,
+          int,
+          int,
+          double,
+          double,
+          double,
+          double,
+          double,
+          double)>();
 
   ffi.Pointer<ggml_tensor> ggml_rope_custom_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -4057,8 +5558,36 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_rope_custom_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Float, ffi.Float, ffi.Float, ffi.Float, ffi.Float, ffi.Float)>>('ggml_rope_custom_inplace');
-  late final _ggml_rope_custom_inplace = _ggml_rope_custom_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int, double, double, double, double, double, double)>();
+  late final _ggml_rope_custom_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float)>>('ggml_rope_custom_inplace');
+  late final _ggml_rope_custom_inplace =
+      _ggml_rope_custom_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              int,
+              int,
+              int,
+              double,
+              double,
+              double,
+              double,
+              double,
+              double)>();
 
   void ggml_rope_yarn_corr_dims(
     int n_dims,
@@ -4078,8 +5607,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_rope_yarn_corr_dimsPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Int, ffi.Int, ffi.Float, ffi.Float, ffi.Float, ffi.Pointer<ffi.Float>)>>('ggml_rope_yarn_corr_dims');
-  late final _ggml_rope_yarn_corr_dims = _ggml_rope_yarn_corr_dimsPtr.asFunction<void Function(int, int, double, double, double, ffi.Pointer<ffi.Float>)>();
+  late final _ggml_rope_yarn_corr_dimsPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Int, ffi.Int, ffi.Float, ffi.Float, ffi.Float,
+              ffi.Pointer<ffi.Float>)>>('ggml_rope_yarn_corr_dims');
+  late final _ggml_rope_yarn_corr_dims =
+      _ggml_rope_yarn_corr_dimsPtr.asFunction<
+          void Function(
+              int, int, double, double, double, ffi.Pointer<ffi.Float>)>();
 
   ffi.Pointer<ggml_tensor> ggml_rope_ext_back(
     ffi.Pointer<ggml_context> ctx,
@@ -4113,8 +5648,37 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_rope_ext_backPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Float, ffi.Float, ffi.Float, ffi.Float, ffi.Float, ffi.Float)>>('ggml_rope_ext_back');
-  late final _ggml_rope_ext_back = _ggml_rope_ext_backPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int, double, double, double, double, double, double)>();
+  late final _ggml_rope_ext_backPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float)>>('ggml_rope_ext_back');
+  late final _ggml_rope_ext_back = _ggml_rope_ext_backPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          int,
+          int,
+          int,
+          double,
+          double,
+          double,
+          double,
+          double,
+          double)>();
 
   ffi.Pointer<ggml_tensor> ggml_rope_multi_back(
     ffi.Pointer<ggml_context> ctx,
@@ -4150,8 +5714,39 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_rope_multi_backPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Pointer<ffi.Int>, ffi.Int, ffi.Int, ffi.Float, ffi.Float, ffi.Float, ffi.Float, ffi.Float, ffi.Float)>>('ggml_rope_multi_back');
-  late final _ggml_rope_multi_back = _ggml_rope_multi_backPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, ffi.Pointer<ffi.Int>, int, int, double, double, double, double, double, double)>();
+  late final _ggml_rope_multi_backPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Pointer<ffi.Int>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float)>>('ggml_rope_multi_back');
+  late final _ggml_rope_multi_back = _ggml_rope_multi_backPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          int,
+          ffi.Pointer<ffi.Int>,
+          int,
+          int,
+          double,
+          double,
+          double,
+          double,
+          double,
+          double)>();
 
   ffi.Pointer<ggml_tensor> ggml_clamp(
     ffi.Pointer<ggml_context> ctx,
@@ -4167,8 +5762,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_clampPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Float, ffi.Float)>>('ggml_clamp');
-  late final _ggml_clamp = _ggml_clampPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, double, double)>();
+  late final _ggml_clampPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Float, ffi.Float)>>('ggml_clamp');
+  late final _ggml_clamp = _ggml_clampPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, double, double)>();
 
   ffi.Pointer<ggml_tensor> ggml_im2col(
     ffi.Pointer<ggml_context> ctx,
@@ -4198,8 +5798,33 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_im2colPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Int, ffi.Int, ffi.Int, ffi.Bool, ffi.UnsignedInt)>>('ggml_im2col');
-  late final _ggml_im2col = _ggml_im2colPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int, int, int, int, bool, int)>();
+  late final _ggml_im2colPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Bool,
+              ffi.UnsignedInt)>>('ggml_im2col');
+  late final _ggml_im2col = _ggml_im2colPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          int,
+          int,
+          int,
+          int,
+          int,
+          int,
+          bool,
+          int)>();
 
   ffi.Pointer<ggml_tensor> ggml_im2col_back(
     ffi.Pointer<ggml_context> ctx,
@@ -4229,8 +5854,33 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_im2col_backPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Int64>, ffi.Int, ffi.Int, ffi.Int, ffi.Int, ffi.Int, ffi.Int, ffi.Bool)>>('ggml_im2col_back');
-  late final _ggml_im2col_back = _ggml_im2col_backPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Int64>, int, int, int, int, int, int, bool)>();
+  late final _ggml_im2col_backPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ffi.Int64>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Bool)>>('ggml_im2col_back');
+  late final _ggml_im2col_back = _ggml_im2col_backPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ffi.Int64>,
+          int,
+          int,
+          int,
+          int,
+          int,
+          int,
+          bool)>();
 
   ffi.Pointer<ggml_tensor> ggml_conv_1d(
     ffi.Pointer<ggml_context> ctx,
@@ -4250,8 +5900,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_conv_1dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int)>>('ggml_conv_1d');
-  late final _ggml_conv_1d = _ggml_conv_1dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int)>();
+  late final _ggml_conv_1dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int)>>('ggml_conv_1d');
+  late final _ggml_conv_1d = _ggml_conv_1dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_conv_1d_ph(
     ffi.Pointer<ggml_context> ctx,
@@ -4269,8 +5929,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_conv_1d_phPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int)>>('ggml_conv_1d_ph');
-  late final _ggml_conv_1d_ph = _ggml_conv_1d_phPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int)>();
+  late final _ggml_conv_1d_phPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int)>>('ggml_conv_1d_ph');
+  late final _ggml_conv_1d_ph = _ggml_conv_1d_phPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_conv_1d_dw(
     ffi.Pointer<ggml_context> ctx,
@@ -4290,8 +5959,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_conv_1d_dwPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int)>>('ggml_conv_1d_dw');
-  late final _ggml_conv_1d_dw = _ggml_conv_1d_dwPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int)>();
+  late final _ggml_conv_1d_dwPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int)>>('ggml_conv_1d_dw');
+  late final _ggml_conv_1d_dw = _ggml_conv_1d_dwPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_conv_1d_dw_ph(
     ffi.Pointer<ggml_context> ctx,
@@ -4309,8 +5988,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_conv_1d_dw_phPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int)>>('ggml_conv_1d_dw_ph');
-  late final _ggml_conv_1d_dw_ph = _ggml_conv_1d_dw_phPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int)>();
+  late final _ggml_conv_1d_dw_phPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int)>>('ggml_conv_1d_dw_ph');
+  late final _ggml_conv_1d_dw_ph = _ggml_conv_1d_dw_phPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_conv_transpose_1d(
     ffi.Pointer<ggml_context> ctx,
@@ -4330,8 +6018,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_conv_transpose_1dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int)>>('ggml_conv_transpose_1d');
-  late final _ggml_conv_transpose_1d = _ggml_conv_transpose_1dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int)>();
+  late final _ggml_conv_transpose_1dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int)>>('ggml_conv_transpose_1d');
+  late final _ggml_conv_transpose_1d = _ggml_conv_transpose_1dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_conv_2d(
     ffi.Pointer<ggml_context> ctx,
@@ -4357,8 +6055,29 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_conv_2dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Int, ffi.Int, ffi.Int)>>('ggml_conv_2d');
-  late final _ggml_conv_2d = _ggml_conv_2dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int, int, int, int)>();
+  late final _ggml_conv_2dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int)>>('ggml_conv_2d');
+  late final _ggml_conv_2d = _ggml_conv_2dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          int,
+          int,
+          int,
+          int,
+          int,
+          int)>();
 
   ffi.Pointer<ggml_tensor> ggml_conv_2d_sk_p0(
     ffi.Pointer<ggml_context> ctx,
@@ -4372,8 +6091,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_conv_2d_sk_p0Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_conv_2d_sk_p0');
-  late final _ggml_conv_2d_sk_p0 = _ggml_conv_2d_sk_p0Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_conv_2d_sk_p0Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_conv_2d_sk_p0');
+  late final _ggml_conv_2d_sk_p0 = _ggml_conv_2d_sk_p0Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_conv_2d_s1_ph(
     ffi.Pointer<ggml_context> ctx,
@@ -4387,8 +6113,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_conv_2d_s1_phPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_conv_2d_s1_ph');
-  late final _ggml_conv_2d_s1_ph = _ggml_conv_2d_s1_phPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_conv_2d_s1_phPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_conv_2d_s1_ph');
+  late final _ggml_conv_2d_s1_ph = _ggml_conv_2d_s1_phPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_conv_2d_dw(
     ffi.Pointer<ggml_context> ctx,
@@ -4414,8 +6147,29 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_conv_2d_dwPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Int, ffi.Int, ffi.Int)>>('ggml_conv_2d_dw');
-  late final _ggml_conv_2d_dw = _ggml_conv_2d_dwPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int, int, int, int)>();
+  late final _ggml_conv_2d_dwPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int)>>('ggml_conv_2d_dw');
+  late final _ggml_conv_2d_dw = _ggml_conv_2d_dwPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          int,
+          int,
+          int,
+          int,
+          int,
+          int)>();
 
   ffi.Pointer<ggml_tensor> ggml_conv_transpose_2d_p0(
     ffi.Pointer<ggml_context> ctx,
@@ -4431,8 +6185,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_conv_transpose_2d_p0Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_conv_transpose_2d_p0');
-  late final _ggml_conv_transpose_2d_p0 = _ggml_conv_transpose_2d_p0Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_conv_transpose_2d_p0Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int)>>('ggml_conv_transpose_2d_p0');
+  late final _ggml_conv_transpose_2d_p0 =
+      _ggml_conv_transpose_2d_p0Ptr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_pool_1d(
     ffi.Pointer<ggml_context> ctx,
@@ -4452,8 +6215,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_pool_1dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.UnsignedInt, ffi.Int, ffi.Int, ffi.Int)>>('ggml_pool_1d');
-  late final _ggml_pool_1d = _ggml_pool_1dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int, int, int)>();
+  late final _ggml_pool_1dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.UnsignedInt,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int)>>('ggml_pool_1d');
+  late final _ggml_pool_1d = _ggml_pool_1dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, int, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_pool_2d(
     ffi.Pointer<ggml_context> ctx,
@@ -4479,8 +6252,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_pool_2dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.UnsignedInt, ffi.Int, ffi.Int, ffi.Int, ffi.Int, ffi.Float, ffi.Float)>>('ggml_pool_2d');
-  late final _ggml_pool_2d = _ggml_pool_2dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int, int, int, int, double, double)>();
+  late final _ggml_pool_2dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.UnsignedInt,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Float,
+              ffi.Float)>>('ggml_pool_2d');
+  late final _ggml_pool_2d = _ggml_pool_2dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, int, int, int, int, int, double, double)>();
 
   ffi.Pointer<ggml_tensor> ggml_pool_2d_back(
     ffi.Pointer<ggml_context> ctx,
@@ -4508,8 +6294,31 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_pool_2d_backPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.UnsignedInt, ffi.Int, ffi.Int, ffi.Int, ffi.Int, ffi.Float, ffi.Float)>>('ggml_pool_2d_back');
-  late final _ggml_pool_2d_back = _ggml_pool_2d_backPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, int, int, int, int, int, double, double)>();
+  late final _ggml_pool_2d_backPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.UnsignedInt,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Float,
+              ffi.Float)>>('ggml_pool_2d_back');
+  late final _ggml_pool_2d_back = _ggml_pool_2d_backPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          int,
+          int,
+          int,
+          int,
+          int,
+          double,
+          double)>();
 
   ffi.Pointer<ggml_tensor> ggml_upscale(
     ffi.Pointer<ggml_context> ctx,
@@ -4523,8 +6332,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_upscalePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_upscale');
-  late final _ggml_upscale = _ggml_upscalePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_upscalePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_upscale');
+  late final _ggml_upscale = _ggml_upscalePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_upscale_ext(
     ffi.Pointer<ggml_context> ctx,
@@ -4544,8 +6358,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_upscale_extPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Int)>>('ggml_upscale_ext');
-  late final _ggml_upscale_ext = _ggml_upscale_extPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int, int, int)>();
+  late final _ggml_upscale_extPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int)>>('ggml_upscale_ext');
+  late final _ggml_upscale_ext = _ggml_upscale_extPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, int, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_pad(
     ffi.Pointer<ggml_context> ctx,
@@ -4565,8 +6389,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_padPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Int)>>('ggml_pad');
-  late final _ggml_pad = _ggml_padPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int, int, int)>();
+  late final _ggml_padPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int)>>('ggml_pad');
+  late final _ggml_pad = _ggml_padPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, int, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_pad_reflect_1d(
     ffi.Pointer<ggml_context> ctx,
@@ -4582,8 +6416,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_pad_reflect_1dPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int)>>('ggml_pad_reflect_1d');
-  late final _ggml_pad_reflect_1d = _ggml_pad_reflect_1dPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int)>();
+  late final _ggml_pad_reflect_1dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int)>>('ggml_pad_reflect_1d');
+  late final _ggml_pad_reflect_1d = _ggml_pad_reflect_1dPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_timestep_embedding(
     ffi.Pointer<ggml_context> ctx,
@@ -4599,8 +6441,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_timestep_embeddingPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int)>>('ggml_timestep_embedding');
-  late final _ggml_timestep_embedding = _ggml_timestep_embeddingPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int)>();
+  late final _ggml_timestep_embeddingPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int)>>('ggml_timestep_embedding');
+  late final _ggml_timestep_embedding = _ggml_timestep_embeddingPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_argsort(
     ffi.Pointer<ggml_context> ctx,
@@ -4614,8 +6464,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_argsortPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.UnsignedInt)>>('ggml_argsort');
-  late final _ggml_argsort = _ggml_argsortPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_argsortPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.UnsignedInt)>>('ggml_argsort');
+  late final _ggml_argsort = _ggml_argsortPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_arange(
     ffi.Pointer<ggml_context> ctx,
@@ -4631,8 +6486,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_arangePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Float, ffi.Float, ffi.Float)>>('ggml_arange');
-  late final _ggml_arange = _ggml_arangePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, double, double, double)>();
+  late final _ggml_arangePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Float, ffi.Float, ffi.Float)>>('ggml_arange');
+  late final _ggml_arange = _ggml_arangePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, double, double, double)>();
 
   ffi.Pointer<ggml_tensor> ggml_top_k(
     ffi.Pointer<ggml_context> ctx,
@@ -4646,8 +6506,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_top_kPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_top_k');
-  late final _ggml_top_k = _ggml_top_kPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_top_kPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_top_k');
+  late final _ggml_top_k = _ggml_top_kPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_flash_attn_ext(
     ffi.Pointer<ggml_context> ctx,
@@ -4671,8 +6536,27 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_flash_attn_extPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Float, ffi.Float, ffi.Float)>>('ggml_flash_attn_ext');
-  late final _ggml_flash_attn_ext = _ggml_flash_attn_extPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, double, double, double)>();
+  late final _ggml_flash_attn_extPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Float,
+              ffi.Float,
+              ffi.Float)>>('ggml_flash_attn_ext');
+  late final _ggml_flash_attn_ext = _ggml_flash_attn_extPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          double,
+          double,
+          double)>();
 
   void ggml_flash_attn_ext_set_prec(
     ffi.Pointer<ggml_tensor> a,
@@ -4684,8 +6568,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_flash_attn_ext_set_precPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.UnsignedInt)>>('ggml_flash_attn_ext_set_prec');
-  late final _ggml_flash_attn_ext_set_prec = _ggml_flash_attn_ext_set_precPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_flash_attn_ext_set_precPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>,
+              ffi.UnsignedInt)>>('ggml_flash_attn_ext_set_prec');
+  late final _ggml_flash_attn_ext_set_prec = _ggml_flash_attn_ext_set_precPtr
+      .asFunction<void Function(ffi.Pointer<ggml_tensor>, int)>();
 
   ggml_prec ggml_flash_attn_ext_get_prec(
     ffi.Pointer<ggml_tensor> a,
@@ -4695,8 +6583,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     ));
   }
 
-  late final _ggml_flash_attn_ext_get_precPtr = _lookup<ffi.NativeFunction<ffi.UnsignedInt Function(ffi.Pointer<ggml_tensor>)>>('ggml_flash_attn_ext_get_prec');
-  late final _ggml_flash_attn_ext_get_prec = _ggml_flash_attn_ext_get_precPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_flash_attn_ext_get_precPtr = _lookup<
+          ffi
+          .NativeFunction<ffi.UnsignedInt Function(ffi.Pointer<ggml_tensor>)>>(
+      'ggml_flash_attn_ext_get_prec');
+  late final _ggml_flash_attn_ext_get_prec = _ggml_flash_attn_ext_get_precPtr
+      .asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_flash_attn_back(
     ffi.Pointer<ggml_context> ctx,
@@ -4716,8 +6608,23 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_flash_attn_backPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Bool)>>('ggml_flash_attn_back');
-  late final _ggml_flash_attn_back = _ggml_flash_attn_backPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, bool)>();
+  late final _ggml_flash_attn_backPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Bool)>>('ggml_flash_attn_back');
+  late final _ggml_flash_attn_back = _ggml_flash_attn_backPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          bool)>();
 
   ffi.Pointer<ggml_tensor> ggml_ssm_conv(
     ffi.Pointer<ggml_context> ctx,
@@ -4731,8 +6638,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_ssm_convPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_ssm_conv');
-  late final _ggml_ssm_conv = _ggml_ssm_convPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_ssm_convPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_ssm_conv');
+  late final _ggml_ssm_conv = _ggml_ssm_convPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_ssm_scan(
     ffi.Pointer<ggml_context> ctx,
@@ -4754,8 +6668,25 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_ssm_scanPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_ssm_scan');
-  late final _ggml_ssm_scan = _ggml_ssm_scanPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_ssm_scanPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_ssm_scan');
+  late final _ggml_ssm_scan = _ggml_ssm_scanPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_win_part(
     ffi.Pointer<ggml_context> ctx,
@@ -4769,8 +6700,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_win_partPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_win_part');
-  late final _ggml_win_part = _ggml_win_partPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_win_partPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_win_part');
+  late final _ggml_win_part = _ggml_win_partPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_win_unpart(
     ffi.Pointer<ggml_context> ctx,
@@ -4788,8 +6724,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_win_unpartPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int)>>('ggml_win_unpart');
-  late final _ggml_win_unpart = _ggml_win_unpartPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int, int)>();
+  late final _ggml_win_unpartPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Int,
+              ffi.Int,
+              ffi.Int)>>('ggml_win_unpart');
+  late final _ggml_win_unpart = _ggml_win_unpartPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, int, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_unary(
     ffi.Pointer<ggml_context> ctx,
@@ -4803,8 +6748,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_unaryPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.UnsignedInt)>>('ggml_unary');
-  late final _ggml_unary = _ggml_unaryPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_unaryPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.UnsignedInt)>>('ggml_unary');
+  late final _ggml_unary = _ggml_unaryPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_unary_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -4818,8 +6768,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_unary_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.UnsignedInt)>>('ggml_unary_inplace');
-  late final _ggml_unary_inplace = _ggml_unary_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_unary_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.UnsignedInt)>>('ggml_unary_inplace');
+  late final _ggml_unary_inplace = _ggml_unary_inplacePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_get_rel_pos(
     ffi.Pointer<ggml_context> ctx,
@@ -4835,8 +6792,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_rel_posPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int)>>('ggml_get_rel_pos');
-  late final _ggml_get_rel_pos = _ggml_get_rel_posPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int)>();
+  late final _ggml_get_rel_posPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int)>>('ggml_get_rel_pos');
+  late final _ggml_get_rel_pos = _ggml_get_rel_posPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, int, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_add_rel_pos(
     ffi.Pointer<ggml_context> ctx,
@@ -4852,8 +6814,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_add_rel_posPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_add_rel_pos');
-  late final _ggml_add_rel_pos = _ggml_add_rel_posPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_add_rel_posPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_add_rel_pos');
+  late final _ggml_add_rel_pos = _ggml_add_rel_posPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_add_rel_pos_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -4869,8 +6842,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_add_rel_pos_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_add_rel_pos_inplace');
-  late final _ggml_add_rel_pos_inplace = _ggml_add_rel_pos_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_add_rel_pos_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_add_rel_pos_inplace');
+  late final _ggml_add_rel_pos_inplace =
+      _ggml_add_rel_pos_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_rwkv_wkv6(
     ffi.Pointer<ggml_context> ctx,
@@ -4892,8 +6877,25 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_rwkv_wkv6Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_rwkv_wkv6');
-  late final _ggml_rwkv_wkv6 = _ggml_rwkv_wkv6Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_rwkv_wkv6Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_rwkv_wkv6');
+  late final _ggml_rwkv_wkv6 = _ggml_rwkv_wkv6Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_gated_linear_attn(
     ffi.Pointer<ggml_context> ctx,
@@ -4915,8 +6917,25 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_gated_linear_attnPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_gated_linear_attn');
-  late final _ggml_gated_linear_attn = _ggml_gated_linear_attnPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, double)>();
+  late final _ggml_gated_linear_attnPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Float)>>('ggml_gated_linear_attn');
+  late final _ggml_gated_linear_attn = _ggml_gated_linear_attnPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          double)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_unary_f32(
     ffi.Pointer<ggml_context> ctx,
@@ -4930,8 +6949,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_unary_f32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ggml_unary_op_f32_t)>>('ggml_map_unary_f32');
-  late final _ggml_map_unary_f32 = _ggml_map_unary_f32Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ggml_unary_op_f32_t)>();
+  late final _ggml_map_unary_f32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_unary_op_f32_t)>>('ggml_map_unary_f32');
+  late final _ggml_map_unary_f32 = _ggml_map_unary_f32Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ggml_unary_op_f32_t)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_unary_inplace_f32(
     ffi.Pointer<ggml_context> ctx,
@@ -4945,8 +6971,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_unary_inplace_f32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ggml_unary_op_f32_t)>>('ggml_map_unary_inplace_f32');
-  late final _ggml_map_unary_inplace_f32 = _ggml_map_unary_inplace_f32Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ggml_unary_op_f32_t)>();
+  late final _ggml_map_unary_inplace_f32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_unary_op_f32_t)>>('ggml_map_unary_inplace_f32');
+  late final _ggml_map_unary_inplace_f32 =
+      _ggml_map_unary_inplace_f32Ptr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ggml_unary_op_f32_t)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_binary_f32(
     ffi.Pointer<ggml_context> ctx,
@@ -4962,8 +6996,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_binary_f32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_binary_op_f32_t)>>('ggml_map_binary_f32');
-  late final _ggml_map_binary_f32 = _ggml_map_binary_f32Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_binary_op_f32_t)>();
+  late final _ggml_map_binary_f32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_binary_op_f32_t)>>('ggml_map_binary_f32');
+  late final _ggml_map_binary_f32 = _ggml_map_binary_f32Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ggml_binary_op_f32_t)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_binary_inplace_f32(
     ffi.Pointer<ggml_context> ctx,
@@ -4979,8 +7024,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_binary_inplace_f32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_binary_op_f32_t)>>('ggml_map_binary_inplace_f32');
-  late final _ggml_map_binary_inplace_f32 = _ggml_map_binary_inplace_f32Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_binary_op_f32_t)>();
+  late final _ggml_map_binary_inplace_f32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_binary_op_f32_t)>>('ggml_map_binary_inplace_f32');
+  late final _ggml_map_binary_inplace_f32 =
+      _ggml_map_binary_inplace_f32Ptr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_binary_op_f32_t)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_custom1_f32(
     ffi.Pointer<ggml_context> ctx,
@@ -4994,8 +7051,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_custom1_f32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ggml_custom1_op_f32_t)>>('ggml_map_custom1_f32');
-  late final _ggml_map_custom1_f32 = _ggml_map_custom1_f32Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ggml_custom1_op_f32_t)>();
+  late final _ggml_map_custom1_f32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom1_op_f32_t)>>('ggml_map_custom1_f32');
+  late final _ggml_map_custom1_f32 = _ggml_map_custom1_f32Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ggml_custom1_op_f32_t)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_custom1_inplace_f32(
     ffi.Pointer<ggml_context> ctx,
@@ -5009,8 +7073,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_custom1_inplace_f32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ggml_custom1_op_f32_t)>>('ggml_map_custom1_inplace_f32');
-  late final _ggml_map_custom1_inplace_f32 = _ggml_map_custom1_inplace_f32Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ggml_custom1_op_f32_t)>();
+  late final _ggml_map_custom1_inplace_f32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom1_op_f32_t)>>('ggml_map_custom1_inplace_f32');
+  late final _ggml_map_custom1_inplace_f32 =
+      _ggml_map_custom1_inplace_f32Ptr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>, ggml_custom1_op_f32_t)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_custom2_f32(
     ffi.Pointer<ggml_context> ctx,
@@ -5026,8 +7098,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_custom2_f32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom2_op_f32_t)>>('ggml_map_custom2_f32');
-  late final _ggml_map_custom2_f32 = _ggml_map_custom2_f32Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom2_op_f32_t)>();
+  late final _ggml_map_custom2_f32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom2_op_f32_t)>>('ggml_map_custom2_f32');
+  late final _ggml_map_custom2_f32 = _ggml_map_custom2_f32Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ggml_custom2_op_f32_t)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_custom2_inplace_f32(
     ffi.Pointer<ggml_context> ctx,
@@ -5043,8 +7126,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_custom2_inplace_f32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom2_op_f32_t)>>('ggml_map_custom2_inplace_f32');
-  late final _ggml_map_custom2_inplace_f32 = _ggml_map_custom2_inplace_f32Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom2_op_f32_t)>();
+  late final _ggml_map_custom2_inplace_f32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom2_op_f32_t)>>('ggml_map_custom2_inplace_f32');
+  late final _ggml_map_custom2_inplace_f32 =
+      _ggml_map_custom2_inplace_f32Ptr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom2_op_f32_t)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_custom3_f32(
     ffi.Pointer<ggml_context> ctx,
@@ -5062,8 +7157,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_custom3_f32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom3_op_f32_t)>>('ggml_map_custom3_f32');
-  late final _ggml_map_custom3_f32 = _ggml_map_custom3_f32Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom3_op_f32_t)>();
+  late final _ggml_map_custom3_f32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom3_op_f32_t)>>('ggml_map_custom3_f32');
+  late final _ggml_map_custom3_f32 = _ggml_map_custom3_f32Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ggml_custom3_op_f32_t)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_custom3_inplace_f32(
     ffi.Pointer<ggml_context> ctx,
@@ -5081,8 +7189,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_custom3_inplace_f32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom3_op_f32_t)>>('ggml_map_custom3_inplace_f32');
-  late final _ggml_map_custom3_inplace_f32 = _ggml_map_custom3_inplace_f32Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom3_op_f32_t)>();
+  late final _ggml_map_custom3_inplace_f32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom3_op_f32_t)>>('ggml_map_custom3_inplace_f32');
+  late final _ggml_map_custom3_inplace_f32 =
+      _ggml_map_custom3_inplace_f32Ptr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom3_op_f32_t)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_custom1(
     ffi.Pointer<ggml_context> ctx,
@@ -5100,8 +7222,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_custom1Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ggml_custom1_op_t, ffi.Int, ffi.Pointer<ffi.Void>)>>('ggml_map_custom1');
-  late final _ggml_map_custom1 = _ggml_map_custom1Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ggml_custom1_op_t, int, ffi.Pointer<ffi.Void>)>();
+  late final _ggml_map_custom1Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom1_op_t,
+              ffi.Int,
+              ffi.Pointer<ffi.Void>)>>('ggml_map_custom1');
+  late final _ggml_map_custom1 = _ggml_map_custom1Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ggml_custom1_op_t,
+          int,
+          ffi.Pointer<ffi.Void>)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_custom1_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -5119,8 +7254,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_custom1_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ggml_custom1_op_t, ffi.Int, ffi.Pointer<ffi.Void>)>>('ggml_map_custom1_inplace');
-  late final _ggml_map_custom1_inplace = _ggml_map_custom1_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ggml_custom1_op_t, int, ffi.Pointer<ffi.Void>)>();
+  late final _ggml_map_custom1_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom1_op_t,
+              ffi.Int,
+              ffi.Pointer<ffi.Void>)>>('ggml_map_custom1_inplace');
+  late final _ggml_map_custom1_inplace =
+      _ggml_map_custom1_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom1_op_t,
+              int,
+              ffi.Pointer<ffi.Void>)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_custom2(
     ffi.Pointer<ggml_context> ctx,
@@ -5140,8 +7289,23 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_custom2Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom2_op_t, ffi.Int, ffi.Pointer<ffi.Void>)>>('ggml_map_custom2');
-  late final _ggml_map_custom2 = _ggml_map_custom2Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom2_op_t, int, ffi.Pointer<ffi.Void>)>();
+  late final _ggml_map_custom2Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom2_op_t,
+              ffi.Int,
+              ffi.Pointer<ffi.Void>)>>('ggml_map_custom2');
+  late final _ggml_map_custom2 = _ggml_map_custom2Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ggml_custom2_op_t,
+          int,
+          ffi.Pointer<ffi.Void>)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_custom2_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -5161,8 +7325,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_custom2_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom2_op_t, ffi.Int, ffi.Pointer<ffi.Void>)>>('ggml_map_custom2_inplace');
-  late final _ggml_map_custom2_inplace = _ggml_map_custom2_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom2_op_t, int, ffi.Pointer<ffi.Void>)>();
+  late final _ggml_map_custom2_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom2_op_t,
+              ffi.Int,
+              ffi.Pointer<ffi.Void>)>>('ggml_map_custom2_inplace');
+  late final _ggml_map_custom2_inplace =
+      _ggml_map_custom2_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom2_op_t,
+              int,
+              ffi.Pointer<ffi.Void>)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_custom3(
     ffi.Pointer<ggml_context> ctx,
@@ -5184,8 +7364,25 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_custom3Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom3_op_t, ffi.Int, ffi.Pointer<ffi.Void>)>>('ggml_map_custom3');
-  late final _ggml_map_custom3 = _ggml_map_custom3Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom3_op_t, int, ffi.Pointer<ffi.Void>)>();
+  late final _ggml_map_custom3Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom3_op_t,
+              ffi.Int,
+              ffi.Pointer<ffi.Void>)>>('ggml_map_custom3');
+  late final _ggml_map_custom3 = _ggml_map_custom3Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ggml_custom3_op_t,
+          int,
+          ffi.Pointer<ffi.Void>)>();
 
   ffi.Pointer<ggml_tensor> ggml_map_custom3_inplace(
     ffi.Pointer<ggml_context> ctx,
@@ -5207,8 +7404,26 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_map_custom3_inplacePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom3_op_t, ffi.Int, ffi.Pointer<ffi.Void>)>>('ggml_map_custom3_inplace');
-  late final _ggml_map_custom3_inplace = _ggml_map_custom3_inplacePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ggml_custom3_op_t, int, ffi.Pointer<ffi.Void>)>();
+  late final _ggml_map_custom3_inplacePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom3_op_t,
+              ffi.Int,
+              ffi.Pointer<ffi.Void>)>>('ggml_map_custom3_inplace');
+  late final _ggml_map_custom3_inplace =
+      _ggml_map_custom3_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ggml_custom3_op_t,
+              int,
+              ffi.Pointer<ffi.Void>)>();
 
   ffi.Pointer<ggml_tensor> ggml_cross_entropy_loss(
     ffi.Pointer<ggml_context> ctx,
@@ -5222,8 +7437,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_cross_entropy_lossPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_cross_entropy_loss');
-  late final _ggml_cross_entropy_loss = _ggml_cross_entropy_lossPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_cross_entropy_lossPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_cross_entropy_loss');
+  late final _ggml_cross_entropy_loss = _ggml_cross_entropy_lossPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_cross_entropy_loss_back(
     ffi.Pointer<ggml_context> ctx,
@@ -5239,8 +7461,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_cross_entropy_loss_backPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_cross_entropy_loss_back');
-  late final _ggml_cross_entropy_loss_back = _ggml_cross_entropy_loss_backPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_cross_entropy_loss_backPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_cross_entropy_loss_back');
+  late final _ggml_cross_entropy_loss_back =
+      _ggml_cross_entropy_loss_backPtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_opt_step_adamw(
     ffi.Pointer<ggml_context> ctx,
@@ -5260,8 +7494,23 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_opt_step_adamwPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_opt_step_adamw');
-  late final _ggml_opt_step_adamw = _ggml_opt_step_adamwPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_opt_step_adamwPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_opt_step_adamw');
+  late final _ggml_opt_step_adamw = _ggml_opt_step_adamwPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_context>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>,
+          ffi.Pointer<ggml_tensor>)>();
 
   void ggml_build_forward_expand(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -5273,8 +7522,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_build_forward_expandPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)>>('ggml_build_forward_expand');
-  late final _ggml_build_forward_expand = _ggml_build_forward_expandPtr.asFunction<void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_build_forward_expandPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_build_forward_expand');
+  late final _ggml_build_forward_expand =
+      _ggml_build_forward_expandPtr.asFunction<
+          void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)>();
 
   void ggml_build_backward_expand(
     ffi.Pointer<ggml_context> ctx_static,
@@ -5290,8 +7544,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_build_backward_expandPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_context>, ffi.Pointer<ggml_cgraph>, ffi.Bool)>>('ggml_build_backward_expand');
-  late final _ggml_build_backward_expand = _ggml_build_backward_expandPtr.asFunction<void Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_context>, ffi.Pointer<ggml_cgraph>, bool)>();
+  late final _ggml_build_backward_expandPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_cgraph>,
+              ffi.Bool)>>('ggml_build_backward_expand');
+  late final _ggml_build_backward_expand =
+      _ggml_build_backward_expandPtr.asFunction<
+          void Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_cgraph>, bool)>();
 
   ffi.Pointer<ggml_cgraph> ggml_new_graph(
     ffi.Pointer<ggml_context> ctx,
@@ -5301,8 +7564,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_new_graphPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_cgraph> Function(ffi.Pointer<ggml_context>)>>('ggml_new_graph');
-  late final _ggml_new_graph = _ggml_new_graphPtr.asFunction<ffi.Pointer<ggml_cgraph> Function(ffi.Pointer<ggml_context>)>();
+  late final _ggml_new_graphPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_cgraph> Function(
+              ffi.Pointer<ggml_context>)>>('ggml_new_graph');
+  late final _ggml_new_graph = _ggml_new_graphPtr.asFunction<
+      ffi.Pointer<ggml_cgraph> Function(ffi.Pointer<ggml_context>)>();
 
   ffi.Pointer<ggml_cgraph> ggml_new_graph_custom(
     ffi.Pointer<ggml_context> ctx,
@@ -5316,8 +7583,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_new_graph_customPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_cgraph> Function(ffi.Pointer<ggml_context>, ffi.Size, ffi.Bool)>>('ggml_new_graph_custom');
-  late final _ggml_new_graph_custom = _ggml_new_graph_customPtr.asFunction<ffi.Pointer<ggml_cgraph> Function(ffi.Pointer<ggml_context>, int, bool)>();
+  late final _ggml_new_graph_customPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_cgraph> Function(ffi.Pointer<ggml_context>, ffi.Size,
+              ffi.Bool)>>('ggml_new_graph_custom');
+  late final _ggml_new_graph_custom = _ggml_new_graph_customPtr.asFunction<
+      ffi.Pointer<ggml_cgraph> Function(
+          ffi.Pointer<ggml_context>, int, bool)>();
 
   ffi.Pointer<ggml_cgraph> ggml_graph_dup(
     ffi.Pointer<ggml_context> ctx,
@@ -5329,8 +7601,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_dupPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_cgraph> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_cgraph>)>>('ggml_graph_dup');
-  late final _ggml_graph_dup = _ggml_graph_dupPtr.asFunction<ffi.Pointer<ggml_cgraph> Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_graph_dupPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_cgraph> Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_graph_dup');
+  late final _ggml_graph_dup = _ggml_graph_dupPtr.asFunction<
+      ffi.Pointer<ggml_cgraph> Function(
+          ffi.Pointer<ggml_context>, ffi.Pointer<ggml_cgraph>)>();
 
   void ggml_graph_cpy(
     ffi.Pointer<ggml_cgraph> src,
@@ -5342,8 +7619,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_cpyPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cgraph>)>>('ggml_graph_cpy');
-  late final _ggml_graph_cpy = _ggml_graph_cpyPtr.asFunction<void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_graph_cpyPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_graph_cpy');
+  late final _ggml_graph_cpy = _ggml_graph_cpyPtr.asFunction<
+      void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cgraph>)>();
 
   void ggml_graph_reset(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -5353,8 +7634,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_resetPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_cgraph>)>>('ggml_graph_reset');
-  late final _ggml_graph_reset = _ggml_graph_resetPtr.asFunction<void Function(ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_graph_resetPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_cgraph>)>>(
+          'ggml_graph_reset');
+  late final _ggml_graph_reset = _ggml_graph_resetPtr
+      .asFunction<void Function(ffi.Pointer<ggml_cgraph>)>();
 
   void ggml_graph_clear(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -5364,8 +7648,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_clearPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_cgraph>)>>('ggml_graph_clear');
-  late final _ggml_graph_clear = _ggml_graph_clearPtr.asFunction<void Function(ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_graph_clearPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_cgraph>)>>(
+          'ggml_graph_clear');
+  late final _ggml_graph_clear = _ggml_graph_clearPtr
+      .asFunction<void Function(ffi.Pointer<ggml_cgraph>)>();
 
   int ggml_graph_size(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -5375,8 +7662,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_sizePtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_cgraph>)>>('ggml_graph_size');
-  late final _ggml_graph_size = _ggml_graph_sizePtr.asFunction<int Function(ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_graph_sizePtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_cgraph>)>>(
+          'ggml_graph_size');
+  late final _ggml_graph_size =
+      _ggml_graph_sizePtr.asFunction<int Function(ffi.Pointer<ggml_cgraph>)>();
 
   ffi.Pointer<ggml_tensor> ggml_graph_node(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -5388,8 +7678,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_nodePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>, ffi.Int)>>('ggml_graph_node');
-  late final _ggml_graph_node = _ggml_graph_nodePtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>, int)>();
+  late final _ggml_graph_nodePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_cgraph>, ffi.Int)>>('ggml_graph_node');
+  late final _ggml_graph_node = _ggml_graph_nodePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>, int)>();
 
   ffi.Pointer<ffi.Pointer<ggml_tensor>> ggml_graph_nodes(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -5399,8 +7693,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_nodesPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Pointer<ggml_tensor>> Function(ffi.Pointer<ggml_cgraph>)>>('ggml_graph_nodes');
-  late final _ggml_graph_nodes = _ggml_graph_nodesPtr.asFunction<ffi.Pointer<ffi.Pointer<ggml_tensor>> Function(ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_graph_nodesPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Pointer<ggml_tensor>> Function(
+              ffi.Pointer<ggml_cgraph>)>>('ggml_graph_nodes');
+  late final _ggml_graph_nodes = _ggml_graph_nodesPtr.asFunction<
+      ffi.Pointer<ffi.Pointer<ggml_tensor>> Function(
+          ffi.Pointer<ggml_cgraph>)>();
 
   int ggml_graph_n_nodes(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -5410,8 +7709,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_n_nodesPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_cgraph>)>>('ggml_graph_n_nodes');
-  late final _ggml_graph_n_nodes = _ggml_graph_n_nodesPtr.asFunction<int Function(ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_graph_n_nodesPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_cgraph>)>>(
+          'ggml_graph_n_nodes');
+  late final _ggml_graph_n_nodes = _ggml_graph_n_nodesPtr
+      .asFunction<int Function(ffi.Pointer<ggml_cgraph>)>();
 
   void ggml_graph_add_node(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -5423,15 +7725,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_add_nodePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)>>('ggml_graph_add_node');
-  late final _ggml_graph_add_node = _ggml_graph_add_nodePtr.asFunction<void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_graph_add_nodePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_graph_add_node');
+  late final _ggml_graph_add_node = _ggml_graph_add_nodePtr.asFunction<
+      void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)>();
 
   int ggml_graph_overhead() {
     return _ggml_graph_overhead();
   }
 
-  late final _ggml_graph_overheadPtr = _lookup<ffi.NativeFunction<ffi.Size Function()>>('ggml_graph_overhead');
-  late final _ggml_graph_overhead = _ggml_graph_overheadPtr.asFunction<int Function()>();
+  late final _ggml_graph_overheadPtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function()>>('ggml_graph_overhead');
+  late final _ggml_graph_overhead =
+      _ggml_graph_overheadPtr.asFunction<int Function()>();
 
   int ggml_graph_overhead_custom(
     int size,
@@ -5443,8 +7751,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_overhead_customPtr = _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Size, ffi.Bool)>>('ggml_graph_overhead_custom');
-  late final _ggml_graph_overhead_custom = _ggml_graph_overhead_customPtr.asFunction<int Function(int, bool)>();
+  late final _ggml_graph_overhead_customPtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Size, ffi.Bool)>>(
+          'ggml_graph_overhead_custom');
+  late final _ggml_graph_overhead_custom =
+      _ggml_graph_overhead_customPtr.asFunction<int Function(int, bool)>();
 
   ffi.Pointer<ggml_tensor> ggml_graph_get_tensor(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -5456,8 +7767,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_get_tensorPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ffi.Char>)>>('ggml_graph_get_tensor');
-  late final _ggml_graph_get_tensor = _ggml_graph_get_tensorPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ffi.Char>)>();
+  late final _ggml_graph_get_tensorPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ffi.Char>)>>('ggml_graph_get_tensor');
+  late final _ggml_graph_get_tensor = _ggml_graph_get_tensorPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_cgraph>, ffi.Pointer<ffi.Char>)>();
 
   ffi.Pointer<ggml_tensor> ggml_graph_get_grad(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -5469,8 +7785,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_get_gradPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)>>('ggml_graph_get_grad');
-  late final _ggml_graph_get_grad = _ggml_graph_get_gradPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_graph_get_gradPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_graph_get_grad');
+  late final _ggml_graph_get_grad = _ggml_graph_get_gradPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ggml_tensor> ggml_graph_get_grad_acc(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -5482,8 +7803,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_get_grad_accPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)>>('ggml_graph_get_grad_acc');
-  late final _ggml_graph_get_grad_acc = _ggml_graph_get_grad_accPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_graph_get_grad_accPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_graph_get_grad_acc');
+  late final _ggml_graph_get_grad_acc = _ggml_graph_get_grad_accPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(
+          ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)>();
 
   void ggml_graph_export(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -5495,8 +7821,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_exportPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ffi.Char>)>>('ggml_graph_export');
-  late final _ggml_graph_export = _ggml_graph_exportPtr.asFunction<void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ffi.Char>)>();
+  late final _ggml_graph_exportPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ffi.Char>)>>('ggml_graph_export');
+  late final _ggml_graph_export = _ggml_graph_exportPtr.asFunction<
+      void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ffi.Char>)>();
 
   ffi.Pointer<ggml_cgraph> ggml_graph_import(
     ffi.Pointer<ffi.Char> fname,
@@ -5510,8 +7840,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_importPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_cgraph> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Pointer<ggml_context>>, ffi.Pointer<ffi.Pointer<ggml_context>>)>>('ggml_graph_import');
-  late final _ggml_graph_import = _ggml_graph_importPtr.asFunction<ffi.Pointer<ggml_cgraph> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Pointer<ggml_context>>, ffi.Pointer<ffi.Pointer<ggml_context>>)>();
+  late final _ggml_graph_importPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_cgraph> Function(
+              ffi.Pointer<ffi.Char>,
+              ffi.Pointer<ffi.Pointer<ggml_context>>,
+              ffi.Pointer<ffi.Pointer<ggml_context>>)>>('ggml_graph_import');
+  late final _ggml_graph_import = _ggml_graph_importPtr.asFunction<
+      ffi.Pointer<ggml_cgraph> Function(
+          ffi.Pointer<ffi.Char>,
+          ffi.Pointer<ffi.Pointer<ggml_context>>,
+          ffi.Pointer<ffi.Pointer<ggml_context>>)>();
 
   void ggml_graph_print(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -5521,8 +7860,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_printPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_cgraph>)>>('ggml_graph_print');
-  late final _ggml_graph_print = _ggml_graph_printPtr.asFunction<void Function(ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_graph_printPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_cgraph>)>>(
+          'ggml_graph_print');
+  late final _ggml_graph_print = _ggml_graph_printPtr
+      .asFunction<void Function(ffi.Pointer<ggml_cgraph>)>();
 
   void ggml_graph_dump_dot(
     ffi.Pointer<ggml_cgraph> gb,
@@ -5536,8 +7878,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_dump_dotPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cgraph>, ffi.Pointer<ffi.Char>)>>('ggml_graph_dump_dot');
-  late final _ggml_graph_dump_dot = _ggml_graph_dump_dotPtr.asFunction<void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cgraph>, ffi.Pointer<ffi.Char>)>();
+  late final _ggml_graph_dump_dotPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ffi.Char>)>>('ggml_graph_dump_dot');
+  late final _ggml_graph_dump_dot = _ggml_graph_dump_dotPtr.asFunction<
+      void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cgraph>,
+          ffi.Pointer<ffi.Char>)>();
 
   void ggml_log_set(
     ggml_log_callback log_callback,
@@ -5549,8 +7896,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_log_setPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_log_callback, ffi.Pointer<ffi.Void>)>>('ggml_log_set');
-  late final _ggml_log_set = _ggml_log_setPtr.asFunction<void Function(ggml_log_callback, ffi.Pointer<ffi.Void>)>();
+  late final _ggml_log_setPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ggml_log_callback, ffi.Pointer<ffi.Void>)>>('ggml_log_set');
+  late final _ggml_log_set = _ggml_log_setPtr
+      .asFunction<void Function(ggml_log_callback, ffi.Pointer<ffi.Void>)>();
 
   ffi.Pointer<ggml_tensor> ggml_set_zero(
     ffi.Pointer<ggml_tensor> tensor,
@@ -5560,8 +7911,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_zeroPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>)>>('ggml_set_zero');
-  late final _ggml_set_zero = _ggml_set_zeroPtr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_set_zeroPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_tensor>)>>('ggml_set_zero');
+  late final _ggml_set_zero = _ggml_set_zeroPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>)>();
 
   void ggml_quantize_init(
     ggml_type type,
@@ -5571,15 +7926,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_quantize_initPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.UnsignedInt)>>('ggml_quantize_init');
-  late final _ggml_quantize_init = _ggml_quantize_initPtr.asFunction<void Function(int)>();
+  late final _ggml_quantize_initPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.UnsignedInt)>>(
+          'ggml_quantize_init');
+  late final _ggml_quantize_init =
+      _ggml_quantize_initPtr.asFunction<void Function(int)>();
 
   void ggml_quantize_free() {
     return _ggml_quantize_free();
   }
 
-  late final _ggml_quantize_freePtr = _lookup<ffi.NativeFunction<ffi.Void Function()>>('ggml_quantize_free');
-  late final _ggml_quantize_free = _ggml_quantize_freePtr.asFunction<void Function()>();
+  late final _ggml_quantize_freePtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function()>>('ggml_quantize_free');
+  late final _ggml_quantize_free =
+      _ggml_quantize_freePtr.asFunction<void Function()>();
 
   bool ggml_quantize_requires_imatrix(
     ggml_type type,
@@ -5589,8 +7949,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_quantize_requires_imatrixPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.UnsignedInt)>>('ggml_quantize_requires_imatrix');
-  late final _ggml_quantize_requires_imatrix = _ggml_quantize_requires_imatrixPtr.asFunction<bool Function(int)>();
+  late final _ggml_quantize_requires_imatrixPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.UnsignedInt)>>(
+          'ggml_quantize_requires_imatrix');
+  late final _ggml_quantize_requires_imatrix =
+      _ggml_quantize_requires_imatrixPtr.asFunction<bool Function(int)>();
 
   int ggml_quantize_chunk(
     ggml_type type,
@@ -5612,8 +7975,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_quantize_chunkPtr = _lookup<ffi.NativeFunction<ffi.Size Function(ffi.UnsignedInt, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Void>, ffi.Int64, ffi.Int64, ffi.Int64, ffi.Pointer<ffi.Float>)>>('ggml_quantize_chunk');
-  late final _ggml_quantize_chunk = _ggml_quantize_chunkPtr.asFunction<int Function(int, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Void>, int, int, int, ffi.Pointer<ffi.Float>)>();
+  late final _ggml_quantize_chunkPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Size Function(
+              ffi.UnsignedInt,
+              ffi.Pointer<ffi.Float>,
+              ffi.Pointer<ffi.Void>,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Int64,
+              ffi.Pointer<ffi.Float>)>>('ggml_quantize_chunk');
+  late final _ggml_quantize_chunk = _ggml_quantize_chunkPtr.asFunction<
+      int Function(int, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Void>, int, int,
+          int, ffi.Pointer<ffi.Float>)>();
 
   ffi.Pointer<ggml_type_traits> ggml_get_type_traits(
     ggml_type type,
@@ -5623,8 +7997,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_type_traitsPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_type_traits> Function(ffi.UnsignedInt)>>('ggml_get_type_traits');
-  late final _ggml_get_type_traits = _ggml_get_type_traitsPtr.asFunction<ffi.Pointer<ggml_type_traits> Function(int)>();
+  late final _ggml_get_type_traitsPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_type_traits> Function(
+              ffi.UnsignedInt)>>('ggml_get_type_traits');
+  late final _ggml_get_type_traits = _ggml_get_type_traitsPtr
+      .asFunction<ffi.Pointer<ggml_type_traits> Function(int)>();
 
   ggml_threadpool_params ggml_threadpool_params_default(
     int n_threads,
@@ -5634,8 +8012,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_threadpool_params_defaultPtr = _lookup<ffi.NativeFunction<ggml_threadpool_params Function(ffi.Int)>>('ggml_threadpool_params_default');
-  late final _ggml_threadpool_params_default = _ggml_threadpool_params_defaultPtr.asFunction<ggml_threadpool_params Function(int)>();
+  late final _ggml_threadpool_params_defaultPtr =
+      _lookup<ffi.NativeFunction<ggml_threadpool_params Function(ffi.Int)>>(
+          'ggml_threadpool_params_default');
+  late final _ggml_threadpool_params_default =
+      _ggml_threadpool_params_defaultPtr
+          .asFunction<ggml_threadpool_params Function(int)>();
 
   void ggml_threadpool_params_init(
     ffi.Pointer<ggml_threadpool_params> p,
@@ -5647,8 +8029,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_threadpool_params_initPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_threadpool_params>, ffi.Int)>>('ggml_threadpool_params_init');
-  late final _ggml_threadpool_params_init = _ggml_threadpool_params_initPtr.asFunction<void Function(ffi.Pointer<ggml_threadpool_params>, int)>();
+  late final _ggml_threadpool_params_initPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_threadpool_params>,
+              ffi.Int)>>('ggml_threadpool_params_init');
+  late final _ggml_threadpool_params_init = _ggml_threadpool_params_initPtr
+      .asFunction<void Function(ffi.Pointer<ggml_threadpool_params>, int)>();
 
   bool ggml_threadpool_params_match(
     ffi.Pointer<ggml_threadpool_params> p0,
@@ -5660,8 +8046,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_threadpool_params_matchPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_threadpool_params>, ffi.Pointer<ggml_threadpool_params>)>>('ggml_threadpool_params_match');
-  late final _ggml_threadpool_params_match = _ggml_threadpool_params_matchPtr.asFunction<bool Function(ffi.Pointer<ggml_threadpool_params>, ffi.Pointer<ggml_threadpool_params>)>();
+  late final _ggml_threadpool_params_matchPtr = _lookup<
+          ffi.NativeFunction<
+              ffi.Bool Function(ffi.Pointer<ggml_threadpool_params>,
+                  ffi.Pointer<ggml_threadpool_params>)>>(
+      'ggml_threadpool_params_match');
+  late final _ggml_threadpool_params_match =
+      _ggml_threadpool_params_matchPtr.asFunction<
+          bool Function(ffi.Pointer<ggml_threadpool_params>,
+              ffi.Pointer<ggml_threadpool_params>)>();
 
   ggml_tallocr ggml_tallocr_new(
     ggml_backend_buffer_t buffer,
@@ -5671,8 +8064,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_tallocr_newPtr = _lookup<ffi.NativeFunction<ggml_tallocr Function(ggml_backend_buffer_t)>>('ggml_tallocr_new');
-  late final _ggml_tallocr_new = _ggml_tallocr_newPtr.asFunction<ggml_tallocr Function(ggml_backend_buffer_t)>();
+  late final _ggml_tallocr_newPtr =
+      _lookup<ffi.NativeFunction<ggml_tallocr Function(ggml_backend_buffer_t)>>(
+          'ggml_tallocr_new');
+  late final _ggml_tallocr_new = _ggml_tallocr_newPtr
+      .asFunction<ggml_tallocr Function(ggml_backend_buffer_t)>();
 
   void ggml_tallocr_alloc(
     ffi.Pointer<ggml_tallocr> talloc,
@@ -5684,8 +8080,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_tallocr_allocPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tallocr>, ffi.Pointer<ggml_tensor>)>>('ggml_tallocr_alloc');
-  late final _ggml_tallocr_alloc = _ggml_tallocr_allocPtr.asFunction<void Function(ffi.Pointer<ggml_tallocr>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_tallocr_allocPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tallocr>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_tallocr_alloc');
+  late final _ggml_tallocr_alloc = _ggml_tallocr_allocPtr.asFunction<
+      void Function(ffi.Pointer<ggml_tallocr>, ffi.Pointer<ggml_tensor>)>();
 
   ggml_gallocr_t ggml_gallocr_new(
     ggml_backend_buffer_type_t buft,
@@ -5695,8 +8095,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_gallocr_newPtr = _lookup<ffi.NativeFunction<ggml_gallocr_t Function(ggml_backend_buffer_type_t)>>('ggml_gallocr_new');
-  late final _ggml_gallocr_new = _ggml_gallocr_newPtr.asFunction<ggml_gallocr_t Function(ggml_backend_buffer_type_t)>();
+  late final _ggml_gallocr_newPtr = _lookup<
+          ffi
+          .NativeFunction<ggml_gallocr_t Function(ggml_backend_buffer_type_t)>>(
+      'ggml_gallocr_new');
+  late final _ggml_gallocr_new = _ggml_gallocr_newPtr
+      .asFunction<ggml_gallocr_t Function(ggml_backend_buffer_type_t)>();
 
   ggml_gallocr_t ggml_gallocr_new_n(
     ffi.Pointer<ggml_backend_buffer_type_t> bufts,
@@ -5708,8 +8112,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_gallocr_new_nPtr = _lookup<ffi.NativeFunction<ggml_gallocr_t Function(ffi.Pointer<ggml_backend_buffer_type_t>, ffi.Int)>>('ggml_gallocr_new_n');
-  late final _ggml_gallocr_new_n = _ggml_gallocr_new_nPtr.asFunction<ggml_gallocr_t Function(ffi.Pointer<ggml_backend_buffer_type_t>, int)>();
+  late final _ggml_gallocr_new_nPtr = _lookup<
+      ffi.NativeFunction<
+          ggml_gallocr_t Function(ffi.Pointer<ggml_backend_buffer_type_t>,
+              ffi.Int)>>('ggml_gallocr_new_n');
+  late final _ggml_gallocr_new_n = _ggml_gallocr_new_nPtr.asFunction<
+      ggml_gallocr_t Function(ffi.Pointer<ggml_backend_buffer_type_t>, int)>();
 
   void ggml_gallocr_free(
     ggml_gallocr_t galloc,
@@ -5719,8 +8127,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_gallocr_freePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_gallocr_t)>>('ggml_gallocr_free');
-  late final _ggml_gallocr_free = _ggml_gallocr_freePtr.asFunction<void Function(ggml_gallocr_t)>();
+  late final _ggml_gallocr_freePtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ggml_gallocr_t)>>(
+          'ggml_gallocr_free');
+  late final _ggml_gallocr_free =
+      _ggml_gallocr_freePtr.asFunction<void Function(ggml_gallocr_t)>();
 
   bool ggml_gallocr_reserve(
     ggml_gallocr_t galloc,
@@ -5732,8 +8143,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_gallocr_reservePtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>)>>('ggml_gallocr_reserve');
-  late final _ggml_gallocr_reserve = _ggml_gallocr_reservePtr.asFunction<bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_gallocr_reservePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_gallocr_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_gallocr_reserve');
+  late final _ggml_gallocr_reserve = _ggml_gallocr_reservePtr
+      .asFunction<bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>)>();
 
   bool ggml_gallocr_reserve_n(
     ggml_gallocr_t galloc,
@@ -5749,8 +8164,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_gallocr_reserve_nPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>, ffi.Pointer<ffi.Int>, ffi.Pointer<ffi.Int>)>>('ggml_gallocr_reserve_n');
-  late final _ggml_gallocr_reserve_n = _ggml_gallocr_reserve_nPtr.asFunction<bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>, ffi.Pointer<ffi.Int>, ffi.Pointer<ffi.Int>)>();
+  late final _ggml_gallocr_reserve_nPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(
+              ggml_gallocr_t,
+              ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ffi.Int>,
+              ffi.Pointer<ffi.Int>)>>('ggml_gallocr_reserve_n');
+  late final _ggml_gallocr_reserve_n = _ggml_gallocr_reserve_nPtr.asFunction<
+      bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>,
+          ffi.Pointer<ffi.Int>, ffi.Pointer<ffi.Int>)>();
 
   bool ggml_gallocr_alloc_graph(
     ggml_gallocr_t galloc,
@@ -5762,8 +8185,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_gallocr_alloc_graphPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>)>>('ggml_gallocr_alloc_graph');
-  late final _ggml_gallocr_alloc_graph = _ggml_gallocr_alloc_graphPtr.asFunction<bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_gallocr_alloc_graphPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_gallocr_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_gallocr_alloc_graph');
+  late final _ggml_gallocr_alloc_graph = _ggml_gallocr_alloc_graphPtr
+      .asFunction<bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>)>();
 
   int ggml_gallocr_get_buffer_size(
     ggml_gallocr_t galloc,
@@ -5775,8 +8202,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_gallocr_get_buffer_sizePtr = _lookup<ffi.NativeFunction<ffi.Size Function(ggml_gallocr_t, ffi.Int)>>('ggml_gallocr_get_buffer_size');
-  late final _ggml_gallocr_get_buffer_size = _ggml_gallocr_get_buffer_sizePtr.asFunction<int Function(ggml_gallocr_t, int)>();
+  late final _ggml_gallocr_get_buffer_sizePtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ggml_gallocr_t, ffi.Int)>>(
+          'ggml_gallocr_get_buffer_size');
+  late final _ggml_gallocr_get_buffer_size = _ggml_gallocr_get_buffer_sizePtr
+      .asFunction<int Function(ggml_gallocr_t, int)>();
 
   ffi.Pointer<ggml_backend_buffer> ggml_backend_alloc_ctx_tensors_from_buft(
     ffi.Pointer<ggml_context> ctx,
@@ -5788,8 +8218,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_alloc_ctx_tensors_from_buftPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_backend_buffer> Function(ffi.Pointer<ggml_context>, ggml_backend_buffer_type_t)>>('ggml_backend_alloc_ctx_tensors_from_buft');
-  late final _ggml_backend_alloc_ctx_tensors_from_buft = _ggml_backend_alloc_ctx_tensors_from_buftPtr.asFunction<ffi.Pointer<ggml_backend_buffer> Function(ffi.Pointer<ggml_context>, ggml_backend_buffer_type_t)>();
+  late final _ggml_backend_alloc_ctx_tensors_from_buftPtr = _lookup<
+          ffi.NativeFunction<
+              ffi.Pointer<ggml_backend_buffer> Function(
+                  ffi.Pointer<ggml_context>, ggml_backend_buffer_type_t)>>(
+      'ggml_backend_alloc_ctx_tensors_from_buft');
+  late final _ggml_backend_alloc_ctx_tensors_from_buft =
+      _ggml_backend_alloc_ctx_tensors_from_buftPtr.asFunction<
+          ffi.Pointer<ggml_backend_buffer> Function(
+              ffi.Pointer<ggml_context>, ggml_backend_buffer_type_t)>();
 
   ffi.Pointer<ggml_backend_buffer> ggml_backend_alloc_ctx_tensors(
     ffi.Pointer<ggml_context> ctx,
@@ -5801,8 +8238,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_alloc_ctx_tensorsPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_backend_buffer> Function(ffi.Pointer<ggml_context>, ggml_backend_t)>>('ggml_backend_alloc_ctx_tensors');
-  late final _ggml_backend_alloc_ctx_tensors = _ggml_backend_alloc_ctx_tensorsPtr.asFunction<ffi.Pointer<ggml_backend_buffer> Function(ffi.Pointer<ggml_context>, ggml_backend_t)>();
+  late final _ggml_backend_alloc_ctx_tensorsPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_backend_buffer> Function(ffi.Pointer<ggml_context>,
+              ggml_backend_t)>>('ggml_backend_alloc_ctx_tensors');
+  late final _ggml_backend_alloc_ctx_tensors =
+      _ggml_backend_alloc_ctx_tensorsPtr.asFunction<
+          ffi.Pointer<ggml_backend_buffer> Function(
+              ffi.Pointer<ggml_context>, ggml_backend_t)>();
 
   ffi.Pointer<ffi.Char> ggml_backend_buft_name(
     ggml_backend_buffer_type_t buft,
@@ -5812,8 +8255,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buft_namePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_buffer_type_t)>>('ggml_backend_buft_name');
-  late final _ggml_backend_buft_name = _ggml_backend_buft_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_buffer_type_t)>();
+  late final _ggml_backend_buft_namePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(
+              ggml_backend_buffer_type_t)>>('ggml_backend_buft_name');
+  late final _ggml_backend_buft_name = _ggml_backend_buft_namePtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_buffer_type_t)>();
 
   ggml_backend_buffer_t ggml_backend_buft_alloc_buffer(
     ggml_backend_buffer_type_t buft,
@@ -5825,8 +8272,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buft_alloc_bufferPtr = _lookup<ffi.NativeFunction<ggml_backend_buffer_t Function(ggml_backend_buffer_type_t, ffi.Size)>>('ggml_backend_buft_alloc_buffer');
-  late final _ggml_backend_buft_alloc_buffer = _ggml_backend_buft_alloc_bufferPtr.asFunction<ggml_backend_buffer_t Function(ggml_backend_buffer_type_t, int)>();
+  late final _ggml_backend_buft_alloc_bufferPtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_buffer_t Function(ggml_backend_buffer_type_t,
+              ffi.Size)>>('ggml_backend_buft_alloc_buffer');
+  late final _ggml_backend_buft_alloc_buffer =
+      _ggml_backend_buft_alloc_bufferPtr.asFunction<
+          ggml_backend_buffer_t Function(ggml_backend_buffer_type_t, int)>();
 
   int ggml_backend_buft_get_alignment(
     ggml_backend_buffer_type_t buft,
@@ -5836,8 +8288,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buft_get_alignmentPtr = _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_type_t)>>('ggml_backend_buft_get_alignment');
-  late final _ggml_backend_buft_get_alignment = _ggml_backend_buft_get_alignmentPtr.asFunction<int Function(ggml_backend_buffer_type_t)>();
+  late final _ggml_backend_buft_get_alignmentPtr = _lookup<
+          ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_type_t)>>(
+      'ggml_backend_buft_get_alignment');
+  late final _ggml_backend_buft_get_alignment =
+      _ggml_backend_buft_get_alignmentPtr
+          .asFunction<int Function(ggml_backend_buffer_type_t)>();
 
   int ggml_backend_buft_get_max_size(
     ggml_backend_buffer_type_t buft,
@@ -5847,8 +8303,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buft_get_max_sizePtr = _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_type_t)>>('ggml_backend_buft_get_max_size');
-  late final _ggml_backend_buft_get_max_size = _ggml_backend_buft_get_max_sizePtr.asFunction<int Function(ggml_backend_buffer_type_t)>();
+  late final _ggml_backend_buft_get_max_sizePtr = _lookup<
+          ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_type_t)>>(
+      'ggml_backend_buft_get_max_size');
+  late final _ggml_backend_buft_get_max_size =
+      _ggml_backend_buft_get_max_sizePtr
+          .asFunction<int Function(ggml_backend_buffer_type_t)>();
 
   int ggml_backend_buft_get_alloc_size(
     ggml_backend_buffer_type_t buft,
@@ -5860,8 +8320,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buft_get_alloc_sizePtr = _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_type_t, ffi.Pointer<ggml_tensor>)>>('ggml_backend_buft_get_alloc_size');
-  late final _ggml_backend_buft_get_alloc_size = _ggml_backend_buft_get_alloc_sizePtr.asFunction<int Function(ggml_backend_buffer_type_t, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_backend_buft_get_alloc_sizePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Size Function(ggml_backend_buffer_type_t,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_buft_get_alloc_size');
+  late final _ggml_backend_buft_get_alloc_size =
+      _ggml_backend_buft_get_alloc_sizePtr.asFunction<
+          int Function(ggml_backend_buffer_type_t, ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_backend_buft_is_host(
     ggml_backend_buffer_type_t buft,
@@ -5871,8 +8336,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buft_is_hostPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_buffer_type_t)>>('ggml_backend_buft_is_host');
-  late final _ggml_backend_buft_is_host = _ggml_backend_buft_is_hostPtr.asFunction<bool Function(ggml_backend_buffer_type_t)>();
+  late final _ggml_backend_buft_is_hostPtr = _lookup<
+          ffi.NativeFunction<ffi.Bool Function(ggml_backend_buffer_type_t)>>(
+      'ggml_backend_buft_is_host');
+  late final _ggml_backend_buft_is_host = _ggml_backend_buft_is_hostPtr
+      .asFunction<bool Function(ggml_backend_buffer_type_t)>();
 
   ggml_backend_dev_t ggml_backend_buft_get_device(
     ggml_backend_buffer_type_t buft,
@@ -5882,8 +8350,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buft_get_devicePtr = _lookup<ffi.NativeFunction<ggml_backend_dev_t Function(ggml_backend_buffer_type_t)>>('ggml_backend_buft_get_device');
-  late final _ggml_backend_buft_get_device = _ggml_backend_buft_get_devicePtr.asFunction<ggml_backend_dev_t Function(ggml_backend_buffer_type_t)>();
+  late final _ggml_backend_buft_get_devicePtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_dev_t Function(
+              ggml_backend_buffer_type_t)>>('ggml_backend_buft_get_device');
+  late final _ggml_backend_buft_get_device = _ggml_backend_buft_get_devicePtr
+      .asFunction<ggml_backend_dev_t Function(ggml_backend_buffer_type_t)>();
 
   ffi.Pointer<ffi.Char> ggml_backend_buffer_name(
     ggml_backend_buffer_t buffer,
@@ -5893,8 +8365,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buffer_namePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_buffer_t)>>('ggml_backend_buffer_name');
-  late final _ggml_backend_buffer_name = _ggml_backend_buffer_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_buffer_t)>();
+  late final _ggml_backend_buffer_namePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(
+              ggml_backend_buffer_t)>>('ggml_backend_buffer_name');
+  late final _ggml_backend_buffer_name = _ggml_backend_buffer_namePtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_buffer_t)>();
 
   void ggml_backend_buffer_free(
     ggml_backend_buffer_t buffer,
@@ -5904,8 +8380,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buffer_freePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_buffer_t)>>('ggml_backend_buffer_free');
-  late final _ggml_backend_buffer_free = _ggml_backend_buffer_freePtr.asFunction<void Function(ggml_backend_buffer_t)>();
+  late final _ggml_backend_buffer_freePtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_buffer_t)>>(
+          'ggml_backend_buffer_free');
+  late final _ggml_backend_buffer_free = _ggml_backend_buffer_freePtr
+      .asFunction<void Function(ggml_backend_buffer_t)>();
 
   ffi.Pointer<ffi.Void> ggml_backend_buffer_get_base(
     ggml_backend_buffer_t buffer,
@@ -5915,8 +8394,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buffer_get_basePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Void> Function(ggml_backend_buffer_t)>>('ggml_backend_buffer_get_base');
-  late final _ggml_backend_buffer_get_base = _ggml_backend_buffer_get_basePtr.asFunction<ffi.Pointer<ffi.Void> Function(ggml_backend_buffer_t)>();
+  late final _ggml_backend_buffer_get_basePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Void> Function(
+              ggml_backend_buffer_t)>>('ggml_backend_buffer_get_base');
+  late final _ggml_backend_buffer_get_base = _ggml_backend_buffer_get_basePtr
+      .asFunction<ffi.Pointer<ffi.Void> Function(ggml_backend_buffer_t)>();
 
   int ggml_backend_buffer_get_size(
     ggml_backend_buffer_t buffer,
@@ -5926,8 +8409,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buffer_get_sizePtr = _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_t)>>('ggml_backend_buffer_get_size');
-  late final _ggml_backend_buffer_get_size = _ggml_backend_buffer_get_sizePtr.asFunction<int Function(ggml_backend_buffer_t)>();
+  late final _ggml_backend_buffer_get_sizePtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_t)>>(
+          'ggml_backend_buffer_get_size');
+  late final _ggml_backend_buffer_get_size = _ggml_backend_buffer_get_sizePtr
+      .asFunction<int Function(ggml_backend_buffer_t)>();
 
   void ggml_backend_buffer_init_tensor(
     ggml_backend_buffer_t buffer,
@@ -5939,8 +8425,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buffer_init_tensorPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>)>>('ggml_backend_buffer_init_tensor');
-  late final _ggml_backend_buffer_init_tensor = _ggml_backend_buffer_init_tensorPtr.asFunction<void Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_backend_buffer_init_tensorPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_buffer_t,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_buffer_init_tensor');
+  late final _ggml_backend_buffer_init_tensor =
+      _ggml_backend_buffer_init_tensorPtr.asFunction<
+          void Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>)>();
 
   int ggml_backend_buffer_get_alignment(
     ggml_backend_buffer_t buffer,
@@ -5950,8 +8441,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buffer_get_alignmentPtr = _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_t)>>('ggml_backend_buffer_get_alignment');
-  late final _ggml_backend_buffer_get_alignment = _ggml_backend_buffer_get_alignmentPtr.asFunction<int Function(ggml_backend_buffer_t)>();
+  late final _ggml_backend_buffer_get_alignmentPtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_t)>>(
+          'ggml_backend_buffer_get_alignment');
+  late final _ggml_backend_buffer_get_alignment =
+      _ggml_backend_buffer_get_alignmentPtr
+          .asFunction<int Function(ggml_backend_buffer_t)>();
 
   int ggml_backend_buffer_get_max_size(
     ggml_backend_buffer_t buffer,
@@ -5961,8 +8456,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buffer_get_max_sizePtr = _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_t)>>('ggml_backend_buffer_get_max_size');
-  late final _ggml_backend_buffer_get_max_size = _ggml_backend_buffer_get_max_sizePtr.asFunction<int Function(ggml_backend_buffer_t)>();
+  late final _ggml_backend_buffer_get_max_sizePtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_t)>>(
+          'ggml_backend_buffer_get_max_size');
+  late final _ggml_backend_buffer_get_max_size =
+      _ggml_backend_buffer_get_max_sizePtr
+          .asFunction<int Function(ggml_backend_buffer_t)>();
 
   int ggml_backend_buffer_get_alloc_size(
     ggml_backend_buffer_t buffer,
@@ -5974,8 +8473,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buffer_get_alloc_sizePtr = _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>)>>('ggml_backend_buffer_get_alloc_size');
-  late final _ggml_backend_buffer_get_alloc_size = _ggml_backend_buffer_get_alloc_sizePtr.asFunction<int Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_backend_buffer_get_alloc_sizePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Size Function(ggml_backend_buffer_t,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_buffer_get_alloc_size');
+  late final _ggml_backend_buffer_get_alloc_size =
+      _ggml_backend_buffer_get_alloc_sizePtr.asFunction<
+          int Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>)>();
 
   void ggml_backend_buffer_clear(
     ggml_backend_buffer_t buffer,
@@ -5987,8 +8491,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buffer_clearPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_buffer_t, ffi.Uint8)>>('ggml_backend_buffer_clear');
-  late final _ggml_backend_buffer_clear = _ggml_backend_buffer_clearPtr.asFunction<void Function(ggml_backend_buffer_t, int)>();
+  late final _ggml_backend_buffer_clearPtr = _lookup<
+          ffi
+          .NativeFunction<ffi.Void Function(ggml_backend_buffer_t, ffi.Uint8)>>(
+      'ggml_backend_buffer_clear');
+  late final _ggml_backend_buffer_clear = _ggml_backend_buffer_clearPtr
+      .asFunction<void Function(ggml_backend_buffer_t, int)>();
 
   bool ggml_backend_buffer_is_host(
     ggml_backend_buffer_t buffer,
@@ -5998,8 +8506,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buffer_is_hostPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_buffer_t)>>('ggml_backend_buffer_is_host');
-  late final _ggml_backend_buffer_is_host = _ggml_backend_buffer_is_hostPtr.asFunction<bool Function(ggml_backend_buffer_t)>();
+  late final _ggml_backend_buffer_is_hostPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_buffer_t)>>(
+          'ggml_backend_buffer_is_host');
+  late final _ggml_backend_buffer_is_host = _ggml_backend_buffer_is_hostPtr
+      .asFunction<bool Function(ggml_backend_buffer_t)>();
 
   void ggml_backend_buffer_set_usage(
     ggml_backend_buffer_t buffer,
@@ -6011,8 +8522,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buffer_set_usagePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_buffer_t, ffi.UnsignedInt)>>('ggml_backend_buffer_set_usage');
-  late final _ggml_backend_buffer_set_usage = _ggml_backend_buffer_set_usagePtr.asFunction<void Function(ggml_backend_buffer_t, int)>();
+  late final _ggml_backend_buffer_set_usagePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_buffer_t,
+              ffi.UnsignedInt)>>('ggml_backend_buffer_set_usage');
+  late final _ggml_backend_buffer_set_usage = _ggml_backend_buffer_set_usagePtr
+      .asFunction<void Function(ggml_backend_buffer_t, int)>();
 
   ggml_backend_buffer_usage ggml_backend_buffer_get_usage(
     ggml_backend_buffer_t buffer,
@@ -6022,8 +8537,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     ));
   }
 
-  late final _ggml_backend_buffer_get_usagePtr = _lookup<ffi.NativeFunction<ffi.UnsignedInt Function(ggml_backend_buffer_t)>>('ggml_backend_buffer_get_usage');
-  late final _ggml_backend_buffer_get_usage = _ggml_backend_buffer_get_usagePtr.asFunction<int Function(ggml_backend_buffer_t)>();
+  late final _ggml_backend_buffer_get_usagePtr = _lookup<
+          ffi.NativeFunction<ffi.UnsignedInt Function(ggml_backend_buffer_t)>>(
+      'ggml_backend_buffer_get_usage');
+  late final _ggml_backend_buffer_get_usage = _ggml_backend_buffer_get_usagePtr
+      .asFunction<int Function(ggml_backend_buffer_t)>();
 
   ggml_backend_buffer_type_t ggml_backend_buffer_get_type(
     ggml_backend_buffer_t buffer,
@@ -6033,8 +8551,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buffer_get_typePtr = _lookup<ffi.NativeFunction<ggml_backend_buffer_type_t Function(ggml_backend_buffer_t)>>('ggml_backend_buffer_get_type');
-  late final _ggml_backend_buffer_get_type = _ggml_backend_buffer_get_typePtr.asFunction<ggml_backend_buffer_type_t Function(ggml_backend_buffer_t)>();
+  late final _ggml_backend_buffer_get_typePtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_buffer_type_t Function(
+              ggml_backend_buffer_t)>>('ggml_backend_buffer_get_type');
+  late final _ggml_backend_buffer_get_type = _ggml_backend_buffer_get_typePtr
+      .asFunction<ggml_backend_buffer_type_t Function(ggml_backend_buffer_t)>();
 
   void ggml_backend_buffer_reset(
     ggml_backend_buffer_t buffer,
@@ -6044,8 +8566,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_buffer_resetPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_buffer_t)>>('ggml_backend_buffer_reset');
-  late final _ggml_backend_buffer_reset = _ggml_backend_buffer_resetPtr.asFunction<void Function(ggml_backend_buffer_t)>();
+  late final _ggml_backend_buffer_resetPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_buffer_t)>>(
+          'ggml_backend_buffer_reset');
+  late final _ggml_backend_buffer_reset = _ggml_backend_buffer_resetPtr
+      .asFunction<void Function(ggml_backend_buffer_t)>();
 
   void ggml_backend_tensor_copy(
     ffi.Pointer<ggml_tensor> src,
@@ -6057,8 +8582,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_tensor_copyPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_backend_tensor_copy');
-  late final _ggml_backend_tensor_copy = _ggml_backend_tensor_copyPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_backend_tensor_copyPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_tensor_copy');
+  late final _ggml_backend_tensor_copy =
+      _ggml_backend_tensor_copyPtr.asFunction<
+          void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ggml_guid_t ggml_backend_guid(
     ggml_backend_t backend,
@@ -6068,8 +8598,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_guidPtr = _lookup<ffi.NativeFunction<ggml_guid_t Function(ggml_backend_t)>>('ggml_backend_guid');
-  late final _ggml_backend_guid = _ggml_backend_guidPtr.asFunction<ggml_guid_t Function(ggml_backend_t)>();
+  late final _ggml_backend_guidPtr =
+      _lookup<ffi.NativeFunction<ggml_guid_t Function(ggml_backend_t)>>(
+          'ggml_backend_guid');
+  late final _ggml_backend_guid =
+      _ggml_backend_guidPtr.asFunction<ggml_guid_t Function(ggml_backend_t)>();
 
   ffi.Pointer<ffi.Char> ggml_backend_name(
     ggml_backend_t backend,
@@ -6079,8 +8612,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_namePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_t)>>('ggml_backend_name');
-  late final _ggml_backend_name = _ggml_backend_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_t)>();
+  late final _ggml_backend_namePtr = _lookup<
+          ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_t)>>(
+      'ggml_backend_name');
+  late final _ggml_backend_name = _ggml_backend_namePtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_t)>();
 
   void ggml_backend_free(
     ggml_backend_t backend,
@@ -6090,8 +8626,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_freePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t)>>('ggml_backend_free');
-  late final _ggml_backend_free = _ggml_backend_freePtr.asFunction<void Function(ggml_backend_t)>();
+  late final _ggml_backend_freePtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t)>>(
+          'ggml_backend_free');
+  late final _ggml_backend_free =
+      _ggml_backend_freePtr.asFunction<void Function(ggml_backend_t)>();
 
   ggml_backend_buffer_type_t ggml_backend_get_default_buffer_type(
     ggml_backend_t backend,
@@ -6101,8 +8640,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_get_default_buffer_typePtr = _lookup<ffi.NativeFunction<ggml_backend_buffer_type_t Function(ggml_backend_t)>>('ggml_backend_get_default_buffer_type');
-  late final _ggml_backend_get_default_buffer_type = _ggml_backend_get_default_buffer_typePtr.asFunction<ggml_backend_buffer_type_t Function(ggml_backend_t)>();
+  late final _ggml_backend_get_default_buffer_typePtr = _lookup<
+          ffi
+          .NativeFunction<ggml_backend_buffer_type_t Function(ggml_backend_t)>>(
+      'ggml_backend_get_default_buffer_type');
+  late final _ggml_backend_get_default_buffer_type =
+      _ggml_backend_get_default_buffer_typePtr
+          .asFunction<ggml_backend_buffer_type_t Function(ggml_backend_t)>();
 
   ggml_backend_buffer_t ggml_backend_alloc_buffer(
     ggml_backend_t backend,
@@ -6114,8 +8658,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_alloc_bufferPtr = _lookup<ffi.NativeFunction<ggml_backend_buffer_t Function(ggml_backend_t, ffi.Size)>>('ggml_backend_alloc_buffer');
-  late final _ggml_backend_alloc_buffer = _ggml_backend_alloc_bufferPtr.asFunction<ggml_backend_buffer_t Function(ggml_backend_t, int)>();
+  late final _ggml_backend_alloc_bufferPtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_buffer_t Function(
+              ggml_backend_t, ffi.Size)>>('ggml_backend_alloc_buffer');
+  late final _ggml_backend_alloc_buffer = _ggml_backend_alloc_bufferPtr
+      .asFunction<ggml_backend_buffer_t Function(ggml_backend_t, int)>();
 
   int ggml_backend_get_alignment(
     ggml_backend_t backend,
@@ -6125,8 +8673,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_get_alignmentPtr = _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_t)>>('ggml_backend_get_alignment');
-  late final _ggml_backend_get_alignment = _ggml_backend_get_alignmentPtr.asFunction<int Function(ggml_backend_t)>();
+  late final _ggml_backend_get_alignmentPtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_t)>>(
+          'ggml_backend_get_alignment');
+  late final _ggml_backend_get_alignment =
+      _ggml_backend_get_alignmentPtr.asFunction<int Function(ggml_backend_t)>();
 
   int ggml_backend_get_max_size(
     ggml_backend_t backend,
@@ -6136,8 +8687,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_get_max_sizePtr = _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_t)>>('ggml_backend_get_max_size');
-  late final _ggml_backend_get_max_size = _ggml_backend_get_max_sizePtr.asFunction<int Function(ggml_backend_t)>();
+  late final _ggml_backend_get_max_sizePtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_t)>>(
+          'ggml_backend_get_max_size');
+  late final _ggml_backend_get_max_size =
+      _ggml_backend_get_max_sizePtr.asFunction<int Function(ggml_backend_t)>();
 
   void ggml_backend_tensor_set_async(
     ggml_backend_t backend,
@@ -6155,8 +8709,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_tensor_set_asyncPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t, ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Void>, ffi.Size, ffi.Size)>>('ggml_backend_tensor_set_async');
-  late final _ggml_backend_tensor_set_async = _ggml_backend_tensor_set_asyncPtr.asFunction<void Function(ggml_backend_t, ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Void>, int, int)>();
+  late final _ggml_backend_tensor_set_asyncPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ggml_backend_t,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ffi.Void>,
+              ffi.Size,
+              ffi.Size)>>('ggml_backend_tensor_set_async');
+  late final _ggml_backend_tensor_set_async =
+      _ggml_backend_tensor_set_asyncPtr.asFunction<
+          void Function(ggml_backend_t, ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ffi.Void>, int, int)>();
 
   void ggml_backend_tensor_get_async(
     ggml_backend_t backend,
@@ -6174,8 +8738,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_tensor_get_asyncPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t, ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Void>, ffi.Size, ffi.Size)>>('ggml_backend_tensor_get_async');
-  late final _ggml_backend_tensor_get_async = _ggml_backend_tensor_get_asyncPtr.asFunction<void Function(ggml_backend_t, ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Void>, int, int)>();
+  late final _ggml_backend_tensor_get_asyncPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ggml_backend_t,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ffi.Void>,
+              ffi.Size,
+              ffi.Size)>>('ggml_backend_tensor_get_async');
+  late final _ggml_backend_tensor_get_async =
+      _ggml_backend_tensor_get_asyncPtr.asFunction<
+          void Function(ggml_backend_t, ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ffi.Void>, int, int)>();
 
   void ggml_backend_tensor_set(
     ffi.Pointer<ggml_tensor> tensor,
@@ -6191,8 +8765,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_tensor_setPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Void>, ffi.Size, ffi.Size)>>('ggml_backend_tensor_set');
-  late final _ggml_backend_tensor_set = _ggml_backend_tensor_setPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Void>, int, int)>();
+  late final _ggml_backend_tensor_setPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Void>,
+              ffi.Size, ffi.Size)>>('ggml_backend_tensor_set');
+  late final _ggml_backend_tensor_set = _ggml_backend_tensor_setPtr.asFunction<
+      void Function(
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Void>, int, int)>();
 
   void ggml_backend_tensor_get(
     ffi.Pointer<ggml_tensor> tensor,
@@ -6208,8 +8787,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_tensor_getPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Void>, ffi.Size, ffi.Size)>>('ggml_backend_tensor_get');
-  late final _ggml_backend_tensor_get = _ggml_backend_tensor_getPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Void>, int, int)>();
+  late final _ggml_backend_tensor_getPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Void>,
+              ffi.Size, ffi.Size)>>('ggml_backend_tensor_get');
+  late final _ggml_backend_tensor_get = _ggml_backend_tensor_getPtr.asFunction<
+      void Function(
+          ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Void>, int, int)>();
 
   void ggml_backend_tensor_memset(
     ffi.Pointer<ggml_tensor> tensor,
@@ -6225,8 +8809,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_tensor_memsetPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Uint8, ffi.Size, ffi.Size)>>('ggml_backend_tensor_memset');
-  late final _ggml_backend_tensor_memset = _ggml_backend_tensor_memsetPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>, int, int, int)>();
+  late final _ggml_backend_tensor_memsetPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Uint8, ffi.Size,
+              ffi.Size)>>('ggml_backend_tensor_memset');
+  late final _ggml_backend_tensor_memset = _ggml_backend_tensor_memsetPtr
+      .asFunction<void Function(ffi.Pointer<ggml_tensor>, int, int, int)>();
 
   void ggml_backend_synchronize(
     ggml_backend_t backend,
@@ -6236,8 +8824,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_synchronizePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t)>>('ggml_backend_synchronize');
-  late final _ggml_backend_synchronize = _ggml_backend_synchronizePtr.asFunction<void Function(ggml_backend_t)>();
+  late final _ggml_backend_synchronizePtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t)>>(
+          'ggml_backend_synchronize');
+  late final _ggml_backend_synchronize =
+      _ggml_backend_synchronizePtr.asFunction<void Function(ggml_backend_t)>();
 
   ggml_backend_graph_plan_t ggml_backend_graph_plan_create(
     ggml_backend_t backend,
@@ -6249,8 +8840,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_graph_plan_createPtr = _lookup<ffi.NativeFunction<ggml_backend_graph_plan_t Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)>>('ggml_backend_graph_plan_create');
-  late final _ggml_backend_graph_plan_create = _ggml_backend_graph_plan_createPtr.asFunction<ggml_backend_graph_plan_t Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_backend_graph_plan_createPtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_graph_plan_t Function(ggml_backend_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_backend_graph_plan_create');
+  late final _ggml_backend_graph_plan_create =
+      _ggml_backend_graph_plan_createPtr.asFunction<
+          ggml_backend_graph_plan_t Function(
+              ggml_backend_t, ffi.Pointer<ggml_cgraph>)>();
 
   void ggml_backend_graph_plan_free(
     ggml_backend_t backend,
@@ -6262,8 +8859,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_graph_plan_freePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t, ggml_backend_graph_plan_t)>>('ggml_backend_graph_plan_free');
-  late final _ggml_backend_graph_plan_free = _ggml_backend_graph_plan_freePtr.asFunction<void Function(ggml_backend_t, ggml_backend_graph_plan_t)>();
+  late final _ggml_backend_graph_plan_freePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_t,
+              ggml_backend_graph_plan_t)>>('ggml_backend_graph_plan_free');
+  late final _ggml_backend_graph_plan_free = _ggml_backend_graph_plan_freePtr
+      .asFunction<void Function(ggml_backend_t, ggml_backend_graph_plan_t)>();
 
   ggml_status ggml_backend_graph_plan_compute(
     ggml_backend_t backend,
@@ -6275,8 +8876,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     ));
   }
 
-  late final _ggml_backend_graph_plan_computePtr = _lookup<ffi.NativeFunction<ffi.Int Function(ggml_backend_t, ggml_backend_graph_plan_t)>>('ggml_backend_graph_plan_compute');
-  late final _ggml_backend_graph_plan_compute = _ggml_backend_graph_plan_computePtr.asFunction<int Function(ggml_backend_t, ggml_backend_graph_plan_t)>();
+  late final _ggml_backend_graph_plan_computePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ggml_backend_t,
+              ggml_backend_graph_plan_t)>>('ggml_backend_graph_plan_compute');
+  late final _ggml_backend_graph_plan_compute =
+      _ggml_backend_graph_plan_computePtr.asFunction<
+          int Function(ggml_backend_t, ggml_backend_graph_plan_t)>();
 
   ggml_status ggml_backend_graph_compute(
     ggml_backend_t backend,
@@ -6288,8 +8894,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     ));
   }
 
-  late final _ggml_backend_graph_computePtr = _lookup<ffi.NativeFunction<ffi.Int Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)>>('ggml_backend_graph_compute');
-  late final _ggml_backend_graph_compute = _ggml_backend_graph_computePtr.asFunction<int Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_backend_graph_computePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ggml_backend_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_backend_graph_compute');
+  late final _ggml_backend_graph_compute = _ggml_backend_graph_computePtr
+      .asFunction<int Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)>();
 
   ggml_status ggml_backend_graph_compute_async(
     ggml_backend_t backend,
@@ -6301,8 +8911,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     ));
   }
 
-  late final _ggml_backend_graph_compute_asyncPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)>>('ggml_backend_graph_compute_async');
-  late final _ggml_backend_graph_compute_async = _ggml_backend_graph_compute_asyncPtr.asFunction<int Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_backend_graph_compute_asyncPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ggml_backend_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_backend_graph_compute_async');
+  late final _ggml_backend_graph_compute_async =
+      _ggml_backend_graph_compute_asyncPtr
+          .asFunction<int Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)>();
 
   bool ggml_backend_supports_op(
     ggml_backend_t backend,
@@ -6314,8 +8929,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_supports_opPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_t, ffi.Pointer<ggml_tensor>)>>('ggml_backend_supports_op');
-  late final _ggml_backend_supports_op = _ggml_backend_supports_opPtr.asFunction<bool Function(ggml_backend_t, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_backend_supports_opPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_t,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_supports_op');
+  late final _ggml_backend_supports_op = _ggml_backend_supports_opPtr
+      .asFunction<bool Function(ggml_backend_t, ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_backend_supports_buft(
     ggml_backend_t backend,
@@ -6327,8 +8946,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_supports_buftPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_t, ggml_backend_buffer_type_t)>>('ggml_backend_supports_buft');
-  late final _ggml_backend_supports_buft = _ggml_backend_supports_buftPtr.asFunction<bool Function(ggml_backend_t, ggml_backend_buffer_type_t)>();
+  late final _ggml_backend_supports_buftPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_t,
+              ggml_backend_buffer_type_t)>>('ggml_backend_supports_buft');
+  late final _ggml_backend_supports_buft = _ggml_backend_supports_buftPtr
+      .asFunction<bool Function(ggml_backend_t, ggml_backend_buffer_type_t)>();
 
   bool ggml_backend_offload_op(
     ggml_backend_t backend,
@@ -6340,8 +8963,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_offload_opPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_t, ffi.Pointer<ggml_tensor>)>>('ggml_backend_offload_op');
-  late final _ggml_backend_offload_op = _ggml_backend_offload_opPtr.asFunction<bool Function(ggml_backend_t, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_backend_offload_opPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_t,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_offload_op');
+  late final _ggml_backend_offload_op = _ggml_backend_offload_opPtr
+      .asFunction<bool Function(ggml_backend_t, ffi.Pointer<ggml_tensor>)>();
 
   void ggml_backend_tensor_copy_async(
     ggml_backend_t backend_src,
@@ -6357,8 +8984,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_tensor_copy_asyncPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t, ggml_backend_t, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>>('ggml_backend_tensor_copy_async');
-  late final _ggml_backend_tensor_copy_async = _ggml_backend_tensor_copy_asyncPtr.asFunction<void Function(ggml_backend_t, ggml_backend_t, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_backend_tensor_copy_asyncPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ggml_backend_t,
+              ggml_backend_t,
+              ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_tensor_copy_async');
+  late final _ggml_backend_tensor_copy_async =
+      _ggml_backend_tensor_copy_asyncPtr.asFunction<
+          void Function(ggml_backend_t, ggml_backend_t,
+              ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   ggml_backend_dev_t ggml_backend_get_device(
     ggml_backend_t backend,
@@ -6368,8 +9004,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_get_devicePtr = _lookup<ffi.NativeFunction<ggml_backend_dev_t Function(ggml_backend_t)>>('ggml_backend_get_device');
-  late final _ggml_backend_get_device = _ggml_backend_get_devicePtr.asFunction<ggml_backend_dev_t Function(ggml_backend_t)>();
+  late final _ggml_backend_get_devicePtr =
+      _lookup<ffi.NativeFunction<ggml_backend_dev_t Function(ggml_backend_t)>>(
+          'ggml_backend_get_device');
+  late final _ggml_backend_get_device = _ggml_backend_get_devicePtr
+      .asFunction<ggml_backend_dev_t Function(ggml_backend_t)>();
 
   ggml_backend_event_t ggml_backend_event_new(
     ggml_backend_dev_t device,
@@ -6379,8 +9018,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_event_newPtr = _lookup<ffi.NativeFunction<ggml_backend_event_t Function(ggml_backend_dev_t)>>('ggml_backend_event_new');
-  late final _ggml_backend_event_new = _ggml_backend_event_newPtr.asFunction<ggml_backend_event_t Function(ggml_backend_dev_t)>();
+  late final _ggml_backend_event_newPtr = _lookup<
+          ffi
+          .NativeFunction<ggml_backend_event_t Function(ggml_backend_dev_t)>>(
+      'ggml_backend_event_new');
+  late final _ggml_backend_event_new = _ggml_backend_event_newPtr
+      .asFunction<ggml_backend_event_t Function(ggml_backend_dev_t)>();
 
   void ggml_backend_event_free(
     ggml_backend_event_t event,
@@ -6390,8 +9033,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_event_freePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_event_t)>>('ggml_backend_event_free');
-  late final _ggml_backend_event_free = _ggml_backend_event_freePtr.asFunction<void Function(ggml_backend_event_t)>();
+  late final _ggml_backend_event_freePtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_event_t)>>(
+          'ggml_backend_event_free');
+  late final _ggml_backend_event_free = _ggml_backend_event_freePtr
+      .asFunction<void Function(ggml_backend_event_t)>();
 
   void ggml_backend_event_record(
     ggml_backend_event_t event,
@@ -6403,8 +9049,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_event_recordPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_event_t, ggml_backend_t)>>('ggml_backend_event_record');
-  late final _ggml_backend_event_record = _ggml_backend_event_recordPtr.asFunction<void Function(ggml_backend_event_t, ggml_backend_t)>();
+  late final _ggml_backend_event_recordPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_event_t,
+              ggml_backend_t)>>('ggml_backend_event_record');
+  late final _ggml_backend_event_record = _ggml_backend_event_recordPtr
+      .asFunction<void Function(ggml_backend_event_t, ggml_backend_t)>();
 
   void ggml_backend_event_synchronize(
     ggml_backend_event_t event,
@@ -6414,8 +9064,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_event_synchronizePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_event_t)>>('ggml_backend_event_synchronize');
-  late final _ggml_backend_event_synchronize = _ggml_backend_event_synchronizePtr.asFunction<void Function(ggml_backend_event_t)>();
+  late final _ggml_backend_event_synchronizePtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_event_t)>>(
+          'ggml_backend_event_synchronize');
+  late final _ggml_backend_event_synchronize =
+      _ggml_backend_event_synchronizePtr
+          .asFunction<void Function(ggml_backend_event_t)>();
 
   void ggml_backend_event_wait(
     ggml_backend_t backend,
@@ -6427,8 +9081,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_event_waitPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t, ggml_backend_event_t)>>('ggml_backend_event_wait');
-  late final _ggml_backend_event_wait = _ggml_backend_event_waitPtr.asFunction<void Function(ggml_backend_t, ggml_backend_event_t)>();
+  late final _ggml_backend_event_waitPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_t,
+              ggml_backend_event_t)>>('ggml_backend_event_wait');
+  late final _ggml_backend_event_wait = _ggml_backend_event_waitPtr
+      .asFunction<void Function(ggml_backend_t, ggml_backend_event_t)>();
 
   ffi.Pointer<ffi.Char> ggml_backend_dev_name(
     ggml_backend_dev_t device,
@@ -6438,8 +9096,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_namePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>>('ggml_backend_dev_name');
-  late final _ggml_backend_dev_name = _ggml_backend_dev_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>();
+  late final _ggml_backend_dev_namePtr = _lookup<
+          ffi
+          .NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>>(
+      'ggml_backend_dev_name');
+  late final _ggml_backend_dev_name = _ggml_backend_dev_namePtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>();
 
   ffi.Pointer<ffi.Char> ggml_backend_dev_description(
     ggml_backend_dev_t device,
@@ -6449,8 +9111,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_descriptionPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>>('ggml_backend_dev_description');
-  late final _ggml_backend_dev_description = _ggml_backend_dev_descriptionPtr.asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>();
+  late final _ggml_backend_dev_descriptionPtr = _lookup<
+          ffi
+          .NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>>(
+      'ggml_backend_dev_description');
+  late final _ggml_backend_dev_description = _ggml_backend_dev_descriptionPtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>();
 
   void ggml_backend_dev_memory(
     ggml_backend_dev_t device,
@@ -6464,8 +9130,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_memoryPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_dev_t, ffi.Pointer<ffi.Size>, ffi.Pointer<ffi.Size>)>>('ggml_backend_dev_memory');
-  late final _ggml_backend_dev_memory = _ggml_backend_dev_memoryPtr.asFunction<void Function(ggml_backend_dev_t, ffi.Pointer<ffi.Size>, ffi.Pointer<ffi.Size>)>();
+  late final _ggml_backend_dev_memoryPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_dev_t, ffi.Pointer<ffi.Size>,
+              ffi.Pointer<ffi.Size>)>>('ggml_backend_dev_memory');
+  late final _ggml_backend_dev_memory = _ggml_backend_dev_memoryPtr.asFunction<
+      void Function(
+          ggml_backend_dev_t, ffi.Pointer<ffi.Size>, ffi.Pointer<ffi.Size>)>();
 
   ggml_backend_dev_type ggml_backend_dev_type1(
     ggml_backend_dev_t device,
@@ -6475,8 +9146,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     ));
   }
 
-  late final _ggml_backend_dev_type1Ptr = _lookup<ffi.NativeFunction<ffi.UnsignedInt Function(ggml_backend_dev_t)>>('ggml_backend_dev_type');
-  late final _ggml_backend_dev_type1 = _ggml_backend_dev_type1Ptr.asFunction<int Function(ggml_backend_dev_t)>();
+  late final _ggml_backend_dev_type1Ptr =
+      _lookup<ffi.NativeFunction<ffi.UnsignedInt Function(ggml_backend_dev_t)>>(
+          'ggml_backend_dev_type');
+  late final _ggml_backend_dev_type1 =
+      _ggml_backend_dev_type1Ptr.asFunction<int Function(ggml_backend_dev_t)>();
 
   void ggml_backend_dev_get_props(
     ggml_backend_dev_t device,
@@ -6488,8 +9162,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_get_propsPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_dev_t, ffi.Pointer<ggml_backend_dev_props>)>>('ggml_backend_dev_get_props');
-  late final _ggml_backend_dev_get_props = _ggml_backend_dev_get_propsPtr.asFunction<void Function(ggml_backend_dev_t, ffi.Pointer<ggml_backend_dev_props>)>();
+  late final _ggml_backend_dev_get_propsPtr = _lookup<
+          ffi.NativeFunction<
+              ffi.Void Function(
+                  ggml_backend_dev_t, ffi.Pointer<ggml_backend_dev_props>)>>(
+      'ggml_backend_dev_get_props');
+  late final _ggml_backend_dev_get_props =
+      _ggml_backend_dev_get_propsPtr.asFunction<
+          void Function(
+              ggml_backend_dev_t, ffi.Pointer<ggml_backend_dev_props>)>();
 
   ggml_backend_reg_t ggml_backend_dev_backend_reg(
     ggml_backend_dev_t device,
@@ -6499,8 +9180,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_backend_regPtr = _lookup<ffi.NativeFunction<ggml_backend_reg_t Function(ggml_backend_dev_t)>>('ggml_backend_dev_backend_reg');
-  late final _ggml_backend_dev_backend_reg = _ggml_backend_dev_backend_regPtr.asFunction<ggml_backend_reg_t Function(ggml_backend_dev_t)>();
+  late final _ggml_backend_dev_backend_regPtr = _lookup<
+          ffi.NativeFunction<ggml_backend_reg_t Function(ggml_backend_dev_t)>>(
+      'ggml_backend_dev_backend_reg');
+  late final _ggml_backend_dev_backend_reg = _ggml_backend_dev_backend_regPtr
+      .asFunction<ggml_backend_reg_t Function(ggml_backend_dev_t)>();
 
   ggml_backend_t ggml_backend_dev_init(
     ggml_backend_dev_t device,
@@ -6512,8 +9196,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_initPtr = _lookup<ffi.NativeFunction<ggml_backend_t Function(ggml_backend_dev_t, ffi.Pointer<ffi.Char>)>>('ggml_backend_dev_init');
-  late final _ggml_backend_dev_init = _ggml_backend_dev_initPtr.asFunction<ggml_backend_t Function(ggml_backend_dev_t, ffi.Pointer<ffi.Char>)>();
+  late final _ggml_backend_dev_initPtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_t Function(ggml_backend_dev_t,
+              ffi.Pointer<ffi.Char>)>>('ggml_backend_dev_init');
+  late final _ggml_backend_dev_init = _ggml_backend_dev_initPtr.asFunction<
+      ggml_backend_t Function(ggml_backend_dev_t, ffi.Pointer<ffi.Char>)>();
 
   ggml_backend_buffer_type_t ggml_backend_dev_buffer_type(
     ggml_backend_dev_t device,
@@ -6523,8 +9211,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_buffer_typePtr = _lookup<ffi.NativeFunction<ggml_backend_buffer_type_t Function(ggml_backend_dev_t)>>('ggml_backend_dev_buffer_type');
-  late final _ggml_backend_dev_buffer_type = _ggml_backend_dev_buffer_typePtr.asFunction<ggml_backend_buffer_type_t Function(ggml_backend_dev_t)>();
+  late final _ggml_backend_dev_buffer_typePtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_buffer_type_t Function(
+              ggml_backend_dev_t)>>('ggml_backend_dev_buffer_type');
+  late final _ggml_backend_dev_buffer_type = _ggml_backend_dev_buffer_typePtr
+      .asFunction<ggml_backend_buffer_type_t Function(ggml_backend_dev_t)>();
 
   ggml_backend_buffer_type_t ggml_backend_dev_host_buffer_type(
     ggml_backend_dev_t device,
@@ -6534,8 +9226,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_host_buffer_typePtr = _lookup<ffi.NativeFunction<ggml_backend_buffer_type_t Function(ggml_backend_dev_t)>>('ggml_backend_dev_host_buffer_type');
-  late final _ggml_backend_dev_host_buffer_type = _ggml_backend_dev_host_buffer_typePtr.asFunction<ggml_backend_buffer_type_t Function(ggml_backend_dev_t)>();
+  late final _ggml_backend_dev_host_buffer_typePtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_buffer_type_t Function(
+              ggml_backend_dev_t)>>('ggml_backend_dev_host_buffer_type');
+  late final _ggml_backend_dev_host_buffer_type =
+      _ggml_backend_dev_host_buffer_typePtr.asFunction<
+          ggml_backend_buffer_type_t Function(ggml_backend_dev_t)>();
 
   ggml_backend_buffer_t ggml_backend_dev_buffer_from_host_ptr(
     ggml_backend_dev_t device,
@@ -6551,8 +9248,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_buffer_from_host_ptrPtr = _lookup<ffi.NativeFunction<ggml_backend_buffer_t Function(ggml_backend_dev_t, ffi.Pointer<ffi.Void>, ffi.Size, ffi.Size)>>('ggml_backend_dev_buffer_from_host_ptr');
-  late final _ggml_backend_dev_buffer_from_host_ptr = _ggml_backend_dev_buffer_from_host_ptrPtr.asFunction<ggml_backend_buffer_t Function(ggml_backend_dev_t, ffi.Pointer<ffi.Void>, int, int)>();
+  late final _ggml_backend_dev_buffer_from_host_ptrPtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_buffer_t Function(
+              ggml_backend_dev_t,
+              ffi.Pointer<ffi.Void>,
+              ffi.Size,
+              ffi.Size)>>('ggml_backend_dev_buffer_from_host_ptr');
+  late final _ggml_backend_dev_buffer_from_host_ptr =
+      _ggml_backend_dev_buffer_from_host_ptrPtr.asFunction<
+          ggml_backend_buffer_t Function(
+              ggml_backend_dev_t, ffi.Pointer<ffi.Void>, int, int)>();
 
   bool ggml_backend_dev_supports_op(
     ggml_backend_dev_t device,
@@ -6564,8 +9270,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_supports_opPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_dev_t, ffi.Pointer<ggml_tensor>)>>('ggml_backend_dev_supports_op');
-  late final _ggml_backend_dev_supports_op = _ggml_backend_dev_supports_opPtr.asFunction<bool Function(ggml_backend_dev_t, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_backend_dev_supports_opPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_dev_t,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_dev_supports_op');
+  late final _ggml_backend_dev_supports_op =
+      _ggml_backend_dev_supports_opPtr.asFunction<
+          bool Function(ggml_backend_dev_t, ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_backend_dev_supports_buft(
     ggml_backend_dev_t device,
@@ -6577,8 +9288,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_supports_buftPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_dev_t, ggml_backend_buffer_type_t)>>('ggml_backend_dev_supports_buft');
-  late final _ggml_backend_dev_supports_buft = _ggml_backend_dev_supports_buftPtr.asFunction<bool Function(ggml_backend_dev_t, ggml_backend_buffer_type_t)>();
+  late final _ggml_backend_dev_supports_buftPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_dev_t,
+              ggml_backend_buffer_type_t)>>('ggml_backend_dev_supports_buft');
+  late final _ggml_backend_dev_supports_buft =
+      _ggml_backend_dev_supports_buftPtr.asFunction<
+          bool Function(ggml_backend_dev_t, ggml_backend_buffer_type_t)>();
 
   bool ggml_backend_dev_offload_op(
     ggml_backend_dev_t device,
@@ -6590,8 +9306,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_offload_opPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_dev_t, ffi.Pointer<ggml_tensor>)>>('ggml_backend_dev_offload_op');
-  late final _ggml_backend_dev_offload_op = _ggml_backend_dev_offload_opPtr.asFunction<bool Function(ggml_backend_dev_t, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_backend_dev_offload_opPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_dev_t,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_dev_offload_op');
+  late final _ggml_backend_dev_offload_op =
+      _ggml_backend_dev_offload_opPtr.asFunction<
+          bool Function(ggml_backend_dev_t, ffi.Pointer<ggml_tensor>)>();
 
   ffi.Pointer<ffi.Char> ggml_backend_reg_name(
     ggml_backend_reg_t reg,
@@ -6601,8 +9322,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_reg_namePtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_reg_t)>>('ggml_backend_reg_name');
-  late final _ggml_backend_reg_name = _ggml_backend_reg_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_reg_t)>();
+  late final _ggml_backend_reg_namePtr = _lookup<
+          ffi
+          .NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_reg_t)>>(
+      'ggml_backend_reg_name');
+  late final _ggml_backend_reg_name = _ggml_backend_reg_namePtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_reg_t)>();
 
   int ggml_backend_reg_dev_count(
     ggml_backend_reg_t reg,
@@ -6612,8 +9337,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_reg_dev_countPtr = _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_reg_t)>>('ggml_backend_reg_dev_count');
-  late final _ggml_backend_reg_dev_count = _ggml_backend_reg_dev_countPtr.asFunction<int Function(ggml_backend_reg_t)>();
+  late final _ggml_backend_reg_dev_countPtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_reg_t)>>(
+          'ggml_backend_reg_dev_count');
+  late final _ggml_backend_reg_dev_count = _ggml_backend_reg_dev_countPtr
+      .asFunction<int Function(ggml_backend_reg_t)>();
 
   ggml_backend_dev_t ggml_backend_reg_dev_get(
     ggml_backend_reg_t reg,
@@ -6625,8 +9353,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_reg_dev_getPtr = _lookup<ffi.NativeFunction<ggml_backend_dev_t Function(ggml_backend_reg_t, ffi.Size)>>('ggml_backend_reg_dev_get');
-  late final _ggml_backend_reg_dev_get = _ggml_backend_reg_dev_getPtr.asFunction<ggml_backend_dev_t Function(ggml_backend_reg_t, int)>();
+  late final _ggml_backend_reg_dev_getPtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_dev_t Function(
+              ggml_backend_reg_t, ffi.Size)>>('ggml_backend_reg_dev_get');
+  late final _ggml_backend_reg_dev_get = _ggml_backend_reg_dev_getPtr
+      .asFunction<ggml_backend_dev_t Function(ggml_backend_reg_t, int)>();
 
   ffi.Pointer<ffi.Void> ggml_backend_reg_get_proc_address(
     ggml_backend_reg_t reg,
@@ -6638,8 +9370,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_reg_get_proc_addressPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Void> Function(ggml_backend_reg_t, ffi.Pointer<ffi.Char>)>>('ggml_backend_reg_get_proc_address');
-  late final _ggml_backend_reg_get_proc_address = _ggml_backend_reg_get_proc_addressPtr.asFunction<ffi.Pointer<ffi.Void> Function(ggml_backend_reg_t, ffi.Pointer<ffi.Char>)>();
+  late final _ggml_backend_reg_get_proc_addressPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Void> Function(ggml_backend_reg_t,
+              ffi.Pointer<ffi.Char>)>>('ggml_backend_reg_get_proc_address');
+  late final _ggml_backend_reg_get_proc_address =
+      _ggml_backend_reg_get_proc_addressPtr.asFunction<
+          ffi.Pointer<ffi.Void> Function(
+              ggml_backend_reg_t, ffi.Pointer<ffi.Char>)>();
 
   void ggml_backend_device_register(
     ggml_backend_dev_t device,
@@ -6649,15 +9387,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_device_registerPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_dev_t)>>('ggml_backend_device_register');
-  late final _ggml_backend_device_register = _ggml_backend_device_registerPtr.asFunction<void Function(ggml_backend_dev_t)>();
+  late final _ggml_backend_device_registerPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_dev_t)>>(
+          'ggml_backend_device_register');
+  late final _ggml_backend_device_register = _ggml_backend_device_registerPtr
+      .asFunction<void Function(ggml_backend_dev_t)>();
 
   int ggml_backend_reg_count() {
     return _ggml_backend_reg_count();
   }
 
-  late final _ggml_backend_reg_countPtr = _lookup<ffi.NativeFunction<ffi.Size Function()>>('ggml_backend_reg_count');
-  late final _ggml_backend_reg_count = _ggml_backend_reg_countPtr.asFunction<int Function()>();
+  late final _ggml_backend_reg_countPtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function()>>(
+          'ggml_backend_reg_count');
+  late final _ggml_backend_reg_count =
+      _ggml_backend_reg_countPtr.asFunction<int Function()>();
 
   ggml_backend_reg_t ggml_backend_reg_get(
     int index,
@@ -6667,8 +9411,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_reg_getPtr = _lookup<ffi.NativeFunction<ggml_backend_reg_t Function(ffi.Size)>>('ggml_backend_reg_get');
-  late final _ggml_backend_reg_get = _ggml_backend_reg_getPtr.asFunction<ggml_backend_reg_t Function(int)>();
+  late final _ggml_backend_reg_getPtr =
+      _lookup<ffi.NativeFunction<ggml_backend_reg_t Function(ffi.Size)>>(
+          'ggml_backend_reg_get');
+  late final _ggml_backend_reg_get =
+      _ggml_backend_reg_getPtr.asFunction<ggml_backend_reg_t Function(int)>();
 
   ggml_backend_reg_t ggml_backend_reg_by_name(
     ffi.Pointer<ffi.Char> name,
@@ -6678,15 +9425,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_reg_by_namePtr = _lookup<ffi.NativeFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>>('ggml_backend_reg_by_name');
-  late final _ggml_backend_reg_by_name = _ggml_backend_reg_by_namePtr.asFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>();
+  late final _ggml_backend_reg_by_namePtr = _lookup<
+          ffi
+          .NativeFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>>(
+      'ggml_backend_reg_by_name');
+  late final _ggml_backend_reg_by_name = _ggml_backend_reg_by_namePtr
+      .asFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>();
 
   int ggml_backend_dev_count() {
     return _ggml_backend_dev_count();
   }
 
-  late final _ggml_backend_dev_countPtr = _lookup<ffi.NativeFunction<ffi.Size Function()>>('ggml_backend_dev_count');
-  late final _ggml_backend_dev_count = _ggml_backend_dev_countPtr.asFunction<int Function()>();
+  late final _ggml_backend_dev_countPtr =
+      _lookup<ffi.NativeFunction<ffi.Size Function()>>(
+          'ggml_backend_dev_count');
+  late final _ggml_backend_dev_count =
+      _ggml_backend_dev_countPtr.asFunction<int Function()>();
 
   ggml_backend_dev_t ggml_backend_dev_get(
     int index,
@@ -6696,8 +9450,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_getPtr = _lookup<ffi.NativeFunction<ggml_backend_dev_t Function(ffi.Size)>>('ggml_backend_dev_get');
-  late final _ggml_backend_dev_get = _ggml_backend_dev_getPtr.asFunction<ggml_backend_dev_t Function(int)>();
+  late final _ggml_backend_dev_getPtr =
+      _lookup<ffi.NativeFunction<ggml_backend_dev_t Function(ffi.Size)>>(
+          'ggml_backend_dev_get');
+  late final _ggml_backend_dev_get =
+      _ggml_backend_dev_getPtr.asFunction<ggml_backend_dev_t Function(int)>();
 
   ggml_backend_dev_t ggml_backend_dev_by_name(
     ffi.Pointer<ffi.Char> name,
@@ -6707,8 +9464,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_by_namePtr = _lookup<ffi.NativeFunction<ggml_backend_dev_t Function(ffi.Pointer<ffi.Char>)>>('ggml_backend_dev_by_name');
-  late final _ggml_backend_dev_by_name = _ggml_backend_dev_by_namePtr.asFunction<ggml_backend_dev_t Function(ffi.Pointer<ffi.Char>)>();
+  late final _ggml_backend_dev_by_namePtr = _lookup<
+          ffi
+          .NativeFunction<ggml_backend_dev_t Function(ffi.Pointer<ffi.Char>)>>(
+      'ggml_backend_dev_by_name');
+  late final _ggml_backend_dev_by_name = _ggml_backend_dev_by_namePtr
+      .asFunction<ggml_backend_dev_t Function(ffi.Pointer<ffi.Char>)>();
 
   ggml_backend_dev_t ggml_backend_dev_by_type(
     ggml_backend_dev_type type,
@@ -6718,8 +9479,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_dev_by_typePtr = _lookup<ffi.NativeFunction<ggml_backend_dev_t Function(ffi.UnsignedInt)>>('ggml_backend_dev_by_type');
-  late final _ggml_backend_dev_by_type = _ggml_backend_dev_by_typePtr.asFunction<ggml_backend_dev_t Function(int)>();
+  late final _ggml_backend_dev_by_typePtr =
+      _lookup<ffi.NativeFunction<ggml_backend_dev_t Function(ffi.UnsignedInt)>>(
+          'ggml_backend_dev_by_type');
+  late final _ggml_backend_dev_by_type = _ggml_backend_dev_by_typePtr
+      .asFunction<ggml_backend_dev_t Function(int)>();
 
   ggml_backend_t ggml_backend_init_by_name(
     ffi.Pointer<ffi.Char> name,
@@ -6731,8 +9495,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_init_by_namePtr = _lookup<ffi.NativeFunction<ggml_backend_t Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('ggml_backend_init_by_name');
-  late final _ggml_backend_init_by_name = _ggml_backend_init_by_namePtr.asFunction<ggml_backend_t Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
+  late final _ggml_backend_init_by_namePtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_t Function(ffi.Pointer<ffi.Char>,
+              ffi.Pointer<ffi.Char>)>>('ggml_backend_init_by_name');
+  late final _ggml_backend_init_by_name =
+      _ggml_backend_init_by_namePtr.asFunction<
+          ggml_backend_t Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
 
   ggml_backend_t ggml_backend_init_by_type(
     ggml_backend_dev_type type,
@@ -6744,15 +9514,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_init_by_typePtr = _lookup<ffi.NativeFunction<ggml_backend_t Function(ffi.UnsignedInt, ffi.Pointer<ffi.Char>)>>('ggml_backend_init_by_type');
-  late final _ggml_backend_init_by_type = _ggml_backend_init_by_typePtr.asFunction<ggml_backend_t Function(int, ffi.Pointer<ffi.Char>)>();
+  late final _ggml_backend_init_by_typePtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_t Function(ffi.UnsignedInt,
+              ffi.Pointer<ffi.Char>)>>('ggml_backend_init_by_type');
+  late final _ggml_backend_init_by_type = _ggml_backend_init_by_typePtr
+      .asFunction<ggml_backend_t Function(int, ffi.Pointer<ffi.Char>)>();
 
   ggml_backend_t ggml_backend_init_best() {
     return _ggml_backend_init_best();
   }
 
-  late final _ggml_backend_init_bestPtr = _lookup<ffi.NativeFunction<ggml_backend_t Function()>>('ggml_backend_init_best');
-  late final _ggml_backend_init_best = _ggml_backend_init_bestPtr.asFunction<ggml_backend_t Function()>();
+  late final _ggml_backend_init_bestPtr =
+      _lookup<ffi.NativeFunction<ggml_backend_t Function()>>(
+          'ggml_backend_init_best');
+  late final _ggml_backend_init_best =
+      _ggml_backend_init_bestPtr.asFunction<ggml_backend_t Function()>();
 
   ggml_backend_reg_t ggml_backend_load(
     ffi.Pointer<ffi.Char> path,
@@ -6762,8 +9539,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_loadPtr = _lookup<ffi.NativeFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>>('ggml_backend_load');
-  late final _ggml_backend_load = _ggml_backend_loadPtr.asFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>();
+  late final _ggml_backend_loadPtr = _lookup<
+          ffi
+          .NativeFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>>(
+      'ggml_backend_load');
+  late final _ggml_backend_load = _ggml_backend_loadPtr
+      .asFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>();
 
   void ggml_backend_unload(
     ggml_backend_reg_t reg,
@@ -6773,15 +9554,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_unloadPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_reg_t)>>('ggml_backend_unload');
-  late final _ggml_backend_unload = _ggml_backend_unloadPtr.asFunction<void Function(ggml_backend_reg_t)>();
+  late final _ggml_backend_unloadPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_reg_t)>>(
+          'ggml_backend_unload');
+  late final _ggml_backend_unload =
+      _ggml_backend_unloadPtr.asFunction<void Function(ggml_backend_reg_t)>();
 
   void ggml_backend_load_all() {
     return _ggml_backend_load_all();
   }
 
-  late final _ggml_backend_load_allPtr = _lookup<ffi.NativeFunction<ffi.Void Function()>>('ggml_backend_load_all');
-  late final _ggml_backend_load_all = _ggml_backend_load_allPtr.asFunction<void Function()>();
+  late final _ggml_backend_load_allPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function()>>('ggml_backend_load_all');
+  late final _ggml_backend_load_all =
+      _ggml_backend_load_allPtr.asFunction<void Function()>();
 
   void ggml_backend_load_all_from_path(
     ffi.Pointer<ffi.Char> dir_path,
@@ -6791,8 +9577,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_load_all_from_pathPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ffi.Char>)>>('ggml_backend_load_all_from_path');
-  late final _ggml_backend_load_all_from_path = _ggml_backend_load_all_from_pathPtr.asFunction<void Function(ffi.Pointer<ffi.Char>)>();
+  late final _ggml_backend_load_all_from_pathPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ffi.Char>)>>(
+          'ggml_backend_load_all_from_path');
+  late final _ggml_backend_load_all_from_path =
+      _ggml_backend_load_all_from_pathPtr
+          .asFunction<void Function(ffi.Pointer<ffi.Char>)>();
 
   ggml_backend_sched_t ggml_backend_sched_new(
     ffi.Pointer<ggml_backend_t> backends,
@@ -6810,8 +9600,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_sched_newPtr = _lookup<ffi.NativeFunction<ggml_backend_sched_t Function(ffi.Pointer<ggml_backend_t>, ffi.Pointer<ggml_backend_buffer_type_t>, ffi.Int, ffi.Size, ffi.Bool)>>('ggml_backend_sched_new');
-  late final _ggml_backend_sched_new = _ggml_backend_sched_newPtr.asFunction<ggml_backend_sched_t Function(ffi.Pointer<ggml_backend_t>, ffi.Pointer<ggml_backend_buffer_type_t>, int, int, bool)>();
+  late final _ggml_backend_sched_newPtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_sched_t Function(
+              ffi.Pointer<ggml_backend_t>,
+              ffi.Pointer<ggml_backend_buffer_type_t>,
+              ffi.Int,
+              ffi.Size,
+              ffi.Bool)>>('ggml_backend_sched_new');
+  late final _ggml_backend_sched_new = _ggml_backend_sched_newPtr.asFunction<
+      ggml_backend_sched_t Function(ffi.Pointer<ggml_backend_t>,
+          ffi.Pointer<ggml_backend_buffer_type_t>, int, int, bool)>();
 
   void ggml_backend_sched_free(
     ggml_backend_sched_t sched,
@@ -6821,8 +9620,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_sched_freePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_sched_t)>>('ggml_backend_sched_free');
-  late final _ggml_backend_sched_free = _ggml_backend_sched_freePtr.asFunction<void Function(ggml_backend_sched_t)>();
+  late final _ggml_backend_sched_freePtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_sched_t)>>(
+          'ggml_backend_sched_free');
+  late final _ggml_backend_sched_free = _ggml_backend_sched_freePtr
+      .asFunction<void Function(ggml_backend_sched_t)>();
 
   bool ggml_backend_sched_reserve(
     ggml_backend_sched_t sched,
@@ -6834,8 +9636,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_sched_reservePtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>>('ggml_backend_sched_reserve');
-  late final _ggml_backend_sched_reserve = _ggml_backend_sched_reservePtr.asFunction<bool Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_backend_sched_reservePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_sched_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_backend_sched_reserve');
+  late final _ggml_backend_sched_reserve =
+      _ggml_backend_sched_reservePtr.asFunction<
+          bool Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>();
 
   int ggml_backend_sched_get_n_backends(
     ggml_backend_sched_t sched,
@@ -6845,8 +9652,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_sched_get_n_backendsPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ggml_backend_sched_t)>>('ggml_backend_sched_get_n_backends');
-  late final _ggml_backend_sched_get_n_backends = _ggml_backend_sched_get_n_backendsPtr.asFunction<int Function(ggml_backend_sched_t)>();
+  late final _ggml_backend_sched_get_n_backendsPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ggml_backend_sched_t)>>(
+          'ggml_backend_sched_get_n_backends');
+  late final _ggml_backend_sched_get_n_backends =
+      _ggml_backend_sched_get_n_backendsPtr
+          .asFunction<int Function(ggml_backend_sched_t)>();
 
   ggml_backend_t ggml_backend_sched_get_backend(
     ggml_backend_sched_t sched,
@@ -6858,8 +9669,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_sched_get_backendPtr = _lookup<ffi.NativeFunction<ggml_backend_t Function(ggml_backend_sched_t, ffi.Int)>>('ggml_backend_sched_get_backend');
-  late final _ggml_backend_sched_get_backend = _ggml_backend_sched_get_backendPtr.asFunction<ggml_backend_t Function(ggml_backend_sched_t, int)>();
+  late final _ggml_backend_sched_get_backendPtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_t Function(ggml_backend_sched_t,
+              ffi.Int)>>('ggml_backend_sched_get_backend');
+  late final _ggml_backend_sched_get_backend =
+      _ggml_backend_sched_get_backendPtr
+          .asFunction<ggml_backend_t Function(ggml_backend_sched_t, int)>();
 
   int ggml_backend_sched_get_n_splits(
     ggml_backend_sched_t sched,
@@ -6869,8 +9685,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_sched_get_n_splitsPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ggml_backend_sched_t)>>('ggml_backend_sched_get_n_splits');
-  late final _ggml_backend_sched_get_n_splits = _ggml_backend_sched_get_n_splitsPtr.asFunction<int Function(ggml_backend_sched_t)>();
+  late final _ggml_backend_sched_get_n_splitsPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ggml_backend_sched_t)>>(
+          'ggml_backend_sched_get_n_splits');
+  late final _ggml_backend_sched_get_n_splits =
+      _ggml_backend_sched_get_n_splitsPtr
+          .asFunction<int Function(ggml_backend_sched_t)>();
 
   int ggml_backend_sched_get_n_copies(
     ggml_backend_sched_t sched,
@@ -6880,8 +9700,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_sched_get_n_copiesPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ggml_backend_sched_t)>>('ggml_backend_sched_get_n_copies');
-  late final _ggml_backend_sched_get_n_copies = _ggml_backend_sched_get_n_copiesPtr.asFunction<int Function(ggml_backend_sched_t)>();
+  late final _ggml_backend_sched_get_n_copiesPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function(ggml_backend_sched_t)>>(
+          'ggml_backend_sched_get_n_copies');
+  late final _ggml_backend_sched_get_n_copies =
+      _ggml_backend_sched_get_n_copiesPtr
+          .asFunction<int Function(ggml_backend_sched_t)>();
 
   int ggml_backend_sched_get_buffer_size(
     ggml_backend_sched_t sched,
@@ -6893,8 +9717,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_sched_get_buffer_sizePtr = _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_sched_t, ggml_backend_t)>>('ggml_backend_sched_get_buffer_size');
-  late final _ggml_backend_sched_get_buffer_size = _ggml_backend_sched_get_buffer_sizePtr.asFunction<int Function(ggml_backend_sched_t, ggml_backend_t)>();
+  late final _ggml_backend_sched_get_buffer_sizePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Size Function(ggml_backend_sched_t,
+              ggml_backend_t)>>('ggml_backend_sched_get_buffer_size');
+  late final _ggml_backend_sched_get_buffer_size =
+      _ggml_backend_sched_get_buffer_sizePtr
+          .asFunction<int Function(ggml_backend_sched_t, ggml_backend_t)>();
 
   void ggml_backend_sched_set_tensor_backend(
     ggml_backend_sched_t sched,
@@ -6908,8 +9737,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_sched_set_tensor_backendPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_sched_t, ffi.Pointer<ggml_tensor>, ggml_backend_t)>>('ggml_backend_sched_set_tensor_backend');
-  late final _ggml_backend_sched_set_tensor_backend = _ggml_backend_sched_set_tensor_backendPtr.asFunction<void Function(ggml_backend_sched_t, ffi.Pointer<ggml_tensor>, ggml_backend_t)>();
+  late final _ggml_backend_sched_set_tensor_backendPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_sched_t, ffi.Pointer<ggml_tensor>,
+              ggml_backend_t)>>('ggml_backend_sched_set_tensor_backend');
+  late final _ggml_backend_sched_set_tensor_backend =
+      _ggml_backend_sched_set_tensor_backendPtr.asFunction<
+          void Function(ggml_backend_sched_t, ffi.Pointer<ggml_tensor>,
+              ggml_backend_t)>();
 
   ggml_backend_t ggml_backend_sched_get_tensor_backend(
     ggml_backend_sched_t sched,
@@ -6921,8 +9756,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_sched_get_tensor_backendPtr = _lookup<ffi.NativeFunction<ggml_backend_t Function(ggml_backend_sched_t, ffi.Pointer<ggml_tensor>)>>('ggml_backend_sched_get_tensor_backend');
-  late final _ggml_backend_sched_get_tensor_backend = _ggml_backend_sched_get_tensor_backendPtr.asFunction<ggml_backend_t Function(ggml_backend_sched_t, ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_backend_sched_get_tensor_backendPtr = _lookup<
+          ffi.NativeFunction<
+              ggml_backend_t Function(
+                  ggml_backend_sched_t, ffi.Pointer<ggml_tensor>)>>(
+      'ggml_backend_sched_get_tensor_backend');
+  late final _ggml_backend_sched_get_tensor_backend =
+      _ggml_backend_sched_get_tensor_backendPtr.asFunction<
+          ggml_backend_t Function(
+              ggml_backend_sched_t, ffi.Pointer<ggml_tensor>)>();
 
   bool ggml_backend_sched_alloc_graph(
     ggml_backend_sched_t sched,
@@ -6934,8 +9776,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_sched_alloc_graphPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>>('ggml_backend_sched_alloc_graph');
-  late final _ggml_backend_sched_alloc_graph = _ggml_backend_sched_alloc_graphPtr.asFunction<bool Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_backend_sched_alloc_graphPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_sched_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_backend_sched_alloc_graph');
+  late final _ggml_backend_sched_alloc_graph =
+      _ggml_backend_sched_alloc_graphPtr.asFunction<
+          bool Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>();
 
   ggml_status ggml_backend_sched_graph_compute(
     ggml_backend_sched_t sched,
@@ -6947,8 +9794,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     ));
   }
 
-  late final _ggml_backend_sched_graph_computePtr = _lookup<ffi.NativeFunction<ffi.Int Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>>('ggml_backend_sched_graph_compute');
-  late final _ggml_backend_sched_graph_compute = _ggml_backend_sched_graph_computePtr.asFunction<int Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_backend_sched_graph_computePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ggml_backend_sched_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_backend_sched_graph_compute');
+  late final _ggml_backend_sched_graph_compute =
+      _ggml_backend_sched_graph_computePtr.asFunction<
+          int Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>();
 
   ggml_status ggml_backend_sched_graph_compute_async(
     ggml_backend_sched_t sched,
@@ -6960,8 +9812,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     ));
   }
 
-  late final _ggml_backend_sched_graph_compute_asyncPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>>('ggml_backend_sched_graph_compute_async');
-  late final _ggml_backend_sched_graph_compute_async = _ggml_backend_sched_graph_compute_asyncPtr.asFunction<int Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_backend_sched_graph_compute_asyncPtr = _lookup<
+          ffi.NativeFunction<
+              ffi.Int Function(
+                  ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>>(
+      'ggml_backend_sched_graph_compute_async');
+  late final _ggml_backend_sched_graph_compute_async =
+      _ggml_backend_sched_graph_compute_asyncPtr.asFunction<
+          int Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>();
 
   void ggml_backend_sched_synchronize(
     ggml_backend_sched_t sched,
@@ -6971,8 +9829,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_sched_synchronizePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_sched_t)>>('ggml_backend_sched_synchronize');
-  late final _ggml_backend_sched_synchronize = _ggml_backend_sched_synchronizePtr.asFunction<void Function(ggml_backend_sched_t)>();
+  late final _ggml_backend_sched_synchronizePtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_sched_t)>>(
+          'ggml_backend_sched_synchronize');
+  late final _ggml_backend_sched_synchronize =
+      _ggml_backend_sched_synchronizePtr
+          .asFunction<void Function(ggml_backend_sched_t)>();
 
   void ggml_backend_sched_reset(
     ggml_backend_sched_t sched,
@@ -6982,8 +9844,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_sched_resetPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_sched_t)>>('ggml_backend_sched_reset');
-  late final _ggml_backend_sched_reset = _ggml_backend_sched_resetPtr.asFunction<void Function(ggml_backend_sched_t)>();
+  late final _ggml_backend_sched_resetPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_sched_t)>>(
+          'ggml_backend_sched_reset');
+  late final _ggml_backend_sched_reset = _ggml_backend_sched_resetPtr
+      .asFunction<void Function(ggml_backend_sched_t)>();
 
   void ggml_backend_sched_set_eval_callback(
     ggml_backend_sched_t sched,
@@ -6997,8 +9862,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_sched_set_eval_callbackPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_sched_t, ggml_backend_sched_eval_callback, ffi.Pointer<ffi.Void>)>>('ggml_backend_sched_set_eval_callback');
-  late final _ggml_backend_sched_set_eval_callback = _ggml_backend_sched_set_eval_callbackPtr.asFunction<void Function(ggml_backend_sched_t, ggml_backend_sched_eval_callback, ffi.Pointer<ffi.Void>)>();
+  late final _ggml_backend_sched_set_eval_callbackPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ggml_backend_sched_t,
+              ggml_backend_sched_eval_callback,
+              ffi.Pointer<ffi.Void>)>>('ggml_backend_sched_set_eval_callback');
+  late final _ggml_backend_sched_set_eval_callback =
+      _ggml_backend_sched_set_eval_callbackPtr.asFunction<
+          void Function(ggml_backend_sched_t, ggml_backend_sched_eval_callback,
+              ffi.Pointer<ffi.Void>)>();
 
   ggml_backend_graph_copy ggml_backend_graph_copy1(
     ggml_backend_t backend,
@@ -7010,8 +9883,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_graph_copy1Ptr = _lookup<ffi.NativeFunction<ggml_backend_graph_copy Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)>>('ggml_backend_graph_copy');
-  late final _ggml_backend_graph_copy1 = _ggml_backend_graph_copy1Ptr.asFunction<ggml_backend_graph_copy Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)>();
+  late final _ggml_backend_graph_copy1Ptr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_graph_copy Function(ggml_backend_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_backend_graph_copy');
+  late final _ggml_backend_graph_copy1 =
+      _ggml_backend_graph_copy1Ptr.asFunction<
+          ggml_backend_graph_copy Function(
+              ggml_backend_t, ffi.Pointer<ggml_cgraph>)>();
 
   void ggml_backend_graph_copy_free(
     ggml_backend_graph_copy copy,
@@ -7021,8 +9900,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_graph_copy_freePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_graph_copy)>>('ggml_backend_graph_copy_free');
-  late final _ggml_backend_graph_copy_free = _ggml_backend_graph_copy_freePtr.asFunction<void Function(ggml_backend_graph_copy)>();
+  late final _ggml_backend_graph_copy_freePtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_graph_copy)>>(
+          'ggml_backend_graph_copy_free');
+  late final _ggml_backend_graph_copy_free = _ggml_backend_graph_copy_freePtr
+      .asFunction<void Function(ggml_backend_graph_copy)>();
 
   bool ggml_backend_compare_graph_backend(
     ggml_backend_t backend1,
@@ -7040,8 +9922,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_compare_graph_backendPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_t, ggml_backend_t, ffi.Pointer<ggml_cgraph>, ggml_backend_eval_callback, ffi.Pointer<ffi.Void>)>>('ggml_backend_compare_graph_backend');
-  late final _ggml_backend_compare_graph_backend = _ggml_backend_compare_graph_backendPtr.asFunction<bool Function(ggml_backend_t, ggml_backend_t, ffi.Pointer<ggml_cgraph>, ggml_backend_eval_callback, ffi.Pointer<ffi.Void>)>();
+  late final _ggml_backend_compare_graph_backendPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Bool Function(
+              ggml_backend_t,
+              ggml_backend_t,
+              ffi.Pointer<ggml_cgraph>,
+              ggml_backend_eval_callback,
+              ffi.Pointer<ffi.Void>)>>('ggml_backend_compare_graph_backend');
+  late final _ggml_backend_compare_graph_backend =
+      _ggml_backend_compare_graph_backendPtr.asFunction<
+          bool Function(
+              ggml_backend_t,
+              ggml_backend_t,
+              ffi.Pointer<ggml_cgraph>,
+              ggml_backend_eval_callback,
+              ffi.Pointer<ffi.Void>)>();
 
   void ggml_backend_tensor_alloc(
     ggml_backend_buffer_t buffer,
@@ -7055,8 +9951,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_tensor_allocPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Void>)>>('ggml_backend_tensor_alloc');
-  late final _ggml_backend_tensor_alloc = _ggml_backend_tensor_allocPtr.asFunction<void Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>, ffi.Pointer<ffi.Void>)>();
+  late final _ggml_backend_tensor_allocPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ffi.Void>)>>('ggml_backend_tensor_alloc');
+  late final _ggml_backend_tensor_alloc =
+      _ggml_backend_tensor_allocPtr.asFunction<
+          void Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ffi.Void>)>();
 
   void ggml_backend_view_init(
     ffi.Pointer<ggml_tensor> tensor,
@@ -7066,8 +9968,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_view_initPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>)>>('ggml_backend_view_init');
-  late final _ggml_backend_view_init = _ggml_backend_view_initPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>)>();
+  late final _ggml_backend_view_initPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>)>>(
+          'ggml_backend_view_init');
+  late final _ggml_backend_view_init = _ggml_backend_view_initPtr
+      .asFunction<void Function(ffi.Pointer<ggml_tensor>)>();
 
   ggml_backend_buffer_t ggml_backend_cpu_buffer_from_ptr(
     ffi.Pointer<ffi.Void> ptr,
@@ -7079,15 +9984,23 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_cpu_buffer_from_ptrPtr = _lookup<ffi.NativeFunction<ggml_backend_buffer_t Function(ffi.Pointer<ffi.Void>, ffi.Size)>>('ggml_backend_cpu_buffer_from_ptr');
-  late final _ggml_backend_cpu_buffer_from_ptr = _ggml_backend_cpu_buffer_from_ptrPtr.asFunction<ggml_backend_buffer_t Function(ffi.Pointer<ffi.Void>, int)>();
+  late final _ggml_backend_cpu_buffer_from_ptrPtr = _lookup<
+      ffi.NativeFunction<
+          ggml_backend_buffer_t Function(ffi.Pointer<ffi.Void>,
+              ffi.Size)>>('ggml_backend_cpu_buffer_from_ptr');
+  late final _ggml_backend_cpu_buffer_from_ptr =
+      _ggml_backend_cpu_buffer_from_ptrPtr.asFunction<
+          ggml_backend_buffer_t Function(ffi.Pointer<ffi.Void>, int)>();
 
   ggml_backend_buffer_type_t ggml_backend_cpu_buffer_type() {
     return _ggml_backend_cpu_buffer_type();
   }
 
-  late final _ggml_backend_cpu_buffer_typePtr = _lookup<ffi.NativeFunction<ggml_backend_buffer_type_t Function()>>('ggml_backend_cpu_buffer_type');
-  late final _ggml_backend_cpu_buffer_type = _ggml_backend_cpu_buffer_typePtr.asFunction<ggml_backend_buffer_type_t Function()>();
+  late final _ggml_backend_cpu_buffer_typePtr =
+      _lookup<ffi.NativeFunction<ggml_backend_buffer_type_t Function()>>(
+          'ggml_backend_cpu_buffer_type');
+  late final _ggml_backend_cpu_buffer_type = _ggml_backend_cpu_buffer_typePtr
+      .asFunction<ggml_backend_buffer_type_t Function()>();
 
   void ggml_numa_init(
     ggml_numa_strategy numa,
@@ -7097,14 +10010,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_numa_initPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.UnsignedInt)>>('ggml_numa_init');
-  late final _ggml_numa_init = _ggml_numa_initPtr.asFunction<void Function(int)>();
+  late final _ggml_numa_initPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.UnsignedInt)>>(
+          'ggml_numa_init');
+  late final _ggml_numa_init =
+      _ggml_numa_initPtr.asFunction<void Function(int)>();
 
   bool ggml_is_numa() {
     return _ggml_is_numa();
   }
 
-  late final _ggml_is_numaPtr = _lookup<ffi.NativeFunction<ffi.Bool Function()>>('ggml_is_numa');
+  late final _ggml_is_numaPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function()>>('ggml_is_numa');
   late final _ggml_is_numa = _ggml_is_numaPtr.asFunction<bool Function()>();
 
   ffi.Pointer<ggml_tensor> ggml_new_i32(
@@ -7117,8 +10034,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_new_i32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Int32)>>('ggml_new_i32');
-  late final _ggml_new_i32 = _ggml_new_i32Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, int)>();
+  late final _ggml_new_i32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>, ffi.Int32)>>('ggml_new_i32');
+  late final _ggml_new_i32 = _ggml_new_i32Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_new_f32(
     ffi.Pointer<ggml_context> ctx,
@@ -7130,8 +10051,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_new_f32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Float)>>('ggml_new_f32');
-  late final _ggml_new_f32 = _ggml_new_f32Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, double)>();
+  late final _ggml_new_f32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>, ffi.Float)>>('ggml_new_f32');
+  late final _ggml_new_f32 = _ggml_new_f32Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, double)>();
 
   ffi.Pointer<ggml_tensor> ggml_set_i32(
     ffi.Pointer<ggml_tensor> tensor,
@@ -7143,8 +10068,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_i32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, ffi.Int32)>>('ggml_set_i32');
-  late final _ggml_set_i32 = _ggml_set_i32Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_set_i32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_tensor>, ffi.Int32)>>('ggml_set_i32');
+  late final _ggml_set_i32 = _ggml_set_i32Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, int)>();
 
   ffi.Pointer<ggml_tensor> ggml_set_f32(
     ffi.Pointer<ggml_tensor> tensor,
@@ -7156,8 +10085,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_f32Ptr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_set_f32');
-  late final _ggml_set_f32 = _ggml_set_f32Ptr.asFunction<ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, double)>();
+  late final _ggml_set_f32Ptr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_set_f32');
+  late final _ggml_set_f32 = _ggml_set_f32Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, double)>();
 
   int ggml_get_i32_1d(
     ffi.Pointer<ggml_tensor> tensor,
@@ -7169,8 +10102,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_i32_1dPtr = _lookup<ffi.NativeFunction<ffi.Int32 Function(ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_get_i32_1d');
-  late final _ggml_get_i32_1d = _ggml_get_i32_1dPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_get_i32_1dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int32 Function(
+              ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_get_i32_1d');
+  late final _ggml_get_i32_1d = _ggml_get_i32_1dPtr
+      .asFunction<int Function(ffi.Pointer<ggml_tensor>, int)>();
 
   void ggml_set_i32_1d(
     ffi.Pointer<ggml_tensor> tensor,
@@ -7184,8 +10121,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_i32_1dPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int32)>>('ggml_set_i32_1d');
-  late final _ggml_set_i32_1d = _ggml_set_i32_1dPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>, int, int)>();
+  late final _ggml_set_i32_1dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Int,
+              ffi.Int32)>>('ggml_set_i32_1d');
+  late final _ggml_set_i32_1d = _ggml_set_i32_1dPtr
+      .asFunction<void Function(ffi.Pointer<ggml_tensor>, int, int)>();
 
   int ggml_get_i32_nd(
     ffi.Pointer<ggml_tensor> tensor,
@@ -7203,8 +10144,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_i32_ndPtr = _lookup<ffi.NativeFunction<ffi.Int32 Function(ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Int)>>('ggml_get_i32_nd');
-  late final _ggml_get_i32_nd = _ggml_get_i32_ndPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>, int, int, int, int)>();
+  late final _ggml_get_i32_ndPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int32 Function(ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int,
+              ffi.Int, ffi.Int)>>('ggml_get_i32_nd');
+  late final _ggml_get_i32_nd = _ggml_get_i32_ndPtr
+      .asFunction<int Function(ffi.Pointer<ggml_tensor>, int, int, int, int)>();
 
   void ggml_set_i32_nd(
     ffi.Pointer<ggml_tensor> tensor,
@@ -7224,8 +10169,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_i32_ndPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Int, ffi.Int32)>>('ggml_set_i32_nd');
-  late final _ggml_set_i32_nd = _ggml_set_i32_ndPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>, int, int, int, int, int)>();
+  late final _ggml_set_i32_ndPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int,
+              ffi.Int, ffi.Int32)>>('ggml_set_i32_nd');
+  late final _ggml_set_i32_nd = _ggml_set_i32_ndPtr.asFunction<
+      void Function(ffi.Pointer<ggml_tensor>, int, int, int, int, int)>();
 
   double ggml_get_f32_1d(
     ffi.Pointer<ggml_tensor> tensor,
@@ -7237,8 +10186,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_f32_1dPtr = _lookup<ffi.NativeFunction<ffi.Float Function(ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_get_f32_1d');
-  late final _ggml_get_f32_1d = _ggml_get_f32_1dPtr.asFunction<double Function(ffi.Pointer<ggml_tensor>, int)>();
+  late final _ggml_get_f32_1dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Float Function(
+              ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_get_f32_1d');
+  late final _ggml_get_f32_1d = _ggml_get_f32_1dPtr
+      .asFunction<double Function(ffi.Pointer<ggml_tensor>, int)>();
 
   void ggml_set_f32_1d(
     ffi.Pointer<ggml_tensor> tensor,
@@ -7252,8 +10205,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_f32_1dPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Float)>>('ggml_set_f32_1d');
-  late final _ggml_set_f32_1d = _ggml_set_f32_1dPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>, int, double)>();
+  late final _ggml_set_f32_1dPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Int,
+              ffi.Float)>>('ggml_set_f32_1d');
+  late final _ggml_set_f32_1d = _ggml_set_f32_1dPtr
+      .asFunction<void Function(ffi.Pointer<ggml_tensor>, int, double)>();
 
   double ggml_get_f32_nd(
     ffi.Pointer<ggml_tensor> tensor,
@@ -7271,8 +10228,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_f32_ndPtr = _lookup<ffi.NativeFunction<ffi.Float Function(ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Int)>>('ggml_get_f32_nd');
-  late final _ggml_get_f32_nd = _ggml_get_f32_ndPtr.asFunction<double Function(ffi.Pointer<ggml_tensor>, int, int, int, int)>();
+  late final _ggml_get_f32_ndPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Float Function(ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int,
+              ffi.Int, ffi.Int)>>('ggml_get_f32_nd');
+  late final _ggml_get_f32_nd = _ggml_get_f32_ndPtr.asFunction<
+      double Function(ffi.Pointer<ggml_tensor>, int, int, int, int)>();
 
   void ggml_set_f32_nd(
     ffi.Pointer<ggml_tensor> tensor,
@@ -7292,8 +10253,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_set_f32_ndPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int, ffi.Int, ffi.Float)>>('ggml_set_f32_nd');
-  late final _ggml_set_f32_nd = _ggml_set_f32_ndPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>, int, int, int, int, double)>();
+  late final _ggml_set_f32_ndPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int, ffi.Int,
+              ffi.Int, ffi.Float)>>('ggml_set_f32_nd');
+  late final _ggml_set_f32_nd = _ggml_set_f32_ndPtr.asFunction<
+      void Function(ffi.Pointer<ggml_tensor>, int, int, int, int, double)>();
 
   ffi.Pointer<ggml_threadpool> ggml_threadpool_new(
     ffi.Pointer<ggml_threadpool_params> params,
@@ -7303,8 +10268,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_threadpool_newPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_threadpool> Function(ffi.Pointer<ggml_threadpool_params>)>>('ggml_threadpool_new');
-  late final _ggml_threadpool_new = _ggml_threadpool_newPtr.asFunction<ffi.Pointer<ggml_threadpool> Function(ffi.Pointer<ggml_threadpool_params>)>();
+  late final _ggml_threadpool_newPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_threadpool> Function(
+              ffi.Pointer<ggml_threadpool_params>)>>('ggml_threadpool_new');
+  late final _ggml_threadpool_new = _ggml_threadpool_newPtr.asFunction<
+      ffi.Pointer<ggml_threadpool> Function(
+          ffi.Pointer<ggml_threadpool_params>)>();
 
   void ggml_threadpool_free(
     ffi.Pointer<ggml_threadpool> threadpool,
@@ -7314,8 +10284,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_threadpool_freePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_threadpool>)>>('ggml_threadpool_free');
-  late final _ggml_threadpool_free = _ggml_threadpool_freePtr.asFunction<void Function(ffi.Pointer<ggml_threadpool>)>();
+  late final _ggml_threadpool_freePtr = _lookup<
+          ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_threadpool>)>>(
+      'ggml_threadpool_free');
+  late final _ggml_threadpool_free = _ggml_threadpool_freePtr
+      .asFunction<void Function(ffi.Pointer<ggml_threadpool>)>();
 
   int ggml_threadpool_get_n_threads(
     ffi.Pointer<ggml_threadpool> threadpool,
@@ -7325,8 +10298,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_threadpool_get_n_threadsPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_threadpool>)>>('ggml_threadpool_get_n_threads');
-  late final _ggml_threadpool_get_n_threads = _ggml_threadpool_get_n_threadsPtr.asFunction<int Function(ffi.Pointer<ggml_threadpool>)>();
+  late final _ggml_threadpool_get_n_threadsPtr = _lookup<
+          ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_threadpool>)>>(
+      'ggml_threadpool_get_n_threads');
+  late final _ggml_threadpool_get_n_threads = _ggml_threadpool_get_n_threadsPtr
+      .asFunction<int Function(ffi.Pointer<ggml_threadpool>)>();
 
   void ggml_threadpool_pause(
     ffi.Pointer<ggml_threadpool> threadpool,
@@ -7336,8 +10312,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_threadpool_pausePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_threadpool>)>>('ggml_threadpool_pause');
-  late final _ggml_threadpool_pause = _ggml_threadpool_pausePtr.asFunction<void Function(ffi.Pointer<ggml_threadpool>)>();
+  late final _ggml_threadpool_pausePtr = _lookup<
+          ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_threadpool>)>>(
+      'ggml_threadpool_pause');
+  late final _ggml_threadpool_pause = _ggml_threadpool_pausePtr
+      .asFunction<void Function(ffi.Pointer<ggml_threadpool>)>();
 
   void ggml_threadpool_resume(
     ffi.Pointer<ggml_threadpool> threadpool,
@@ -7347,8 +10326,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_threadpool_resumePtr = _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_threadpool>)>>('ggml_threadpool_resume');
-  late final _ggml_threadpool_resume = _ggml_threadpool_resumePtr.asFunction<void Function(ffi.Pointer<ggml_threadpool>)>();
+  late final _ggml_threadpool_resumePtr = _lookup<
+          ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_threadpool>)>>(
+      'ggml_threadpool_resume');
+  late final _ggml_threadpool_resume = _ggml_threadpool_resumePtr
+      .asFunction<void Function(ffi.Pointer<ggml_threadpool>)>();
 
   ggml_cplan ggml_graph_plan(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -7362,8 +10344,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_graph_planPtr = _lookup<ffi.NativeFunction<ggml_cplan Function(ffi.Pointer<ggml_cgraph>, ffi.Int, ffi.Pointer<ggml_threadpool>)>>('ggml_graph_plan');
-  late final _ggml_graph_plan = _ggml_graph_planPtr.asFunction<ggml_cplan Function(ffi.Pointer<ggml_cgraph>, int, ffi.Pointer<ggml_threadpool>)>();
+  late final _ggml_graph_planPtr = _lookup<
+      ffi.NativeFunction<
+          ggml_cplan Function(ffi.Pointer<ggml_cgraph>, ffi.Int,
+              ffi.Pointer<ggml_threadpool>)>>('ggml_graph_plan');
+  late final _ggml_graph_plan = _ggml_graph_planPtr.asFunction<
+      ggml_cplan Function(
+          ffi.Pointer<ggml_cgraph>, int, ffi.Pointer<ggml_threadpool>)>();
 
   ggml_status ggml_graph_compute(
     ffi.Pointer<ggml_cgraph> cgraph,
@@ -7375,8 +10362,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     ));
   }
 
-  late final _ggml_graph_computePtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cplan>)>>('ggml_graph_compute');
-  late final _ggml_graph_compute = _ggml_graph_computePtr.asFunction<int Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cplan>)>();
+  late final _ggml_graph_computePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ggml_cplan>)>>('ggml_graph_compute');
+  late final _ggml_graph_compute = _ggml_graph_computePtr.asFunction<
+      int Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cplan>)>();
 
   ggml_status ggml_graph_compute_with_ctx(
     ffi.Pointer<ggml_context> ctx,
@@ -7390,169 +10381,225 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     ));
   }
 
-  late final _ggml_graph_compute_with_ctxPtr = _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_cgraph>, ffi.Int)>>('ggml_graph_compute_with_ctx');
-  late final _ggml_graph_compute_with_ctx = _ggml_graph_compute_with_ctxPtr.asFunction<int Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_cgraph>, int)>();
+  late final _ggml_graph_compute_with_ctxPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_cgraph>,
+              ffi.Int)>>('ggml_graph_compute_with_ctx');
+  late final _ggml_graph_compute_with_ctx =
+      _ggml_graph_compute_with_ctxPtr.asFunction<
+          int Function(
+              ffi.Pointer<ggml_context>, ffi.Pointer<ggml_cgraph>, int)>();
 
   int ggml_cpu_has_sse3() {
     return _ggml_cpu_has_sse3();
   }
 
-  late final _ggml_cpu_has_sse3Ptr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_sse3');
-  late final _ggml_cpu_has_sse3 = _ggml_cpu_has_sse3Ptr.asFunction<int Function()>();
+  late final _ggml_cpu_has_sse3Ptr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_sse3');
+  late final _ggml_cpu_has_sse3 =
+      _ggml_cpu_has_sse3Ptr.asFunction<int Function()>();
 
   int ggml_cpu_has_ssse3() {
     return _ggml_cpu_has_ssse3();
   }
 
-  late final _ggml_cpu_has_ssse3Ptr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_ssse3');
-  late final _ggml_cpu_has_ssse3 = _ggml_cpu_has_ssse3Ptr.asFunction<int Function()>();
+  late final _ggml_cpu_has_ssse3Ptr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_ssse3');
+  late final _ggml_cpu_has_ssse3 =
+      _ggml_cpu_has_ssse3Ptr.asFunction<int Function()>();
 
   int ggml_cpu_has_avx() {
     return _ggml_cpu_has_avx();
   }
 
-  late final _ggml_cpu_has_avxPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_avx');
-  late final _ggml_cpu_has_avx = _ggml_cpu_has_avxPtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_avxPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_avx');
+  late final _ggml_cpu_has_avx =
+      _ggml_cpu_has_avxPtr.asFunction<int Function()>();
 
   int ggml_cpu_has_avx_vnni() {
     return _ggml_cpu_has_avx_vnni();
   }
 
-  late final _ggml_cpu_has_avx_vnniPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_avx_vnni');
-  late final _ggml_cpu_has_avx_vnni = _ggml_cpu_has_avx_vnniPtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_avx_vnniPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_avx_vnni');
+  late final _ggml_cpu_has_avx_vnni =
+      _ggml_cpu_has_avx_vnniPtr.asFunction<int Function()>();
 
   int ggml_cpu_has_avx2() {
     return _ggml_cpu_has_avx2();
   }
 
-  late final _ggml_cpu_has_avx2Ptr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_avx2');
-  late final _ggml_cpu_has_avx2 = _ggml_cpu_has_avx2Ptr.asFunction<int Function()>();
+  late final _ggml_cpu_has_avx2Ptr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_avx2');
+  late final _ggml_cpu_has_avx2 =
+      _ggml_cpu_has_avx2Ptr.asFunction<int Function()>();
 
   int ggml_cpu_has_f16c() {
     return _ggml_cpu_has_f16c();
   }
 
-  late final _ggml_cpu_has_f16cPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_f16c');
-  late final _ggml_cpu_has_f16c = _ggml_cpu_has_f16cPtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_f16cPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_f16c');
+  late final _ggml_cpu_has_f16c =
+      _ggml_cpu_has_f16cPtr.asFunction<int Function()>();
 
   int ggml_cpu_has_fma() {
     return _ggml_cpu_has_fma();
   }
 
-  late final _ggml_cpu_has_fmaPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_fma');
-  late final _ggml_cpu_has_fma = _ggml_cpu_has_fmaPtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_fmaPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_fma');
+  late final _ggml_cpu_has_fma =
+      _ggml_cpu_has_fmaPtr.asFunction<int Function()>();
 
   int ggml_cpu_has_avx512() {
     return _ggml_cpu_has_avx512();
   }
 
-  late final _ggml_cpu_has_avx512Ptr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_avx512');
-  late final _ggml_cpu_has_avx512 = _ggml_cpu_has_avx512Ptr.asFunction<int Function()>();
+  late final _ggml_cpu_has_avx512Ptr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_avx512');
+  late final _ggml_cpu_has_avx512 =
+      _ggml_cpu_has_avx512Ptr.asFunction<int Function()>();
 
   int ggml_cpu_has_avx512_vbmi() {
     return _ggml_cpu_has_avx512_vbmi();
   }
 
-  late final _ggml_cpu_has_avx512_vbmiPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_avx512_vbmi');
-  late final _ggml_cpu_has_avx512_vbmi = _ggml_cpu_has_avx512_vbmiPtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_avx512_vbmiPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>(
+          'ggml_cpu_has_avx512_vbmi');
+  late final _ggml_cpu_has_avx512_vbmi =
+      _ggml_cpu_has_avx512_vbmiPtr.asFunction<int Function()>();
 
   int ggml_cpu_has_avx512_vnni() {
     return _ggml_cpu_has_avx512_vnni();
   }
 
-  late final _ggml_cpu_has_avx512_vnniPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_avx512_vnni');
-  late final _ggml_cpu_has_avx512_vnni = _ggml_cpu_has_avx512_vnniPtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_avx512_vnniPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>(
+          'ggml_cpu_has_avx512_vnni');
+  late final _ggml_cpu_has_avx512_vnni =
+      _ggml_cpu_has_avx512_vnniPtr.asFunction<int Function()>();
 
   int ggml_cpu_has_avx512_bf16() {
     return _ggml_cpu_has_avx512_bf16();
   }
 
-  late final _ggml_cpu_has_avx512_bf16Ptr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_avx512_bf16');
-  late final _ggml_cpu_has_avx512_bf16 = _ggml_cpu_has_avx512_bf16Ptr.asFunction<int Function()>();
+  late final _ggml_cpu_has_avx512_bf16Ptr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>(
+          'ggml_cpu_has_avx512_bf16');
+  late final _ggml_cpu_has_avx512_bf16 =
+      _ggml_cpu_has_avx512_bf16Ptr.asFunction<int Function()>();
 
   int ggml_cpu_has_amx_int8() {
     return _ggml_cpu_has_amx_int8();
   }
 
-  late final _ggml_cpu_has_amx_int8Ptr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_amx_int8');
-  late final _ggml_cpu_has_amx_int8 = _ggml_cpu_has_amx_int8Ptr.asFunction<int Function()>();
+  late final _ggml_cpu_has_amx_int8Ptr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_amx_int8');
+  late final _ggml_cpu_has_amx_int8 =
+      _ggml_cpu_has_amx_int8Ptr.asFunction<int Function()>();
 
   int ggml_cpu_has_neon() {
     return _ggml_cpu_has_neon();
   }
 
-  late final _ggml_cpu_has_neonPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_neon');
-  late final _ggml_cpu_has_neon = _ggml_cpu_has_neonPtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_neonPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_neon');
+  late final _ggml_cpu_has_neon =
+      _ggml_cpu_has_neonPtr.asFunction<int Function()>();
 
   int ggml_cpu_has_arm_fma() {
     return _ggml_cpu_has_arm_fma();
   }
 
-  late final _ggml_cpu_has_arm_fmaPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_arm_fma');
-  late final _ggml_cpu_has_arm_fma = _ggml_cpu_has_arm_fmaPtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_arm_fmaPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_arm_fma');
+  late final _ggml_cpu_has_arm_fma =
+      _ggml_cpu_has_arm_fmaPtr.asFunction<int Function()>();
 
   int ggml_cpu_has_fp16_va() {
     return _ggml_cpu_has_fp16_va();
   }
 
-  late final _ggml_cpu_has_fp16_vaPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_fp16_va');
-  late final _ggml_cpu_has_fp16_va = _ggml_cpu_has_fp16_vaPtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_fp16_vaPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_fp16_va');
+  late final _ggml_cpu_has_fp16_va =
+      _ggml_cpu_has_fp16_vaPtr.asFunction<int Function()>();
 
   int ggml_cpu_has_dotprod() {
     return _ggml_cpu_has_dotprod();
   }
 
-  late final _ggml_cpu_has_dotprodPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_dotprod');
-  late final _ggml_cpu_has_dotprod = _ggml_cpu_has_dotprodPtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_dotprodPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_dotprod');
+  late final _ggml_cpu_has_dotprod =
+      _ggml_cpu_has_dotprodPtr.asFunction<int Function()>();
 
   int ggml_cpu_has_matmul_int8() {
     return _ggml_cpu_has_matmul_int8();
   }
 
-  late final _ggml_cpu_has_matmul_int8Ptr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_matmul_int8');
-  late final _ggml_cpu_has_matmul_int8 = _ggml_cpu_has_matmul_int8Ptr.asFunction<int Function()>();
+  late final _ggml_cpu_has_matmul_int8Ptr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>(
+          'ggml_cpu_has_matmul_int8');
+  late final _ggml_cpu_has_matmul_int8 =
+      _ggml_cpu_has_matmul_int8Ptr.asFunction<int Function()>();
 
   int ggml_cpu_has_sve() {
     return _ggml_cpu_has_sve();
   }
 
-  late final _ggml_cpu_has_svePtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_sve');
-  late final _ggml_cpu_has_sve = _ggml_cpu_has_svePtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_svePtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_sve');
+  late final _ggml_cpu_has_sve =
+      _ggml_cpu_has_svePtr.asFunction<int Function()>();
 
   int ggml_cpu_get_sve_cnt() {
     return _ggml_cpu_get_sve_cnt();
   }
 
-  late final _ggml_cpu_get_sve_cntPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_get_sve_cnt');
-  late final _ggml_cpu_get_sve_cnt = _ggml_cpu_get_sve_cntPtr.asFunction<int Function()>();
+  late final _ggml_cpu_get_sve_cntPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_get_sve_cnt');
+  late final _ggml_cpu_get_sve_cnt =
+      _ggml_cpu_get_sve_cntPtr.asFunction<int Function()>();
 
   int ggml_cpu_has_riscv_v() {
     return _ggml_cpu_has_riscv_v();
   }
 
-  late final _ggml_cpu_has_riscv_vPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_riscv_v');
-  late final _ggml_cpu_has_riscv_v = _ggml_cpu_has_riscv_vPtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_riscv_vPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_riscv_v');
+  late final _ggml_cpu_has_riscv_v =
+      _ggml_cpu_has_riscv_vPtr.asFunction<int Function()>();
 
   int ggml_cpu_has_vsx() {
     return _ggml_cpu_has_vsx();
   }
 
-  late final _ggml_cpu_has_vsxPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_vsx');
-  late final _ggml_cpu_has_vsx = _ggml_cpu_has_vsxPtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_vsxPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_vsx');
+  late final _ggml_cpu_has_vsx =
+      _ggml_cpu_has_vsxPtr.asFunction<int Function()>();
 
   int ggml_cpu_has_wasm_simd() {
     return _ggml_cpu_has_wasm_simd();
   }
 
-  late final _ggml_cpu_has_wasm_simdPtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_wasm_simd');
-  late final _ggml_cpu_has_wasm_simd = _ggml_cpu_has_wasm_simdPtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_wasm_simdPtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_wasm_simd');
+  late final _ggml_cpu_has_wasm_simd =
+      _ggml_cpu_has_wasm_simdPtr.asFunction<int Function()>();
 
   int ggml_cpu_has_llamafile() {
     return _ggml_cpu_has_llamafile();
   }
 
-  late final _ggml_cpu_has_llamafilePtr = _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_llamafile');
-  late final _ggml_cpu_has_llamafile = _ggml_cpu_has_llamafilePtr.asFunction<int Function()>();
+  late final _ggml_cpu_has_llamafilePtr =
+      _lookup<ffi.NativeFunction<ffi.Int Function()>>('ggml_cpu_has_llamafile');
+  late final _ggml_cpu_has_llamafile =
+      _ggml_cpu_has_llamafilePtr.asFunction<int Function()>();
 
   ffi.Pointer<ggml_type_traits_cpu> ggml_get_type_traits_cpu(
     ggml_type type,
@@ -7562,22 +10609,30 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_get_type_traits_cpuPtr = _lookup<ffi.NativeFunction<ffi.Pointer<ggml_type_traits_cpu> Function(ffi.UnsignedInt)>>('ggml_get_type_traits_cpu');
-  late final _ggml_get_type_traits_cpu = _ggml_get_type_traits_cpuPtr.asFunction<ffi.Pointer<ggml_type_traits_cpu> Function(int)>();
+  late final _ggml_get_type_traits_cpuPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_type_traits_cpu> Function(
+              ffi.UnsignedInt)>>('ggml_get_type_traits_cpu');
+  late final _ggml_get_type_traits_cpu = _ggml_get_type_traits_cpuPtr
+      .asFunction<ffi.Pointer<ggml_type_traits_cpu> Function(int)>();
 
   void ggml_cpu_init() {
     return _ggml_cpu_init();
   }
 
-  late final _ggml_cpu_initPtr = _lookup<ffi.NativeFunction<ffi.Void Function()>>('ggml_cpu_init');
+  late final _ggml_cpu_initPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function()>>('ggml_cpu_init');
   late final _ggml_cpu_init = _ggml_cpu_initPtr.asFunction<void Function()>();
 
   ggml_backend_t ggml_backend_cpu_init() {
     return _ggml_backend_cpu_init();
   }
 
-  late final _ggml_backend_cpu_initPtr = _lookup<ffi.NativeFunction<ggml_backend_t Function()>>('ggml_backend_cpu_init');
-  late final _ggml_backend_cpu_init = _ggml_backend_cpu_initPtr.asFunction<ggml_backend_t Function()>();
+  late final _ggml_backend_cpu_initPtr =
+      _lookup<ffi.NativeFunction<ggml_backend_t Function()>>(
+          'ggml_backend_cpu_init');
+  late final _ggml_backend_cpu_init =
+      _ggml_backend_cpu_initPtr.asFunction<ggml_backend_t Function()>();
 
   bool ggml_backend_is_cpu(
     ggml_backend_t backend,
@@ -7587,8 +10642,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_is_cpuPtr = _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_t)>>('ggml_backend_is_cpu');
-  late final _ggml_backend_is_cpu = _ggml_backend_is_cpuPtr.asFunction<bool Function(ggml_backend_t)>();
+  late final _ggml_backend_is_cpuPtr =
+      _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_t)>>(
+          'ggml_backend_is_cpu');
+  late final _ggml_backend_is_cpu =
+      _ggml_backend_is_cpuPtr.asFunction<bool Function(ggml_backend_t)>();
 
   void ggml_backend_cpu_set_n_threads(
     ggml_backend_t backend_cpu,
@@ -7600,8 +10658,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_cpu_set_n_threadsPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t, ffi.Int)>>('ggml_backend_cpu_set_n_threads');
-  late final _ggml_backend_cpu_set_n_threads = _ggml_backend_cpu_set_n_threadsPtr.asFunction<void Function(ggml_backend_t, int)>();
+  late final _ggml_backend_cpu_set_n_threadsPtr =
+      _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t, ffi.Int)>>(
+          'ggml_backend_cpu_set_n_threads');
+  late final _ggml_backend_cpu_set_n_threads =
+      _ggml_backend_cpu_set_n_threadsPtr
+          .asFunction<void Function(ggml_backend_t, int)>();
 
   void ggml_backend_cpu_set_threadpool(
     ggml_backend_t backend_cpu,
@@ -7613,8 +10675,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_cpu_set_threadpoolPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t, ggml_threadpool_t)>>('ggml_backend_cpu_set_threadpool');
-  late final _ggml_backend_cpu_set_threadpool = _ggml_backend_cpu_set_threadpoolPtr.asFunction<void Function(ggml_backend_t, ggml_threadpool_t)>();
+  late final _ggml_backend_cpu_set_threadpoolPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_t,
+              ggml_threadpool_t)>>('ggml_backend_cpu_set_threadpool');
+  late final _ggml_backend_cpu_set_threadpool =
+      _ggml_backend_cpu_set_threadpoolPtr
+          .asFunction<void Function(ggml_backend_t, ggml_threadpool_t)>();
 
   void ggml_backend_cpu_set_abort_callback(
     ggml_backend_t backend_cpu,
@@ -7628,15 +10695,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
     );
   }
 
-  late final _ggml_backend_cpu_set_abort_callbackPtr = _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t, ggml_abort_callback, ffi.Pointer<ffi.Void>)>>('ggml_backend_cpu_set_abort_callback');
-  late final _ggml_backend_cpu_set_abort_callback = _ggml_backend_cpu_set_abort_callbackPtr.asFunction<void Function(ggml_backend_t, ggml_abort_callback, ffi.Pointer<ffi.Void>)>();
+  late final _ggml_backend_cpu_set_abort_callbackPtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_t, ggml_abort_callback,
+              ffi.Pointer<ffi.Void>)>>('ggml_backend_cpu_set_abort_callback');
+  late final _ggml_backend_cpu_set_abort_callback =
+      _ggml_backend_cpu_set_abort_callbackPtr.asFunction<
+          void Function(
+              ggml_backend_t, ggml_abort_callback, ffi.Pointer<ffi.Void>)>();
 
   ggml_backend_reg_t ggml_backend_cpu_reg() {
     return _ggml_backend_cpu_reg();
   }
 
-  late final _ggml_backend_cpu_regPtr = _lookup<ffi.NativeFunction<ggml_backend_reg_t Function()>>('ggml_backend_cpu_reg');
-  late final _ggml_backend_cpu_reg = _ggml_backend_cpu_regPtr.asFunction<ggml_backend_reg_t Function()>();
+  late final _ggml_backend_cpu_regPtr =
+      _lookup<ffi.NativeFunction<ggml_backend_reg_t Function()>>(
+          'ggml_backend_cpu_reg');
+  late final _ggml_backend_cpu_reg =
+      _ggml_backend_cpu_regPtr.asFunction<ggml_backend_reg_t Function()>();
 }
 
 final class max_align_t extends ffi.Opaque {}
@@ -7770,12 +10846,19 @@ final class _IO_cookie_io_functions_t extends ffi.Struct {
   external ffi.Pointer<cookie_close_function_t> close;
 }
 
-typedef cookie_read_function_t = ffi.NativeFunction<__ssize_t Function(ffi.Pointer<ffi.Void> __cookie, ffi.Pointer<ffi.Char> __buf, ffi.Size __nbytes)>;
+typedef cookie_read_function_t = ffi.NativeFunction<
+    __ssize_t Function(ffi.Pointer<ffi.Void> __cookie,
+        ffi.Pointer<ffi.Char> __buf, ffi.Size __nbytes)>;
 typedef __ssize_t = ffi.Long;
 typedef Dart__ssize_t = int;
-typedef cookie_write_function_t = ffi.NativeFunction<__ssize_t Function(ffi.Pointer<ffi.Void> __cookie, ffi.Pointer<ffi.Char> __buf, ffi.Size __nbytes)>;
-typedef cookie_seek_function_t = ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Void> __cookie, ffi.Pointer<__off64_t> __pos, ffi.Int __w)>;
-typedef cookie_close_function_t = ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Void> __cookie)>;
+typedef cookie_write_function_t = ffi.NativeFunction<
+    __ssize_t Function(ffi.Pointer<ffi.Void> __cookie,
+        ffi.Pointer<ffi.Char> __buf, ffi.Size __nbytes)>;
+typedef cookie_seek_function_t = ffi.NativeFunction<
+    ffi.Int Function(ffi.Pointer<ffi.Void> __cookie,
+        ffi.Pointer<__off64_t> __pos, ffi.Int __w)>;
+typedef cookie_close_function_t
+    = ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Void> __cookie)>;
 typedef FILE = _IO_FILE;
 typedef cookie_io_functions_t = _IO_cookie_io_functions_t;
 
@@ -8334,33 +11417,100 @@ enum ggml_sort_order {
       };
 }
 
-typedef ggml_unary_op_f32_t = ffi.Pointer<ffi.NativeFunction<ggml_unary_op_f32_tFunction>>;
-typedef ggml_unary_op_f32_tFunction = ffi.Void Function(ffi.Int, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>);
-typedef Dartggml_unary_op_f32_tFunction = void Function(int, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>);
-typedef ggml_binary_op_f32_t = ffi.Pointer<ffi.NativeFunction<ggml_binary_op_f32_tFunction>>;
-typedef ggml_binary_op_f32_tFunction = ffi.Void Function(ffi.Int, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>);
-typedef Dartggml_binary_op_f32_tFunction = void Function(int, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>);
-typedef ggml_custom1_op_f32_t = ffi.Pointer<ffi.NativeFunction<ggml_custom1_op_f32_tFunction>>;
-typedef ggml_custom1_op_f32_tFunction = ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>);
-typedef Dartggml_custom1_op_f32_tFunction = void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>);
-typedef ggml_custom2_op_f32_t = ffi.Pointer<ffi.NativeFunction<ggml_custom2_op_f32_tFunction>>;
-typedef ggml_custom2_op_f32_tFunction = ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>);
-typedef Dartggml_custom2_op_f32_tFunction = void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>);
-typedef ggml_custom3_op_f32_t = ffi.Pointer<ffi.NativeFunction<ggml_custom3_op_f32_tFunction>>;
-typedef ggml_custom3_op_f32_tFunction = ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>);
-typedef Dartggml_custom3_op_f32_tFunction = void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>);
-typedef ggml_custom1_op_t = ffi.Pointer<ffi.NativeFunction<ggml_custom1_op_tFunction>>;
-typedef ggml_custom1_op_tFunction = ffi.Void Function(ffi.Pointer<ggml_tensor> dst, ffi.Pointer<ggml_tensor> a, ffi.Int ith, ffi.Int nth, ffi.Pointer<ffi.Void> userdata);
-typedef Dartggml_custom1_op_tFunction = void Function(ffi.Pointer<ggml_tensor> dst, ffi.Pointer<ggml_tensor> a, int ith, int nth, ffi.Pointer<ffi.Void> userdata);
-typedef ggml_custom2_op_t = ffi.Pointer<ffi.NativeFunction<ggml_custom2_op_tFunction>>;
-typedef ggml_custom2_op_tFunction = ffi.Void Function(ffi.Pointer<ggml_tensor> dst, ffi.Pointer<ggml_tensor> a, ffi.Pointer<ggml_tensor> b, ffi.Int ith, ffi.Int nth, ffi.Pointer<ffi.Void> userdata);
-typedef Dartggml_custom2_op_tFunction = void Function(ffi.Pointer<ggml_tensor> dst, ffi.Pointer<ggml_tensor> a, ffi.Pointer<ggml_tensor> b, int ith, int nth, ffi.Pointer<ffi.Void> userdata);
-typedef ggml_custom3_op_t = ffi.Pointer<ffi.NativeFunction<ggml_custom3_op_tFunction>>;
-typedef ggml_custom3_op_tFunction = ffi.Void Function(ffi.Pointer<ggml_tensor> dst, ffi.Pointer<ggml_tensor> a, ffi.Pointer<ggml_tensor> b, ffi.Pointer<ggml_tensor> c, ffi.Int ith, ffi.Int nth, ffi.Pointer<ffi.Void> userdata);
-typedef Dartggml_custom3_op_tFunction = void Function(ffi.Pointer<ggml_tensor> dst, ffi.Pointer<ggml_tensor> a, ffi.Pointer<ggml_tensor> b, ffi.Pointer<ggml_tensor> c, int ith, int nth, ffi.Pointer<ffi.Void> userdata);
-typedef ggml_log_callback = ffi.Pointer<ffi.NativeFunction<ggml_log_callbackFunction>>;
-typedef ggml_log_callbackFunction = ffi.Void Function(ffi.UnsignedInt level, ffi.Pointer<ffi.Char> text, ffi.Pointer<ffi.Void> user_data);
-typedef Dartggml_log_callbackFunction = void Function(ggml_log_level level, ffi.Pointer<ffi.Char> text, ffi.Pointer<ffi.Void> user_data);
+typedef ggml_unary_op_f32_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_unary_op_f32_tFunction>>;
+typedef ggml_unary_op_f32_tFunction = ffi.Void Function(
+    ffi.Int, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>);
+typedef Dartggml_unary_op_f32_tFunction = void Function(
+    int, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>);
+typedef ggml_binary_op_f32_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_binary_op_f32_tFunction>>;
+typedef ggml_binary_op_f32_tFunction = ffi.Void Function(ffi.Int,
+    ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>);
+typedef Dartggml_binary_op_f32_tFunction = void Function(int,
+    ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>);
+typedef ggml_custom1_op_f32_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_custom1_op_f32_tFunction>>;
+typedef ggml_custom1_op_f32_tFunction = ffi.Void Function(
+    ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>);
+typedef Dartggml_custom1_op_f32_tFunction = void Function(
+    ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>);
+typedef ggml_custom2_op_f32_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_custom2_op_f32_tFunction>>;
+typedef ggml_custom2_op_f32_tFunction = ffi.Void Function(
+    ffi.Pointer<ggml_tensor>,
+    ffi.Pointer<ggml_tensor>,
+    ffi.Pointer<ggml_tensor>);
+typedef Dartggml_custom2_op_f32_tFunction = void Function(
+    ffi.Pointer<ggml_tensor>,
+    ffi.Pointer<ggml_tensor>,
+    ffi.Pointer<ggml_tensor>);
+typedef ggml_custom3_op_f32_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_custom3_op_f32_tFunction>>;
+typedef ggml_custom3_op_f32_tFunction = ffi.Void Function(
+    ffi.Pointer<ggml_tensor>,
+    ffi.Pointer<ggml_tensor>,
+    ffi.Pointer<ggml_tensor>,
+    ffi.Pointer<ggml_tensor>);
+typedef Dartggml_custom3_op_f32_tFunction = void Function(
+    ffi.Pointer<ggml_tensor>,
+    ffi.Pointer<ggml_tensor>,
+    ffi.Pointer<ggml_tensor>,
+    ffi.Pointer<ggml_tensor>);
+typedef ggml_custom1_op_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_custom1_op_tFunction>>;
+typedef ggml_custom1_op_tFunction = ffi.Void Function(
+    ffi.Pointer<ggml_tensor> dst,
+    ffi.Pointer<ggml_tensor> a,
+    ffi.Int ith,
+    ffi.Int nth,
+    ffi.Pointer<ffi.Void> userdata);
+typedef Dartggml_custom1_op_tFunction = void Function(
+    ffi.Pointer<ggml_tensor> dst,
+    ffi.Pointer<ggml_tensor> a,
+    int ith,
+    int nth,
+    ffi.Pointer<ffi.Void> userdata);
+typedef ggml_custom2_op_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_custom2_op_tFunction>>;
+typedef ggml_custom2_op_tFunction = ffi.Void Function(
+    ffi.Pointer<ggml_tensor> dst,
+    ffi.Pointer<ggml_tensor> a,
+    ffi.Pointer<ggml_tensor> b,
+    ffi.Int ith,
+    ffi.Int nth,
+    ffi.Pointer<ffi.Void> userdata);
+typedef Dartggml_custom2_op_tFunction = void Function(
+    ffi.Pointer<ggml_tensor> dst,
+    ffi.Pointer<ggml_tensor> a,
+    ffi.Pointer<ggml_tensor> b,
+    int ith,
+    int nth,
+    ffi.Pointer<ffi.Void> userdata);
+typedef ggml_custom3_op_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_custom3_op_tFunction>>;
+typedef ggml_custom3_op_tFunction = ffi.Void Function(
+    ffi.Pointer<ggml_tensor> dst,
+    ffi.Pointer<ggml_tensor> a,
+    ffi.Pointer<ggml_tensor> b,
+    ffi.Pointer<ggml_tensor> c,
+    ffi.Int ith,
+    ffi.Int nth,
+    ffi.Pointer<ffi.Void> userdata);
+typedef Dartggml_custom3_op_tFunction = void Function(
+    ffi.Pointer<ggml_tensor> dst,
+    ffi.Pointer<ggml_tensor> a,
+    ffi.Pointer<ggml_tensor> b,
+    ffi.Pointer<ggml_tensor> c,
+    int ith,
+    int nth,
+    ffi.Pointer<ffi.Void> userdata);
+typedef ggml_log_callback
+    = ffi.Pointer<ffi.NativeFunction<ggml_log_callbackFunction>>;
+typedef ggml_log_callbackFunction = ffi.Void Function(ffi.UnsignedInt level,
+    ffi.Pointer<ffi.Char> text, ffi.Pointer<ffi.Void> user_data);
+typedef Dartggml_log_callbackFunction = void Function(ggml_log_level level,
+    ffi.Pointer<ffi.Char> text, ffi.Pointer<ffi.Void> user_data);
 
 final class ggml_type_traits extends ffi.Struct {
   external ffi.Pointer<ffi.Char> type_name;
@@ -8382,12 +11532,18 @@ final class ggml_type_traits extends ffi.Struct {
   external ggml_from_float_t from_float_ref;
 }
 
-typedef ggml_to_float_t = ffi.Pointer<ffi.NativeFunction<ggml_to_float_tFunction>>;
-typedef ggml_to_float_tFunction = ffi.Void Function(ffi.Pointer<ffi.Void> x, ffi.Pointer<ffi.Float> y, ffi.Int64 k);
-typedef Dartggml_to_float_tFunction = void Function(ffi.Pointer<ffi.Void> x, ffi.Pointer<ffi.Float> y, int k);
-typedef ggml_from_float_t = ffi.Pointer<ffi.NativeFunction<ggml_from_float_tFunction>>;
-typedef ggml_from_float_tFunction = ffi.Void Function(ffi.Pointer<ffi.Float> x, ffi.Pointer<ffi.Void> y, ffi.Int64 k);
-typedef Dartggml_from_float_tFunction = void Function(ffi.Pointer<ffi.Float> x, ffi.Pointer<ffi.Void> y, int k);
+typedef ggml_to_float_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_to_float_tFunction>>;
+typedef ggml_to_float_tFunction = ffi.Void Function(
+    ffi.Pointer<ffi.Void> x, ffi.Pointer<ffi.Float> y, ffi.Int64 k);
+typedef Dartggml_to_float_tFunction = void Function(
+    ffi.Pointer<ffi.Void> x, ffi.Pointer<ffi.Float> y, int k);
+typedef ggml_from_float_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_from_float_tFunction>>;
+typedef ggml_from_float_tFunction = ffi.Void Function(
+    ffi.Pointer<ffi.Float> x, ffi.Pointer<ffi.Void> y, ffi.Int64 k);
+typedef Dartggml_from_float_tFunction = void Function(
+    ffi.Pointer<ffi.Float> x, ffi.Pointer<ffi.Void> y, int k);
 
 enum ggml_sched_priority {
   GGML_SCHED_PRIO_NORMAL(0),
@@ -8403,7 +11559,8 @@ enum ggml_sched_priority {
         1 => GGML_SCHED_PRIO_MEDIUM,
         2 => GGML_SCHED_PRIO_HIGH,
         3 => GGML_SCHED_PRIO_REALTIME,
-        _ => throw ArgumentError("Unknown value for ggml_sched_priority: $value"),
+        _ =>
+          throw ArgumentError("Unknown value for ggml_sched_priority: $value"),
       };
 }
 
@@ -8475,7 +11632,8 @@ enum ggml_backend_buffer_usage {
         0 => GGML_BACKEND_BUFFER_USAGE_ANY,
         1 => GGML_BACKEND_BUFFER_USAGE_WEIGHTS,
         2 => GGML_BACKEND_BUFFER_USAGE_COMPUTE,
-        _ => throw ArgumentError("Unknown value for ggml_backend_buffer_usage: $value"),
+        _ => throw ArgumentError(
+            "Unknown value for ggml_backend_buffer_usage: $value"),
       };
 }
 
@@ -8494,7 +11652,8 @@ enum ggml_backend_dev_type {
         0 => GGML_BACKEND_DEVICE_TYPE_CPU,
         1 => GGML_BACKEND_DEVICE_TYPE_GPU,
         2 => GGML_BACKEND_DEVICE_TYPE_ACCEL,
-        _ => throw ArgumentError("Unknown value for ggml_backend_dev_type: $value"),
+        _ => throw ArgumentError(
+            "Unknown value for ggml_backend_dev_type: $value"),
       };
 }
 
@@ -8542,9 +11701,12 @@ final class ggml_backend_feature extends ffi.Struct {
 final class ggml_backend_sched extends ffi.Opaque {}
 
 typedef ggml_backend_sched_t = ffi.Pointer<ggml_backend_sched>;
-typedef ggml_backend_sched_eval_callback = ffi.Pointer<ffi.NativeFunction<ggml_backend_sched_eval_callbackFunction>>;
-typedef ggml_backend_sched_eval_callbackFunction = ffi.Bool Function(ffi.Pointer<ggml_tensor> t, ffi.Bool ask, ffi.Pointer<ffi.Void> user_data);
-typedef Dartggml_backend_sched_eval_callbackFunction = bool Function(ffi.Pointer<ggml_tensor> t, bool ask, ffi.Pointer<ffi.Void> user_data);
+typedef ggml_backend_sched_eval_callback
+    = ffi.Pointer<ffi.NativeFunction<ggml_backend_sched_eval_callbackFunction>>;
+typedef ggml_backend_sched_eval_callbackFunction = ffi.Bool Function(
+    ffi.Pointer<ggml_tensor> t, ffi.Bool ask, ffi.Pointer<ffi.Void> user_data);
+typedef Dartggml_backend_sched_eval_callbackFunction = bool Function(
+    ffi.Pointer<ggml_tensor> t, bool ask, ffi.Pointer<ffi.Void> user_data);
 
 final class ggml_backend_graph_copy extends ffi.Struct {
   external ggml_backend_buffer_t buffer;
@@ -8556,9 +11718,18 @@ final class ggml_backend_graph_copy extends ffi.Struct {
   external ffi.Pointer<ggml_cgraph> graph;
 }
 
-typedef ggml_backend_eval_callback = ffi.Pointer<ffi.NativeFunction<ggml_backend_eval_callbackFunction>>;
-typedef ggml_backend_eval_callbackFunction = ffi.Bool Function(ffi.Int node_index, ffi.Pointer<ggml_tensor> t1, ffi.Pointer<ggml_tensor> t2, ffi.Pointer<ffi.Void> user_data);
-typedef Dartggml_backend_eval_callbackFunction = bool Function(int node_index, ffi.Pointer<ggml_tensor> t1, ffi.Pointer<ggml_tensor> t2, ffi.Pointer<ffi.Void> user_data);
+typedef ggml_backend_eval_callback
+    = ffi.Pointer<ffi.NativeFunction<ggml_backend_eval_callbackFunction>>;
+typedef ggml_backend_eval_callbackFunction = ffi.Bool Function(
+    ffi.Int node_index,
+    ffi.Pointer<ggml_tensor> t1,
+    ffi.Pointer<ggml_tensor> t2,
+    ffi.Pointer<ffi.Void> user_data);
+typedef Dartggml_backend_eval_callbackFunction = bool Function(
+    int node_index,
+    ffi.Pointer<ggml_tensor> t1,
+    ffi.Pointer<ggml_tensor> t2,
+    ffi.Pointer<ffi.Void> user_data);
 
 final class ggml_cplan extends ffi.Struct {
   @ffi.Size()
@@ -8576,9 +11747,12 @@ final class ggml_cplan extends ffi.Struct {
   external ffi.Pointer<ffi.Void> abort_callback_data;
 }
 
-typedef ggml_abort_callback = ffi.Pointer<ffi.NativeFunction<ggml_abort_callbackFunction>>;
-typedef ggml_abort_callbackFunction = ffi.Bool Function(ffi.Pointer<ffi.Void> data);
-typedef Dartggml_abort_callbackFunction = bool Function(ffi.Pointer<ffi.Void> data);
+typedef ggml_abort_callback
+    = ffi.Pointer<ffi.NativeFunction<ggml_abort_callbackFunction>>;
+typedef ggml_abort_callbackFunction = ffi.Bool Function(
+    ffi.Pointer<ffi.Void> data);
+typedef Dartggml_abort_callbackFunction = bool Function(
+    ffi.Pointer<ffi.Void> data);
 
 enum ggml_numa_strategy {
   GGML_NUMA_STRATEGY_DISABLED(0),
@@ -8598,7 +11772,8 @@ enum ggml_numa_strategy {
         3 => GGML_NUMA_STRATEGY_NUMACTL,
         4 => GGML_NUMA_STRATEGY_MIRROR,
         5 => GGML_NUMA_STRATEGY_COUNT,
-        _ => throw ArgumentError("Unknown value for ggml_numa_strategy: $value"),
+        _ =>
+          throw ArgumentError("Unknown value for ggml_numa_strategy: $value"),
       };
 }
 
@@ -8616,9 +11791,26 @@ final class ggml_type_traits_cpu extends ffi.Struct {
   external int nrows;
 }
 
-typedef ggml_vec_dot_t = ffi.Pointer<ffi.NativeFunction<ggml_vec_dot_tFunction>>;
-typedef ggml_vec_dot_tFunction = ffi.Void Function(ffi.Int n, ffi.Pointer<ffi.Float> s, ffi.Size bs, ffi.Pointer<ffi.Void> x, ffi.Size bx, ffi.Pointer<ffi.Void> y, ffi.Size by, ffi.Int nrc);
-typedef Dartggml_vec_dot_tFunction = void Function(int n, ffi.Pointer<ffi.Float> s, int bs, ffi.Pointer<ffi.Void> x, int bx, ffi.Pointer<ffi.Void> y, int by, int nrc);
+typedef ggml_vec_dot_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_vec_dot_tFunction>>;
+typedef ggml_vec_dot_tFunction = ffi.Void Function(
+    ffi.Int n,
+    ffi.Pointer<ffi.Float> s,
+    ffi.Size bs,
+    ffi.Pointer<ffi.Void> x,
+    ffi.Size bx,
+    ffi.Pointer<ffi.Void> y,
+    ffi.Size by,
+    ffi.Int nrc);
+typedef Dartggml_vec_dot_tFunction = void Function(
+    int n,
+    ffi.Pointer<ffi.Float> s,
+    int bs,
+    ffi.Pointer<ffi.Void> x,
+    int bx,
+    ffi.Pointer<ffi.Void> y,
+    int by,
+    int nrc);
 typedef ggml_threadpool_t = ffi.Pointer<ggml_threadpool>;
 
 const int __bool_true_false_are_defined = 1;
