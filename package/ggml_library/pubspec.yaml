@@ -27,7 +27,7 @@ dependencies:
 dev_dependencies:
   lints: '^5.0.0'
   test: 'any'
-  ffigen: '^15.0.0'
+  ffigen: '^16.1.0'
 dependency_overrides:
   pointycastle: '3.8.0'
   mime: '^2.0.0'
@@ -44,5 +44,8 @@ ffigen:
       - '../../native_lib/lib/ggml/include/ggml-backend.h'
   compiler-opts:
     - '-I/usr/lib/clang/19.1.7/include'
+  comments:
+    style: any
+    length: full
 project:
   type: ''

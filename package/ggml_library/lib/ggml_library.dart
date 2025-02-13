@@ -34,3 +34,5 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 <!-- END LICENSE --> */
 export "base.dart";
 export "io.dart" if (dart.library.js) "none.dart";
+
+//// slebew: // ignore_for_file: unused_field, unused_element, no_leading_underscores_for_local_identifiers, non_constant_identifier_names, library_private_types_in_public_api, camel_case_types, constant_identifier_names
