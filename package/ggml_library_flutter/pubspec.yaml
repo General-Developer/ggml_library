@@ -1,6 +1,6 @@
 name: 'ggml_library_flutter'
 description: 'GGML Is Library machine learning in dart with special feature speed up inference model in cpu only or any gpu'
-version: '0.0.0'
+version: '0.0.5'
 funding:
   - 'https://github.com/sponsors/azkadev'
   - 'https://github.com/sponsors/generalfoss'

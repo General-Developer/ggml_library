@@ -1,6 +1,6 @@
 name: 'ggml_library_project'
 description: 'GGML Is Library machine learning in dart with special feature speed up inference model in cpu only or any gpu'
-version: '0.0.0'
+version: '0.0.5'
 repository: 'https://github.com/General-Developer/ggml_library'
 homepage: 'https://www.youtube.com/@general_dev'
 issue_tracker: 'https://t.me/DEVELOPER_GLOBAL_PUBLIC'
