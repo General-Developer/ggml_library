@@ -1,6 +1,6 @@
 name: 'ggml_library'
 description: 'GGML Is Library machine learning in dart with special feature speed up inference model in cpu only or any gpu'
-version: '0.0.5'
+version: '0.0.6'
 homepage: 'https://www.youtube.com/@general_dev'
 repository: 'https://github.com/General-Developer/ggml_library'
 issue_tracker: 'https://t.me/DEVELOPER_GLOBAL_PUBLIC'
@@ -27,7 +27,7 @@ dependencies:
 dev_dependencies:
   lints: '^5.0.0'
   test: 'any'
-  ffigen: '^16.1.0'
+  ffigen: '^15.0.0'
 dependency_overrides:
   pointycastle: '3.8.0'
   mime: '^2.0.0'
@@ -45,7 +45,7 @@ ffigen:
   compiler-opts:
     - '-I/usr/lib/clang/19.1.7/include'
   comments:
-    style: any
-    length: full
+    style: 'any'
+    length: 'full'
 project:
   type: ''
