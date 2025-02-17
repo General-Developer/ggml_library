@@ -102,17 +102,16 @@ class GgmlLibrary extends GgmlLibraryBase {
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   @override
-  void close() {}
-
-  /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  @override
-  FutureOr<void> dispose() {
-    close();
-  }
+  FutureOr<void> dispose() {}
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   GgmlLibrarySharedBindingsByGeneralDeveloper
       get ggmlLibrarySharedBindingsByGeneralDeveloper {
     return GgmlLibrary._ggmlLibrarySharedBindingsByGeneralDeveloper;
   }
+
+  @override
+
+  /// Check Out: https://www.youtube.com/@GENERAL_DEV
+  FutureOr<void> initialized() async {}
 }

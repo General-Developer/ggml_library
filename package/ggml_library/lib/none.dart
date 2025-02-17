@@ -44,10 +44,6 @@ class GgmlLibrary extends GgmlLibraryBase {
   });
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  @override
-  void close() {}
-
-  /// Check Out: https://www.youtube.com/@GENERAL_DEV
   final bool _isCrash = false;
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
@@ -77,6 +73,12 @@ class GgmlLibrary extends GgmlLibraryBase {
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   @override
   FutureOr<void> ensureInitialized() async {
+    return;
+  }
+
+  /// Check Out: https://www.youtube.com/@GENERAL_DEV
+  @override
+  FutureOr<void> initialized() async {
     return;
   }
 }
