@@ -16,6 +16,10 @@ platforms:
   macos: null
   web: null
   windows: null
+topics:
+  - 'ggml'
+  - 'artificial-intelligence'
+  - 'machine-learning'
 environment:
   sdk: '>=3.6.0 <4.0.0'
 dependencies:

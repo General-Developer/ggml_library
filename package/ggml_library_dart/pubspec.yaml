@@ -1,6 +1,10 @@
 name: 'ggml_library_dart'
 description: 'GGML Is Library machine learning in dart with special feature speed up inference model in cpu only or any gpu'
 version: '0.0.7'
+topics:
+  - 'ggml'
+  - 'artificial-intelligence'
+  - 'machine-learning'
 environment:
   sdk: '>=3.6.0 <4.0.0'
 dependencies:
