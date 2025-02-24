@@ -118,14 +118,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.6"
-  dart_style:
-    dependency: transitive
-    description:
-      name: dart_style
-      sha256: "7306ab8a2359a48d22310ad823521d723acfed60ee1f7e37388e8986853b6820"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.3.8"
   encrypt:
     dependency: transitive
     description:
@@ -143,21 +135,21 @@ packages:
     source: hosted
     version: "2.1.3"
   ffi_universe:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: ffi_universe
-      sha256: "9afe9eab610670021843c8b8c9bcd2a212840dfcf312bac18f4c503092b286a9"
+      sha256: "1ef6d22cd011198a8f3c91ffcaf843916278f7edc3e9ffaca6a918c26b3f4c8e"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.2"
+    version: "0.0.4"
   ffigen:
     dependency: "direct dev"
     description:
       name: ffigen
-      sha256: "2119b4fe3aad0db94dc9531b90283c4640a6231070e613c400b426a4da08c704"
+      sha256: a0ca4853028c6a9e4d9a0a40bb744fceb898c89d75931d08e87b3987d0087060
       url: "https://pub.dev"
     source: hosted
-    version: "16.1.0"
+    version: "15.0.0"
   file:
     dependency: transitive
     description:
@@ -186,18 +178,10 @@ packages:
     dependency: "direct main"
     description:
       name: general_lib
-      sha256: "39952559bd55cc6c0a17dab5f9a406e7e671d84244d423f1b6a95fb7a2dc1478"
+      sha256: "5618d8320485471f04d61c14c67b2c7044d77fae95acfb92375348af78baffd8"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.65"
-  general_ml:
-    dependency: "direct main"
-    description:
-      name: general_ml
-      sha256: d47f7637574b8bf239a3f4efc35d04533489a3c340b6dd5f6179ff041601dbc6
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.1"
+    version: "0.0.66"
   glob:
     dependency: transitive
     description:
@@ -599,4 +583,4 @@ packages:
     source: hosted
     version: "0.2.3"
 sdks:
-  dart: ">=3.6.0 <4.0.0"
+  dart: ">=3.7.0 <4.0.0"

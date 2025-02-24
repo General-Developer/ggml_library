@@ -33,8 +33,9 @@ Bukan maksud kami menipu itu karena harga yang sudah di kalkulasi + bantuan tiba
 
 <!-- END LICENSE --> */
 import 'dart:async';
-import 'dart:ffi';
+// import 'dart:ffi';
 
+import 'package:ffi_universe/ffi_universe.dart';
 import 'package:ggml_library/core/ggml/ffi/bindings.dart';
 
 import 'base.dart';
@@ -43,16 +44,10 @@ import 'base.dart';
 /// Check Out: https://www.youtube.com/@GENERAL_DEV
 class GgmlLibrary extends GgmlLibraryBase {
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  GgmlLibrary({
-    String? libraryGgmlPath,
-  }) : super(
-          libraryGgmlPath:
-              libraryGgmlPath ?? GgmlLibraryBase.getLibraryWhisperPathDefault(),
-        );
+  GgmlLibrary({String? libraryGgmlPath}) : super(libraryGgmlPath: libraryGgmlPath ?? GgmlLibraryBase.getLibraryWhisperPathDefault());
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  static late final GgmlLibrarySharedBindingsByGeneralDeveloper
-      _ggmlLibrarySharedBindingsByGeneralDeveloper;
+  static late final GgmlLibrarySharedBindingsByGeneralDeveloper _ggmlLibrarySharedBindingsByGeneralDeveloper;
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   static bool _isEnsureInitialized = false;
@@ -64,12 +59,7 @@ class GgmlLibrary extends GgmlLibraryBase {
       return;
     }
     try {
-      _ggmlLibrarySharedBindingsByGeneralDeveloper =
-          GgmlLibrarySharedBindingsByGeneralDeveloper(
-        DynamicLibrary.open(
-          libraryGgmlPath,
-        ),
-      );
+      _ggmlLibrarySharedBindingsByGeneralDeveloper = GgmlLibrarySharedBindingsByGeneralDeveloper(await FFIUniverse.open(path:libraryGgmlPath));
       _isDeviceSupport = true;
     } catch (e) {
       print(e);
@@ -105,13 +95,11 @@ class GgmlLibrary extends GgmlLibraryBase {
   FutureOr<void> dispose() {}
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  GgmlLibrarySharedBindingsByGeneralDeveloper
-      get ggmlLibrarySharedBindingsByGeneralDeveloper {
+  GgmlLibrarySharedBindingsByGeneralDeveloper get ggmlLibrarySharedBindingsByGeneralDeveloper {
     return GgmlLibrary._ggmlLibrarySharedBindingsByGeneralDeveloper;
   }
 
   @override
-
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   FutureOr<void> initialized() async {}
 }
