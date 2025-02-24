@@ -6,14 +6,14 @@ topics:
   - 'artificial-intelligence'
   - 'machine-learning'
 environment:
-  sdk: '>=3.6.0 <4.0.0'
+  sdk: '>=3.7.0 <4.0.0'
 dependencies:
   general_lib: '^0.0.66'
   ffi: '^2.1.0'
   path: '^1.9.0'
   ggml_library: '^0.0.8'
 dev_dependencies:
-  lints: '^5.0.0'
+  lints: '^5.1.1'
   test: 'any'
 dependency_overrides:
   pointycastle: '3.8.0'
