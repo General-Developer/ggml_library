@@ -41,16 +41,15 @@ import 'package:ggml_library/ggml_library.dart';
 
 void main(List<String> args) async {
   print("start");
-  final GgmlLibrary ggmlLibrary = GgmlLibrary(
-    libraryGgmlPath: "libggml.so",
-  );
+  final GgmlLibrary ggmlLibrary = GgmlLibrary(libraryGgmlPath: "libggml.so");
   await ggmlLibrary.ensureInitialized();
   final Pointer<ggml_init_params> params = calloc<ggml_init_params>();
   params.ref.no_alloc = false;
   final Pointer<ggml_context> ggmlContext = ggmlLibrary
       .ggmlLibrarySharedBindingsByGeneralDeveloper
       .ggml_init(params.ref);
-  ggmlLibrary.ggmlLibrarySharedBindingsByGeneralDeveloper
-      .ggml_free(ggmlContext);
+  ggmlLibrary.ggmlLibrarySharedBindingsByGeneralDeveloper.ggml_free(
+    ggmlContext,
+  );
   exit(0);
 }

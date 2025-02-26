@@ -2,8 +2,6 @@
  
 **Ggml Library** Is library Machine Learning
 
-[![](https://raw.githubusercontent.com/General-Developer/ggml_library/refs/heads/main/assets/demo_background.png)](https://youtu.be/drlqUwJEOg4)
-
 [![](https://raw.githubusercontent.com/globalcorporation/.github/main/.github/logo/powered.png)](https://www.youtube.com/@Global_Corporation)
 
 **Copyright (c) 2024 GLOBAL CORPORATION - GENERAL DEVELOPER**
@@ -74,7 +72,20 @@ void main(List<String> args) async {
 
 ## Examples
 
-1. [Whisper Speech To Text / Transcribe From Audio Or Video](https://github.com/general-developer/whisper_library)
-2. [LLAMA](https://github.com/general-developer/llama_library)
-   
+- [Whisper Speech To Text / Transcribe From Audio Or Video](https://github.com/general-developer/whisper_library)
+    
+Minimal simple application example of using whisper library [Youtube Video](https://youtu.be/U-5EDMk0UgE) 
+| Mobile                                                                                                                                  | Desktop |
+|-----------------------------------------------------------------------------------------------------------------------------------------|---------|
+| [![](https://raw.githubusercontent.com/General-Developer/whisper_library/refs/heads/main/assets/examples/whisper_app/mobile.png)](https://youtu.be/U-5EDMk0UgE) | [![](https://raw.githubusercontent.com/General-Developer/whisper_library/refs/heads/main/assets/examples/whisper_app/desktop.png)](https://youtu.be/U-5EDMk0UgE)        |
+
+
+- [LLAMA Ai Edge / Local](https://github.com/general-developer/llama_library)
+    
+Minimal simple application example of using llama library [Youtube Video](https://youtu.be/U-5EDMk0UgE) 
+| Mobile                                                                                                                                  | Desktop |
+|-----------------------------------------------------------------------------------------------------------------------------------------|---------|
+| [![](https://raw.githubusercontent.com/General-Developer/llama_library/refs/heads/main/assets/examples/llama_app/mobile.png)](https://youtu.be/U-5EDMk0UgE) | [![](https://raw.githubusercontent.com/General-Developer/llama_library/refs/heads/main/assets/examples/llama_app/desktop.png)](https://youtu.be/U-5EDMk0UgE)        |
+
+
 **Copyright (c) 2024 GLOBAL CORPORATION - GENERAL DEVELOPER**

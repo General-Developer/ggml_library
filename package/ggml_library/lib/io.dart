@@ -44,10 +44,15 @@ import 'base.dart';
 /// Check Out: https://www.youtube.com/@GENERAL_DEV
 class GgmlLibrary extends GgmlLibraryBase {
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  GgmlLibrary({String? libraryGgmlPath}) : super(libraryGgmlPath: libraryGgmlPath ?? GgmlLibraryBase.getLibraryWhisperPathDefault());
+  GgmlLibrary({String? libraryGgmlPath})
+    : super(
+        libraryGgmlPath:
+            libraryGgmlPath ?? GgmlLibraryBase.getLibraryWhisperPathDefault(),
+      );
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  static late final GgmlLibrarySharedBindingsByGeneralDeveloper _ggmlLibrarySharedBindingsByGeneralDeveloper;
+  static late final GgmlLibrarySharedBindingsByGeneralDeveloper
+  _ggmlLibrarySharedBindingsByGeneralDeveloper;
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   static bool _isEnsureInitialized = false;
@@ -59,7 +64,10 @@ class GgmlLibrary extends GgmlLibraryBase {
       return;
     }
     try {
-      _ggmlLibrarySharedBindingsByGeneralDeveloper = GgmlLibrarySharedBindingsByGeneralDeveloper(await FFIUniverse.open(path:libraryGgmlPath));
+      _ggmlLibrarySharedBindingsByGeneralDeveloper =
+          GgmlLibrarySharedBindingsByGeneralDeveloper(
+            await FFIUniverse.open(path: libraryGgmlPath),
+          );
       _isDeviceSupport = true;
     } catch (e) {
       print(e);
@@ -95,7 +103,8 @@ class GgmlLibrary extends GgmlLibraryBase {
   FutureOr<void> dispose() {}
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  GgmlLibrarySharedBindingsByGeneralDeveloper get ggmlLibrarySharedBindingsByGeneralDeveloper {
+  GgmlLibrarySharedBindingsByGeneralDeveloper
+  get ggmlLibrarySharedBindingsByGeneralDeveloper {
     return GgmlLibrary._ggmlLibrarySharedBindingsByGeneralDeveloper;
   }
 

@@ -39,9 +39,7 @@ import 'base.dart';
 /// Check Out: https://www.youtube.com/@GENERAL_DEV
 class GgmlLibrary extends GgmlLibraryBase {
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
-  GgmlLibrary({
-    super.libraryGgmlPath,
-  });
+  GgmlLibrary({super.libraryGgmlPath});
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   final bool _isCrash = false;
