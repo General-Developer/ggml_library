@@ -99,7 +99,7 @@ Minimal simple application example of using outetts [Youtube Video](https://yout
 
 - [Stable Diffusion](https://github.com/general-developer/stable_diffusion_library)
     
-Minimal simple application example of using outetts [Youtube Video](https://youtu.be/U-5EDMk0UgE) 
+Minimal simple application example of Stable Diffusion [Youtube Video](https://youtu.be/U-5EDMk0UgE) 
 | Mobile                                                                                                                                  | Desktop |
 |-----------------------------------------------------------------------------------------------------------------------------------------|---------|
 | [![](https://raw.githubusercontent.com/General-Developer/stable_diffusion_library/refs/heads/main/assets/examples/stable_diffusion_app/mobile.png)](https://youtu.be/U-5EDMk0UgE) | [![](https://raw.githubusercontent.com/General-Developer/stable_diffusion_library/refs/heads/main/assets/examples/stable_diffusion_app/desktop.png)](https://youtu.be/U-5EDMk0UgE)        |
