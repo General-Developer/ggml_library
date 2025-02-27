@@ -27,7 +27,7 @@ dependencies:
   ffi: '^2.1.0'
   crypto: '^3.0.3'
   path: '^1.9.0'
-  ffi_universe: '^0.0.6'
+  ffi_universe: '^0.0.7'
 dev_dependencies:
   lints: '^5.0.0'
   test: 'any'
