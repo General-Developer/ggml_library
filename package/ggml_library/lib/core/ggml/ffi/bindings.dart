@@ -9,11 +9,11 @@ import 'package:ffi_universe/ffi_universe.dart' as ffi;
 class GgmlLibrarySharedBindingsByGeneralDeveloper {
   /// Holds the symbol lookup function.
   final ffi.Pointer<T> Function<T extends ffi.NativeType>(String symbolName)
-  _lookup;
+      _lookup;
 
   /// The symbols are looked up in [dynamicLibrary].
   GgmlLibrarySharedBindingsByGeneralDeveloper(ffi.DynamicLibrary dynamicLibrary)
-    : _lookup = dynamicLibrary.lookup;
+      : _lookup = dynamicLibrary.lookup;
 
   /// The symbols are looked up with [lookup].
   GgmlLibrarySharedBindingsByGeneralDeveloper.fromLookup(
@@ -60,8 +60,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _removePtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>)>>(
-        'remove',
-      );
+    'remove',
+  );
   late final _remove =
       _removePtr.asFunction<int Function(ffi.Pointer<ffi.Char>)>();
 
@@ -72,15 +72,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _renamePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)
-    >
-  >('rename');
-  late final _rename =
-      _renamePtr
-          .asFunction<
-            int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)
-          >();
+      ffi.NativeFunction<
+          ffi.Int Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('rename');
+  late final _rename = _renamePtr
+      .asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -94,20 +90,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _renameatPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(
-        ffi.Int,
-        ffi.Pointer<ffi.Char>,
-        ffi.Int,
-        ffi.Pointer<ffi.Char>,
-      )
-    >
-  >('renameat');
-  late final _renameat =
-      _renameatPtr
-          .asFunction<
-            int Function(int, ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>)
-          >();
+      ffi.NativeFunction<
+          ffi.Int Function(
+            ffi.Int,
+            ffi.Pointer<ffi.Char>,
+            ffi.Int,
+            ffi.Pointer<ffi.Char>,
+          )>>('renameat');
+  late final _renameat = _renameatPtr.asFunction<
+      int Function(int, ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -117,8 +108,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _fclosePtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
-        'fclose',
-      );
+    'fclose',
+  );
   late final _fclose = _fclosePtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -138,11 +129,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _tmpnamPtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>
-  >('tmpnam');
-  late final _tmpnam =
-      _tmpnamPtr
-          .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>();
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>>('tmpnam');
+  late final _tmpnam = _tmpnamPtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -151,11 +141,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _tmpnam_rPtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>
-  >('tmpnam_r');
-  late final _tmpnam_r =
-      _tmpnam_rPtr
-          .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>();
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>>('tmpnam_r');
+  late final _tmpnam_r = _tmpnam_rPtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -167,21 +156,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _tempnamPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(
+            ffi.Pointer<ffi.Char>,
+            ffi.Pointer<ffi.Char>,
+          )>>('tempnam');
+  late final _tempnam = _tempnamPtr.asFunction<
       ffi.Pointer<ffi.Char> Function(
         ffi.Pointer<ffi.Char>,
         ffi.Pointer<ffi.Char>,
-      )
-    >
-  >('tempnam');
-  late final _tempnam =
-      _tempnamPtr
-          .asFunction<
-            ffi.Pointer<ffi.Char> Function(
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<ffi.Char>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -191,8 +175,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _fflushPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
-        'fflush',
-      );
+    'fflush',
+  );
   late final _fflush = _fflushPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -203,8 +187,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _fflush_unlockedPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
-        'fflush_unlocked',
-      );
+    'fflush_unlocked',
+  );
   late final _fflush_unlocked =
       _fflush_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
@@ -218,18 +202,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fopenPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)
-    >
-  >('fopen');
-  late final _fopen =
-      _fopenPtr
-          .asFunction<
-            ffi.Pointer<FILE> Function(
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<ffi.Char>,
-            )
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('fopen');
+  late final _fopen = _fopenPtr.asFunction<
+      ffi.Pointer<FILE> Function(
+        ffi.Pointer<ffi.Char>,
+        ffi.Pointer<ffi.Char>,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -242,23 +222,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _freopenPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(
+            ffi.Pointer<ffi.Char>,
+            ffi.Pointer<ffi.Char>,
+            ffi.Pointer<FILE>,
+          )>>('freopen');
+  late final _freopen = _freopenPtr.asFunction<
       ffi.Pointer<FILE> Function(
         ffi.Pointer<ffi.Char>,
         ffi.Pointer<ffi.Char>,
         ffi.Pointer<FILE>,
-      )
-    >
-  >('freopen');
-  late final _freopen =
-      _freopenPtr
-          .asFunction<
-            ffi.Pointer<FILE> Function(
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<FILE>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -267,13 +242,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fdopenPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<FILE> Function(ffi.Int, ffi.Pointer<ffi.Char>)
-    >
-  >('fdopen');
-  late final _fdopen =
-      _fdopenPtr
-          .asFunction<ffi.Pointer<FILE> Function(int, ffi.Pointer<ffi.Char>)>();
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(
+              ffi.Int, ffi.Pointer<ffi.Char>)>>('fdopen');
+  late final _fdopen = _fdopenPtr
+      .asFunction<ffi.Pointer<FILE> Function(int, ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -286,23 +259,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fopencookiePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(
+            ffi.Pointer<ffi.Void>,
+            ffi.Pointer<ffi.Char>,
+            cookie_io_functions_t,
+          )>>('fopencookie');
+  late final _fopencookie = _fopencookiePtr.asFunction<
       ffi.Pointer<FILE> Function(
         ffi.Pointer<ffi.Void>,
         ffi.Pointer<ffi.Char>,
         cookie_io_functions_t,
-      )
-    >
-  >('fopencookie');
-  late final _fopencookie =
-      _fopencookiePtr
-          .asFunction<
-            ffi.Pointer<FILE> Function(
-              ffi.Pointer<ffi.Void>,
-              ffi.Pointer<ffi.Char>,
-              cookie_io_functions_t,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -315,23 +283,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fmemopenPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(
+            ffi.Pointer<ffi.Void>,
+            ffi.Size,
+            ffi.Pointer<ffi.Char>,
+          )>>('fmemopen');
+  late final _fmemopen = _fmemopenPtr.asFunction<
       ffi.Pointer<FILE> Function(
         ffi.Pointer<ffi.Void>,
-        ffi.Size,
+        int,
         ffi.Pointer<ffi.Char>,
-      )
-    >
-  >('fmemopen');
-  late final _fmemopen =
-      _fmemopenPtr
-          .asFunction<
-            ffi.Pointer<FILE> Function(
-              ffi.Pointer<ffi.Void>,
-              int,
-              ffi.Pointer<ffi.Char>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -343,21 +306,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _open_memstreamPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(
+            ffi.Pointer<ffi.Pointer<ffi.Char>>,
+            ffi.Pointer<ffi.Size>,
+          )>>('open_memstream');
+  late final _open_memstream = _open_memstreamPtr.asFunction<
       ffi.Pointer<FILE> Function(
         ffi.Pointer<ffi.Pointer<ffi.Char>>,
         ffi.Pointer<ffi.Size>,
-      )
-    >
-  >('open_memstream');
-  late final _open_memstream =
-      _open_memstreamPtr
-          .asFunction<
-            ffi.Pointer<FILE> Function(
-              ffi.Pointer<ffi.Pointer<ffi.Char>>,
-              ffi.Pointer<ffi.Size>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -366,15 +324,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _setbufPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)
-    >
-  >('setbuf');
-  late final _setbuf =
-      _setbufPtr
-          .asFunction<
-            void Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>>('setbuf');
+  late final _setbuf = _setbufPtr
+      .asFunction<void Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -388,20 +342,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _setvbufPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(
-        ffi.Pointer<FILE>,
-        ffi.Pointer<ffi.Char>,
-        ffi.Int,
-        ffi.Size,
-      )
-    >
-  >('setvbuf');
-  late final _setvbuf =
-      _setvbufPtr
-          .asFunction<
-            int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, int, int)
-          >();
+      ffi.NativeFunction<
+          ffi.Int Function(
+            ffi.Pointer<FILE>,
+            ffi.Pointer<ffi.Char>,
+            ffi.Int,
+            ffi.Size,
+          )>>('setvbuf');
+  late final _setvbuf = _setvbufPtr.asFunction<
+      int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, int, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -414,15 +363,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _setbufferPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, ffi.Size)
-    >
-  >('setbuffer');
-  late final _setbuffer =
-      _setbufferPtr
-          .asFunction<
-            void Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, int)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>,
+              ffi.Size)>>('setbuffer');
+  late final _setbuffer = _setbufferPtr.asFunction<
+      void Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -432,8 +377,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _setlinebufPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>(
-        'setlinebuf',
-      );
+    'setlinebuf',
+  );
   late final _setlinebuf =
       _setlinebufPtr.asFunction<void Function(ffi.Pointer<FILE>)>();
 
@@ -444,13 +389,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fprintfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)
-    >
-  >('fprintf');
-  late final _fprintf =
-      _fprintfPtr
-          .asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>();
+      ffi.NativeFunction<
+          ffi.Int Function(
+              ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>>('fprintf');
+  late final _fprintf = _fprintfPtr
+      .asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -460,8 +403,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _printfPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>)>>(
-        'printf',
-      );
+    'printf',
+  );
   late final _printf =
       _printfPtr.asFunction<int Function(ffi.Pointer<ffi.Char>)>();
 
@@ -472,15 +415,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _sprintfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)
-    >
-  >('sprintf');
-  late final _sprintf =
-      _sprintfPtr
-          .asFunction<
-            int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)
-          >();
+      ffi.NativeFunction<
+          ffi.Int Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('sprintf');
+  late final _sprintf = _sprintfPtr
+      .asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -493,23 +432,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _vfprintfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(
+      ffi.NativeFunction<
+          ffi.Int Function(
+            ffi.Pointer<FILE>,
+            ffi.Pointer<ffi.Char>,
+            ffi.Pointer<__va_list_tag>,
+          )>>('vfprintf');
+  late final _vfprintf = _vfprintfPtr.asFunction<
+      int Function(
         ffi.Pointer<FILE>,
         ffi.Pointer<ffi.Char>,
         ffi.Pointer<__va_list_tag>,
-      )
-    >
-  >('vfprintf');
-  late final _vfprintf =
-      _vfprintfPtr
-          .asFunction<
-            int Function(
-              ffi.Pointer<FILE>,
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<__va_list_tag>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -521,15 +455,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _vprintfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)
-    >
-  >('vprintf');
-  late final _vprintf =
-      _vprintfPtr
-          .asFunction<
-            int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)
-          >();
+      ffi.NativeFunction<
+          ffi.Int Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vprintf');
+  late final _vprintf = _vprintfPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -542,23 +472,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _vsprintfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(
+      ffi.NativeFunction<
+          ffi.Int Function(
+            ffi.Pointer<ffi.Char>,
+            ffi.Pointer<ffi.Char>,
+            ffi.Pointer<__va_list_tag>,
+          )>>('vsprintf');
+  late final _vsprintf = _vsprintfPtr.asFunction<
+      int Function(
         ffi.Pointer<ffi.Char>,
         ffi.Pointer<ffi.Char>,
         ffi.Pointer<__va_list_tag>,
-      )
-    >
-  >('vsprintf');
-  late final _vsprintf =
-      _vsprintfPtr
-          .asFunction<
-            int Function(
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<__va_list_tag>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -571,15 +496,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _snprintfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Size, ffi.Pointer<ffi.Char>)
-    >
-  >('snprintf');
-  late final _snprintf =
-      _snprintfPtr
-          .asFunction<
-            int Function(ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>)
-          >();
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Size,
+              ffi.Pointer<ffi.Char>)>>('snprintf');
+  late final _snprintf = _snprintfPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -593,25 +514,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _vsnprintfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(
+      ffi.NativeFunction<
+          ffi.Int Function(
+            ffi.Pointer<ffi.Char>,
+            ffi.Size,
+            ffi.Pointer<ffi.Char>,
+            ffi.Pointer<__va_list_tag>,
+          )>>('vsnprintf');
+  late final _vsnprintf = _vsnprintfPtr.asFunction<
+      int Function(
         ffi.Pointer<ffi.Char>,
-        ffi.Size,
+        int,
         ffi.Pointer<ffi.Char>,
         ffi.Pointer<__va_list_tag>,
-      )
-    >
-  >('vsnprintf');
-  late final _vsnprintf =
-      _vsnprintfPtr
-          .asFunction<
-            int Function(
-              ffi.Pointer<ffi.Char>,
-              int,
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<__va_list_tag>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -624,23 +540,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _vasprintfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(
+      ffi.NativeFunction<
+          ffi.Int Function(
+            ffi.Pointer<ffi.Pointer<ffi.Char>>,
+            ffi.Pointer<ffi.Char>,
+            ffi.Pointer<__va_list_tag>,
+          )>>('vasprintf');
+  late final _vasprintf = _vasprintfPtr.asFunction<
+      int Function(
         ffi.Pointer<ffi.Pointer<ffi.Char>>,
         ffi.Pointer<ffi.Char>,
         ffi.Pointer<__va_list_tag>,
-      )
-    >
-  >('vasprintf');
-  late final _vasprintf =
-      _vasprintfPtr
-          .asFunction<
-            int Function(
-              ffi.Pointer<ffi.Pointer<ffi.Char>>,
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<__va_list_tag>,
-            )
-          >();
+      )>();
 
   int __asprintf(
     ffi.Pointer<ffi.Pointer<ffi.Char>> __ptr,
@@ -650,21 +561,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final ___asprintfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(
+      ffi.NativeFunction<
+          ffi.Int Function(
+            ffi.Pointer<ffi.Pointer<ffi.Char>>,
+            ffi.Pointer<ffi.Char>,
+          )>>('__asprintf');
+  late final ___asprintf = ___asprintfPtr.asFunction<
+      int Function(
         ffi.Pointer<ffi.Pointer<ffi.Char>>,
         ffi.Pointer<ffi.Char>,
-      )
-    >
-  >('__asprintf');
-  late final ___asprintf =
-      ___asprintfPtr
-          .asFunction<
-            int Function(
-              ffi.Pointer<ffi.Pointer<ffi.Char>>,
-              ffi.Pointer<ffi.Char>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -676,21 +582,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _asprintfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(
+      ffi.NativeFunction<
+          ffi.Int Function(
+            ffi.Pointer<ffi.Pointer<ffi.Char>>,
+            ffi.Pointer<ffi.Char>,
+          )>>('asprintf');
+  late final _asprintf = _asprintfPtr.asFunction<
+      int Function(
         ffi.Pointer<ffi.Pointer<ffi.Char>>,
         ffi.Pointer<ffi.Char>,
-      )
-    >
-  >('asprintf');
-  late final _asprintf =
-      _asprintfPtr
-          .asFunction<
-            int Function(
-              ffi.Pointer<ffi.Pointer<ffi.Char>>,
-              ffi.Pointer<ffi.Char>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -703,19 +604,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _vdprintfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(
-        ffi.Int,
-        ffi.Pointer<ffi.Char>,
-        ffi.Pointer<__va_list_tag>,
-      )
-    >
-  >('vdprintf');
-  late final _vdprintf =
-      _vdprintfPtr
-          .asFunction<
-            int Function(int, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)
-          >();
+      ffi.NativeFunction<
+          ffi.Int Function(
+            ffi.Int,
+            ffi.Pointer<ffi.Char>,
+            ffi.Pointer<__va_list_tag>,
+          )>>('vdprintf');
+  late final _vdprintf = _vdprintfPtr.asFunction<
+      int Function(int, ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -724,8 +620,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _dprintfPtr = _lookup<
-    ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<ffi.Char>)>
-  >('dprintf');
+          ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<ffi.Char>)>>(
+      'dprintf');
   late final _dprintf =
       _dprintfPtr.asFunction<int Function(int, ffi.Pointer<ffi.Char>)>();
 
@@ -736,13 +632,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fscanfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)
-    >
-  >('fscanf');
-  late final _fscanf =
-      _fscanfPtr
-          .asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>();
+      ffi.NativeFunction<
+          ffi.Int Function(
+              ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>>('fscanf');
+  late final _fscanf = _fscanfPtr
+      .asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -752,8 +646,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _scanfPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>)>>(
-        'scanf',
-      );
+    'scanf',
+  );
   late final _scanf =
       _scanfPtr.asFunction<int Function(ffi.Pointer<ffi.Char>)>();
 
@@ -764,15 +658,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _sscanfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)
-    >
-  >('sscanf');
-  late final _sscanf =
-      _sscanfPtr
-          .asFunction<
-            int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)
-          >();
+      ffi.NativeFunction<
+          ffi.Int Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('sscanf');
+  late final _sscanf = _sscanfPtr
+      .asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -785,23 +675,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _vfscanfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(
+      ffi.NativeFunction<
+          ffi.Int Function(
+            ffi.Pointer<FILE>,
+            ffi.Pointer<ffi.Char>,
+            ffi.Pointer<__va_list_tag>,
+          )>>('vfscanf');
+  late final _vfscanf = _vfscanfPtr.asFunction<
+      int Function(
         ffi.Pointer<FILE>,
         ffi.Pointer<ffi.Char>,
         ffi.Pointer<__va_list_tag>,
-      )
-    >
-  >('vfscanf');
-  late final _vfscanf =
-      _vfscanfPtr
-          .asFunction<
-            int Function(
-              ffi.Pointer<FILE>,
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<__va_list_tag>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -810,15 +695,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _vscanfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)
-    >
-  >('vscanf');
-  late final _vscanf =
-      _vscanfPtr
-          .asFunction<
-            int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)
-          >();
+      ffi.NativeFunction<
+          ffi.Int Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vscanf');
+  late final _vscanf = _vscanfPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -831,23 +712,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _vsscanfPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(
+      ffi.NativeFunction<
+          ffi.Int Function(
+            ffi.Pointer<ffi.Char>,
+            ffi.Pointer<ffi.Char>,
+            ffi.Pointer<__va_list_tag>,
+          )>>('vsscanf');
+  late final _vsscanf = _vsscanfPtr.asFunction<
+      int Function(
         ffi.Pointer<ffi.Char>,
         ffi.Pointer<ffi.Char>,
         ffi.Pointer<__va_list_tag>,
-      )
-    >
-  >('vsscanf');
-  late final _vsscanf =
-      _vsscanfPtr
-          .asFunction<
-            int Function(
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<__va_list_tag>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -888,8 +764,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _getc_unlockedPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
-        'getc_unlocked',
-      );
+    'getc_unlocked',
+  );
   late final _getc_unlocked =
       _getc_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
@@ -912,8 +788,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _fgetc_unlockedPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
-        'fgetc_unlocked',
-      );
+    'fgetc_unlocked',
+  );
   late final _fgetc_unlocked =
       _fgetc_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
@@ -925,8 +801,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _fputcPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>(
-        'fputc',
-      );
+    'fputc',
+  );
   late final _fputc =
       _fputcPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
 
@@ -938,8 +814,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _putcPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>(
-        'putc',
-      );
+    'putc',
+  );
   late final _putc =
       _putcPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
 
@@ -961,8 +837,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _fputc_unlockedPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>(
-        'fputc_unlocked',
-      );
+    'fputc_unlocked',
+  );
   late final _fputc_unlocked =
       _fputc_unlockedPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
 
@@ -974,8 +850,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _putc_unlockedPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>(
-        'putc_unlocked',
-      );
+    'putc_unlocked',
+  );
   late final _putc_unlocked =
       _putc_unlockedPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
 
@@ -987,8 +863,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _putchar_unlockedPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int)>>(
-        'putchar_unlocked',
-      );
+    'putchar_unlocked',
+  );
   late final _putchar_unlocked =
       _putchar_unlockedPtr.asFunction<int Function(int)>();
 
@@ -1010,8 +886,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _putwPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>(
-        'putw',
-      );
+    'putw',
+  );
   late final _putw =
       _putwPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
 
@@ -1026,23 +902,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fgetsPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(
+            ffi.Pointer<ffi.Char>,
+            ffi.Int,
+            ffi.Pointer<FILE>,
+          )>>('fgets');
+  late final _fgets = _fgetsPtr.asFunction<
       ffi.Pointer<ffi.Char> Function(
         ffi.Pointer<ffi.Char>,
-        ffi.Int,
+        int,
         ffi.Pointer<FILE>,
-      )
-    >
-  >('fgets');
-  late final _fgets =
-      _fgetsPtr
-          .asFunction<
-            ffi.Pointer<ffi.Char> Function(
-              ffi.Pointer<ffi.Char>,
-              int,
-              ffi.Pointer<FILE>,
-            )
-          >();
+      )>();
 
   int __getdelim(
     ffi.Pointer<ffi.Pointer<ffi.Char>> __lineptr,
@@ -1054,25 +925,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final ___getdelimPtr = _lookup<
-    ffi.NativeFunction<
-      __ssize_t Function(
+      ffi.NativeFunction<
+          __ssize_t Function(
+            ffi.Pointer<ffi.Pointer<ffi.Char>>,
+            ffi.Pointer<ffi.Size>,
+            ffi.Int,
+            ffi.Pointer<FILE>,
+          )>>('__getdelim');
+  late final ___getdelim = ___getdelimPtr.asFunction<
+      int Function(
         ffi.Pointer<ffi.Pointer<ffi.Char>>,
         ffi.Pointer<ffi.Size>,
-        ffi.Int,
+        int,
         ffi.Pointer<FILE>,
-      )
-    >
-  >('__getdelim');
-  late final ___getdelim =
-      ___getdelimPtr
-          .asFunction<
-            int Function(
-              ffi.Pointer<ffi.Pointer<ffi.Char>>,
-              ffi.Pointer<ffi.Size>,
-              int,
-              ffi.Pointer<FILE>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1086,25 +952,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _getdelimPtr = _lookup<
-    ffi.NativeFunction<
-      __ssize_t Function(
+      ffi.NativeFunction<
+          __ssize_t Function(
+            ffi.Pointer<ffi.Pointer<ffi.Char>>,
+            ffi.Pointer<ffi.Size>,
+            ffi.Int,
+            ffi.Pointer<FILE>,
+          )>>('getdelim');
+  late final _getdelim = _getdelimPtr.asFunction<
+      int Function(
         ffi.Pointer<ffi.Pointer<ffi.Char>>,
         ffi.Pointer<ffi.Size>,
-        ffi.Int,
+        int,
         ffi.Pointer<FILE>,
-      )
-    >
-  >('getdelim');
-  late final _getdelim =
-      _getdelimPtr
-          .asFunction<
-            int Function(
-              ffi.Pointer<ffi.Pointer<ffi.Char>>,
-              ffi.Pointer<ffi.Size>,
-              int,
-              ffi.Pointer<FILE>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1117,23 +978,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _getlinePtr = _lookup<
-    ffi.NativeFunction<
-      __ssize_t Function(
+      ffi.NativeFunction<
+          __ssize_t Function(
+            ffi.Pointer<ffi.Pointer<ffi.Char>>,
+            ffi.Pointer<ffi.Size>,
+            ffi.Pointer<FILE>,
+          )>>('getline');
+  late final _getline = _getlinePtr.asFunction<
+      int Function(
         ffi.Pointer<ffi.Pointer<ffi.Char>>,
         ffi.Pointer<ffi.Size>,
         ffi.Pointer<FILE>,
-      )
-    >
-  >('getline');
-  late final _getline =
-      _getlinePtr
-          .asFunction<
-            int Function(
-              ffi.Pointer<ffi.Pointer<ffi.Char>>,
-              ffi.Pointer<ffi.Size>,
-              ffi.Pointer<FILE>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1142,13 +998,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fputsPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<FILE>)
-    >
-  >('fputs');
-  late final _fputs =
-      _fputsPtr
-          .asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<FILE>)>();
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<FILE>)>>('fputs');
+  late final _fputs = _fputsPtr
+      .asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<FILE>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1158,8 +1011,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _putsPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>)>>(
-        'puts',
-      );
+    'puts',
+  );
   late final _puts = _putsPtr.asFunction<int Function(ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -1170,8 +1023,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ungetcPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Pointer<FILE>)>>(
-        'ungetc',
-      );
+    'ungetc',
+  );
   late final _ungetc =
       _ungetcPtr.asFunction<int Function(int, ffi.Pointer<FILE>)>();
 
@@ -1187,20 +1040,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _freadPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.UnsignedLong Function(
-        ffi.Pointer<ffi.Void>,
-        ffi.Size,
-        ffi.Size,
-        ffi.Pointer<FILE>,
-      )
-    >
-  >('fread');
-  late final _fread =
-      _freadPtr
-          .asFunction<
-            int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)
-          >();
+      ffi.NativeFunction<
+          ffi.UnsignedLong Function(
+            ffi.Pointer<ffi.Void>,
+            ffi.Size,
+            ffi.Size,
+            ffi.Pointer<FILE>,
+          )>>('fread');
+  late final _fread = _freadPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1214,20 +1062,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fwritePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.UnsignedLong Function(
-        ffi.Pointer<ffi.Void>,
-        ffi.Size,
-        ffi.Size,
-        ffi.Pointer<FILE>,
-      )
-    >
-  >('fwrite');
-  late final _fwrite =
-      _fwritePtr
-          .asFunction<
-            int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)
-          >();
+      ffi.NativeFunction<
+          ffi.UnsignedLong Function(
+            ffi.Pointer<ffi.Void>,
+            ffi.Size,
+            ffi.Size,
+            ffi.Pointer<FILE>,
+          )>>('fwrite');
+  late final _fwrite = _fwritePtr.asFunction<
+      int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1241,20 +1084,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fread_unlockedPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Size Function(
-        ffi.Pointer<ffi.Void>,
-        ffi.Size,
-        ffi.Size,
-        ffi.Pointer<FILE>,
-      )
-    >
-  >('fread_unlocked');
-  late final _fread_unlocked =
-      _fread_unlockedPtr
-          .asFunction<
-            int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)
-          >();
+      ffi.NativeFunction<
+          ffi.Size Function(
+            ffi.Pointer<ffi.Void>,
+            ffi.Size,
+            ffi.Size,
+            ffi.Pointer<FILE>,
+          )>>('fread_unlocked');
+  late final _fread_unlocked = _fread_unlockedPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1268,20 +1106,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fwrite_unlockedPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Size Function(
-        ffi.Pointer<ffi.Void>,
-        ffi.Size,
-        ffi.Size,
-        ffi.Pointer<FILE>,
-      )
-    >
-  >('fwrite_unlocked');
-  late final _fwrite_unlocked =
-      _fwrite_unlockedPtr
-          .asFunction<
-            int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)
-          >();
+      ffi.NativeFunction<
+          ffi.Size Function(
+            ffi.Pointer<ffi.Void>,
+            ffi.Size,
+            ffi.Size,
+            ffi.Pointer<FILE>,
+          )>>('fwrite_unlocked');
+  late final _fwrite_unlocked = _fwrite_unlockedPtr.asFunction<
+      int Function(ffi.Pointer<ffi.Void>, int, int, ffi.Pointer<FILE>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1290,8 +1123,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fseekPtr = _lookup<
-    ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Long, ffi.Int)>
-  >('fseek');
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<FILE>, ffi.Long, ffi.Int)>>('fseek');
   late final _fseek =
       _fseekPtr.asFunction<int Function(ffi.Pointer<FILE>, int, int)>();
 
@@ -1303,8 +1136,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ftellPtr =
       _lookup<ffi.NativeFunction<ffi.Long Function(ffi.Pointer<FILE>)>>(
-        'ftell',
-      );
+    'ftell',
+  );
   late final _ftell = _ftellPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -1315,8 +1148,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _rewindPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>(
-        'rewind',
-      );
+    'rewind',
+  );
   late final _rewind =
       _rewindPtr.asFunction<void Function(ffi.Pointer<FILE>)>();
 
@@ -1327,8 +1160,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fseekoPtr = _lookup<
-    ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, __off_t, ffi.Int)>
-  >('fseeko');
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<FILE>, __off_t, ffi.Int)>>('fseeko');
   late final _fseeko =
       _fseekoPtr.asFunction<int Function(ffi.Pointer<FILE>, int, int)>();
 
@@ -1340,8 +1173,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ftelloPtr =
       _lookup<ffi.NativeFunction<__off_t Function(ffi.Pointer<FILE>)>>(
-        'ftello',
-      );
+    'ftello',
+  );
   late final _ftello = _ftelloPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -1351,11 +1184,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fgetposPtr = _lookup<
-    ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>
-  >('fgetpos');
-  late final _fgetpos =
-      _fgetposPtr
-          .asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>();
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>>('fgetpos');
+  late final _fgetpos = _fgetposPtr
+      .asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1364,11 +1196,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _fsetposPtr = _lookup<
-    ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>
-  >('fsetpos');
-  late final _fsetpos =
-      _fsetposPtr
-          .asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>();
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>>('fsetpos');
+  late final _fsetpos = _fsetposPtr
+      .asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<fpos_t>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1378,8 +1209,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _clearerrPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>(
-        'clearerr',
-      );
+    'clearerr',
+  );
   late final _clearerr =
       _clearerrPtr.asFunction<void Function(ffi.Pointer<FILE>)>();
 
@@ -1401,8 +1232,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ferrorPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
-        'ferror',
-      );
+    'ferror',
+  );
   late final _ferror = _ferrorPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -1413,8 +1244,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _clearerr_unlockedPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>(
-        'clearerr_unlocked',
-      );
+    'clearerr_unlocked',
+  );
   late final _clearerr_unlocked =
       _clearerr_unlockedPtr.asFunction<void Function(ffi.Pointer<FILE>)>();
 
@@ -1426,8 +1257,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _feof_unlockedPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
-        'feof_unlocked',
-      );
+    'feof_unlocked',
+  );
   late final _feof_unlocked =
       _feof_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
@@ -1439,8 +1270,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ferror_unlockedPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
-        'ferror_unlocked',
-      );
+    'ferror_unlocked',
+  );
   late final _ferror_unlocked =
       _ferror_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
@@ -1452,8 +1283,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _perrorPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ffi.Char>)>>(
-        'perror',
-      );
+    'perror',
+  );
   late final _perror =
       _perrorPtr.asFunction<void Function(ffi.Pointer<ffi.Char>)>();
 
@@ -1465,8 +1296,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _filenoPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
-        'fileno',
-      );
+    'fileno',
+  );
   late final _fileno = _filenoPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -1477,8 +1308,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _fileno_unlockedPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
-        'fileno_unlocked',
-      );
+    'fileno_unlocked',
+  );
   late final _fileno_unlocked =
       _fileno_unlockedPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
@@ -1490,8 +1321,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _pclosePtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
-        'pclose',
-      );
+    'pclose',
+  );
   late final _pclose = _pclosePtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -1504,18 +1335,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _popenPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)
-    >
-  >('popen');
-  late final _popen =
-      _popenPtr
-          .asFunction<
-            ffi.Pointer<FILE> Function(
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<ffi.Char>,
-            )
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('popen');
+  late final _popen = _popenPtr.asFunction<
+      ffi.Pointer<FILE> Function(
+        ffi.Pointer<ffi.Char>,
+        ffi.Pointer<ffi.Char>,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1524,11 +1351,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ctermidPtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>
-  >('ctermid');
-  late final _ctermid =
-      _ctermidPtr
-          .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>();
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>>('ctermid');
+  late final _ctermid = _ctermidPtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1538,8 +1364,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _flockfilePtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>(
-        'flockfile',
-      );
+    'flockfile',
+  );
   late final _flockfile =
       _flockfilePtr.asFunction<void Function(ffi.Pointer<FILE>)>();
 
@@ -1551,8 +1377,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ftrylockfilePtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
-        'ftrylockfile',
-      );
+    'ftrylockfile',
+  );
   late final _ftrylockfile =
       _ftrylockfilePtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
@@ -1564,8 +1390,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _funlockfilePtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<FILE>)>>(
-        'funlockfile',
-      );
+    'funlockfile',
+  );
   late final _funlockfile =
       _funlockfilePtr.asFunction<void Function(ffi.Pointer<FILE>)>();
 
@@ -1575,8 +1401,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final ___uflowPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
-        '__uflow',
-      );
+    '__uflow',
+  );
   late final ___uflow =
       ___uflowPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
 
@@ -1586,8 +1412,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final ___overflowPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Int)>>(
-        '__overflow',
-      );
+    '__overflow',
+  );
   late final ___overflow =
       ___overflowPtr.asFunction<int Function(ffi.Pointer<FILE>, int)>();
 
@@ -1602,15 +1428,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_abortPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<ffi.Char>, ffi.Int, ffi.Pointer<ffi.Char>)
-    >
-  >('ggml_abort');
-  late final _ggml_abort =
-      _ggml_abortPtr
-          .asFunction<
-            void Function(ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ffi.Char>, ffi.Int,
+              ffi.Pointer<ffi.Char>)>>('ggml_abort');
+  late final _ggml_abort = _ggml_abortPtr.asFunction<
+      void Function(ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1620,11 +1442,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_status_to_stringPtr =
       _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Int)>>(
-        'ggml_status_to_string',
-      );
-  late final _ggml_status_to_string =
-      _ggml_status_to_stringPtr
-          .asFunction<ffi.Pointer<ffi.Char> Function(int)>();
+    'ggml_status_to_string',
+  );
+  late final _ggml_status_to_string = _ggml_status_to_stringPtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1634,8 +1455,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_fp16_to_fp32Ptr =
       _lookup<ffi.NativeFunction<ffi.Float Function(ggml_fp16_t)>>(
-        'ggml_fp16_to_fp32',
-      );
+    'ggml_fp16_to_fp32',
+  );
   late final _ggml_fp16_to_fp32 =
       _ggml_fp16_to_fp32Ptr.asFunction<double Function(int)>();
 
@@ -1647,8 +1468,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_fp32_to_fp16Ptr =
       _lookup<ffi.NativeFunction<ggml_fp16_t Function(ffi.Float)>>(
-        'ggml_fp32_to_fp16',
-      );
+    'ggml_fp32_to_fp16',
+  );
   late final _ggml_fp32_to_fp16 =
       _ggml_fp32_to_fp16Ptr.asFunction<int Function(double)>();
 
@@ -1663,19 +1484,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_fp16_to_fp32_rowPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ffi.Pointer<ggml_fp16_t>,
-        ffi.Pointer<ffi.Float>,
-        ffi.Int64,
-      )
-    >
-  >('ggml_fp16_to_fp32_row');
-  late final _ggml_fp16_to_fp32_row =
-      _ggml_fp16_to_fp32_rowPtr
-          .asFunction<
-            void Function(ffi.Pointer<ggml_fp16_t>, ffi.Pointer<ffi.Float>, int)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ffi.Pointer<ggml_fp16_t>,
+            ffi.Pointer<ffi.Float>,
+            ffi.Int64,
+          )>>('ggml_fp16_to_fp32_row');
+  late final _ggml_fp16_to_fp32_row = _ggml_fp16_to_fp32_rowPtr.asFunction<
+      void Function(ffi.Pointer<ggml_fp16_t>, ffi.Pointer<ffi.Float>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1688,19 +1504,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_fp32_to_fp16_rowPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ffi.Pointer<ffi.Float>,
-        ffi.Pointer<ggml_fp16_t>,
-        ffi.Int64,
-      )
-    >
-  >('ggml_fp32_to_fp16_row');
-  late final _ggml_fp32_to_fp16_row =
-      _ggml_fp32_to_fp16_rowPtr
-          .asFunction<
-            void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_fp16_t>, int)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ffi.Pointer<ffi.Float>,
+            ffi.Pointer<ggml_fp16_t>,
+            ffi.Int64,
+          )>>('ggml_fp32_to_fp16_row');
+  late final _ggml_fp32_to_fp16_row = _ggml_fp32_to_fp16_rowPtr.asFunction<
+      void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_fp16_t>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1710,8 +1521,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_fp32_to_bf16Ptr =
       _lookup<ffi.NativeFunction<ggml_bf16_t Function(ffi.Float)>>(
-        'ggml_fp32_to_bf16',
-      );
+    'ggml_fp32_to_bf16',
+  );
   late final _ggml_fp32_to_bf16 =
       _ggml_fp32_to_bf16Ptr.asFunction<ggml_bf16_t Function(double)>();
 
@@ -1723,8 +1534,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_bf16_to_fp32Ptr =
       _lookup<ffi.NativeFunction<ffi.Float Function(ggml_bf16_t)>>(
-        'ggml_bf16_to_fp32',
-      );
+    'ggml_bf16_to_fp32',
+  );
   late final _ggml_bf16_to_fp32 =
       _ggml_bf16_to_fp32Ptr.asFunction<double Function(ggml_bf16_t)>();
 
@@ -1739,19 +1550,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_bf16_to_fp32_rowPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ffi.Pointer<ggml_bf16_t>,
-        ffi.Pointer<ffi.Float>,
-        ffi.Int64,
-      )
-    >
-  >('ggml_bf16_to_fp32_row');
-  late final _ggml_bf16_to_fp32_row =
-      _ggml_bf16_to_fp32_rowPtr
-          .asFunction<
-            void Function(ffi.Pointer<ggml_bf16_t>, ffi.Pointer<ffi.Float>, int)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ffi.Pointer<ggml_bf16_t>,
+            ffi.Pointer<ffi.Float>,
+            ffi.Int64,
+          )>>('ggml_bf16_to_fp32_row');
+  late final _ggml_bf16_to_fp32_row = _ggml_bf16_to_fp32_rowPtr.asFunction<
+      void Function(ffi.Pointer<ggml_bf16_t>, ffi.Pointer<ffi.Float>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1764,19 +1570,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_fp32_to_bf16_row_refPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ffi.Pointer<ffi.Float>,
-        ffi.Pointer<ggml_bf16_t>,
-        ffi.Int64,
-      )
-    >
-  >('ggml_fp32_to_bf16_row_ref');
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ffi.Pointer<ffi.Float>,
+            ffi.Pointer<ggml_bf16_t>,
+            ffi.Int64,
+          )>>('ggml_fp32_to_bf16_row_ref');
   late final _ggml_fp32_to_bf16_row_ref =
-      _ggml_fp32_to_bf16_row_refPtr
-          .asFunction<
-            void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_bf16_t>, int)
-          >();
+      _ggml_fp32_to_bf16_row_refPtr.asFunction<
+          void Function(
+              ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_bf16_t>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1789,19 +1592,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_fp32_to_bf16_rowPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ffi.Pointer<ffi.Float>,
-        ffi.Pointer<ggml_bf16_t>,
-        ffi.Int64,
-      )
-    >
-  >('ggml_fp32_to_bf16_row');
-  late final _ggml_fp32_to_bf16_row =
-      _ggml_fp32_to_bf16_rowPtr
-          .asFunction<
-            void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_bf16_t>, int)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ffi.Pointer<ffi.Float>,
+            ffi.Pointer<ggml_bf16_t>,
+            ffi.Int64,
+          )>>('ggml_fp32_to_bf16_row');
+  late final _ggml_fp32_to_bf16_row = _ggml_fp32_to_bf16_rowPtr.asFunction<
+      void Function(ffi.Pointer<ffi.Float>, ffi.Pointer<ggml_bf16_t>, int)>();
 
   late final ffi.Pointer<ffi.Size> _GGML_TENSOR_SIZE = _lookup<ffi.Size>(
     'GGML_TENSOR_SIZE',
@@ -1819,11 +1617,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_guid_matchesPtr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_guid_t, ggml_guid_t)>>(
-        'ggml_guid_matches',
-      );
-  late final _ggml_guid_matches =
-      _ggml_guid_matchesPtr
-          .asFunction<bool Function(ggml_guid_t, ggml_guid_t)>();
+    'ggml_guid_matches',
+  );
+  late final _ggml_guid_matches = _ggml_guid_matchesPtr
+      .asFunction<bool Function(ggml_guid_t, ggml_guid_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1886,18 +1683,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_fopenPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<FILE> Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)
-    >
-  >('ggml_fopen');
-  late final _ggml_fopen =
-      _ggml_fopenPtr
-          .asFunction<
-            ffi.Pointer<FILE> Function(
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<ffi.Char>,
-            )
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<FILE> Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('ggml_fopen');
+  late final _ggml_fopen = _ggml_fopenPtr.asFunction<
+      ffi.Pointer<FILE> Function(
+        ffi.Pointer<ffi.Char>,
+        ffi.Pointer<ffi.Char>,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1907,11 +1700,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_print_objectPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_object>)>>(
-        'ggml_print_object',
-      );
-  late final _ggml_print_object =
-      _ggml_print_objectPtr
-          .asFunction<void Function(ffi.Pointer<ggml_object>)>();
+    'ggml_print_object',
+  );
+  late final _ggml_print_object = _ggml_print_objectPtr
+      .asFunction<void Function(ffi.Pointer<ggml_object>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1921,11 +1713,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_print_objectsPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_context>)>>(
-        'ggml_print_objects',
-      );
-  late final _ggml_print_objects =
-      _ggml_print_objectsPtr
-          .asFunction<void Function(ffi.Pointer<ggml_context>)>();
+    'ggml_print_objects',
+  );
+  late final _ggml_print_objects = _ggml_print_objectsPtr
+      .asFunction<void Function(ffi.Pointer<ggml_context>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -1935,8 +1726,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_nelementsPtr =
       _lookup<ffi.NativeFunction<ffi.Int64 Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_nelements',
-      );
+    'ggml_nelements',
+  );
   late final _ggml_nelements =
       _ggml_nelementsPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
@@ -1948,8 +1739,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_nrowsPtr =
       _lookup<ffi.NativeFunction<ffi.Int64 Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_nrows',
-      );
+    'ggml_nrows',
+  );
   late final _ggml_nrows =
       _ggml_nrowsPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
@@ -1961,8 +1752,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_nbytesPtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_nbytes',
-      );
+    'ggml_nbytes',
+  );
   late final _ggml_nbytes =
       _ggml_nbytesPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
@@ -1974,8 +1765,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_nbytes_padPtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_nbytes_pad',
-      );
+    'ggml_nbytes_pad',
+  );
   late final _ggml_nbytes_pad =
       _ggml_nbytes_padPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
@@ -1987,8 +1778,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_blck_sizePtr =
       _lookup<ffi.NativeFunction<ffi.Int64 Function(ffi.UnsignedInt)>>(
-        'ggml_blck_size',
-      );
+    'ggml_blck_size',
+  );
   late final _ggml_blck_size =
       _ggml_blck_sizePtr.asFunction<int Function(int)>();
 
@@ -2000,8 +1791,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_type_sizePtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ffi.UnsignedInt)>>(
-        'ggml_type_size',
-      );
+    'ggml_type_size',
+  );
   late final _ggml_type_size =
       _ggml_type_sizePtr.asFunction<int Function(int)>();
 
@@ -2012,8 +1803,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_row_sizePtr = _lookup<
-    ffi.NativeFunction<ffi.Size Function(ffi.UnsignedInt, ffi.Int64)>
-  >('ggml_row_size');
+          ffi.NativeFunction<ffi.Size Function(ffi.UnsignedInt, ffi.Int64)>>(
+      'ggml_row_size');
   late final _ggml_row_size =
       _ggml_row_sizePtr.asFunction<int Function(int, int)>();
 
@@ -2025,8 +1816,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_type_sizefPtr =
       _lookup<ffi.NativeFunction<ffi.Double Function(ffi.UnsignedInt)>>(
-        'ggml_type_sizef',
-      );
+    'ggml_type_sizef',
+  );
   late final _ggml_type_sizef =
       _ggml_type_sizefPtr.asFunction<double Function(int)>();
 
@@ -2037,8 +1828,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_type_namePtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>
-  >('ggml_type_name');
+          ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>>(
+      'ggml_type_name');
   late final _ggml_type_name =
       _ggml_type_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(int)>();
 
@@ -2049,8 +1840,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_op_namePtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>
-  >('ggml_op_name');
+          ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>>(
+      'ggml_op_name');
   late final _ggml_op_name =
       _ggml_op_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(int)>();
 
@@ -2061,8 +1852,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_op_symbolPtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>
-  >('ggml_op_symbol');
+          ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>>(
+      'ggml_op_symbol');
   late final _ggml_op_symbol =
       _ggml_op_symbolPtr.asFunction<ffi.Pointer<ffi.Char> Function(int)>();
 
@@ -2073,8 +1864,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_unary_op_namePtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>
-  >('ggml_unary_op_name');
+          ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.UnsignedInt)>>(
+      'ggml_unary_op_name');
   late final _ggml_unary_op_name =
       _ggml_unary_op_namePtr.asFunction<ffi.Pointer<ffi.Char> Function(int)>();
 
@@ -2085,13 +1876,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_op_descPtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ggml_tensor>)>
-  >('ggml_op_desc');
-  late final _ggml_op_desc =
-      _ggml_op_descPtr
-          .asFunction<
-            ffi.Pointer<ffi.Char> Function(ffi.Pointer<ggml_tensor>)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(
+              ffi.Pointer<ggml_tensor>)>>('ggml_op_desc');
+  late final _ggml_op_desc = _ggml_op_descPtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2101,11 +1890,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_element_sizePtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_element_size',
-      );
-  late final _ggml_element_size =
-      _ggml_element_sizePtr
-          .asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
+    'ggml_element_size',
+  );
+  late final _ggml_element_size = _ggml_element_sizePtr
+      .asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2115,8 +1903,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_is_quantizedPtr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.UnsignedInt)>>(
-        'ggml_is_quantized',
-      );
+    'ggml_is_quantized',
+  );
   late final _ggml_is_quantized =
       _ggml_is_quantizedPtr.asFunction<bool Function(int)>();
 
@@ -2128,8 +1916,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_ftype_to_ggml_typePtr =
       _lookup<ffi.NativeFunction<ffi.UnsignedInt Function(ffi.Int)>>(
-        'ggml_ftype_to_ggml_type',
-      );
+    'ggml_ftype_to_ggml_type',
+  );
   late final _ggml_ftype_to_ggml_type =
       _ggml_ftype_to_ggml_typePtr.asFunction<int Function(int)>();
 
@@ -2141,11 +1929,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_is_transposedPtr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_is_transposed',
-      );
-  late final _ggml_is_transposed =
-      _ggml_is_transposedPtr
-          .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+    'ggml_is_transposed',
+  );
+  late final _ggml_is_transposed = _ggml_is_transposedPtr
+      .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2155,11 +1942,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_is_permutedPtr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_is_permuted',
-      );
-  late final _ggml_is_permuted =
-      _ggml_is_permutedPtr
-          .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+    'ggml_is_permuted',
+  );
+  late final _ggml_is_permuted = _ggml_is_permutedPtr
+      .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2169,8 +1955,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_is_emptyPtr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_is_empty',
-      );
+    'ggml_is_empty',
+  );
   late final _ggml_is_empty =
       _ggml_is_emptyPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
@@ -2182,8 +1968,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_is_scalarPtr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_is_scalar',
-      );
+    'ggml_is_scalar',
+  );
   late final _ggml_is_scalar =
       _ggml_is_scalarPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
@@ -2195,8 +1981,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_is_vectorPtr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_is_vector',
-      );
+    'ggml_is_vector',
+  );
   late final _ggml_is_vector =
       _ggml_is_vectorPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
@@ -2208,8 +1994,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_is_matrixPtr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_is_matrix',
-      );
+    'ggml_is_matrix',
+  );
   late final _ggml_is_matrix =
       _ggml_is_matrixPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
@@ -2221,8 +2007,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_is_3dPtr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_is_3d',
-      );
+    'ggml_is_3d',
+  );
   late final _ggml_is_3d =
       _ggml_is_3dPtr.asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
@@ -2234,8 +2020,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_n_dimsPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_n_dims',
-      );
+    'ggml_n_dims',
+  );
   late final _ggml_n_dims =
       _ggml_n_dimsPtr.asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
@@ -2247,11 +2033,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_is_contiguousPtr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_is_contiguous',
-      );
-  late final _ggml_is_contiguous =
-      _ggml_is_contiguousPtr
-          .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+    'ggml_is_contiguous',
+  );
+  late final _ggml_is_contiguous = _ggml_is_contiguousPtr
+      .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2261,11 +2046,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_is_contiguous_0Ptr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_is_contiguous_0',
-      );
-  late final _ggml_is_contiguous_0 =
-      _ggml_is_contiguous_0Ptr
-          .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+    'ggml_is_contiguous_0',
+  );
+  late final _ggml_is_contiguous_0 = _ggml_is_contiguous_0Ptr
+      .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2275,11 +2059,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_is_contiguous_1Ptr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_is_contiguous_1',
-      );
-  late final _ggml_is_contiguous_1 =
-      _ggml_is_contiguous_1Ptr
-          .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+    'ggml_is_contiguous_1',
+  );
+  late final _ggml_is_contiguous_1 = _ggml_is_contiguous_1Ptr
+      .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2289,11 +2072,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_is_contiguous_2Ptr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_is_contiguous_2',
-      );
-  late final _ggml_is_contiguous_2 =
-      _ggml_is_contiguous_2Ptr
-          .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
+    'ggml_is_contiguous_2',
+  );
+  late final _ggml_is_contiguous_2 = _ggml_is_contiguous_2Ptr
+      .asFunction<bool Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2305,15 +2087,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_are_same_shapePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_are_same_shape');
-  late final _ggml_are_same_shape =
-      _ggml_are_same_shapePtr
-          .asFunction<
-            bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)
-          >();
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_are_same_shape');
+  late final _ggml_are_same_shape = _ggml_are_same_shapePtr.asFunction<
+      bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2325,15 +2103,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_are_same_stridePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_are_same_stride');
-  late final _ggml_are_same_stride =
-      _ggml_are_same_stridePtr
-          .asFunction<
-            bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)
-          >();
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_are_same_stride');
+  late final _ggml_are_same_stride = _ggml_are_same_stridePtr.asFunction<
+      bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2345,15 +2119,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_can_repeatPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_can_repeat');
-  late final _ggml_can_repeat =
-      _ggml_can_repeatPtr
-          .asFunction<
-            bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)
-          >();
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_can_repeat');
+  late final _ggml_can_repeat = _ggml_can_repeatPtr.asFunction<
+      bool Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2377,13 +2147,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_validate_row_dataPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(ffi.UnsignedInt, ffi.Pointer<ffi.Void>, ffi.Size)
-    >
-  >('ggml_validate_row_data');
-  late final _ggml_validate_row_data =
-      _ggml_validate_row_dataPtr
-          .asFunction<bool Function(int, ffi.Pointer<ffi.Void>, int)>();
+      ffi.NativeFunction<
+          ffi.Bool Function(ffi.UnsignedInt, ffi.Pointer<ffi.Void>,
+              ffi.Size)>>('ggml_validate_row_data');
+  late final _ggml_validate_row_data = _ggml_validate_row_dataPtr
+      .asFunction<bool Function(int, ffi.Pointer<ffi.Void>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2392,11 +2160,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_initPtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ggml_context> Function(ggml_init_params)>
-  >('ggml_init');
-  late final _ggml_init =
-      _ggml_initPtr
-          .asFunction<ffi.Pointer<ggml_context> Function(ggml_init_params)>();
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_context> Function(ggml_init_params)>>('ggml_init');
+  late final _ggml_init = _ggml_initPtr
+      .asFunction<ffi.Pointer<ggml_context> Function(ggml_init_params)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2406,8 +2173,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_resetPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_context>)>>(
-        'ggml_reset',
-      );
+    'ggml_reset',
+  );
   late final _ggml_reset =
       _ggml_resetPtr.asFunction<void Function(ffi.Pointer<ggml_context>)>();
 
@@ -2419,8 +2186,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_freePtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_context>)>>(
-        'ggml_free',
-      );
+    'ggml_free',
+  );
   late final _ggml_free =
       _ggml_freePtr.asFunction<void Function(ffi.Pointer<ggml_context>)>();
 
@@ -2432,8 +2199,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_used_memPtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_context>)>>(
-        'ggml_used_mem',
-      );
+    'ggml_used_mem',
+  );
   late final _ggml_used_mem =
       _ggml_used_memPtr.asFunction<int Function(ffi.Pointer<ggml_context>)>();
 
@@ -2445,11 +2212,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_get_no_allocPtr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.Pointer<ggml_context>)>>(
-        'ggml_get_no_alloc',
-      );
-  late final _ggml_get_no_alloc =
-      _ggml_get_no_allocPtr
-          .asFunction<bool Function(ffi.Pointer<ggml_context>)>();
+    'ggml_get_no_alloc',
+  );
+  late final _ggml_get_no_alloc = _ggml_get_no_allocPtr
+      .asFunction<bool Function(ffi.Pointer<ggml_context>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2458,11 +2224,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_no_allocPtr = _lookup<
-    ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_context>, ffi.Bool)>
-  >('ggml_set_no_alloc');
-  late final _ggml_set_no_alloc =
-      _ggml_set_no_allocPtr
-          .asFunction<void Function(ffi.Pointer<ggml_context>, bool)>();
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ffi.Pointer<ggml_context>, ffi.Bool)>>('ggml_set_no_alloc');
+  late final _ggml_set_no_alloc = _ggml_set_no_allocPtr
+      .asFunction<void Function(ffi.Pointer<ggml_context>, bool)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2471,15 +2237,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_mem_bufferPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_context>)
-    >
-  >('ggml_get_mem_buffer');
-  late final _ggml_get_mem_buffer =
-      _ggml_get_mem_bufferPtr
-          .asFunction<
-            ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_context>)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Void> Function(
+              ffi.Pointer<ggml_context>)>>('ggml_get_mem_buffer');
+  late final _ggml_get_mem_buffer = _ggml_get_mem_bufferPtr
+      .asFunction<ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_context>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2489,11 +2251,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_get_mem_sizePtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_context>)>>(
-        'ggml_get_mem_size',
-      );
-  late final _ggml_get_mem_size =
-      _ggml_get_mem_sizePtr
-          .asFunction<int Function(ffi.Pointer<ggml_context>)>();
+    'ggml_get_mem_size',
+  );
+  late final _ggml_get_mem_size = _ggml_get_mem_sizePtr
+      .asFunction<int Function(ffi.Pointer<ggml_context>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2503,11 +2264,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_get_max_tensor_sizePtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Pointer<ggml_context>)>>(
-        'ggml_get_max_tensor_size',
-      );
-  late final _ggml_get_max_tensor_size =
-      _ggml_get_max_tensor_sizePtr
-          .asFunction<int Function(ffi.Pointer<ggml_context>)>();
+    'ggml_get_max_tensor_size',
+  );
+  late final _ggml_get_max_tensor_size = _ggml_get_max_tensor_sizePtr
+      .asFunction<int Function(ffi.Pointer<ggml_context>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2521,25 +2281,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_new_tensorPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.UnsignedInt,
+            ffi.Int,
+            ffi.Pointer<ffi.Int64>,
+          )>>('ggml_new_tensor');
+  late final _ggml_new_tensor = _ggml_new_tensorPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
-        ffi.UnsignedInt,
-        ffi.Int,
+        int,
+        int,
         ffi.Pointer<ffi.Int64>,
-      )
-    >
-  >('ggml_new_tensor');
-  late final _ggml_new_tensor =
-      _ggml_new_tensorPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              int,
-              int,
-              ffi.Pointer<ffi.Int64>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2552,23 +2307,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_new_tensor_1dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.UnsignedInt,
+            ffi.Int64,
+          )>>('ggml_new_tensor_1d');
+  late final _ggml_new_tensor_1d = _ggml_new_tensor_1dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
-        ffi.UnsignedInt,
-        ffi.Int64,
-      )
-    >
-  >('ggml_new_tensor_1d');
-  late final _ggml_new_tensor_1d =
-      _ggml_new_tensor_1dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2582,25 +2332,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_new_tensor_2dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.UnsignedInt,
+            ffi.Int64,
+            ffi.Int64,
+          )>>('ggml_new_tensor_2d');
+  late final _ggml_new_tensor_2d = _ggml_new_tensor_2dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
-        ffi.UnsignedInt,
-        ffi.Int64,
-        ffi.Int64,
-      )
-    >
-  >('ggml_new_tensor_2d');
-  late final _ggml_new_tensor_2d =
-      _ggml_new_tensor_2dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2615,27 +2360,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_new_tensor_3dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.UnsignedInt,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Int64,
+          )>>('ggml_new_tensor_3d');
+  late final _ggml_new_tensor_3d = _ggml_new_tensor_3dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
-        ffi.UnsignedInt,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Int64,
-      )
-    >
-  >('ggml_new_tensor_3d');
-  late final _ggml_new_tensor_3d =
-      _ggml_new_tensor_3dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2651,29 +2391,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_new_tensor_4dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.UnsignedInt,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Int64,
+          )>>('ggml_new_tensor_4d');
+  late final _ggml_new_tensor_4d = _ggml_new_tensor_4dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
-        ffi.UnsignedInt,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Int64,
-      )
-    >
-  >('ggml_new_tensor_4d');
-  late final _ggml_new_tensor_4d =
-      _ggml_new_tensor_4dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              int,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2685,15 +2420,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_new_bufferPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_context>, ffi.Size)
-    >
-  >('ggml_new_buffer');
-  late final _ggml_new_buffer =
-      _ggml_new_bufferPtr
-          .asFunction<
-            ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_context>, int)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Void> Function(
+              ffi.Pointer<ggml_context>, ffi.Size)>>('ggml_new_buffer');
+  late final _ggml_new_buffer = _ggml_new_bufferPtr.asFunction<
+      ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_context>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2705,21 +2436,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_dup_tensorPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_dup_tensor');
+  late final _ggml_dup_tensor = _ggml_dup_tensorPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_dup_tensor');
-  late final _ggml_dup_tensor =
-      _ggml_dup_tensorPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2731,21 +2457,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_view_tensorPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_view_tensor');
+  late final _ggml_view_tensor = _ggml_view_tensorPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_view_tensor');
-  late final _ggml_view_tensor =
-      _ggml_view_tensorPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2756,15 +2477,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_first_tensorPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>)
-    >
-  >('ggml_get_first_tensor');
-  late final _ggml_get_first_tensor =
-      _ggml_get_first_tensorPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>)>>('ggml_get_first_tensor');
+  late final _ggml_get_first_tensor = _ggml_get_first_tensorPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2776,21 +2493,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_next_tensorPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_get_next_tensor');
+  late final _ggml_get_next_tensor = _ggml_get_next_tensorPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_get_next_tensor');
-  late final _ggml_get_next_tensor =
-      _ggml_get_next_tensorPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2802,21 +2514,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_tensorPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ffi.Char>,
+          )>>('ggml_get_tensor');
+  late final _ggml_get_tensor = _ggml_get_tensorPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ffi.Char>,
-      )
-    >
-  >('ggml_get_tensor');
-  late final _ggml_get_tensor =
-      _ggml_get_tensorPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ffi.Char>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2832,29 +2539,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_unravel_indexPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int64,
+            ffi.Pointer<ffi.Int64>,
+            ffi.Pointer<ffi.Int64>,
+            ffi.Pointer<ffi.Int64>,
+            ffi.Pointer<ffi.Int64>,
+          )>>('ggml_unravel_index');
+  late final _ggml_unravel_index = _ggml_unravel_indexPtr.asFunction<
+      void Function(
         ffi.Pointer<ggml_tensor>,
-        ffi.Int64,
+        int,
         ffi.Pointer<ffi.Int64>,
         ffi.Pointer<ffi.Int64>,
         ffi.Pointer<ffi.Int64>,
         ffi.Pointer<ffi.Int64>,
-      )
-    >
-  >('ggml_unravel_index');
-  late final _ggml_unravel_index =
-      _ggml_unravel_indexPtr
-          .asFunction<
-            void Function(
-              ffi.Pointer<ggml_tensor>,
-              int,
-              ffi.Pointer<ffi.Int64>,
-              ffi.Pointer<ffi.Int64>,
-              ffi.Pointer<ffi.Int64>,
-              ffi.Pointer<ffi.Int64>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2863,11 +2565,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_unary_opPtr = _lookup<
-    ffi.NativeFunction<ffi.UnsignedInt Function(ffi.Pointer<ggml_tensor>)>
-  >('ggml_get_unary_op');
-  late final _ggml_get_unary_op =
-      _ggml_get_unary_opPtr
-          .asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
+          ffi
+          .NativeFunction<ffi.UnsignedInt Function(ffi.Pointer<ggml_tensor>)>>(
+      'ggml_get_unary_op');
+  late final _ggml_get_unary_op = _ggml_get_unary_opPtr
+      .asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2876,13 +2578,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_dataPtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_tensor>)>
-  >('ggml_get_data');
-  late final _ggml_get_data =
-      _ggml_get_dataPtr
-          .asFunction<
-            ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_tensor>)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Void> Function(
+              ffi.Pointer<ggml_tensor>)>>('ggml_get_data');
+  late final _ggml_get_data = _ggml_get_dataPtr
+      .asFunction<ffi.Pointer<ffi.Void> Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2891,15 +2591,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_data_f32Ptr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ffi.Float> Function(ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_get_data_f32');
-  late final _ggml_get_data_f32 =
-      _ggml_get_data_f32Ptr
-          .asFunction<
-            ffi.Pointer<ffi.Float> Function(ffi.Pointer<ggml_tensor>)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Float> Function(
+              ffi.Pointer<ggml_tensor>)>>('ggml_get_data_f32');
+  late final _ggml_get_data_f32 = _ggml_get_data_f32Ptr
+      .asFunction<ffi.Pointer<ffi.Float> Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2908,13 +2604,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_namePtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ggml_tensor>)>
-  >('ggml_get_name');
-  late final _ggml_get_name =
-      _ggml_get_namePtr
-          .asFunction<
-            ffi.Pointer<ffi.Char> Function(ffi.Pointer<ggml_tensor>)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(
+              ffi.Pointer<ggml_tensor>)>>('ggml_get_name');
+  late final _ggml_get_name = _ggml_get_namePtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2926,21 +2620,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_namePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ffi.Char>,
+          )>>('ggml_set_name');
+  late final _ggml_set_name = _ggml_set_namePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ffi.Char>,
-      )
-    >
-  >('ggml_set_name');
-  late final _ggml_set_name =
-      _ggml_set_namePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ffi.Char>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2952,21 +2641,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_format_namePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ffi.Char>,
+          )>>('ggml_format_name');
+  late final _ggml_format_name = _ggml_format_namePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ffi.Char>,
-      )
-    >
-  >('ggml_format_name');
-  late final _ggml_format_name =
-      _ggml_format_namePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ffi.Char>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -2976,8 +2660,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_set_inputPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_set_input',
-      );
+    'ggml_set_input',
+  );
   late final _ggml_set_input =
       _ggml_set_inputPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>)>();
 
@@ -2989,8 +2673,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_set_outputPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_set_output',
-      );
+    'ggml_set_output',
+  );
   late final _ggml_set_output =
       _ggml_set_outputPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>)>();
 
@@ -3004,15 +2688,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_paramPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_set_param');
-  late final _ggml_set_param =
-      _ggml_set_paramPtr
-          .asFunction<
-            void Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_context>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_set_param');
+  late final _ggml_set_param = _ggml_set_paramPtr.asFunction<
+      void Function(ffi.Pointer<ggml_context>, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3022,8 +2702,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_set_lossPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_set_loss',
-      );
+    'ggml_set_loss',
+  );
   late final _ggml_set_loss =
       _ggml_set_lossPtr.asFunction<void Function(ffi.Pointer<ggml_tensor>)>();
 
@@ -3037,21 +2717,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_dupPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_dup');
+  late final _ggml_dup = _ggml_dupPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_dup');
-  late final _ggml_dup =
-      _ggml_dupPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3063,21 +2738,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_dup_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_dup_inplace');
+  late final _ggml_dup_inplace = _ggml_dup_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_dup_inplace');
-  late final _ggml_dup_inplace =
-      _ggml_dup_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3090,23 +2760,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_addPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_add');
+  late final _ggml_add = _ggml_addPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_add');
-  late final _ggml_add =
-      _ggml_addPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3119,23 +2784,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_add_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_add_inplace');
+  late final _ggml_add_inplace = _ggml_add_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_add_inplace');
-  late final _ggml_add_inplace =
-      _ggml_add_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3149,25 +2809,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_add_castPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.UnsignedInt,
+          )>>('ggml_add_cast');
+  late final _ggml_add_cast = _ggml_add_castPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.UnsignedInt,
-      )
-    >
-  >('ggml_add_cast');
-  late final _ggml_add_cast =
-      _ggml_add_castPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3180,23 +2835,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_add1Ptr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_add1');
+  late final _ggml_add1 = _ggml_add1Ptr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_add1');
-  late final _ggml_add1 =
-      _ggml_add1Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3209,23 +2859,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_add1_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_add1_inplace');
+  late final _ggml_add1_inplace = _ggml_add1_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_add1_inplace');
-  late final _ggml_add1_inplace =
-      _ggml_add1_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3242,31 +2887,26 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_accPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Size,
+            ffi.Size,
+            ffi.Size,
+            ffi.Size,
+          )>>('ggml_acc');
+  late final _ggml_acc = _ggml_accPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Size,
-        ffi.Size,
-        ffi.Size,
-        ffi.Size,
-      )
-    >
-  >('ggml_acc');
-  late final _ggml_acc =
-      _ggml_accPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3283,31 +2923,26 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_acc_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Size,
+            ffi.Size,
+            ffi.Size,
+            ffi.Size,
+          )>>('ggml_acc_inplace');
+  late final _ggml_acc_inplace = _ggml_acc_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Size,
-        ffi.Size,
-        ffi.Size,
-        ffi.Size,
-      )
-    >
-  >('ggml_acc_inplace');
-  late final _ggml_acc_inplace =
-      _ggml_acc_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3320,23 +2955,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_subPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_sub');
+  late final _ggml_sub = _ggml_subPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_sub');
-  late final _ggml_sub =
-      _ggml_subPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3349,23 +2979,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_sub_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_sub_inplace');
+  late final _ggml_sub_inplace = _ggml_sub_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_sub_inplace');
-  late final _ggml_sub_inplace =
-      _ggml_sub_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3378,23 +3003,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_mulPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_mul');
+  late final _ggml_mul = _ggml_mulPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_mul');
-  late final _ggml_mul =
-      _ggml_mulPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3407,23 +3027,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_mul_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_mul_inplace');
+  late final _ggml_mul_inplace = _ggml_mul_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_mul_inplace');
-  late final _ggml_mul_inplace =
-      _ggml_mul_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3436,23 +3051,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_divPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_div');
+  late final _ggml_div = _ggml_divPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_div');
-  late final _ggml_div =
-      _ggml_divPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3465,23 +3075,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_div_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_div_inplace');
+  late final _ggml_div_inplace = _ggml_div_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_div_inplace');
-  late final _ggml_div_inplace =
-      _ggml_div_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3493,21 +3098,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_sqrPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_sqr');
+  late final _ggml_sqr = _ggml_sqrPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_sqr');
-  late final _ggml_sqr =
-      _ggml_sqrPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3519,21 +3119,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_sqr_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_sqr_inplace');
+  late final _ggml_sqr_inplace = _ggml_sqr_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_sqr_inplace');
-  late final _ggml_sqr_inplace =
-      _ggml_sqr_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3545,21 +3140,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_sqrtPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_sqrt');
+  late final _ggml_sqrt = _ggml_sqrtPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_sqrt');
-  late final _ggml_sqrt =
-      _ggml_sqrtPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3571,21 +3161,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_sqrt_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_sqrt_inplace');
+  late final _ggml_sqrt_inplace = _ggml_sqrt_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_sqrt_inplace');
-  late final _ggml_sqrt_inplace =
-      _ggml_sqrt_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3597,21 +3182,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_logPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_log');
+  late final _ggml_log = _ggml_logPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_log');
-  late final _ggml_log =
-      _ggml_logPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3623,21 +3203,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_log_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_log_inplace');
+  late final _ggml_log_inplace = _ggml_log_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_log_inplace');
-  late final _ggml_log_inplace =
-      _ggml_log_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3649,21 +3224,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_sinPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_sin');
+  late final _ggml_sin = _ggml_sinPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_sin');
-  late final _ggml_sin =
-      _ggml_sinPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3675,21 +3245,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_sin_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_sin_inplace');
+  late final _ggml_sin_inplace = _ggml_sin_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_sin_inplace');
-  late final _ggml_sin_inplace =
-      _ggml_sin_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3701,21 +3266,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_cosPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_cos');
+  late final _ggml_cos = _ggml_cosPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_cos');
-  late final _ggml_cos =
-      _ggml_cosPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3727,21 +3287,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_cos_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_cos_inplace');
+  late final _ggml_cos_inplace = _ggml_cos_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_cos_inplace');
-  late final _ggml_cos_inplace =
-      _ggml_cos_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3753,21 +3308,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_sumPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_sum');
+  late final _ggml_sum = _ggml_sumPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_sum');
-  late final _ggml_sum =
-      _ggml_sumPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3779,21 +3329,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_sum_rowsPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_sum_rows');
+  late final _ggml_sum_rows = _ggml_sum_rowsPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_sum_rows');
-  late final _ggml_sum_rows =
-      _ggml_sum_rowsPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3805,21 +3350,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_meanPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_mean');
+  late final _ggml_mean = _ggml_meanPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_mean');
-  late final _ggml_mean =
-      _ggml_meanPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3831,21 +3371,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_argmaxPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_argmax');
+  late final _ggml_argmax = _ggml_argmaxPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_argmax');
-  late final _ggml_argmax =
-      _ggml_argmaxPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3858,23 +3393,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_count_equalPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_count_equal');
+  late final _ggml_count_equal = _ggml_count_equalPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_count_equal');
-  late final _ggml_count_equal =
-      _ggml_count_equalPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3887,23 +3417,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_repeatPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_repeat');
+  late final _ggml_repeat = _ggml_repeatPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_repeat');
-  late final _ggml_repeat =
-      _ggml_repeatPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3916,23 +3441,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_repeat_backPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_repeat_back');
+  late final _ggml_repeat_back = _ggml_repeat_backPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_repeat_back');
-  late final _ggml_repeat_back =
-      _ggml_repeat_backPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3946,25 +3466,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_concatPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+          )>>('ggml_concat');
+  late final _ggml_concat = _ggml_concatPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-      )
-    >
-  >('ggml_concat');
-  late final _ggml_concat =
-      _ggml_concatPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -3976,21 +3491,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_absPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_abs');
+  late final _ggml_abs = _ggml_absPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_abs');
-  late final _ggml_abs =
-      _ggml_absPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4002,21 +3512,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_abs_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_abs_inplace');
+  late final _ggml_abs_inplace = _ggml_abs_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_abs_inplace');
-  late final _ggml_abs_inplace =
-      _ggml_abs_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4028,21 +3533,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_sgnPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_sgn');
+  late final _ggml_sgn = _ggml_sgnPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_sgn');
-  late final _ggml_sgn =
-      _ggml_sgnPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4054,21 +3554,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_sgn_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_sgn_inplace');
+  late final _ggml_sgn_inplace = _ggml_sgn_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_sgn_inplace');
-  late final _ggml_sgn_inplace =
-      _ggml_sgn_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4080,21 +3575,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_negPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_neg');
+  late final _ggml_neg = _ggml_negPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_neg');
-  late final _ggml_neg =
-      _ggml_negPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4106,21 +3596,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_neg_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_neg_inplace');
+  late final _ggml_neg_inplace = _ggml_neg_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_neg_inplace');
-  late final _ggml_neg_inplace =
-      _ggml_neg_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4132,21 +3617,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_stepPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_step');
+  late final _ggml_step = _ggml_stepPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_step');
-  late final _ggml_step =
-      _ggml_stepPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4158,21 +3638,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_step_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_step_inplace');
+  late final _ggml_step_inplace = _ggml_step_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_step_inplace');
-  late final _ggml_step_inplace =
-      _ggml_step_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4184,21 +3659,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_tanhPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_tanh');
+  late final _ggml_tanh = _ggml_tanhPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_tanh');
-  late final _ggml_tanh =
-      _ggml_tanhPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4210,21 +3680,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_tanh_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_tanh_inplace');
+  late final _ggml_tanh_inplace = _ggml_tanh_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_tanh_inplace');
-  late final _ggml_tanh_inplace =
-      _ggml_tanh_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4236,21 +3701,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_eluPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_elu');
+  late final _ggml_elu = _ggml_eluPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_elu');
-  late final _ggml_elu =
-      _ggml_eluPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4262,21 +3722,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_elu_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_elu_inplace');
+  late final _ggml_elu_inplace = _ggml_elu_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_elu_inplace');
-  late final _ggml_elu_inplace =
-      _ggml_elu_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4288,21 +3743,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_reluPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_relu');
+  late final _ggml_relu = _ggml_reluPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_relu');
-  late final _ggml_relu =
-      _ggml_reluPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4316,25 +3766,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_leaky_reluPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Float,
+            ffi.Bool,
+          )>>('ggml_leaky_relu');
+  late final _ggml_leaky_relu = _ggml_leaky_reluPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Float,
-        ffi.Bool,
-      )
-    >
-  >('ggml_leaky_relu');
-  late final _ggml_leaky_relu =
-      _ggml_leaky_reluPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              double,
-              bool,
-            )
-          >();
+        double,
+        bool,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4346,21 +3791,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_relu_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_relu_inplace');
+  late final _ggml_relu_inplace = _ggml_relu_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_relu_inplace');
-  late final _ggml_relu_inplace =
-      _ggml_relu_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4372,21 +3812,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_sigmoidPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_sigmoid');
+  late final _ggml_sigmoid = _ggml_sigmoidPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_sigmoid');
-  late final _ggml_sigmoid =
-      _ggml_sigmoidPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4398,21 +3833,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_sigmoid_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_sigmoid_inplace');
+  late final _ggml_sigmoid_inplace = _ggml_sigmoid_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_sigmoid_inplace');
-  late final _ggml_sigmoid_inplace =
-      _ggml_sigmoid_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4424,21 +3854,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_geluPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_gelu');
+  late final _ggml_gelu = _ggml_geluPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_gelu');
-  late final _ggml_gelu =
-      _ggml_geluPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4450,21 +3875,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_gelu_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_gelu_inplace');
+  late final _ggml_gelu_inplace = _ggml_gelu_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_gelu_inplace');
-  late final _ggml_gelu_inplace =
-      _ggml_gelu_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4476,21 +3896,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_gelu_quickPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_gelu_quick');
+  late final _ggml_gelu_quick = _ggml_gelu_quickPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_gelu_quick');
-  late final _ggml_gelu_quick =
-      _ggml_gelu_quickPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4502,21 +3917,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_gelu_quick_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_gelu_quick_inplace');
+  late final _ggml_gelu_quick_inplace = _ggml_gelu_quick_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_gelu_quick_inplace');
-  late final _ggml_gelu_quick_inplace =
-      _ggml_gelu_quick_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4528,21 +3938,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_siluPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_silu');
+  late final _ggml_silu = _ggml_siluPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_silu');
-  late final _ggml_silu =
-      _ggml_siluPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4554,21 +3959,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_silu_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_silu_inplace');
+  late final _ggml_silu_inplace = _ggml_silu_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_silu_inplace');
-  late final _ggml_silu_inplace =
-      _ggml_silu_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4581,23 +3981,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_silu_backPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_silu_back');
+  late final _ggml_silu_back = _ggml_silu_backPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_silu_back');
-  late final _ggml_silu_back =
-      _ggml_silu_backPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4609,21 +4004,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_hardswishPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_hardswish');
+  late final _ggml_hardswish = _ggml_hardswishPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_hardswish');
-  late final _ggml_hardswish =
-      _ggml_hardswishPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4635,21 +4025,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_hardsigmoidPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_hardsigmoid');
+  late final _ggml_hardsigmoid = _ggml_hardsigmoidPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_hardsigmoid');
-  late final _ggml_hardsigmoid =
-      _ggml_hardsigmoidPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4661,21 +4046,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_expPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_exp');
+  late final _ggml_exp = _ggml_expPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_exp');
-  late final _ggml_exp =
-      _ggml_expPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4687,21 +4067,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_exp_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_exp_inplace');
+  late final _ggml_exp_inplace = _ggml_exp_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_exp_inplace');
-  late final _ggml_exp_inplace =
-      _ggml_exp_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4714,23 +4089,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_normPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Float,
+          )>>('ggml_norm');
+  late final _ggml_norm = _ggml_normPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Float,
-      )
-    >
-  >('ggml_norm');
-  late final _ggml_norm =
-      _ggml_normPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              double,
-            )
-          >();
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4743,23 +4113,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_norm_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Float,
+          )>>('ggml_norm_inplace');
+  late final _ggml_norm_inplace = _ggml_norm_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Float,
-      )
-    >
-  >('ggml_norm_inplace');
-  late final _ggml_norm_inplace =
-      _ggml_norm_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              double,
-            )
-          >();
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4772,23 +4137,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_rms_normPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Float,
+          )>>('ggml_rms_norm');
+  late final _ggml_rms_norm = _ggml_rms_normPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Float,
-      )
-    >
-  >('ggml_rms_norm');
-  late final _ggml_rms_norm =
-      _ggml_rms_normPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              double,
-            )
-          >();
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4801,23 +4161,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_rms_norm_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Float,
+          )>>('ggml_rms_norm_inplace');
+  late final _ggml_rms_norm_inplace = _ggml_rms_norm_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Float,
-      )
-    >
-  >('ggml_rms_norm_inplace');
-  late final _ggml_rms_norm_inplace =
-      _ggml_rms_norm_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              double,
-            )
-          >();
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4831,25 +4186,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_group_normPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Float,
+          )>>('ggml_group_norm');
+  late final _ggml_group_norm = _ggml_group_normPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Float,
-      )
-    >
-  >('ggml_group_norm');
-  late final _ggml_group_norm =
-      _ggml_group_normPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              double,
-            )
-          >();
+        int,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4863,25 +4213,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_group_norm_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Float,
+          )>>('ggml_group_norm_inplace');
+  late final _ggml_group_norm_inplace = _ggml_group_norm_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Float,
-      )
-    >
-  >('ggml_group_norm_inplace');
-  late final _ggml_group_norm_inplace =
-      _ggml_group_norm_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              double,
-            )
-          >();
+        int,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4895,25 +4240,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_rms_norm_backPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Float,
+          )>>('ggml_rms_norm_back');
+  late final _ggml_rms_norm_back = _ggml_rms_norm_backPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Float,
-      )
-    >
-  >('ggml_rms_norm_back');
-  late final _ggml_rms_norm_back =
-      _ggml_rms_norm_backPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              double,
-            )
-          >();
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4926,23 +4266,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_mul_matPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_mul_mat');
+  late final _ggml_mul_mat = _ggml_mul_matPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_mul_mat');
-  late final _ggml_mul_mat =
-      _ggml_mul_matPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4951,13 +4286,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_mul_mat_set_precPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.UnsignedInt)
-    >
-  >('ggml_mul_mat_set_prec');
-  late final _ggml_mul_mat_set_prec =
-      _ggml_mul_mat_set_precPtr
-          .asFunction<void Function(ffi.Pointer<ggml_tensor>, int)>();
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>,
+              ffi.UnsignedInt)>>('ggml_mul_mat_set_prec');
+  late final _ggml_mul_mat_set_prec = _ggml_mul_mat_set_precPtr
+      .asFunction<void Function(ffi.Pointer<ggml_tensor>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -4971,25 +4304,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_mul_mat_idPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_mul_mat_id');
+  late final _ggml_mul_mat_id = _ggml_mul_mat_idPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_mul_mat_id');
-  late final _ggml_mul_mat_id =
-      _ggml_mul_mat_idPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5002,23 +4330,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_out_prodPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_out_prod');
+  late final _ggml_out_prod = _ggml_out_prodPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_out_prod');
-  late final _ggml_out_prod =
-      _ggml_out_prodPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5031,23 +4354,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_scalePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Float,
+          )>>('ggml_scale');
+  late final _ggml_scale = _ggml_scalePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Float,
-      )
-    >
-  >('ggml_scale');
-  late final _ggml_scale =
-      _ggml_scalePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              double,
-            )
-          >();
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5060,23 +4378,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_scale_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Float,
+          )>>('ggml_scale_inplace');
+  late final _ggml_scale_inplace = _ggml_scale_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Float,
-      )
-    >
-  >('ggml_scale_inplace');
-  late final _ggml_scale_inplace =
-      _ggml_scale_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              double,
-            )
-          >();
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5093,31 +4406,26 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_setPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Size,
+            ffi.Size,
+            ffi.Size,
+            ffi.Size,
+          )>>('ggml_set');
+  late final _ggml_set = _ggml_setPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Size,
-        ffi.Size,
-        ffi.Size,
-        ffi.Size,
-      )
-    >
-  >('ggml_set');
-  late final _ggml_set =
-      _ggml_setPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5134,31 +4442,26 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Size,
+            ffi.Size,
+            ffi.Size,
+            ffi.Size,
+          )>>('ggml_set_inplace');
+  late final _ggml_set_inplace = _ggml_set_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Size,
-        ffi.Size,
-        ffi.Size,
-        ffi.Size,
-      )
-    >
-  >('ggml_set_inplace');
-  late final _ggml_set_inplace =
-      _ggml_set_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5172,25 +4475,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_1dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Size,
+          )>>('ggml_set_1d');
+  late final _ggml_set_1d = _ggml_set_1dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Size,
-      )
-    >
-  >('ggml_set_1d');
-  late final _ggml_set_1d =
-      _ggml_set_1dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5204,25 +4502,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_1d_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Size,
+          )>>('ggml_set_1d_inplace');
+  late final _ggml_set_1d_inplace = _ggml_set_1d_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Size,
-      )
-    >
-  >('ggml_set_1d_inplace');
-  late final _ggml_set_1d_inplace =
-      _ggml_set_1d_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5237,27 +4530,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_2dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Size,
+            ffi.Size,
+          )>>('ggml_set_2d');
+  late final _ggml_set_2d = _ggml_set_2dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Size,
-        ffi.Size,
-      )
-    >
-  >('ggml_set_2d');
-  late final _ggml_set_2d =
-      _ggml_set_2dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5272,27 +4560,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_2d_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Size,
+            ffi.Size,
+          )>>('ggml_set_2d_inplace');
+  late final _ggml_set_2d_inplace = _ggml_set_2d_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Size,
-        ffi.Size,
-      )
-    >
-  >('ggml_set_2d_inplace');
-  late final _ggml_set_2d_inplace =
-      _ggml_set_2d_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5305,23 +4588,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_cpyPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_cpy');
+  late final _ggml_cpy = _ggml_cpyPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_cpy');
-  late final _ggml_cpy =
-      _ggml_cpyPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5334,23 +4612,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_castPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.UnsignedInt,
+          )>>('ggml_cast');
+  late final _ggml_cast = _ggml_castPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.UnsignedInt,
-      )
-    >
-  >('ggml_cast');
-  late final _ggml_cast =
-      _ggml_castPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5362,21 +4635,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_contPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_cont');
+  late final _ggml_cont = _ggml_contPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_cont');
-  late final _ggml_cont =
-      _ggml_contPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5389,23 +4657,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_cont_1dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int64,
+          )>>('ggml_cont_1d');
+  late final _ggml_cont_1d = _ggml_cont_1dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int64,
-      )
-    >
-  >('ggml_cont_1d');
-  late final _ggml_cont_1d =
-      _ggml_cont_1dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5419,25 +4682,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_cont_2dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int64,
+            ffi.Int64,
+          )>>('ggml_cont_2d');
+  late final _ggml_cont_2d = _ggml_cont_2dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int64,
-        ffi.Int64,
-      )
-    >
-  >('ggml_cont_2d');
-  late final _ggml_cont_2d =
-      _ggml_cont_2dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5452,27 +4710,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_cont_3dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Int64,
+          )>>('ggml_cont_3d');
+  late final _ggml_cont_3d = _ggml_cont_3dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Int64,
-      )
-    >
-  >('ggml_cont_3d');
-  late final _ggml_cont_3d =
-      _ggml_cont_3dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5488,29 +4741,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_cont_4dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Int64,
+          )>>('ggml_cont_4d');
+  late final _ggml_cont_4d = _ggml_cont_4dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Int64,
-      )
-    >
-  >('ggml_cont_4d');
-  late final _ggml_cont_4d =
-      _ggml_cont_4dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5523,23 +4771,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_reshapePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_reshape');
+  late final _ggml_reshape = _ggml_reshapePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_reshape');
-  late final _ggml_reshape =
-      _ggml_reshapePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5552,23 +4795,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_reshape_1dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int64,
+          )>>('ggml_reshape_1d');
+  late final _ggml_reshape_1d = _ggml_reshape_1dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int64,
-      )
-    >
-  >('ggml_reshape_1d');
-  late final _ggml_reshape_1d =
-      _ggml_reshape_1dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5582,25 +4820,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_reshape_2dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int64,
+            ffi.Int64,
+          )>>('ggml_reshape_2d');
+  late final _ggml_reshape_2d = _ggml_reshape_2dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int64,
-        ffi.Int64,
-      )
-    >
-  >('ggml_reshape_2d');
-  late final _ggml_reshape_2d =
-      _ggml_reshape_2dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5615,27 +4848,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_reshape_3dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Int64,
+          )>>('ggml_reshape_3d');
+  late final _ggml_reshape_3d = _ggml_reshape_3dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Int64,
-      )
-    >
-  >('ggml_reshape_3d');
-  late final _ggml_reshape_3d =
-      _ggml_reshape_3dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5651,29 +4879,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_reshape_4dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Int64,
+          )>>('ggml_reshape_4d');
+  late final _ggml_reshape_4d = _ggml_reshape_4dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Int64,
-      )
-    >
-  >('ggml_reshape_4d');
-  late final _ggml_reshape_4d =
-      _ggml_reshape_4dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5687,25 +4910,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_view_1dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int64,
+            ffi.Size,
+          )>>('ggml_view_1d');
+  late final _ggml_view_1d = _ggml_view_1dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int64,
-        ffi.Size,
-      )
-    >
-  >('ggml_view_1d');
-  late final _ggml_view_1d =
-      _ggml_view_1dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5721,29 +4939,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_view_2dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Size,
+            ffi.Size,
+          )>>('ggml_view_2d');
+  late final _ggml_view_2d = _ggml_view_2dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Size,
-        ffi.Size,
-      )
-    >
-  >('ggml_view_2d');
-  late final _ggml_view_2d =
-      _ggml_view_2dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5761,33 +4974,28 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_view_3dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Size,
+            ffi.Size,
+            ffi.Size,
+          )>>('ggml_view_3d');
+  late final _ggml_view_3d = _ggml_view_3dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Size,
-        ffi.Size,
-        ffi.Size,
-      )
-    >
-  >('ggml_view_3d');
-  late final _ggml_view_3d =
-      _ggml_view_3dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5807,37 +5015,32 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_view_4dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Size,
+            ffi.Size,
+            ffi.Size,
+            ffi.Size,
+          )>>('ggml_view_4d');
+  late final _ggml_view_4d = _ggml_view_4dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Size,
-        ffi.Size,
-        ffi.Size,
-        ffi.Size,
-      )
-    >
-  >('ggml_view_4d');
-  late final _ggml_view_4d =
-      _ggml_view_4dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5853,29 +5056,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_permutePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_permute');
+  late final _ggml_permute = _ggml_permutePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_permute');
-  late final _ggml_permute =
-      _ggml_permutePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5887,21 +5085,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_transposePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_transpose');
+  late final _ggml_transpose = _ggml_transposePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_transpose');
-  late final _ggml_transpose =
-      _ggml_transposePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5914,23 +5107,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_rowsPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_get_rows');
+  late final _ggml_get_rows = _ggml_get_rowsPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_get_rows');
-  late final _ggml_get_rows =
-      _ggml_get_rowsPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5944,25 +5132,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_rows_backPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_get_rows_back');
+  late final _ggml_get_rows_back = _ggml_get_rows_backPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_get_rows_back');
-  late final _ggml_get_rows_back =
-      _ggml_get_rows_backPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -5974,21 +5157,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_diagPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_diag');
+  late final _ggml_diag = _ggml_diagPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_diag');
-  late final _ggml_diag =
-      _ggml_diagPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6001,23 +5179,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_diag_mask_infPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+          )>>('ggml_diag_mask_inf');
+  late final _ggml_diag_mask_inf = _ggml_diag_mask_infPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-      )
-    >
-  >('ggml_diag_mask_inf');
-  late final _ggml_diag_mask_inf =
-      _ggml_diag_mask_infPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6030,23 +5203,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_diag_mask_inf_inplacePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-      )
-    >
-  >('ggml_diag_mask_inf_inplace');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+          )>>('ggml_diag_mask_inf_inplace');
   late final _ggml_diag_mask_inf_inplace =
-      _ggml_diag_mask_inf_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+      _ggml_diag_mask_inf_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            int,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6059,23 +5228,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_diag_mask_zeroPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+          )>>('ggml_diag_mask_zero');
+  late final _ggml_diag_mask_zero = _ggml_diag_mask_zeroPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-      )
-    >
-  >('ggml_diag_mask_zero');
-  late final _ggml_diag_mask_zero =
-      _ggml_diag_mask_zeroPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6088,23 +5252,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_diag_mask_zero_inplacePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-      )
-    >
-  >('ggml_diag_mask_zero_inplace');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+          )>>('ggml_diag_mask_zero_inplace');
   late final _ggml_diag_mask_zero_inplace =
-      _ggml_diag_mask_zero_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+      _ggml_diag_mask_zero_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            int,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6116,21 +5276,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_soft_maxPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_soft_max');
+  late final _ggml_soft_max = _ggml_soft_maxPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_soft_max');
-  late final _ggml_soft_max =
-      _ggml_soft_maxPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6142,21 +5297,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_soft_max_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_soft_max_inplace');
+  late final _ggml_soft_max_inplace = _ggml_soft_max_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_soft_max_inplace');
-  late final _ggml_soft_max_inplace =
-      _ggml_soft_max_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6171,27 +5321,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_soft_max_extPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_soft_max_ext');
+  late final _ggml_soft_max_ext = _ggml_soft_max_extPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_soft_max_ext');
-  late final _ggml_soft_max_ext =
-      _ggml_soft_max_extPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              double,
-              double,
-            )
-          >();
+        double,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6206,27 +5351,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_soft_max_ext_backPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_soft_max_ext_back');
+  late final _ggml_soft_max_ext_back = _ggml_soft_max_ext_backPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_soft_max_ext_back');
-  late final _ggml_soft_max_ext_back =
-      _ggml_soft_max_ext_backPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              double,
-              double,
-            )
-          >();
+        double,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6241,27 +5381,23 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_soft_max_ext_back_inplacePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_soft_max_ext_back_inplace');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_soft_max_ext_back_inplace');
   late final _ggml_soft_max_ext_back_inplace =
-      _ggml_soft_max_ext_back_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              double,
-              double,
-            )
-          >();
+      _ggml_soft_max_ext_back_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            double,
+            double,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6276,27 +5412,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_ropePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_rope');
+  late final _ggml_rope = _ggml_ropePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_rope');
-  late final _ggml_rope =
-      _ggml_ropePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6311,27 +5442,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_rope_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_rope_inplace');
+  late final _ggml_rope_inplace = _ggml_rope_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_rope_inplace');
-  late final _ggml_rope_inplace =
-      _ggml_rope_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6368,43 +5494,38 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_rope_extPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_rope_ext');
+  late final _ggml_rope_ext = _ggml_rope_extPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_rope_ext');
-  late final _ggml_rope_ext =
-      _ggml_rope_extPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              double,
-              double,
-              double,
-              double,
-              double,
-              double,
-            )
-          >();
+        int,
+        int,
+        int,
+        double,
+        double,
+        double,
+        double,
+        double,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6443,45 +5564,40 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_rope_multiPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Pointer<ffi.Int>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_rope_multi');
+  late final _ggml_rope_multi = _ggml_rope_multiPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
+        int,
         ffi.Pointer<ffi.Int>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_rope_multi');
-  late final _ggml_rope_multi =
-      _ggml_rope_multiPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              ffi.Pointer<ffi.Int>,
-              int,
-              int,
-              double,
-              double,
-              double,
-              double,
-              double,
-              double,
-            )
-          >();
+        int,
+        int,
+        double,
+        double,
+        double,
+        double,
+        double,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6518,43 +5634,38 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_rope_ext_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_rope_ext_inplace');
+  late final _ggml_rope_ext_inplace = _ggml_rope_ext_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_rope_ext_inplace');
-  late final _ggml_rope_ext_inplace =
-      _ggml_rope_ext_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              double,
-              double,
-              double,
-              double,
-              double,
-              double,
-            )
-          >();
+        int,
+        int,
+        int,
+        double,
+        double,
+        double,
+        double,
+        double,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6589,41 +5700,36 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_rope_customPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_rope_custom');
+  late final _ggml_rope_custom = _ggml_rope_customPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_rope_custom');
-  late final _ggml_rope_custom =
-      _ggml_rope_customPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              double,
-              double,
-              double,
-              double,
-              double,
-              double,
-            )
-          >();
+        int,
+        int,
+        int,
+        double,
+        double,
+        double,
+        double,
+        double,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6658,41 +5764,37 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_rope_custom_inplacePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_rope_custom_inplace');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_rope_custom_inplace');
   late final _ggml_rope_custom_inplace =
-      _ggml_rope_custom_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              double,
-              double,
-              double,
-              double,
-              double,
-              double,
-            )
-          >();
+      _ggml_rope_custom_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            int,
+            int,
+            int,
+            double,
+            double,
+            double,
+            double,
+            double,
+            double,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6715,29 +5817,25 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_rope_yarn_corr_dimsPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ffi.Int,
-        ffi.Int,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Pointer<ffi.Float>,
-      )
-    >
-  >('ggml_rope_yarn_corr_dims');
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ffi.Int,
+            ffi.Int,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Pointer<ffi.Float>,
+          )>>('ggml_rope_yarn_corr_dims');
   late final _ggml_rope_yarn_corr_dims =
-      _ggml_rope_yarn_corr_dimsPtr
-          .asFunction<
-            void Function(
-              int,
-              int,
-              double,
-              double,
-              double,
-              ffi.Pointer<ffi.Float>,
-            )
-          >();
+      _ggml_rope_yarn_corr_dimsPtr.asFunction<
+          void Function(
+            int,
+            int,
+            double,
+            double,
+            double,
+            ffi.Pointer<ffi.Float>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6774,43 +5872,38 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_rope_ext_backPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_rope_ext_back');
+  late final _ggml_rope_ext_back = _ggml_rope_ext_backPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_rope_ext_back');
-  late final _ggml_rope_ext_back =
-      _ggml_rope_ext_backPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              double,
-              double,
-              double,
-              double,
-              double,
-              double,
-            )
-          >();
+        int,
+        int,
+        int,
+        double,
+        double,
+        double,
+        double,
+        double,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6849,45 +5942,40 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_rope_multi_backPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Pointer<ffi.Int>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_rope_multi_back');
+  late final _ggml_rope_multi_back = _ggml_rope_multi_backPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
+        int,
         ffi.Pointer<ffi.Int>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_rope_multi_back');
-  late final _ggml_rope_multi_back =
-      _ggml_rope_multi_backPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              ffi.Pointer<ffi.Int>,
-              int,
-              int,
-              double,
-              double,
-              double,
-              double,
-              double,
-              double,
-            )
-          >();
+        int,
+        int,
+        double,
+        double,
+        double,
+        double,
+        double,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6901,25 +5989,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_clampPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_clamp');
+  late final _ggml_clamp = _ggml_clampPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_clamp');
-  late final _ggml_clamp =
-      _ggml_clampPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              double,
-              double,
-            )
-          >();
+        double,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -6952,39 +6035,34 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_im2colPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Bool,
+            ffi.UnsignedInt,
+          )>>('ggml_im2col');
+  late final _ggml_im2col = _ggml_im2colPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Bool,
-        ffi.UnsignedInt,
-      )
-    >
-  >('ggml_im2col');
-  late final _ggml_im2col =
-      _ggml_im2colPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-              int,
-              int,
-              bool,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+        int,
+        int,
+        bool,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7005,39 +6083,34 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_im2col_backPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ffi.Int64>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Bool,
+          )>>('ggml_im2col_back');
+  late final _ggml_im2col_back = _ggml_im2col_backPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ffi.Int64>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Bool,
-      )
-    >
-  >('ggml_im2col_back');
-  late final _ggml_im2col_back =
-      _ggml_im2col_backPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ffi.Int64>,
-              int,
-              int,
-              int,
-              int,
-              int,
-              int,
-              bool,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+        int,
+        int,
+        bool,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7053,29 +6126,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_conv_1dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_conv_1d');
+  late final _ggml_conv_1d = _ggml_conv_1dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_conv_1d');
-  late final _ggml_conv_1d =
-      _ggml_conv_1dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7090,27 +6158,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_conv_1d_phPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_conv_1d_ph');
+  late final _ggml_conv_1d_ph = _ggml_conv_1d_phPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_conv_1d_ph');
-  late final _ggml_conv_1d_ph =
-      _ggml_conv_1d_phPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7126,29 +6189,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_conv_1d_dwPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_conv_1d_dw');
+  late final _ggml_conv_1d_dw = _ggml_conv_1d_dwPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_conv_1d_dw');
-  late final _ggml_conv_1d_dw =
-      _ggml_conv_1d_dwPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7163,27 +6221,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_conv_1d_dw_phPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_conv_1d_dw_ph');
+  late final _ggml_conv_1d_dw_ph = _ggml_conv_1d_dw_phPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_conv_1d_dw_ph');
-  late final _ggml_conv_1d_dw_ph =
-      _ggml_conv_1d_dw_phPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7199,29 +6252,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_conv_transpose_1dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_conv_transpose_1d');
+  late final _ggml_conv_transpose_1d = _ggml_conv_transpose_1dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_conv_transpose_1d');
-  late final _ggml_conv_transpose_1d =
-      _ggml_conv_transpose_1dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7240,35 +6288,30 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_conv_2dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_conv_2d');
+  late final _ggml_conv_2d = _ggml_conv_2dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_conv_2d');
-  late final _ggml_conv_2d =
-      _ggml_conv_2dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7281,23 +6324,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_conv_2d_sk_p0Ptr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_conv_2d_sk_p0');
+  late final _ggml_conv_2d_sk_p0 = _ggml_conv_2d_sk_p0Ptr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_conv_2d_sk_p0');
-  late final _ggml_conv_2d_sk_p0 =
-      _ggml_conv_2d_sk_p0Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7310,23 +6348,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_conv_2d_s1_phPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_conv_2d_s1_ph');
+  late final _ggml_conv_2d_s1_ph = _ggml_conv_2d_s1_phPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_conv_2d_s1_ph');
-  late final _ggml_conv_2d_s1_ph =
-      _ggml_conv_2d_s1_phPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7345,35 +6378,30 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_conv_2d_dwPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_conv_2d_dw');
+  late final _ggml_conv_2d_dw = _ggml_conv_2d_dwPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_conv_2d_dw');
-  late final _ggml_conv_2d_dw =
-      _ggml_conv_2d_dwPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7387,25 +6415,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_conv_transpose_2d_p0Ptr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-      )
-    >
-  >('ggml_conv_transpose_2d_p0');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+          )>>('ggml_conv_transpose_2d_p0');
   late final _ggml_conv_transpose_2d_p0 =
-      _ggml_conv_transpose_2d_p0Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+      _ggml_conv_transpose_2d_p0Ptr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            int,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7421,29 +6445,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_pool_1dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.UnsignedInt,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_pool_1d');
+  late final _ggml_pool_1d = _ggml_pool_1dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.UnsignedInt,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_pool_1d');
-  late final _ggml_pool_1d =
-      _ggml_pool_1dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7462,35 +6481,30 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_pool_2dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.UnsignedInt,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_pool_2d');
+  late final _ggml_pool_2d = _ggml_pool_2dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.UnsignedInt,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_pool_2d');
-  late final _ggml_pool_2d =
-      _ggml_pool_2dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-              int,
-              double,
-              double,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+        int,
+        double,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7510,37 +6524,32 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_pool_2d_backPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.UnsignedInt,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_pool_2d_back');
+  late final _ggml_pool_2d_back = _ggml_pool_2d_backPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.UnsignedInt,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_pool_2d_back');
-  late final _ggml_pool_2d_back =
-      _ggml_pool_2d_backPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-              int,
-              double,
-              double,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+        int,
+        double,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7553,23 +6562,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_upscalePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+          )>>('ggml_upscale');
+  late final _ggml_upscale = _ggml_upscalePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-      )
-    >
-  >('ggml_upscale');
-  late final _ggml_upscale =
-      _ggml_upscalePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7585,29 +6589,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_upscale_extPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_upscale_ext');
+  late final _ggml_upscale_ext = _ggml_upscale_extPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_upscale_ext');
-  late final _ggml_upscale_ext =
-      _ggml_upscale_extPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7623,29 +6622,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_padPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_pad');
+  late final _ggml_pad = _ggml_padPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_pad');
-  late final _ggml_pad =
-      _ggml_padPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7659,25 +6653,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_pad_reflect_1dPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_pad_reflect_1d');
+  late final _ggml_pad_reflect_1d = _ggml_pad_reflect_1dPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_pad_reflect_1d');
-  late final _ggml_pad_reflect_1d =
-      _ggml_pad_reflect_1dPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7691,25 +6680,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_timestep_embeddingPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_timestep_embedding');
+  late final _ggml_timestep_embedding = _ggml_timestep_embeddingPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_timestep_embedding');
-  late final _ggml_timestep_embedding =
-      _ggml_timestep_embeddingPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7722,23 +6706,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_argsortPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.UnsignedInt,
+          )>>('ggml_argsort');
+  late final _ggml_argsort = _ggml_argsortPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.UnsignedInt,
-      )
-    >
-  >('ggml_argsort');
-  late final _ggml_argsort =
-      _ggml_argsortPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7752,25 +6731,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_arangePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_arange');
+  late final _ggml_arange = _ggml_arangePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_arange');
-  late final _ggml_arange =
-      _ggml_arangePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              double,
-              double,
-              double,
-            )
-          >();
+        double,
+        double,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7783,23 +6757,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_top_kPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+          )>>('ggml_top_k');
+  late final _ggml_top_k = _ggml_top_kPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-      )
-    >
-  >('ggml_top_k');
-  late final _ggml_top_k =
-      _ggml_top_kPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7826,33 +6795,28 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_flash_attn_extPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Float,
+            ffi.Float,
+            ffi.Float,
+          )>>('ggml_flash_attn_ext');
+  late final _ggml_flash_attn_ext = _ggml_flash_attn_extPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Float,
-        ffi.Float,
-        ffi.Float,
-      )
-    >
-  >('ggml_flash_attn_ext');
-  late final _ggml_flash_attn_ext =
-      _ggml_flash_attn_extPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              double,
-              double,
-              double,
-            )
-          >();
+        double,
+        double,
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7864,13 +6828,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_flash_attn_ext_set_precPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.UnsignedInt)
-    >
-  >('ggml_flash_attn_ext_set_prec');
-  late final _ggml_flash_attn_ext_set_prec =
-      _ggml_flash_attn_ext_set_precPtr
-          .asFunction<void Function(ffi.Pointer<ggml_tensor>, int)>();
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>,
+              ffi.UnsignedInt)>>('ggml_flash_attn_ext_set_prec');
+  late final _ggml_flash_attn_ext_set_prec = _ggml_flash_attn_ext_set_precPtr
+      .asFunction<void Function(ffi.Pointer<ggml_tensor>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7879,11 +6841,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_flash_attn_ext_get_precPtr = _lookup<
-    ffi.NativeFunction<ffi.UnsignedInt Function(ffi.Pointer<ggml_tensor>)>
-  >('ggml_flash_attn_ext_get_prec');
-  late final _ggml_flash_attn_ext_get_prec =
-      _ggml_flash_attn_ext_get_precPtr
-          .asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
+          ffi
+          .NativeFunction<ffi.UnsignedInt Function(ffi.Pointer<ggml_tensor>)>>(
+      'ggml_flash_attn_ext_get_prec');
+  late final _ggml_flash_attn_ext_get_prec = _ggml_flash_attn_ext_get_precPtr
+      .asFunction<int Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7899,29 +6861,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_flash_attn_backPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Bool,
+          )>>('ggml_flash_attn_back');
+  late final _ggml_flash_attn_back = _ggml_flash_attn_backPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Bool,
-      )
-    >
-  >('ggml_flash_attn_back');
-  late final _ggml_flash_attn_back =
-      _ggml_flash_attn_backPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              bool,
-            )
-          >();
+        bool,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7934,23 +6891,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_ssm_convPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_ssm_conv');
+  late final _ggml_ssm_conv = _ggml_ssm_convPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_ssm_conv');
-  late final _ggml_ssm_conv =
-      _ggml_ssm_convPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -7967,7 +6919,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_ssm_scanPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_ssm_scan');
+  late final _ggml_ssm_scan = _ggml_ssm_scanPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
@@ -7976,22 +6938,7 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_ssm_scan');
-  late final _ggml_ssm_scan =
-      _ggml_ssm_scanPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8004,23 +6951,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_win_partPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+          )>>('ggml_win_part');
+  late final _ggml_win_part = _ggml_win_partPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-      )
-    >
-  >('ggml_win_part');
-  late final _ggml_win_part =
-      _ggml_win_partPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8035,27 +6977,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_win_unpartPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_win_unpart');
+  late final _ggml_win_unpart = _ggml_win_unpartPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_win_unpart');
-  late final _ggml_win_unpart =
-      _ggml_win_unpartPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8068,23 +7005,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_unaryPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.UnsignedInt,
+          )>>('ggml_unary');
+  late final _ggml_unary = _ggml_unaryPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.UnsignedInt,
-      )
-    >
-  >('ggml_unary');
-  late final _ggml_unary =
-      _ggml_unaryPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8097,23 +7029,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_unary_inplacePtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.UnsignedInt,
+          )>>('ggml_unary_inplace');
+  late final _ggml_unary_inplace = _ggml_unary_inplacePtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.UnsignedInt,
-      )
-    >
-  >('ggml_unary_inplace');
-  late final _ggml_unary_inplace =
-      _ggml_unary_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-            )
-          >();
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8127,25 +7054,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_rel_posPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_get_rel_pos');
+  late final _ggml_get_rel_pos = _ggml_get_rel_posPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_get_rel_pos');
-  late final _ggml_get_rel_pos =
-      _ggml_get_rel_posPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8159,25 +7081,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_add_rel_posPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_add_rel_pos');
+  late final _ggml_add_rel_pos = _ggml_add_rel_posPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_add_rel_pos');
-  late final _ggml_add_rel_pos =
-      _ggml_add_rel_posPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8191,25 +7108,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_add_rel_pos_inplacePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_add_rel_pos_inplace');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_add_rel_pos_inplace');
   late final _ggml_add_rel_pos_inplace =
-      _ggml_add_rel_pos_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      _ggml_add_rel_pos_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8226,7 +7139,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_rwkv_wkv6Ptr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_rwkv_wkv6');
+  late final _ggml_rwkv_wkv6 = _ggml_rwkv_wkv6Ptr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
@@ -8235,22 +7158,7 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_rwkv_wkv6');
-  late final _ggml_rwkv_wkv6 =
-      _ggml_rwkv_wkv6Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8267,7 +7175,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_gated_linear_attnPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Float,
+          )>>('ggml_gated_linear_attn');
+  late final _ggml_gated_linear_attn = _ggml_gated_linear_attnPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
@@ -8275,23 +7193,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-        ffi.Float,
-      )
-    >
-  >('ggml_gated_linear_attn');
-  late final _ggml_gated_linear_attn =
-      _ggml_gated_linear_attnPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              double,
-            )
-          >();
+        double,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8304,23 +7207,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_unary_f32Ptr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_unary_op_f32_t,
+          )>>('ggml_map_unary_f32');
+  late final _ggml_map_unary_f32 = _ggml_map_unary_f32Ptr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ggml_unary_op_f32_t,
-      )
-    >
-  >('ggml_map_unary_f32');
-  late final _ggml_map_unary_f32 =
-      _ggml_map_unary_f32Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_unary_op_f32_t,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8333,23 +7231,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_unary_inplace_f32Ptr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ggml_unary_op_f32_t,
-      )
-    >
-  >('ggml_map_unary_inplace_f32');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_unary_op_f32_t,
+          )>>('ggml_map_unary_inplace_f32');
   late final _ggml_map_unary_inplace_f32 =
-      _ggml_map_unary_inplace_f32Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_unary_op_f32_t,
-            )
-          >();
+      _ggml_map_unary_inplace_f32Ptr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_unary_op_f32_t,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8363,25 +7257,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_binary_f32Ptr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_binary_op_f32_t,
+          )>>('ggml_map_binary_f32');
+  late final _ggml_map_binary_f32 = _ggml_map_binary_f32Ptr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ggml_binary_op_f32_t,
-      )
-    >
-  >('ggml_map_binary_f32');
-  late final _ggml_map_binary_f32 =
-      _ggml_map_binary_f32Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_binary_op_f32_t,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8395,25 +7284,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_binary_inplace_f32Ptr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-        ggml_binary_op_f32_t,
-      )
-    >
-  >('ggml_map_binary_inplace_f32');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_binary_op_f32_t,
+          )>>('ggml_map_binary_inplace_f32');
   late final _ggml_map_binary_inplace_f32 =
-      _ggml_map_binary_inplace_f32Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_binary_op_f32_t,
-            )
-          >();
+      _ggml_map_binary_inplace_f32Ptr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_binary_op_f32_t,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8426,23 +7311,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_custom1_f32Ptr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom1_op_f32_t,
+          )>>('ggml_map_custom1_f32');
+  late final _ggml_map_custom1_f32 = _ggml_map_custom1_f32Ptr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ggml_custom1_op_f32_t,
-      )
-    >
-  >('ggml_map_custom1_f32');
-  late final _ggml_map_custom1_f32 =
-      _ggml_map_custom1_f32Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_custom1_op_f32_t,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8455,23 +7335,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_custom1_inplace_f32Ptr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ggml_custom1_op_f32_t,
-      )
-    >
-  >('ggml_map_custom1_inplace_f32');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom1_op_f32_t,
+          )>>('ggml_map_custom1_inplace_f32');
   late final _ggml_map_custom1_inplace_f32 =
-      _ggml_map_custom1_inplace_f32Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_custom1_op_f32_t,
-            )
-          >();
+      _ggml_map_custom1_inplace_f32Ptr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom1_op_f32_t,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8485,25 +7361,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_custom2_f32Ptr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom2_op_f32_t,
+          )>>('ggml_map_custom2_f32');
+  late final _ggml_map_custom2_f32 = _ggml_map_custom2_f32Ptr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ggml_custom2_op_f32_t,
-      )
-    >
-  >('ggml_map_custom2_f32');
-  late final _ggml_map_custom2_f32 =
-      _ggml_map_custom2_f32Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_custom2_op_f32_t,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8517,25 +7388,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_custom2_inplace_f32Ptr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-        ggml_custom2_op_f32_t,
-      )
-    >
-  >('ggml_map_custom2_inplace_f32');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom2_op_f32_t,
+          )>>('ggml_map_custom2_inplace_f32');
   late final _ggml_map_custom2_inplace_f32 =
-      _ggml_map_custom2_inplace_f32Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_custom2_op_f32_t,
-            )
-          >();
+      _ggml_map_custom2_inplace_f32Ptr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom2_op_f32_t,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8550,27 +7417,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_custom3_f32Ptr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom3_op_f32_t,
+          )>>('ggml_map_custom3_f32');
+  late final _ggml_map_custom3_f32 = _ggml_map_custom3_f32Ptr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ggml_custom3_op_f32_t,
-      )
-    >
-  >('ggml_map_custom3_f32');
-  late final _ggml_map_custom3_f32 =
-      _ggml_map_custom3_f32Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_custom3_op_f32_t,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8585,27 +7447,23 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_custom3_inplace_f32Ptr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-        ggml_custom3_op_f32_t,
-      )
-    >
-  >('ggml_map_custom3_inplace_f32');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom3_op_f32_t,
+          )>>('ggml_map_custom3_inplace_f32');
   late final _ggml_map_custom3_inplace_f32 =
-      _ggml_map_custom3_inplace_f32Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_custom3_op_f32_t,
-            )
-          >();
+      _ggml_map_custom3_inplace_f32Ptr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom3_op_f32_t,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8620,27 +7478,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_custom1Ptr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom1_op_t,
+            ffi.Int,
+            ffi.Pointer<ffi.Void>,
+          )>>('ggml_map_custom1');
+  late final _ggml_map_custom1 = _ggml_map_custom1Ptr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ggml_custom1_op_t,
-        ffi.Int,
+        int,
         ffi.Pointer<ffi.Void>,
-      )
-    >
-  >('ggml_map_custom1');
-  late final _ggml_map_custom1 =
-      _ggml_map_custom1Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_custom1_op_t,
-              int,
-              ffi.Pointer<ffi.Void>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8655,27 +7508,23 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_custom1_inplacePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ggml_custom1_op_t,
-        ffi.Int,
-        ffi.Pointer<ffi.Void>,
-      )
-    >
-  >('ggml_map_custom1_inplace');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom1_op_t,
+            ffi.Int,
+            ffi.Pointer<ffi.Void>,
+          )>>('ggml_map_custom1_inplace');
   late final _ggml_map_custom1_inplace =
-      _ggml_map_custom1_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_custom1_op_t,
-              int,
-              ffi.Pointer<ffi.Void>,
-            )
-          >();
+      _ggml_map_custom1_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom1_op_t,
+            int,
+            ffi.Pointer<ffi.Void>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8691,29 +7540,24 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_custom2Ptr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom2_op_t,
+            ffi.Int,
+            ffi.Pointer<ffi.Void>,
+          )>>('ggml_map_custom2');
+  late final _ggml_map_custom2 = _ggml_map_custom2Ptr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ggml_custom2_op_t,
-        ffi.Int,
+        int,
         ffi.Pointer<ffi.Void>,
-      )
-    >
-  >('ggml_map_custom2');
-  late final _ggml_map_custom2 =
-      _ggml_map_custom2Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_custom2_op_t,
-              int,
-              ffi.Pointer<ffi.Void>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8729,29 +7573,25 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_custom2_inplacePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-        ggml_custom2_op_t,
-        ffi.Int,
-        ffi.Pointer<ffi.Void>,
-      )
-    >
-  >('ggml_map_custom2_inplace');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom2_op_t,
+            ffi.Int,
+            ffi.Pointer<ffi.Void>,
+          )>>('ggml_map_custom2_inplace');
   late final _ggml_map_custom2_inplace =
-      _ggml_map_custom2_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_custom2_op_t,
-              int,
-              ffi.Pointer<ffi.Void>,
-            )
-          >();
+      _ggml_map_custom2_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom2_op_t,
+            int,
+            ffi.Pointer<ffi.Void>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8768,31 +7608,26 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_custom3Ptr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom3_op_t,
+            ffi.Int,
+            ffi.Pointer<ffi.Void>,
+          )>>('ggml_map_custom3');
+  late final _ggml_map_custom3 = _ggml_map_custom3Ptr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ggml_custom3_op_t,
-        ffi.Int,
+        int,
         ffi.Pointer<ffi.Void>,
-      )
-    >
-  >('ggml_map_custom3');
-  late final _ggml_map_custom3 =
-      _ggml_map_custom3Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_custom3_op_t,
-              int,
-              ffi.Pointer<ffi.Void>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8809,31 +7644,27 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_map_custom3_inplacePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-        ggml_custom3_op_t,
-        ffi.Int,
-        ffi.Pointer<ffi.Void>,
-      )
-    >
-  >('ggml_map_custom3_inplace');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom3_op_t,
+            ffi.Int,
+            ffi.Pointer<ffi.Void>,
+          )>>('ggml_map_custom3_inplace');
   late final _ggml_map_custom3_inplace =
-      _ggml_map_custom3_inplacePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ggml_custom3_op_t,
-              int,
-              ffi.Pointer<ffi.Void>,
-            )
-          >();
+      _ggml_map_custom3_inplacePtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ggml_custom3_op_t,
+            int,
+            ffi.Pointer<ffi.Void>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8846,23 +7677,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_cross_entropy_lossPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_cross_entropy_loss');
+  late final _ggml_cross_entropy_loss = _ggml_cross_entropy_lossPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_cross_entropy_loss');
-  late final _ggml_cross_entropy_loss =
-      _ggml_cross_entropy_lossPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8876,25 +7702,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_cross_entropy_loss_backPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_cross_entropy_loss_back');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_cross_entropy_loss_back');
   late final _ggml_cross_entropy_loss_back =
-      _ggml_cross_entropy_loss_backPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      _ggml_cross_entropy_loss_backPtr.asFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8910,7 +7732,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_opt_step_adamwPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_opt_step_adamw');
+  late final _ggml_opt_step_adamw = _ggml_opt_step_adamwPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_tensor>,
@@ -8918,21 +7749,7 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_opt_step_adamw');
-  late final _ggml_opt_step_adamw =
-      _ggml_opt_step_adamwPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8944,15 +7761,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_build_forward_expandPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_build_forward_expand');
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_build_forward_expand');
   late final _ggml_build_forward_expand =
-      _ggml_build_forward_expandPtr
-          .asFunction<
-            void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)
-          >();
+      _ggml_build_forward_expandPtr.asFunction<
+          void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8971,25 +7785,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_build_backward_expandPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_cgraph>,
-        ffi.Bool,
-      )
-    >
-  >('ggml_build_backward_expand');
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_cgraph>,
+            ffi.Bool,
+          )>>('ggml_build_backward_expand');
   late final _ggml_build_backward_expand =
-      _ggml_build_backward_expandPtr
-          .asFunction<
-            void Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_cgraph>,
-              bool,
-            )
-          >();
+      _ggml_build_backward_expandPtr.asFunction<
+          void Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_cgraph>,
+            bool,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -8998,15 +7808,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_new_graphPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_cgraph> Function(ffi.Pointer<ggml_context>)
-    >
-  >('ggml_new_graph');
-  late final _ggml_new_graph =
-      _ggml_new_graphPtr
-          .asFunction<
-            ffi.Pointer<ggml_cgraph> Function(ffi.Pointer<ggml_context>)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_cgraph> Function(
+              ffi.Pointer<ggml_context>)>>('ggml_new_graph');
+  late final _ggml_new_graph = _ggml_new_graphPtr.asFunction<
+      ffi.Pointer<ggml_cgraph> Function(ffi.Pointer<ggml_context>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9019,23 +7825,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_new_graph_customPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_cgraph> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Size,
+            ffi.Bool,
+          )>>('ggml_new_graph_custom');
+  late final _ggml_new_graph_custom = _ggml_new_graph_customPtr.asFunction<
       ffi.Pointer<ggml_cgraph> Function(
         ffi.Pointer<ggml_context>,
-        ffi.Size,
-        ffi.Bool,
-      )
-    >
-  >('ggml_new_graph_custom');
-  late final _ggml_new_graph_custom =
-      _ggml_new_graph_customPtr
-          .asFunction<
-            ffi.Pointer<ggml_cgraph> Function(
-              ffi.Pointer<ggml_context>,
-              int,
-              bool,
-            )
-          >();
+        int,
+        bool,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9047,21 +7848,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_graph_dupPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_cgraph> Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_cgraph>,
+          )>>('ggml_graph_dup');
+  late final _ggml_graph_dup = _ggml_graph_dupPtr.asFunction<
       ffi.Pointer<ggml_cgraph> Function(
         ffi.Pointer<ggml_context>,
         ffi.Pointer<ggml_cgraph>,
-      )
-    >
-  >('ggml_graph_dup');
-  late final _ggml_graph_dup =
-      _ggml_graph_dupPtr
-          .asFunction<
-            ffi.Pointer<ggml_cgraph> Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_cgraph>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9073,15 +7869,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_graph_cpyPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cgraph>)
-    >
-  >('ggml_graph_cpy');
-  late final _ggml_graph_cpy =
-      _ggml_graph_cpyPtr
-          .asFunction<
-            void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cgraph>)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_graph_cpy');
+  late final _ggml_graph_cpy = _ggml_graph_cpyPtr.asFunction<
+      void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cgraph>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9091,11 +7883,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_graph_resetPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_cgraph>)>>(
-        'ggml_graph_reset',
-      );
-  late final _ggml_graph_reset =
-      _ggml_graph_resetPtr
-          .asFunction<void Function(ffi.Pointer<ggml_cgraph>)>();
+    'ggml_graph_reset',
+  );
+  late final _ggml_graph_reset = _ggml_graph_resetPtr
+      .asFunction<void Function(ffi.Pointer<ggml_cgraph>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9105,11 +7896,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_graph_clearPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_cgraph>)>>(
-        'ggml_graph_clear',
-      );
-  late final _ggml_graph_clear =
-      _ggml_graph_clearPtr
-          .asFunction<void Function(ffi.Pointer<ggml_cgraph>)>();
+    'ggml_graph_clear',
+  );
+  late final _ggml_graph_clear = _ggml_graph_clearPtr
+      .asFunction<void Function(ffi.Pointer<ggml_cgraph>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9119,8 +7909,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_graph_sizePtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_cgraph>)>>(
-        'ggml_graph_size',
-      );
+    'ggml_graph_size',
+  );
   late final _ggml_graph_size =
       _ggml_graph_sizePtr.asFunction<int Function(ffi.Pointer<ggml_cgraph>)>();
 
@@ -9134,15 +7924,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_graph_nodePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>, ffi.Int)
-    >
-  >('ggml_graph_node');
-  late final _ggml_graph_node =
-      _ggml_graph_nodePtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>, int)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_cgraph>, ffi.Int)>>('ggml_graph_node');
+  late final _ggml_graph_node = _ggml_graph_nodePtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_cgraph>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9153,17 +7939,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_graph_nodesPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ffi.Pointer<ggml_tensor>> Function(ffi.Pointer<ggml_cgraph>)
-    >
-  >('ggml_graph_nodes');
-  late final _ggml_graph_nodes =
-      _ggml_graph_nodesPtr
-          .asFunction<
-            ffi.Pointer<ffi.Pointer<ggml_tensor>> Function(
-              ffi.Pointer<ggml_cgraph>,
-            )
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Pointer<ggml_tensor>> Function(
+              ffi.Pointer<ggml_cgraph>)>>('ggml_graph_nodes');
+  late final _ggml_graph_nodes = _ggml_graph_nodesPtr.asFunction<
+      ffi.Pointer<ffi.Pointer<ggml_tensor>> Function(
+        ffi.Pointer<ggml_cgraph>,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9173,11 +7955,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_graph_n_nodesPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_cgraph>)>>(
-        'ggml_graph_n_nodes',
-      );
-  late final _ggml_graph_n_nodes =
-      _ggml_graph_n_nodesPtr
-          .asFunction<int Function(ffi.Pointer<ggml_cgraph>)>();
+    'ggml_graph_n_nodes',
+  );
+  late final _ggml_graph_n_nodes = _ggml_graph_n_nodesPtr
+      .asFunction<int Function(ffi.Pointer<ggml_cgraph>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9189,15 +7970,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_graph_add_nodePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_graph_add_node');
-  late final _ggml_graph_add_node =
-      _ggml_graph_add_nodePtr
-          .asFunction<
-            void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_graph_add_node');
+  late final _ggml_graph_add_node = _ggml_graph_add_nodePtr.asFunction<
+      void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9218,8 +7995,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_graph_overhead_customPtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ffi.Size, ffi.Bool)>>(
-        'ggml_graph_overhead_custom',
-      );
+    'ggml_graph_overhead_custom',
+  );
   late final _ggml_graph_overhead_custom =
       _ggml_graph_overhead_customPtr.asFunction<int Function(int, bool)>();
 
@@ -9233,21 +8010,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_graph_get_tensorPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_cgraph>,
+            ffi.Pointer<ffi.Char>,
+          )>>('ggml_graph_get_tensor');
+  late final _ggml_graph_get_tensor = _ggml_graph_get_tensorPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_cgraph>,
         ffi.Pointer<ffi.Char>,
-      )
-    >
-  >('ggml_graph_get_tensor');
-  late final _ggml_graph_get_tensor =
-      _ggml_graph_get_tensorPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_cgraph>,
-              ffi.Pointer<ffi.Char>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9259,21 +8031,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_graph_get_gradPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_cgraph>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_graph_get_grad');
+  late final _ggml_graph_get_grad = _ggml_graph_get_gradPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_cgraph>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_graph_get_grad');
-  late final _ggml_graph_get_grad =
-      _ggml_graph_get_gradPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_cgraph>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9285,21 +8052,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_graph_get_grad_accPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+            ffi.Pointer<ggml_cgraph>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_graph_get_grad_acc');
+  late final _ggml_graph_get_grad_acc = _ggml_graph_get_grad_accPtr.asFunction<
       ffi.Pointer<ggml_tensor> Function(
         ffi.Pointer<ggml_cgraph>,
         ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_graph_get_grad_acc');
-  late final _ggml_graph_get_grad_acc =
-      _ggml_graph_get_grad_accPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(
-              ffi.Pointer<ggml_cgraph>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9311,15 +8073,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_graph_exportPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ffi.Char>)
-    >
-  >('ggml_graph_export');
-  late final _ggml_graph_export =
-      _ggml_graph_exportPtr
-          .asFunction<
-            void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ffi.Char>)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ffi.Char>)>>('ggml_graph_export');
+  late final _ggml_graph_export = _ggml_graph_exportPtr.asFunction<
+      void Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9332,23 +8090,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_graph_importPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_cgraph> Function(
+            ffi.Pointer<ffi.Char>,
+            ffi.Pointer<ffi.Pointer<ggml_context>>,
+            ffi.Pointer<ffi.Pointer<ggml_context>>,
+          )>>('ggml_graph_import');
+  late final _ggml_graph_import = _ggml_graph_importPtr.asFunction<
       ffi.Pointer<ggml_cgraph> Function(
         ffi.Pointer<ffi.Char>,
         ffi.Pointer<ffi.Pointer<ggml_context>>,
         ffi.Pointer<ffi.Pointer<ggml_context>>,
-      )
-    >
-  >('ggml_graph_import');
-  late final _ggml_graph_import =
-      _ggml_graph_importPtr
-          .asFunction<
-            ffi.Pointer<ggml_cgraph> Function(
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<ffi.Pointer<ggml_context>>,
-              ffi.Pointer<ffi.Pointer<ggml_context>>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9358,11 +8111,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_graph_printPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_cgraph>)>>(
-        'ggml_graph_print',
-      );
-  late final _ggml_graph_print =
-      _ggml_graph_printPtr
-          .asFunction<void Function(ffi.Pointer<ggml_cgraph>)>();
+    'ggml_graph_print',
+  );
+  late final _ggml_graph_print = _ggml_graph_printPtr
+      .asFunction<void Function(ffi.Pointer<ggml_cgraph>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9375,23 +8127,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_graph_dump_dotPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ffi.Pointer<ggml_cgraph>,
+            ffi.Pointer<ggml_cgraph>,
+            ffi.Pointer<ffi.Char>,
+          )>>('ggml_graph_dump_dot');
+  late final _ggml_graph_dump_dot = _ggml_graph_dump_dotPtr.asFunction<
+      void Function(
         ffi.Pointer<ggml_cgraph>,
         ffi.Pointer<ggml_cgraph>,
         ffi.Pointer<ffi.Char>,
-      )
-    >
-  >('ggml_graph_dump_dot');
-  late final _ggml_graph_dump_dot =
-      _ggml_graph_dump_dotPtr
-          .asFunction<
-            void Function(
-              ffi.Pointer<ggml_cgraph>,
-              ffi.Pointer<ggml_cgraph>,
-              ffi.Pointer<ffi.Char>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9403,15 +8150,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_log_setPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ggml_log_callback, ffi.Pointer<ffi.Void>)
-    >
-  >('ggml_log_set');
-  late final _ggml_log_set =
-      _ggml_log_setPtr
-          .asFunction<
-            void Function(ggml_log_callback, ffi.Pointer<ffi.Void>)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(
+              ggml_log_callback, ffi.Pointer<ffi.Void>)>>('ggml_log_set');
+  late final _ggml_log_set = _ggml_log_setPtr
+      .asFunction<void Function(ggml_log_callback, ffi.Pointer<ffi.Void>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9420,15 +8163,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_zeroPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_set_zero');
-  late final _ggml_set_zero =
-      _ggml_set_zeroPtr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_tensor>)>>('ggml_set_zero');
+  late final _ggml_set_zero = _ggml_set_zeroPtr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9438,8 +8177,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_quantize_initPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.UnsignedInt)>>(
-        'ggml_quantize_init',
-      );
+    'ggml_quantize_init',
+  );
   late final _ggml_quantize_init =
       _ggml_quantize_initPtr.asFunction<void Function(int)>();
 
@@ -9462,8 +8201,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_quantize_requires_imatrixPtr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ffi.UnsignedInt)>>(
-        'ggml_quantize_requires_imatrix',
-      );
+    'ggml_quantize_requires_imatrix',
+  );
   late final _ggml_quantize_requires_imatrix =
       _ggml_quantize_requires_imatrixPtr.asFunction<bool Function(int)>();
 
@@ -9490,31 +8229,26 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_quantize_chunkPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Size Function(
-        ffi.UnsignedInt,
+      ffi.NativeFunction<
+          ffi.Size Function(
+            ffi.UnsignedInt,
+            ffi.Pointer<ffi.Float>,
+            ffi.Pointer<ffi.Void>,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Int64,
+            ffi.Pointer<ffi.Float>,
+          )>>('ggml_quantize_chunk');
+  late final _ggml_quantize_chunk = _ggml_quantize_chunkPtr.asFunction<
+      int Function(
+        int,
         ffi.Pointer<ffi.Float>,
         ffi.Pointer<ffi.Void>,
-        ffi.Int64,
-        ffi.Int64,
-        ffi.Int64,
+        int,
+        int,
+        int,
         ffi.Pointer<ffi.Float>,
-      )
-    >
-  >('ggml_quantize_chunk');
-  late final _ggml_quantize_chunk =
-      _ggml_quantize_chunkPtr
-          .asFunction<
-            int Function(
-              int,
-              ffi.Pointer<ffi.Float>,
-              ffi.Pointer<ffi.Void>,
-              int,
-              int,
-              int,
-              ffi.Pointer<ffi.Float>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9523,11 +8257,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_type_traitsPtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ggml_type_traits> Function(ffi.UnsignedInt)>
-  >('ggml_get_type_traits');
-  late final _ggml_get_type_traits =
-      _ggml_get_type_traitsPtr
-          .asFunction<ffi.Pointer<ggml_type_traits> Function(int)>();
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_type_traits> Function(
+              ffi.UnsignedInt)>>('ggml_get_type_traits');
+  late final _ggml_get_type_traits = _ggml_get_type_traitsPtr
+      .asFunction<ffi.Pointer<ggml_type_traits> Function(int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9537,8 +8271,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_threadpool_params_defaultPtr =
       _lookup<ffi.NativeFunction<ggml_threadpool_params Function(ffi.Int)>>(
-        'ggml_threadpool_params_default',
-      );
+    'ggml_threadpool_params_default',
+  );
   late final _ggml_threadpool_params_default =
       _ggml_threadpool_params_defaultPtr
           .asFunction<ggml_threadpool_params Function(int)>();
@@ -9553,15 +8287,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_threadpool_params_initPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<ggml_threadpool_params>, ffi.Int)
-    >
-  >('ggml_threadpool_params_init');
-  late final _ggml_threadpool_params_init =
-      _ggml_threadpool_params_initPtr
-          .asFunction<
-            void Function(ffi.Pointer<ggml_threadpool_params>, int)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_threadpool_params>,
+              ffi.Int)>>('ggml_threadpool_params_init');
+  late final _ggml_threadpool_params_init = _ggml_threadpool_params_initPtr
+      .asFunction<void Function(ffi.Pointer<ggml_threadpool_params>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9573,21 +8303,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_threadpool_params_matchPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(
-        ffi.Pointer<ggml_threadpool_params>,
-        ffi.Pointer<ggml_threadpool_params>,
-      )
-    >
-  >('ggml_threadpool_params_match');
+      ffi.NativeFunction<
+          ffi.Bool Function(
+            ffi.Pointer<ggml_threadpool_params>,
+            ffi.Pointer<ggml_threadpool_params>,
+          )>>('ggml_threadpool_params_match');
   late final _ggml_threadpool_params_match =
-      _ggml_threadpool_params_matchPtr
-          .asFunction<
-            bool Function(
-              ffi.Pointer<ggml_threadpool_params>,
-              ffi.Pointer<ggml_threadpool_params>,
-            )
-          >();
+      _ggml_threadpool_params_matchPtr.asFunction<
+          bool Function(
+            ffi.Pointer<ggml_threadpool_params>,
+            ffi.Pointer<ggml_threadpool_params>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9597,11 +8323,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_tallocr_newPtr =
       _lookup<ffi.NativeFunction<ggml_tallocr Function(ggml_backend_buffer_t)>>(
-        'ggml_tallocr_new',
-      );
-  late final _ggml_tallocr_new =
-      _ggml_tallocr_newPtr
-          .asFunction<ggml_tallocr Function(ggml_backend_buffer_t)>();
+    'ggml_tallocr_new',
+  );
+  late final _ggml_tallocr_new = _ggml_tallocr_newPtr
+      .asFunction<ggml_tallocr Function(ggml_backend_buffer_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9613,15 +8338,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_tallocr_allocPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<ggml_tallocr>, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_tallocr_alloc');
-  late final _ggml_tallocr_alloc =
-      _ggml_tallocr_allocPtr
-          .asFunction<
-            void Function(ffi.Pointer<ggml_tallocr>, ffi.Pointer<ggml_tensor>)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tallocr>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_tallocr_alloc');
+  late final _ggml_tallocr_alloc = _ggml_tallocr_allocPtr.asFunction<
+      void Function(ffi.Pointer<ggml_tallocr>, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9630,11 +8351,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_gallocr_newPtr = _lookup<
-    ffi.NativeFunction<ggml_gallocr_t Function(ggml_backend_buffer_type_t)>
-  >('ggml_gallocr_new');
-  late final _ggml_gallocr_new =
-      _ggml_gallocr_newPtr
-          .asFunction<ggml_gallocr_t Function(ggml_backend_buffer_type_t)>();
+          ffi
+          .NativeFunction<ggml_gallocr_t Function(ggml_backend_buffer_type_t)>>(
+      'ggml_gallocr_new');
+  late final _ggml_gallocr_new = _ggml_gallocr_newPtr
+      .asFunction<ggml_gallocr_t Function(ggml_backend_buffer_type_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9646,18 +8367,14 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_gallocr_new_nPtr = _lookup<
-    ffi.NativeFunction<
-      ggml_gallocr_t Function(ffi.Pointer<ggml_backend_buffer_type_t>, ffi.Int)
-    >
-  >('ggml_gallocr_new_n');
-  late final _ggml_gallocr_new_n =
-      _ggml_gallocr_new_nPtr
-          .asFunction<
-            ggml_gallocr_t Function(
-              ffi.Pointer<ggml_backend_buffer_type_t>,
-              int,
-            )
-          >();
+      ffi.NativeFunction<
+          ggml_gallocr_t Function(ffi.Pointer<ggml_backend_buffer_type_t>,
+              ffi.Int)>>('ggml_gallocr_new_n');
+  late final _ggml_gallocr_new_n = _ggml_gallocr_new_nPtr.asFunction<
+      ggml_gallocr_t Function(
+        ffi.Pointer<ggml_backend_buffer_type_t>,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9667,8 +8384,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_gallocr_freePtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ggml_gallocr_t)>>(
-        'ggml_gallocr_free',
-      );
+    'ggml_gallocr_free',
+  );
   late final _ggml_gallocr_free =
       _ggml_gallocr_freePtr.asFunction<void Function(ggml_gallocr_t)>();
 
@@ -9682,15 +8399,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_gallocr_reservePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>)
-    >
-  >('ggml_gallocr_reserve');
-  late final _ggml_gallocr_reserve =
-      _ggml_gallocr_reservePtr
-          .asFunction<
-            bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>)
-          >();
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_gallocr_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_gallocr_reserve');
+  late final _ggml_gallocr_reserve = _ggml_gallocr_reservePtr
+      .asFunction<bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9709,25 +8422,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_gallocr_reserve_nPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(
+      ffi.NativeFunction<
+          ffi.Bool Function(
+            ggml_gallocr_t,
+            ffi.Pointer<ggml_cgraph>,
+            ffi.Pointer<ffi.Int>,
+            ffi.Pointer<ffi.Int>,
+          )>>('ggml_gallocr_reserve_n');
+  late final _ggml_gallocr_reserve_n = _ggml_gallocr_reserve_nPtr.asFunction<
+      bool Function(
         ggml_gallocr_t,
         ffi.Pointer<ggml_cgraph>,
         ffi.Pointer<ffi.Int>,
         ffi.Pointer<ffi.Int>,
-      )
-    >
-  >('ggml_gallocr_reserve_n');
-  late final _ggml_gallocr_reserve_n =
-      _ggml_gallocr_reserve_nPtr
-          .asFunction<
-            bool Function(
-              ggml_gallocr_t,
-              ffi.Pointer<ggml_cgraph>,
-              ffi.Pointer<ffi.Int>,
-              ffi.Pointer<ffi.Int>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9739,15 +8447,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_gallocr_alloc_graphPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>)
-    >
-  >('ggml_gallocr_alloc_graph');
-  late final _ggml_gallocr_alloc_graph =
-      _ggml_gallocr_alloc_graphPtr
-          .asFunction<
-            bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>)
-          >();
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_gallocr_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_gallocr_alloc_graph');
+  late final _ggml_gallocr_alloc_graph = _ggml_gallocr_alloc_graphPtr
+      .asFunction<bool Function(ggml_gallocr_t, ffi.Pointer<ggml_cgraph>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9757,11 +8461,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_gallocr_get_buffer_sizePtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ggml_gallocr_t, ffi.Int)>>(
-        'ggml_gallocr_get_buffer_size',
-      );
-  late final _ggml_gallocr_get_buffer_size =
-      _ggml_gallocr_get_buffer_sizePtr
-          .asFunction<int Function(ggml_gallocr_t, int)>();
+    'ggml_gallocr_get_buffer_size',
+  );
+  late final _ggml_gallocr_get_buffer_size = _ggml_gallocr_get_buffer_sizePtr
+      .asFunction<int Function(ggml_gallocr_t, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9773,21 +8476,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_alloc_ctx_tensors_from_buftPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_backend_buffer> Function(
-        ffi.Pointer<ggml_context>,
-        ggml_backend_buffer_type_t,
-      )
-    >
-  >('ggml_backend_alloc_ctx_tensors_from_buft');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_backend_buffer> Function(
+            ffi.Pointer<ggml_context>,
+            ggml_backend_buffer_type_t,
+          )>>('ggml_backend_alloc_ctx_tensors_from_buft');
   late final _ggml_backend_alloc_ctx_tensors_from_buft =
-      _ggml_backend_alloc_ctx_tensors_from_buftPtr
-          .asFunction<
-            ffi.Pointer<ggml_backend_buffer> Function(
-              ffi.Pointer<ggml_context>,
-              ggml_backend_buffer_type_t,
-            )
-          >();
+      _ggml_backend_alloc_ctx_tensors_from_buftPtr.asFunction<
+          ffi.Pointer<ggml_backend_buffer> Function(
+            ffi.Pointer<ggml_context>,
+            ggml_backend_buffer_type_t,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9799,21 +8498,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_alloc_ctx_tensorsPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_backend_buffer> Function(
-        ffi.Pointer<ggml_context>,
-        ggml_backend_t,
-      )
-    >
-  >('ggml_backend_alloc_ctx_tensors');
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_backend_buffer> Function(
+            ffi.Pointer<ggml_context>,
+            ggml_backend_t,
+          )>>('ggml_backend_alloc_ctx_tensors');
   late final _ggml_backend_alloc_ctx_tensors =
-      _ggml_backend_alloc_ctx_tensorsPtr
-          .asFunction<
-            ffi.Pointer<ggml_backend_buffer> Function(
-              ffi.Pointer<ggml_context>,
-              ggml_backend_t,
-            )
-          >();
+      _ggml_backend_alloc_ctx_tensorsPtr.asFunction<
+          ffi.Pointer<ggml_backend_buffer> Function(
+            ffi.Pointer<ggml_context>,
+            ggml_backend_t,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9824,15 +8519,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buft_namePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ffi.Char> Function(ggml_backend_buffer_type_t)
-    >
-  >('ggml_backend_buft_name');
-  late final _ggml_backend_buft_name =
-      _ggml_backend_buft_namePtr
-          .asFunction<
-            ffi.Pointer<ffi.Char> Function(ggml_backend_buffer_type_t)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(
+              ggml_backend_buffer_type_t)>>('ggml_backend_buft_name');
+  late final _ggml_backend_buft_name = _ggml_backend_buft_namePtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_buffer_type_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9844,15 +8535,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buft_alloc_bufferPtr = _lookup<
-    ffi.NativeFunction<
-      ggml_backend_buffer_t Function(ggml_backend_buffer_type_t, ffi.Size)
-    >
-  >('ggml_backend_buft_alloc_buffer');
+      ffi.NativeFunction<
+          ggml_backend_buffer_t Function(ggml_backend_buffer_type_t,
+              ffi.Size)>>('ggml_backend_buft_alloc_buffer');
   late final _ggml_backend_buft_alloc_buffer =
-      _ggml_backend_buft_alloc_bufferPtr
-          .asFunction<
-            ggml_backend_buffer_t Function(ggml_backend_buffer_type_t, int)
-          >();
+      _ggml_backend_buft_alloc_bufferPtr.asFunction<
+          ggml_backend_buffer_t Function(ggml_backend_buffer_type_t, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9861,8 +8549,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buft_get_alignmentPtr = _lookup<
-    ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_type_t)>
-  >('ggml_backend_buft_get_alignment');
+          ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_type_t)>>(
+      'ggml_backend_buft_get_alignment');
   late final _ggml_backend_buft_get_alignment =
       _ggml_backend_buft_get_alignmentPtr
           .asFunction<int Function(ggml_backend_buffer_type_t)>();
@@ -9874,8 +8562,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buft_get_max_sizePtr = _lookup<
-    ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_type_t)>
-  >('ggml_backend_buft_get_max_size');
+          ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_type_t)>>(
+      'ggml_backend_buft_get_max_size');
   late final _ggml_backend_buft_get_max_size =
       _ggml_backend_buft_get_max_sizePtr
           .asFunction<int Function(ggml_backend_buffer_type_t)>();
@@ -9890,15 +8578,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buft_get_alloc_sizePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Size Function(ggml_backend_buffer_type_t, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_backend_buft_get_alloc_size');
+      ffi.NativeFunction<
+          ffi.Size Function(ggml_backend_buffer_type_t,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_buft_get_alloc_size');
   late final _ggml_backend_buft_get_alloc_size =
-      _ggml_backend_buft_get_alloc_sizePtr
-          .asFunction<
-            int Function(ggml_backend_buffer_type_t, ffi.Pointer<ggml_tensor>)
-          >();
+      _ggml_backend_buft_get_alloc_sizePtr.asFunction<
+          int Function(ggml_backend_buffer_type_t, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9907,11 +8592,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buft_is_hostPtr = _lookup<
-    ffi.NativeFunction<ffi.Bool Function(ggml_backend_buffer_type_t)>
-  >('ggml_backend_buft_is_host');
-  late final _ggml_backend_buft_is_host =
-      _ggml_backend_buft_is_hostPtr
-          .asFunction<bool Function(ggml_backend_buffer_type_t)>();
+          ffi.NativeFunction<ffi.Bool Function(ggml_backend_buffer_type_t)>>(
+      'ggml_backend_buft_is_host');
+  late final _ggml_backend_buft_is_host = _ggml_backend_buft_is_hostPtr
+      .asFunction<bool Function(ggml_backend_buffer_type_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9922,13 +8606,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buft_get_devicePtr = _lookup<
-    ffi.NativeFunction<ggml_backend_dev_t Function(ggml_backend_buffer_type_t)>
-  >('ggml_backend_buft_get_device');
-  late final _ggml_backend_buft_get_device =
-      _ggml_backend_buft_get_devicePtr
-          .asFunction<
-            ggml_backend_dev_t Function(ggml_backend_buffer_type_t)
-          >();
+      ffi.NativeFunction<
+          ggml_backend_dev_t Function(
+              ggml_backend_buffer_type_t)>>('ggml_backend_buft_get_device');
+  late final _ggml_backend_buft_get_device = _ggml_backend_buft_get_devicePtr
+      .asFunction<ggml_backend_dev_t Function(ggml_backend_buffer_type_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9937,11 +8619,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buffer_namePtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_buffer_t)>
-  >('ggml_backend_buffer_name');
-  late final _ggml_backend_buffer_name =
-      _ggml_backend_buffer_namePtr
-          .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_buffer_t)>();
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(
+              ggml_backend_buffer_t)>>('ggml_backend_buffer_name');
+  late final _ggml_backend_buffer_name = _ggml_backend_buffer_namePtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_buffer_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9951,11 +8633,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_buffer_freePtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_buffer_t)>>(
-        'ggml_backend_buffer_free',
-      );
-  late final _ggml_backend_buffer_free =
-      _ggml_backend_buffer_freePtr
-          .asFunction<void Function(ggml_backend_buffer_t)>();
+    'ggml_backend_buffer_free',
+  );
+  late final _ggml_backend_buffer_free = _ggml_backend_buffer_freePtr
+      .asFunction<void Function(ggml_backend_buffer_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9966,11 +8647,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buffer_get_basePtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Void> Function(ggml_backend_buffer_t)>
-  >('ggml_backend_buffer_get_base');
-  late final _ggml_backend_buffer_get_base =
-      _ggml_backend_buffer_get_basePtr
-          .asFunction<ffi.Pointer<ffi.Void> Function(ggml_backend_buffer_t)>();
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Void> Function(
+              ggml_backend_buffer_t)>>('ggml_backend_buffer_get_base');
+  late final _ggml_backend_buffer_get_base = _ggml_backend_buffer_get_basePtr
+      .asFunction<ffi.Pointer<ffi.Void> Function(ggml_backend_buffer_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9980,11 +8661,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_buffer_get_sizePtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_t)>>(
-        'ggml_backend_buffer_get_size',
-      );
-  late final _ggml_backend_buffer_get_size =
-      _ggml_backend_buffer_get_sizePtr
-          .asFunction<int Function(ggml_backend_buffer_t)>();
+    'ggml_backend_buffer_get_size',
+  );
+  late final _ggml_backend_buffer_get_size = _ggml_backend_buffer_get_sizePtr
+      .asFunction<int Function(ggml_backend_buffer_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -9996,15 +8676,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buffer_init_tensorPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_backend_buffer_init_tensor');
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_buffer_t,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_buffer_init_tensor');
   late final _ggml_backend_buffer_init_tensor =
-      _ggml_backend_buffer_init_tensorPtr
-          .asFunction<
-            void Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>)
-          >();
+      _ggml_backend_buffer_init_tensorPtr.asFunction<
+          void Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10014,8 +8691,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_buffer_get_alignmentPtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_t)>>(
-        'ggml_backend_buffer_get_alignment',
-      );
+    'ggml_backend_buffer_get_alignment',
+  );
   late final _ggml_backend_buffer_get_alignment =
       _ggml_backend_buffer_get_alignmentPtr
           .asFunction<int Function(ggml_backend_buffer_t)>();
@@ -10028,8 +8705,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_buffer_get_max_sizePtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_buffer_t)>>(
-        'ggml_backend_buffer_get_max_size',
-      );
+    'ggml_backend_buffer_get_max_size',
+  );
   late final _ggml_backend_buffer_get_max_size =
       _ggml_backend_buffer_get_max_sizePtr
           .asFunction<int Function(ggml_backend_buffer_t)>();
@@ -10044,15 +8721,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buffer_get_alloc_sizePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Size Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_backend_buffer_get_alloc_size');
+      ffi.NativeFunction<
+          ffi.Size Function(ggml_backend_buffer_t,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_buffer_get_alloc_size');
   late final _ggml_backend_buffer_get_alloc_size =
-      _ggml_backend_buffer_get_alloc_sizePtr
-          .asFunction<
-            int Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>)
-          >();
+      _ggml_backend_buffer_get_alloc_sizePtr.asFunction<
+          int Function(ggml_backend_buffer_t, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10061,11 +8735,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buffer_clearPtr = _lookup<
-    ffi.NativeFunction<ffi.Void Function(ggml_backend_buffer_t, ffi.Uint8)>
-  >('ggml_backend_buffer_clear');
-  late final _ggml_backend_buffer_clear =
-      _ggml_backend_buffer_clearPtr
-          .asFunction<void Function(ggml_backend_buffer_t, int)>();
+          ffi
+          .NativeFunction<ffi.Void Function(ggml_backend_buffer_t, ffi.Uint8)>>(
+      'ggml_backend_buffer_clear');
+  late final _ggml_backend_buffer_clear = _ggml_backend_buffer_clearPtr
+      .asFunction<void Function(ggml_backend_buffer_t, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10075,11 +8749,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_buffer_is_hostPtr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_buffer_t)>>(
-        'ggml_backend_buffer_is_host',
-      );
-  late final _ggml_backend_buffer_is_host =
-      _ggml_backend_buffer_is_hostPtr
-          .asFunction<bool Function(ggml_backend_buffer_t)>();
+    'ggml_backend_buffer_is_host',
+  );
+  late final _ggml_backend_buffer_is_host = _ggml_backend_buffer_is_hostPtr
+      .asFunction<bool Function(ggml_backend_buffer_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10091,13 +8764,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buffer_set_usagePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ggml_backend_buffer_t, ffi.UnsignedInt)
-    >
-  >('ggml_backend_buffer_set_usage');
-  late final _ggml_backend_buffer_set_usage =
-      _ggml_backend_buffer_set_usagePtr
-          .asFunction<void Function(ggml_backend_buffer_t, int)>();
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_buffer_t,
+              ffi.UnsignedInt)>>('ggml_backend_buffer_set_usage');
+  late final _ggml_backend_buffer_set_usage = _ggml_backend_buffer_set_usagePtr
+      .asFunction<void Function(ggml_backend_buffer_t, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10110,11 +8781,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buffer_get_usagePtr = _lookup<
-    ffi.NativeFunction<ffi.UnsignedInt Function(ggml_backend_buffer_t)>
-  >('ggml_backend_buffer_get_usage');
-  late final _ggml_backend_buffer_get_usage =
-      _ggml_backend_buffer_get_usagePtr
-          .asFunction<int Function(ggml_backend_buffer_t)>();
+          ffi.NativeFunction<ffi.UnsignedInt Function(ggml_backend_buffer_t)>>(
+      'ggml_backend_buffer_get_usage');
+  late final _ggml_backend_buffer_get_usage = _ggml_backend_buffer_get_usagePtr
+      .asFunction<int Function(ggml_backend_buffer_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10125,15 +8795,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_buffer_get_typePtr = _lookup<
-    ffi.NativeFunction<
-      ggml_backend_buffer_type_t Function(ggml_backend_buffer_t)
-    >
-  >('ggml_backend_buffer_get_type');
-  late final _ggml_backend_buffer_get_type =
-      _ggml_backend_buffer_get_typePtr
-          .asFunction<
-            ggml_backend_buffer_type_t Function(ggml_backend_buffer_t)
-          >();
+      ffi.NativeFunction<
+          ggml_backend_buffer_type_t Function(
+              ggml_backend_buffer_t)>>('ggml_backend_buffer_get_type');
+  late final _ggml_backend_buffer_get_type = _ggml_backend_buffer_get_typePtr
+      .asFunction<ggml_backend_buffer_type_t Function(ggml_backend_buffer_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10143,11 +8809,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_buffer_resetPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_buffer_t)>>(
-        'ggml_backend_buffer_reset',
-      );
-  late final _ggml_backend_buffer_reset =
-      _ggml_backend_buffer_resetPtr
-          .asFunction<void Function(ggml_backend_buffer_t)>();
+    'ggml_backend_buffer_reset',
+  );
+  late final _ggml_backend_buffer_reset = _ggml_backend_buffer_resetPtr
+      .asFunction<void Function(ggml_backend_buffer_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10159,15 +8824,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_tensor_copyPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_backend_tensor_copy');
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_tensor_copy');
   late final _ggml_backend_tensor_copy =
-      _ggml_backend_tensor_copyPtr
-          .asFunction<
-            void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)
-          >();
+      _ggml_backend_tensor_copyPtr.asFunction<
+          void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10177,8 +8839,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_guidPtr =
       _lookup<ffi.NativeFunction<ggml_guid_t Function(ggml_backend_t)>>(
-        'ggml_backend_guid',
-      );
+    'ggml_backend_guid',
+  );
   late final _ggml_backend_guid =
       _ggml_backend_guidPtr.asFunction<ggml_guid_t Function(ggml_backend_t)>();
 
@@ -10189,11 +8851,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_namePtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_t)>
-  >('ggml_backend_name');
-  late final _ggml_backend_name =
-      _ggml_backend_namePtr
-          .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_t)>();
+          ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_t)>>(
+      'ggml_backend_name');
+  late final _ggml_backend_name = _ggml_backend_namePtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10203,8 +8864,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_freePtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t)>>(
-        'ggml_backend_free',
-      );
+    'ggml_backend_free',
+  );
   late final _ggml_backend_free =
       _ggml_backend_freePtr.asFunction<void Function(ggml_backend_t)>();
 
@@ -10217,8 +8878,9 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_get_default_buffer_typePtr = _lookup<
-    ffi.NativeFunction<ggml_backend_buffer_type_t Function(ggml_backend_t)>
-  >('ggml_backend_get_default_buffer_type');
+          ffi
+          .NativeFunction<ggml_backend_buffer_type_t Function(ggml_backend_t)>>(
+      'ggml_backend_get_default_buffer_type');
   late final _ggml_backend_get_default_buffer_type =
       _ggml_backend_get_default_buffer_typePtr
           .asFunction<ggml_backend_buffer_type_t Function(ggml_backend_t)>();
@@ -10233,11 +8895,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_alloc_bufferPtr = _lookup<
-    ffi.NativeFunction<ggml_backend_buffer_t Function(ggml_backend_t, ffi.Size)>
-  >('ggml_backend_alloc_buffer');
-  late final _ggml_backend_alloc_buffer =
-      _ggml_backend_alloc_bufferPtr
-          .asFunction<ggml_backend_buffer_t Function(ggml_backend_t, int)>();
+      ffi.NativeFunction<
+          ggml_backend_buffer_t Function(
+              ggml_backend_t, ffi.Size)>>('ggml_backend_alloc_buffer');
+  late final _ggml_backend_alloc_buffer = _ggml_backend_alloc_bufferPtr
+      .asFunction<ggml_backend_buffer_t Function(ggml_backend_t, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10247,8 +8909,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_get_alignmentPtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_t)>>(
-        'ggml_backend_get_alignment',
-      );
+    'ggml_backend_get_alignment',
+  );
   late final _ggml_backend_get_alignment =
       _ggml_backend_get_alignmentPtr.asFunction<int Function(ggml_backend_t)>();
 
@@ -10260,8 +8922,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_get_max_sizePtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_t)>>(
-        'ggml_backend_get_max_size',
-      );
+    'ggml_backend_get_max_size',
+  );
   late final _ggml_backend_get_max_size =
       _ggml_backend_get_max_sizePtr.asFunction<int Function(ggml_backend_t)>();
 
@@ -10278,27 +8940,23 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_tensor_set_asyncPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ggml_backend_t,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ffi.Void>,
-        ffi.Size,
-        ffi.Size,
-      )
-    >
-  >('ggml_backend_tensor_set_async');
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ggml_backend_t,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ffi.Void>,
+            ffi.Size,
+            ffi.Size,
+          )>>('ggml_backend_tensor_set_async');
   late final _ggml_backend_tensor_set_async =
-      _ggml_backend_tensor_set_asyncPtr
-          .asFunction<
-            void Function(
-              ggml_backend_t,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ffi.Void>,
-              int,
-              int,
-            )
-          >();
+      _ggml_backend_tensor_set_asyncPtr.asFunction<
+          void Function(
+            ggml_backend_t,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ffi.Void>,
+            int,
+            int,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10313,27 +8971,23 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_tensor_get_asyncPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ggml_backend_t,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ffi.Void>,
-        ffi.Size,
-        ffi.Size,
-      )
-    >
-  >('ggml_backend_tensor_get_async');
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ggml_backend_t,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ffi.Void>,
+            ffi.Size,
+            ffi.Size,
+          )>>('ggml_backend_tensor_get_async');
   late final _ggml_backend_tensor_get_async =
-      _ggml_backend_tensor_get_asyncPtr
-          .asFunction<
-            void Function(
-              ggml_backend_t,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ffi.Void>,
-              int,
-              int,
-            )
-          >();
+      _ggml_backend_tensor_get_asyncPtr.asFunction<
+          void Function(
+            ggml_backend_t,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ffi.Void>,
+            int,
+            int,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10347,25 +9001,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_tensor_setPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ffi.Void>,
+            ffi.Size,
+            ffi.Size,
+          )>>('ggml_backend_tensor_set');
+  late final _ggml_backend_tensor_set = _ggml_backend_tensor_setPtr.asFunction<
+      void Function(
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ffi.Void>,
-        ffi.Size,
-        ffi.Size,
-      )
-    >
-  >('ggml_backend_tensor_set');
-  late final _ggml_backend_tensor_set =
-      _ggml_backend_tensor_setPtr
-          .asFunction<
-            void Function(
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ffi.Void>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10379,25 +9028,20 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_tensor_getPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ffi.Void>,
+            ffi.Size,
+            ffi.Size,
+          )>>('ggml_backend_tensor_get');
+  late final _ggml_backend_tensor_get = _ggml_backend_tensor_getPtr.asFunction<
+      void Function(
         ffi.Pointer<ggml_tensor>,
         ffi.Pointer<ffi.Void>,
-        ffi.Size,
-        ffi.Size,
-      )
-    >
-  >('ggml_backend_tensor_get');
-  late final _ggml_backend_tensor_get =
-      _ggml_backend_tensor_getPtr
-          .asFunction<
-            void Function(
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ffi.Void>,
-              int,
-              int,
-            )
-          >();
+        int,
+        int,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10411,13 +9055,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_tensor_memsetPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Uint8, ffi.Size, ffi.Size)
-    >
-  >('ggml_backend_tensor_memset');
-  late final _ggml_backend_tensor_memset =
-      _ggml_backend_tensor_memsetPtr
-          .asFunction<void Function(ffi.Pointer<ggml_tensor>, int, int, int)>();
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Uint8, ffi.Size,
+              ffi.Size)>>('ggml_backend_tensor_memset');
+  late final _ggml_backend_tensor_memset = _ggml_backend_tensor_memsetPtr
+      .asFunction<void Function(ffi.Pointer<ggml_tensor>, int, int, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10427,8 +9069,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_synchronizePtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t)>>(
-        'ggml_backend_synchronize',
-      );
+    'ggml_backend_synchronize',
+  );
   late final _ggml_backend_synchronize =
       _ggml_backend_synchronizePtr.asFunction<void Function(ggml_backend_t)>();
 
@@ -10442,21 +9084,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_graph_plan_createPtr = _lookup<
-    ffi.NativeFunction<
-      ggml_backend_graph_plan_t Function(
-        ggml_backend_t,
-        ffi.Pointer<ggml_cgraph>,
-      )
-    >
-  >('ggml_backend_graph_plan_create');
+      ffi.NativeFunction<
+          ggml_backend_graph_plan_t Function(
+            ggml_backend_t,
+            ffi.Pointer<ggml_cgraph>,
+          )>>('ggml_backend_graph_plan_create');
   late final _ggml_backend_graph_plan_create =
-      _ggml_backend_graph_plan_createPtr
-          .asFunction<
-            ggml_backend_graph_plan_t Function(
-              ggml_backend_t,
-              ffi.Pointer<ggml_cgraph>,
-            )
-          >();
+      _ggml_backend_graph_plan_createPtr.asFunction<
+          ggml_backend_graph_plan_t Function(
+            ggml_backend_t,
+            ffi.Pointer<ggml_cgraph>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10468,15 +9106,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_graph_plan_freePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ggml_backend_t, ggml_backend_graph_plan_t)
-    >
-  >('ggml_backend_graph_plan_free');
-  late final _ggml_backend_graph_plan_free =
-      _ggml_backend_graph_plan_freePtr
-          .asFunction<
-            void Function(ggml_backend_t, ggml_backend_graph_plan_t)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_t,
+              ggml_backend_graph_plan_t)>>('ggml_backend_graph_plan_free');
+  late final _ggml_backend_graph_plan_free = _ggml_backend_graph_plan_freePtr
+      .asFunction<void Function(ggml_backend_t, ggml_backend_graph_plan_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10490,15 +9124,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_graph_plan_computePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ggml_backend_t, ggml_backend_graph_plan_t)
-    >
-  >('ggml_backend_graph_plan_compute');
+      ffi.NativeFunction<
+          ffi.Int Function(ggml_backend_t,
+              ggml_backend_graph_plan_t)>>('ggml_backend_graph_plan_compute');
   late final _ggml_backend_graph_plan_compute =
-      _ggml_backend_graph_plan_computePtr
-          .asFunction<
-            int Function(ggml_backend_t, ggml_backend_graph_plan_t)
-          >();
+      _ggml_backend_graph_plan_computePtr.asFunction<
+          int Function(ggml_backend_t, ggml_backend_graph_plan_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10510,13 +9141,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_graph_computePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)
-    >
-  >('ggml_backend_graph_compute');
-  late final _ggml_backend_graph_compute =
-      _ggml_backend_graph_computePtr
-          .asFunction<int Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)>();
+      ffi.NativeFunction<
+          ffi.Int Function(ggml_backend_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_backend_graph_compute');
+  late final _ggml_backend_graph_compute = _ggml_backend_graph_computePtr
+      .asFunction<int Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10530,10 +9159,9 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_graph_compute_asyncPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)
-    >
-  >('ggml_backend_graph_compute_async');
+      ffi.NativeFunction<
+          ffi.Int Function(ggml_backend_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_backend_graph_compute_async');
   late final _ggml_backend_graph_compute_async =
       _ggml_backend_graph_compute_asyncPtr
           .asFunction<int Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)>();
@@ -10548,15 +9176,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_supports_opPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(ggml_backend_t, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_backend_supports_op');
-  late final _ggml_backend_supports_op =
-      _ggml_backend_supports_opPtr
-          .asFunction<
-            bool Function(ggml_backend_t, ffi.Pointer<ggml_tensor>)
-          >();
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_t,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_supports_op');
+  late final _ggml_backend_supports_op = _ggml_backend_supports_opPtr
+      .asFunction<bool Function(ggml_backend_t, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10568,15 +9192,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_supports_buftPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(ggml_backend_t, ggml_backend_buffer_type_t)
-    >
-  >('ggml_backend_supports_buft');
-  late final _ggml_backend_supports_buft =
-      _ggml_backend_supports_buftPtr
-          .asFunction<
-            bool Function(ggml_backend_t, ggml_backend_buffer_type_t)
-          >();
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_t,
+              ggml_backend_buffer_type_t)>>('ggml_backend_supports_buft');
+  late final _ggml_backend_supports_buft = _ggml_backend_supports_buftPtr
+      .asFunction<bool Function(ggml_backend_t, ggml_backend_buffer_type_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10588,15 +9208,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_offload_opPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(ggml_backend_t, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_backend_offload_op');
-  late final _ggml_backend_offload_op =
-      _ggml_backend_offload_opPtr
-          .asFunction<
-            bool Function(ggml_backend_t, ffi.Pointer<ggml_tensor>)
-          >();
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_t,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_offload_op');
+  late final _ggml_backend_offload_op = _ggml_backend_offload_opPtr
+      .asFunction<bool Function(ggml_backend_t, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10610,25 +9226,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_tensor_copy_asyncPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ggml_backend_t,
-        ggml_backend_t,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ggml_tensor>,
-      )
-    >
-  >('ggml_backend_tensor_copy_async');
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ggml_backend_t,
+            ggml_backend_t,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>>('ggml_backend_tensor_copy_async');
   late final _ggml_backend_tensor_copy_async =
-      _ggml_backend_tensor_copy_asyncPtr
-          .asFunction<
-            void Function(
-              ggml_backend_t,
-              ggml_backend_t,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      _ggml_backend_tensor_copy_asyncPtr.asFunction<
+          void Function(
+            ggml_backend_t,
+            ggml_backend_t,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ggml_tensor>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10638,11 +9250,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_get_devicePtr =
       _lookup<ffi.NativeFunction<ggml_backend_dev_t Function(ggml_backend_t)>>(
-        'ggml_backend_get_device',
-      );
-  late final _ggml_backend_get_device =
-      _ggml_backend_get_devicePtr
-          .asFunction<ggml_backend_dev_t Function(ggml_backend_t)>();
+    'ggml_backend_get_device',
+  );
+  late final _ggml_backend_get_device = _ggml_backend_get_devicePtr
+      .asFunction<ggml_backend_dev_t Function(ggml_backend_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10651,11 +9262,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_event_newPtr = _lookup<
-    ffi.NativeFunction<ggml_backend_event_t Function(ggml_backend_dev_t)>
-  >('ggml_backend_event_new');
-  late final _ggml_backend_event_new =
-      _ggml_backend_event_newPtr
-          .asFunction<ggml_backend_event_t Function(ggml_backend_dev_t)>();
+          ffi
+          .NativeFunction<ggml_backend_event_t Function(ggml_backend_dev_t)>>(
+      'ggml_backend_event_new');
+  late final _ggml_backend_event_new = _ggml_backend_event_newPtr
+      .asFunction<ggml_backend_event_t Function(ggml_backend_dev_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10665,11 +9276,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_event_freePtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_event_t)>>(
-        'ggml_backend_event_free',
-      );
-  late final _ggml_backend_event_free =
-      _ggml_backend_event_freePtr
-          .asFunction<void Function(ggml_backend_event_t)>();
+    'ggml_backend_event_free',
+  );
+  late final _ggml_backend_event_free = _ggml_backend_event_freePtr
+      .asFunction<void Function(ggml_backend_event_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10681,11 +9291,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_event_recordPtr = _lookup<
-    ffi.NativeFunction<ffi.Void Function(ggml_backend_event_t, ggml_backend_t)>
-  >('ggml_backend_event_record');
-  late final _ggml_backend_event_record =
-      _ggml_backend_event_recordPtr
-          .asFunction<void Function(ggml_backend_event_t, ggml_backend_t)>();
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_event_t,
+              ggml_backend_t)>>('ggml_backend_event_record');
+  late final _ggml_backend_event_record = _ggml_backend_event_recordPtr
+      .asFunction<void Function(ggml_backend_event_t, ggml_backend_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10695,8 +9305,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_event_synchronizePtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_event_t)>>(
-        'ggml_backend_event_synchronize',
-      );
+    'ggml_backend_event_synchronize',
+  );
   late final _ggml_backend_event_synchronize =
       _ggml_backend_event_synchronizePtr
           .asFunction<void Function(ggml_backend_event_t)>();
@@ -10711,11 +9321,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_event_waitPtr = _lookup<
-    ffi.NativeFunction<ffi.Void Function(ggml_backend_t, ggml_backend_event_t)>
-  >('ggml_backend_event_wait');
-  late final _ggml_backend_event_wait =
-      _ggml_backend_event_waitPtr
-          .asFunction<void Function(ggml_backend_t, ggml_backend_event_t)>();
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_t,
+              ggml_backend_event_t)>>('ggml_backend_event_wait');
+  late final _ggml_backend_event_wait = _ggml_backend_event_waitPtr
+      .asFunction<void Function(ggml_backend_t, ggml_backend_event_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10724,11 +9334,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_dev_namePtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>
-  >('ggml_backend_dev_name');
-  late final _ggml_backend_dev_name =
-      _ggml_backend_dev_namePtr
-          .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>();
+          ffi
+          .NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>>(
+      'ggml_backend_dev_name');
+  late final _ggml_backend_dev_name = _ggml_backend_dev_namePtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10739,11 +9349,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_dev_descriptionPtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>
-  >('ggml_backend_dev_description');
-  late final _ggml_backend_dev_description =
-      _ggml_backend_dev_descriptionPtr
-          .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>();
+          ffi
+          .NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>>(
+      'ggml_backend_dev_description');
+  late final _ggml_backend_dev_description = _ggml_backend_dev_descriptionPtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_dev_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10756,23 +9366,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_dev_memoryPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ggml_backend_dev_t,
+            ffi.Pointer<ffi.Size>,
+            ffi.Pointer<ffi.Size>,
+          )>>('ggml_backend_dev_memory');
+  late final _ggml_backend_dev_memory = _ggml_backend_dev_memoryPtr.asFunction<
+      void Function(
         ggml_backend_dev_t,
         ffi.Pointer<ffi.Size>,
         ffi.Pointer<ffi.Size>,
-      )
-    >
-  >('ggml_backend_dev_memory');
-  late final _ggml_backend_dev_memory =
-      _ggml_backend_dev_memoryPtr
-          .asFunction<
-            void Function(
-              ggml_backend_dev_t,
-              ffi.Pointer<ffi.Size>,
-              ffi.Pointer<ffi.Size>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10782,8 +9387,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_dev_type1Ptr =
       _lookup<ffi.NativeFunction<ffi.UnsignedInt Function(ggml_backend_dev_t)>>(
-        'ggml_backend_dev_type',
-      );
+    'ggml_backend_dev_type',
+  );
   late final _ggml_backend_dev_type1 =
       _ggml_backend_dev_type1Ptr.asFunction<int Function(ggml_backend_dev_t)>();
 
@@ -10797,18 +9402,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_dev_get_propsPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ggml_backend_dev_t, ffi.Pointer<ggml_backend_dev_props>)
-    >
-  >('ggml_backend_dev_get_props');
+          ffi.NativeFunction<
+              ffi.Void Function(
+                  ggml_backend_dev_t, ffi.Pointer<ggml_backend_dev_props>)>>(
+      'ggml_backend_dev_get_props');
   late final _ggml_backend_dev_get_props =
-      _ggml_backend_dev_get_propsPtr
-          .asFunction<
-            void Function(
-              ggml_backend_dev_t,
-              ffi.Pointer<ggml_backend_dev_props>,
-            )
-          >();
+      _ggml_backend_dev_get_propsPtr.asFunction<
+          void Function(
+            ggml_backend_dev_t,
+            ffi.Pointer<ggml_backend_dev_props>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10817,11 +9420,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_dev_backend_regPtr = _lookup<
-    ffi.NativeFunction<ggml_backend_reg_t Function(ggml_backend_dev_t)>
-  >('ggml_backend_dev_backend_reg');
-  late final _ggml_backend_dev_backend_reg =
-      _ggml_backend_dev_backend_regPtr
-          .asFunction<ggml_backend_reg_t Function(ggml_backend_dev_t)>();
+          ffi.NativeFunction<ggml_backend_reg_t Function(ggml_backend_dev_t)>>(
+      'ggml_backend_dev_backend_reg');
+  late final _ggml_backend_dev_backend_reg = _ggml_backend_dev_backend_regPtr
+      .asFunction<ggml_backend_reg_t Function(ggml_backend_dev_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10833,15 +9435,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_dev_initPtr = _lookup<
-    ffi.NativeFunction<
-      ggml_backend_t Function(ggml_backend_dev_t, ffi.Pointer<ffi.Char>)
-    >
-  >('ggml_backend_dev_init');
-  late final _ggml_backend_dev_init =
-      _ggml_backend_dev_initPtr
-          .asFunction<
-            ggml_backend_t Function(ggml_backend_dev_t, ffi.Pointer<ffi.Char>)
-          >();
+      ffi.NativeFunction<
+          ggml_backend_t Function(ggml_backend_dev_t,
+              ffi.Pointer<ffi.Char>)>>('ggml_backend_dev_init');
+  late final _ggml_backend_dev_init = _ggml_backend_dev_initPtr.asFunction<
+      ggml_backend_t Function(ggml_backend_dev_t, ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10852,13 +9450,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_dev_buffer_typePtr = _lookup<
-    ffi.NativeFunction<ggml_backend_buffer_type_t Function(ggml_backend_dev_t)>
-  >('ggml_backend_dev_buffer_type');
-  late final _ggml_backend_dev_buffer_type =
-      _ggml_backend_dev_buffer_typePtr
-          .asFunction<
-            ggml_backend_buffer_type_t Function(ggml_backend_dev_t)
-          >();
+      ffi.NativeFunction<
+          ggml_backend_buffer_type_t Function(
+              ggml_backend_dev_t)>>('ggml_backend_dev_buffer_type');
+  late final _ggml_backend_dev_buffer_type = _ggml_backend_dev_buffer_typePtr
+      .asFunction<ggml_backend_buffer_type_t Function(ggml_backend_dev_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10869,13 +9465,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_dev_host_buffer_typePtr = _lookup<
-    ffi.NativeFunction<ggml_backend_buffer_type_t Function(ggml_backend_dev_t)>
-  >('ggml_backend_dev_host_buffer_type');
+      ffi.NativeFunction<
+          ggml_backend_buffer_type_t Function(
+              ggml_backend_dev_t)>>('ggml_backend_dev_host_buffer_type');
   late final _ggml_backend_dev_host_buffer_type =
-      _ggml_backend_dev_host_buffer_typePtr
-          .asFunction<
-            ggml_backend_buffer_type_t Function(ggml_backend_dev_t)
-          >();
+      _ggml_backend_dev_host_buffer_typePtr.asFunction<
+          ggml_backend_buffer_type_t Function(ggml_backend_dev_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10894,25 +9489,21 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_dev_buffer_from_host_ptrPtr = _lookup<
-    ffi.NativeFunction<
-      ggml_backend_buffer_t Function(
-        ggml_backend_dev_t,
-        ffi.Pointer<ffi.Void>,
-        ffi.Size,
-        ffi.Size,
-      )
-    >
-  >('ggml_backend_dev_buffer_from_host_ptr');
+      ffi.NativeFunction<
+          ggml_backend_buffer_t Function(
+            ggml_backend_dev_t,
+            ffi.Pointer<ffi.Void>,
+            ffi.Size,
+            ffi.Size,
+          )>>('ggml_backend_dev_buffer_from_host_ptr');
   late final _ggml_backend_dev_buffer_from_host_ptr =
-      _ggml_backend_dev_buffer_from_host_ptrPtr
-          .asFunction<
-            ggml_backend_buffer_t Function(
-              ggml_backend_dev_t,
-              ffi.Pointer<ffi.Void>,
-              int,
-              int,
-            )
-          >();
+      _ggml_backend_dev_buffer_from_host_ptrPtr.asFunction<
+          ggml_backend_buffer_t Function(
+            ggml_backend_dev_t,
+            ffi.Pointer<ffi.Void>,
+            int,
+            int,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10924,15 +9515,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_dev_supports_opPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(ggml_backend_dev_t, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_backend_dev_supports_op');
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_dev_t,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_dev_supports_op');
   late final _ggml_backend_dev_supports_op =
-      _ggml_backend_dev_supports_opPtr
-          .asFunction<
-            bool Function(ggml_backend_dev_t, ffi.Pointer<ggml_tensor>)
-          >();
+      _ggml_backend_dev_supports_opPtr.asFunction<
+          bool Function(ggml_backend_dev_t, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10944,15 +9532,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_dev_supports_buftPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(ggml_backend_dev_t, ggml_backend_buffer_type_t)
-    >
-  >('ggml_backend_dev_supports_buft');
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_dev_t,
+              ggml_backend_buffer_type_t)>>('ggml_backend_dev_supports_buft');
   late final _ggml_backend_dev_supports_buft =
-      _ggml_backend_dev_supports_buftPtr
-          .asFunction<
-            bool Function(ggml_backend_dev_t, ggml_backend_buffer_type_t)
-          >();
+      _ggml_backend_dev_supports_buftPtr.asFunction<
+          bool Function(ggml_backend_dev_t, ggml_backend_buffer_type_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10964,15 +9549,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_dev_offload_opPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(ggml_backend_dev_t, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_backend_dev_offload_op');
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_dev_t,
+              ffi.Pointer<ggml_tensor>)>>('ggml_backend_dev_offload_op');
   late final _ggml_backend_dev_offload_op =
-      _ggml_backend_dev_offload_opPtr
-          .asFunction<
-            bool Function(ggml_backend_dev_t, ffi.Pointer<ggml_tensor>)
-          >();
+      _ggml_backend_dev_offload_opPtr.asFunction<
+          bool Function(ggml_backend_dev_t, ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10981,11 +9563,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_reg_namePtr = _lookup<
-    ffi.NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_reg_t)>
-  >('ggml_backend_reg_name');
-  late final _ggml_backend_reg_name =
-      _ggml_backend_reg_namePtr
-          .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_reg_t)>();
+          ffi
+          .NativeFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_reg_t)>>(
+      'ggml_backend_reg_name');
+  late final _ggml_backend_reg_name = _ggml_backend_reg_namePtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ggml_backend_reg_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -10995,11 +9577,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_reg_dev_countPtr =
       _lookup<ffi.NativeFunction<ffi.Size Function(ggml_backend_reg_t)>>(
-        'ggml_backend_reg_dev_count',
-      );
-  late final _ggml_backend_reg_dev_count =
-      _ggml_backend_reg_dev_countPtr
-          .asFunction<int Function(ggml_backend_reg_t)>();
+    'ggml_backend_reg_dev_count',
+  );
+  late final _ggml_backend_reg_dev_count = _ggml_backend_reg_dev_countPtr
+      .asFunction<int Function(ggml_backend_reg_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11011,13 +9592,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_reg_dev_getPtr = _lookup<
-    ffi.NativeFunction<
-      ggml_backend_dev_t Function(ggml_backend_reg_t, ffi.Size)
-    >
-  >('ggml_backend_reg_dev_get');
-  late final _ggml_backend_reg_dev_get =
-      _ggml_backend_reg_dev_getPtr
-          .asFunction<ggml_backend_dev_t Function(ggml_backend_reg_t, int)>();
+      ffi.NativeFunction<
+          ggml_backend_dev_t Function(
+              ggml_backend_reg_t, ffi.Size)>>('ggml_backend_reg_dev_get');
+  late final _ggml_backend_reg_dev_get = _ggml_backend_reg_dev_getPtr
+      .asFunction<ggml_backend_dev_t Function(ggml_backend_reg_t, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11029,18 +9608,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_reg_get_proc_addressPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ffi.Void> Function(ggml_backend_reg_t, ffi.Pointer<ffi.Char>)
-    >
-  >('ggml_backend_reg_get_proc_address');
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Void> Function(ggml_backend_reg_t,
+              ffi.Pointer<ffi.Char>)>>('ggml_backend_reg_get_proc_address');
   late final _ggml_backend_reg_get_proc_address =
-      _ggml_backend_reg_get_proc_addressPtr
-          .asFunction<
-            ffi.Pointer<ffi.Void> Function(
-              ggml_backend_reg_t,
-              ffi.Pointer<ffi.Char>,
-            )
-          >();
+      _ggml_backend_reg_get_proc_addressPtr.asFunction<
+          ffi.Pointer<ffi.Void> Function(
+            ggml_backend_reg_t,
+            ffi.Pointer<ffi.Char>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11050,11 +9626,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_device_registerPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_dev_t)>>(
-        'ggml_backend_device_register',
-      );
-  late final _ggml_backend_device_register =
-      _ggml_backend_device_registerPtr
-          .asFunction<void Function(ggml_backend_dev_t)>();
+    'ggml_backend_device_register',
+  );
+  late final _ggml_backend_device_register = _ggml_backend_device_registerPtr
+      .asFunction<void Function(ggml_backend_dev_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11064,8 +9639,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_reg_countPtr =
       _lookup<ffi.NativeFunction<ffi.Size Function()>>(
-        'ggml_backend_reg_count',
-      );
+    'ggml_backend_reg_count',
+  );
   late final _ggml_backend_reg_count =
       _ggml_backend_reg_countPtr.asFunction<int Function()>();
 
@@ -11077,8 +9652,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_reg_getPtr =
       _lookup<ffi.NativeFunction<ggml_backend_reg_t Function(ffi.Size)>>(
-        'ggml_backend_reg_get',
-      );
+    'ggml_backend_reg_get',
+  );
   late final _ggml_backend_reg_get =
       _ggml_backend_reg_getPtr.asFunction<ggml_backend_reg_t Function(int)>();
 
@@ -11089,11 +9664,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_reg_by_namePtr = _lookup<
-    ffi.NativeFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>
-  >('ggml_backend_reg_by_name');
-  late final _ggml_backend_reg_by_name =
-      _ggml_backend_reg_by_namePtr
-          .asFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>();
+          ffi
+          .NativeFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>>(
+      'ggml_backend_reg_by_name');
+  late final _ggml_backend_reg_by_name = _ggml_backend_reg_by_namePtr
+      .asFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11103,8 +9678,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_dev_countPtr =
       _lookup<ffi.NativeFunction<ffi.Size Function()>>(
-        'ggml_backend_dev_count',
-      );
+    'ggml_backend_dev_count',
+  );
   late final _ggml_backend_dev_count =
       _ggml_backend_dev_countPtr.asFunction<int Function()>();
 
@@ -11116,8 +9691,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_dev_getPtr =
       _lookup<ffi.NativeFunction<ggml_backend_dev_t Function(ffi.Size)>>(
-        'ggml_backend_dev_get',
-      );
+    'ggml_backend_dev_get',
+  );
   late final _ggml_backend_dev_get =
       _ggml_backend_dev_getPtr.asFunction<ggml_backend_dev_t Function(int)>();
 
@@ -11128,11 +9703,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_dev_by_namePtr = _lookup<
-    ffi.NativeFunction<ggml_backend_dev_t Function(ffi.Pointer<ffi.Char>)>
-  >('ggml_backend_dev_by_name');
-  late final _ggml_backend_dev_by_name =
-      _ggml_backend_dev_by_namePtr
-          .asFunction<ggml_backend_dev_t Function(ffi.Pointer<ffi.Char>)>();
+          ffi
+          .NativeFunction<ggml_backend_dev_t Function(ffi.Pointer<ffi.Char>)>>(
+      'ggml_backend_dev_by_name');
+  late final _ggml_backend_dev_by_name = _ggml_backend_dev_by_namePtr
+      .asFunction<ggml_backend_dev_t Function(ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11142,11 +9717,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_dev_by_typePtr =
       _lookup<ffi.NativeFunction<ggml_backend_dev_t Function(ffi.UnsignedInt)>>(
-        'ggml_backend_dev_by_type',
-      );
-  late final _ggml_backend_dev_by_type =
-      _ggml_backend_dev_by_typePtr
-          .asFunction<ggml_backend_dev_t Function(int)>();
+    'ggml_backend_dev_by_type',
+  );
+  late final _ggml_backend_dev_by_type = _ggml_backend_dev_by_typePtr
+      .asFunction<ggml_backend_dev_t Function(int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11158,18 +9732,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_init_by_namePtr = _lookup<
-    ffi.NativeFunction<
-      ggml_backend_t Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)
-    >
-  >('ggml_backend_init_by_name');
+      ffi.NativeFunction<
+          ggml_backend_t Function(ffi.Pointer<ffi.Char>,
+              ffi.Pointer<ffi.Char>)>>('ggml_backend_init_by_name');
   late final _ggml_backend_init_by_name =
-      _ggml_backend_init_by_namePtr
-          .asFunction<
-            ggml_backend_t Function(
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<ffi.Char>,
-            )
-          >();
+      _ggml_backend_init_by_namePtr.asFunction<
+          ggml_backend_t Function(
+            ffi.Pointer<ffi.Char>,
+            ffi.Pointer<ffi.Char>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11181,13 +9752,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_init_by_typePtr = _lookup<
-    ffi.NativeFunction<
-      ggml_backend_t Function(ffi.UnsignedInt, ffi.Pointer<ffi.Char>)
-    >
-  >('ggml_backend_init_by_type');
-  late final _ggml_backend_init_by_type =
-      _ggml_backend_init_by_typePtr
-          .asFunction<ggml_backend_t Function(int, ffi.Pointer<ffi.Char>)>();
+      ffi.NativeFunction<
+          ggml_backend_t Function(ffi.UnsignedInt,
+              ffi.Pointer<ffi.Char>)>>('ggml_backend_init_by_type');
+  late final _ggml_backend_init_by_type = _ggml_backend_init_by_typePtr
+      .asFunction<ggml_backend_t Function(int, ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11197,8 +9766,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_init_bestPtr =
       _lookup<ffi.NativeFunction<ggml_backend_t Function()>>(
-        'ggml_backend_init_best',
-      );
+    'ggml_backend_init_best',
+  );
   late final _ggml_backend_init_best =
       _ggml_backend_init_bestPtr.asFunction<ggml_backend_t Function()>();
 
@@ -11209,11 +9778,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_loadPtr = _lookup<
-    ffi.NativeFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>
-  >('ggml_backend_load');
-  late final _ggml_backend_load =
-      _ggml_backend_loadPtr
-          .asFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>();
+          ffi
+          .NativeFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>>(
+      'ggml_backend_load');
+  late final _ggml_backend_load = _ggml_backend_loadPtr
+      .asFunction<ggml_backend_reg_t Function(ffi.Pointer<ffi.Char>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11223,8 +9792,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_unloadPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_reg_t)>>(
-        'ggml_backend_unload',
-      );
+    'ggml_backend_unload',
+  );
   late final _ggml_backend_unload =
       _ggml_backend_unloadPtr.asFunction<void Function(ggml_backend_reg_t)>();
 
@@ -11247,8 +9816,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_load_all_from_pathPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ffi.Char>)>>(
-        'ggml_backend_load_all_from_path',
-      );
+    'ggml_backend_load_all_from_path',
+  );
   late final _ggml_backend_load_all_from_path =
       _ggml_backend_load_all_from_pathPtr
           .asFunction<void Function(ffi.Pointer<ffi.Char>)>();
@@ -11272,27 +9841,22 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_sched_newPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ggml_backend_sched_t Function(
+            ffi.Pointer<ggml_backend_t>,
+            ffi.Pointer<ggml_backend_buffer_type_t>,
+            ffi.Int,
+            ffi.Size,
+            ffi.Bool,
+          )>>('ggml_backend_sched_new');
+  late final _ggml_backend_sched_new = _ggml_backend_sched_newPtr.asFunction<
       ggml_backend_sched_t Function(
         ffi.Pointer<ggml_backend_t>,
         ffi.Pointer<ggml_backend_buffer_type_t>,
-        ffi.Int,
-        ffi.Size,
-        ffi.Bool,
-      )
-    >
-  >('ggml_backend_sched_new');
-  late final _ggml_backend_sched_new =
-      _ggml_backend_sched_newPtr
-          .asFunction<
-            ggml_backend_sched_t Function(
-              ffi.Pointer<ggml_backend_t>,
-              ffi.Pointer<ggml_backend_buffer_type_t>,
-              int,
-              int,
-              bool,
-            )
-          >();
+        int,
+        int,
+        bool,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11302,11 +9866,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_sched_freePtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_sched_t)>>(
-        'ggml_backend_sched_free',
-      );
-  late final _ggml_backend_sched_free =
-      _ggml_backend_sched_freePtr
-          .asFunction<void Function(ggml_backend_sched_t)>();
+    'ggml_backend_sched_free',
+  );
+  late final _ggml_backend_sched_free = _ggml_backend_sched_freePtr
+      .asFunction<void Function(ggml_backend_sched_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11318,15 +9881,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_sched_reservePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)
-    >
-  >('ggml_backend_sched_reserve');
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_sched_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_backend_sched_reserve');
   late final _ggml_backend_sched_reserve =
-      _ggml_backend_sched_reservePtr
-          .asFunction<
-            bool Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)
-          >();
+      _ggml_backend_sched_reservePtr.asFunction<
+          bool Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11336,8 +9896,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_sched_get_n_backendsPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ggml_backend_sched_t)>>(
-        'ggml_backend_sched_get_n_backends',
-      );
+    'ggml_backend_sched_get_n_backends',
+  );
   late final _ggml_backend_sched_get_n_backends =
       _ggml_backend_sched_get_n_backendsPtr
           .asFunction<int Function(ggml_backend_sched_t)>();
@@ -11352,8 +9912,9 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_sched_get_backendPtr = _lookup<
-    ffi.NativeFunction<ggml_backend_t Function(ggml_backend_sched_t, ffi.Int)>
-  >('ggml_backend_sched_get_backend');
+      ffi.NativeFunction<
+          ggml_backend_t Function(ggml_backend_sched_t,
+              ffi.Int)>>('ggml_backend_sched_get_backend');
   late final _ggml_backend_sched_get_backend =
       _ggml_backend_sched_get_backendPtr
           .asFunction<ggml_backend_t Function(ggml_backend_sched_t, int)>();
@@ -11366,8 +9927,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_sched_get_n_splitsPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ggml_backend_sched_t)>>(
-        'ggml_backend_sched_get_n_splits',
-      );
+    'ggml_backend_sched_get_n_splits',
+  );
   late final _ggml_backend_sched_get_n_splits =
       _ggml_backend_sched_get_n_splitsPtr
           .asFunction<int Function(ggml_backend_sched_t)>();
@@ -11380,8 +9941,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_sched_get_n_copiesPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function(ggml_backend_sched_t)>>(
-        'ggml_backend_sched_get_n_copies',
-      );
+    'ggml_backend_sched_get_n_copies',
+  );
   late final _ggml_backend_sched_get_n_copies =
       _ggml_backend_sched_get_n_copiesPtr
           .asFunction<int Function(ggml_backend_sched_t)>();
@@ -11396,8 +9957,9 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_sched_get_buffer_sizePtr = _lookup<
-    ffi.NativeFunction<ffi.Size Function(ggml_backend_sched_t, ggml_backend_t)>
-  >('ggml_backend_sched_get_buffer_size');
+      ffi.NativeFunction<
+          ffi.Size Function(ggml_backend_sched_t,
+              ggml_backend_t)>>('ggml_backend_sched_get_buffer_size');
   late final _ggml_backend_sched_get_buffer_size =
       _ggml_backend_sched_get_buffer_sizePtr
           .asFunction<int Function(ggml_backend_sched_t, ggml_backend_t)>();
@@ -11413,23 +9975,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_sched_set_tensor_backendPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ggml_backend_sched_t,
-        ffi.Pointer<ggml_tensor>,
-        ggml_backend_t,
-      )
-    >
-  >('ggml_backend_sched_set_tensor_backend');
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ggml_backend_sched_t,
+            ffi.Pointer<ggml_tensor>,
+            ggml_backend_t,
+          )>>('ggml_backend_sched_set_tensor_backend');
   late final _ggml_backend_sched_set_tensor_backend =
-      _ggml_backend_sched_set_tensor_backendPtr
-          .asFunction<
-            void Function(
-              ggml_backend_sched_t,
-              ffi.Pointer<ggml_tensor>,
-              ggml_backend_t,
-            )
-          >();
+      _ggml_backend_sched_set_tensor_backendPtr.asFunction<
+          void Function(
+            ggml_backend_sched_t,
+            ffi.Pointer<ggml_tensor>,
+            ggml_backend_t,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11441,18 +9999,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_sched_get_tensor_backendPtr = _lookup<
-    ffi.NativeFunction<
-      ggml_backend_t Function(ggml_backend_sched_t, ffi.Pointer<ggml_tensor>)
-    >
-  >('ggml_backend_sched_get_tensor_backend');
+          ffi.NativeFunction<
+              ggml_backend_t Function(
+                  ggml_backend_sched_t, ffi.Pointer<ggml_tensor>)>>(
+      'ggml_backend_sched_get_tensor_backend');
   late final _ggml_backend_sched_get_tensor_backend =
-      _ggml_backend_sched_get_tensor_backendPtr
-          .asFunction<
-            ggml_backend_t Function(
-              ggml_backend_sched_t,
-              ffi.Pointer<ggml_tensor>,
-            )
-          >();
+      _ggml_backend_sched_get_tensor_backendPtr.asFunction<
+          ggml_backend_t Function(
+            ggml_backend_sched_t,
+            ffi.Pointer<ggml_tensor>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11464,15 +10020,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_sched_alloc_graphPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)
-    >
-  >('ggml_backend_sched_alloc_graph');
+      ffi.NativeFunction<
+          ffi.Bool Function(ggml_backend_sched_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_backend_sched_alloc_graph');
   late final _ggml_backend_sched_alloc_graph =
-      _ggml_backend_sched_alloc_graphPtr
-          .asFunction<
-            bool Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)
-          >();
+      _ggml_backend_sched_alloc_graphPtr.asFunction<
+          bool Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11486,15 +10039,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_sched_graph_computePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)
-    >
-  >('ggml_backend_sched_graph_compute');
+      ffi.NativeFunction<
+          ffi.Int Function(ggml_backend_sched_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_backend_sched_graph_compute');
   late final _ggml_backend_sched_graph_compute =
-      _ggml_backend_sched_graph_computePtr
-          .asFunction<
-            int Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)
-          >();
+      _ggml_backend_sched_graph_computePtr.asFunction<
+          int Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11508,15 +10058,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_sched_graph_compute_asyncPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)
-    >
-  >('ggml_backend_sched_graph_compute_async');
+          ffi.NativeFunction<
+              ffi.Int Function(
+                  ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>>(
+      'ggml_backend_sched_graph_compute_async');
   late final _ggml_backend_sched_graph_compute_async =
-      _ggml_backend_sched_graph_compute_asyncPtr
-          .asFunction<
-            int Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)
-          >();
+      _ggml_backend_sched_graph_compute_asyncPtr.asFunction<
+          int Function(ggml_backend_sched_t, ffi.Pointer<ggml_cgraph>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11526,8 +10074,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_sched_synchronizePtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_sched_t)>>(
-        'ggml_backend_sched_synchronize',
-      );
+    'ggml_backend_sched_synchronize',
+  );
   late final _ggml_backend_sched_synchronize =
       _ggml_backend_sched_synchronizePtr
           .asFunction<void Function(ggml_backend_sched_t)>();
@@ -11540,11 +10088,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_sched_resetPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_sched_t)>>(
-        'ggml_backend_sched_reset',
-      );
-  late final _ggml_backend_sched_reset =
-      _ggml_backend_sched_resetPtr
-          .asFunction<void Function(ggml_backend_sched_t)>();
+    'ggml_backend_sched_reset',
+  );
+  late final _ggml_backend_sched_reset = _ggml_backend_sched_resetPtr
+      .asFunction<void Function(ggml_backend_sched_t)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11557,23 +10104,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_sched_set_eval_callbackPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ggml_backend_sched_t,
-        ggml_backend_sched_eval_callback,
-        ffi.Pointer<ffi.Void>,
-      )
-    >
-  >('ggml_backend_sched_set_eval_callback');
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ggml_backend_sched_t,
+            ggml_backend_sched_eval_callback,
+            ffi.Pointer<ffi.Void>,
+          )>>('ggml_backend_sched_set_eval_callback');
   late final _ggml_backend_sched_set_eval_callback =
-      _ggml_backend_sched_set_eval_callbackPtr
-          .asFunction<
-            void Function(
-              ggml_backend_sched_t,
-              ggml_backend_sched_eval_callback,
-              ffi.Pointer<ffi.Void>,
-            )
-          >();
+      _ggml_backend_sched_set_eval_callbackPtr.asFunction<
+          void Function(
+            ggml_backend_sched_t,
+            ggml_backend_sched_eval_callback,
+            ffi.Pointer<ffi.Void>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11585,18 +10128,15 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_graph_copy1Ptr = _lookup<
-    ffi.NativeFunction<
-      ggml_backend_graph_copy Function(ggml_backend_t, ffi.Pointer<ggml_cgraph>)
-    >
-  >('ggml_backend_graph_copy');
+      ffi.NativeFunction<
+          ggml_backend_graph_copy Function(ggml_backend_t,
+              ffi.Pointer<ggml_cgraph>)>>('ggml_backend_graph_copy');
   late final _ggml_backend_graph_copy1 =
-      _ggml_backend_graph_copy1Ptr
-          .asFunction<
-            ggml_backend_graph_copy Function(
-              ggml_backend_t,
-              ffi.Pointer<ggml_cgraph>,
-            )
-          >();
+      _ggml_backend_graph_copy1Ptr.asFunction<
+          ggml_backend_graph_copy Function(
+            ggml_backend_t,
+            ffi.Pointer<ggml_cgraph>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11606,11 +10146,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_graph_copy_freePtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_graph_copy)>>(
-        'ggml_backend_graph_copy_free',
-      );
-  late final _ggml_backend_graph_copy_free =
-      _ggml_backend_graph_copy_freePtr
-          .asFunction<void Function(ggml_backend_graph_copy)>();
+    'ggml_backend_graph_copy_free',
+  );
+  late final _ggml_backend_graph_copy_free = _ggml_backend_graph_copy_freePtr
+      .asFunction<void Function(ggml_backend_graph_copy)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11631,27 +10170,23 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_compare_graph_backendPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Bool Function(
-        ggml_backend_t,
-        ggml_backend_t,
-        ffi.Pointer<ggml_cgraph>,
-        ggml_backend_eval_callback,
-        ffi.Pointer<ffi.Void>,
-      )
-    >
-  >('ggml_backend_compare_graph_backend');
+      ffi.NativeFunction<
+          ffi.Bool Function(
+            ggml_backend_t,
+            ggml_backend_t,
+            ffi.Pointer<ggml_cgraph>,
+            ggml_backend_eval_callback,
+            ffi.Pointer<ffi.Void>,
+          )>>('ggml_backend_compare_graph_backend');
   late final _ggml_backend_compare_graph_backend =
-      _ggml_backend_compare_graph_backendPtr
-          .asFunction<
-            bool Function(
-              ggml_backend_t,
-              ggml_backend_t,
-              ffi.Pointer<ggml_cgraph>,
-              ggml_backend_eval_callback,
-              ffi.Pointer<ffi.Void>,
-            )
-          >();
+      _ggml_backend_compare_graph_backendPtr.asFunction<
+          bool Function(
+            ggml_backend_t,
+            ggml_backend_t,
+            ffi.Pointer<ggml_cgraph>,
+            ggml_backend_eval_callback,
+            ffi.Pointer<ffi.Void>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11664,23 +10199,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_tensor_allocPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ggml_backend_buffer_t,
-        ffi.Pointer<ggml_tensor>,
-        ffi.Pointer<ffi.Void>,
-      )
-    >
-  >('ggml_backend_tensor_alloc');
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ggml_backend_buffer_t,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ffi.Void>,
+          )>>('ggml_backend_tensor_alloc');
   late final _ggml_backend_tensor_alloc =
-      _ggml_backend_tensor_allocPtr
-          .asFunction<
-            void Function(
-              ggml_backend_buffer_t,
-              ffi.Pointer<ggml_tensor>,
-              ffi.Pointer<ffi.Void>,
-            )
-          >();
+      _ggml_backend_tensor_allocPtr.asFunction<
+          void Function(
+            ggml_backend_buffer_t,
+            ffi.Pointer<ggml_tensor>,
+            ffi.Pointer<ffi.Void>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11690,11 +10221,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_view_initPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_tensor>)>>(
-        'ggml_backend_view_init',
-      );
-  late final _ggml_backend_view_init =
-      _ggml_backend_view_initPtr
-          .asFunction<void Function(ffi.Pointer<ggml_tensor>)>();
+    'ggml_backend_view_init',
+  );
+  late final _ggml_backend_view_init = _ggml_backend_view_initPtr
+      .asFunction<void Function(ffi.Pointer<ggml_tensor>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11706,15 +10236,12 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_cpu_buffer_from_ptrPtr = _lookup<
-    ffi.NativeFunction<
-      ggml_backend_buffer_t Function(ffi.Pointer<ffi.Void>, ffi.Size)
-    >
-  >('ggml_backend_cpu_buffer_from_ptr');
+      ffi.NativeFunction<
+          ggml_backend_buffer_t Function(ffi.Pointer<ffi.Void>,
+              ffi.Size)>>('ggml_backend_cpu_buffer_from_ptr');
   late final _ggml_backend_cpu_buffer_from_ptr =
-      _ggml_backend_cpu_buffer_from_ptrPtr
-          .asFunction<
-            ggml_backend_buffer_t Function(ffi.Pointer<ffi.Void>, int)
-          >();
+      _ggml_backend_cpu_buffer_from_ptrPtr.asFunction<
+          ggml_backend_buffer_t Function(ffi.Pointer<ffi.Void>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11724,11 +10251,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_cpu_buffer_typePtr =
       _lookup<ffi.NativeFunction<ggml_backend_buffer_type_t Function()>>(
-        'ggml_backend_cpu_buffer_type',
-      );
-  late final _ggml_backend_cpu_buffer_type =
-      _ggml_backend_cpu_buffer_typePtr
-          .asFunction<ggml_backend_buffer_type_t Function()>();
+    'ggml_backend_cpu_buffer_type',
+  );
+  late final _ggml_backend_cpu_buffer_type = _ggml_backend_cpu_buffer_typePtr
+      .asFunction<ggml_backend_buffer_type_t Function()>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11738,8 +10264,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_numa_initPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.UnsignedInt)>>(
-        'ggml_numa_init',
-      );
+    'ggml_numa_init',
+  );
   late final _ggml_numa_init =
       _ggml_numa_initPtr.asFunction<void Function(int)>();
 
@@ -11763,15 +10289,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_new_i32Ptr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Int32)
-    >
-  >('ggml_new_i32');
-  late final _ggml_new_i32 =
-      _ggml_new_i32Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, int)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>, ffi.Int32)>>('ggml_new_i32');
+  late final _ggml_new_i32 = _ggml_new_i32Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11783,15 +10305,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_new_f32Ptr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, ffi.Float)
-    >
-  >('ggml_new_f32');
-  late final _ggml_new_f32 =
-      _ggml_new_f32Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, double)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_context>, ffi.Float)>>('ggml_new_f32');
+  late final _ggml_new_f32 = _ggml_new_f32Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_context>, double)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11803,15 +10321,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_i32Ptr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, ffi.Int32)
-    >
-  >('ggml_set_i32');
-  late final _ggml_set_i32 =
-      _ggml_set_i32Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, int)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_tensor>, ffi.Int32)>>('ggml_set_i32');
+  late final _ggml_set_i32 = _ggml_set_i32Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11823,15 +10337,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_f32Ptr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, ffi.Float)
-    >
-  >('ggml_set_f32');
-  late final _ggml_set_f32 =
-      _ggml_set_f32Ptr
-          .asFunction<
-            ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, double)
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_tensor> Function(
+              ffi.Pointer<ggml_tensor>, ffi.Float)>>('ggml_set_f32');
+  late final _ggml_set_f32 = _ggml_set_f32Ptr.asFunction<
+      ffi.Pointer<ggml_tensor> Function(ffi.Pointer<ggml_tensor>, double)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11840,11 +10350,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_i32_1dPtr = _lookup<
-    ffi.NativeFunction<ffi.Int32 Function(ffi.Pointer<ggml_tensor>, ffi.Int)>
-  >('ggml_get_i32_1d');
-  late final _ggml_get_i32_1d =
-      _ggml_get_i32_1dPtr
-          .asFunction<int Function(ffi.Pointer<ggml_tensor>, int)>();
+      ffi.NativeFunction<
+          ffi.Int32 Function(
+              ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_get_i32_1d');
+  late final _ggml_get_i32_1d = _ggml_get_i32_1dPtr
+      .asFunction<int Function(ffi.Pointer<ggml_tensor>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11853,13 +10363,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_i32_1dPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Int32)
-    >
-  >('ggml_set_i32_1d');
-  late final _ggml_set_i32_1d =
-      _ggml_set_i32_1dPtr
-          .asFunction<void Function(ffi.Pointer<ggml_tensor>, int, int)>();
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Int,
+              ffi.Int32)>>('ggml_set_i32_1d');
+  late final _ggml_set_i32_1d = _ggml_set_i32_1dPtr
+      .asFunction<void Function(ffi.Pointer<ggml_tensor>, int, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11874,21 +10382,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_i32_ndPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int32 Function(
-        ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_get_i32_nd');
-  late final _ggml_get_i32_nd =
-      _ggml_get_i32_ndPtr
-          .asFunction<
-            int Function(ffi.Pointer<ggml_tensor>, int, int, int, int)
-          >();
+      ffi.NativeFunction<
+          ffi.Int32 Function(
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_get_i32_nd');
+  late final _ggml_get_i32_nd = _ggml_get_i32_ndPtr
+      .asFunction<int Function(ffi.Pointer<ggml_tensor>, int, int, int, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11904,22 +10407,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_i32_ndPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int32,
-      )
-    >
-  >('ggml_set_i32_nd');
-  late final _ggml_set_i32_nd =
-      _ggml_set_i32_ndPtr
-          .asFunction<
-            void Function(ffi.Pointer<ggml_tensor>, int, int, int, int, int)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int32,
+          )>>('ggml_set_i32_nd');
+  late final _ggml_set_i32_nd = _ggml_set_i32_ndPtr.asFunction<
+      void Function(ffi.Pointer<ggml_tensor>, int, int, int, int, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11928,11 +10426,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_f32_1dPtr = _lookup<
-    ffi.NativeFunction<ffi.Float Function(ffi.Pointer<ggml_tensor>, ffi.Int)>
-  >('ggml_get_f32_1d');
-  late final _ggml_get_f32_1d =
-      _ggml_get_f32_1dPtr
-          .asFunction<double Function(ffi.Pointer<ggml_tensor>, int)>();
+      ffi.NativeFunction<
+          ffi.Float Function(
+              ffi.Pointer<ggml_tensor>, ffi.Int)>>('ggml_get_f32_1d');
+  late final _ggml_get_f32_1d = _ggml_get_f32_1dPtr
+      .asFunction<double Function(ffi.Pointer<ggml_tensor>, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11941,13 +10439,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_f32_1dPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Int, ffi.Float)
-    >
-  >('ggml_set_f32_1d');
-  late final _ggml_set_f32_1d =
-      _ggml_set_f32_1dPtr
-          .asFunction<void Function(ffi.Pointer<ggml_tensor>, int, double)>();
+      ffi.NativeFunction<
+          ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Int,
+              ffi.Float)>>('ggml_set_f32_1d');
+  late final _ggml_set_f32_1d = _ggml_set_f32_1dPtr
+      .asFunction<void Function(ffi.Pointer<ggml_tensor>, int, double)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11962,21 +10458,16 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_f32_ndPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Float Function(
-        ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-      )
-    >
-  >('ggml_get_f32_nd');
-  late final _ggml_get_f32_nd =
-      _ggml_get_f32_ndPtr
-          .asFunction<
-            double Function(ffi.Pointer<ggml_tensor>, int, int, int, int)
-          >();
+      ffi.NativeFunction<
+          ffi.Float Function(
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+          )>>('ggml_get_f32_nd');
+  late final _ggml_get_f32_nd = _ggml_get_f32_ndPtr.asFunction<
+      double Function(ffi.Pointer<ggml_tensor>, int, int, int, int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -11992,22 +10483,17 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_set_f32_ndPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ffi.Pointer<ggml_tensor>,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Int,
-        ffi.Float,
-      )
-    >
-  >('ggml_set_f32_nd');
-  late final _ggml_set_f32_nd =
-      _ggml_set_f32_ndPtr
-          .asFunction<
-            void Function(ffi.Pointer<ggml_tensor>, int, int, int, int, double)
-          >();
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ffi.Pointer<ggml_tensor>,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Int,
+            ffi.Float,
+          )>>('ggml_set_f32_nd');
+  late final _ggml_set_f32_nd = _ggml_set_f32_ndPtr.asFunction<
+      void Function(ffi.Pointer<ggml_tensor>, int, int, int, int, double)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -12018,17 +10504,13 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_threadpool_newPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_threadpool> Function(ffi.Pointer<ggml_threadpool_params>)
-    >
-  >('ggml_threadpool_new');
-  late final _ggml_threadpool_new =
-      _ggml_threadpool_newPtr
-          .asFunction<
-            ffi.Pointer<ggml_threadpool> Function(
-              ffi.Pointer<ggml_threadpool_params>,
-            )
-          >();
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_threadpool> Function(
+              ffi.Pointer<ggml_threadpool_params>)>>('ggml_threadpool_new');
+  late final _ggml_threadpool_new = _ggml_threadpool_newPtr.asFunction<
+      ffi.Pointer<ggml_threadpool> Function(
+        ffi.Pointer<ggml_threadpool_params>,
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -12037,11 +10519,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_threadpool_freePtr = _lookup<
-    ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_threadpool>)>
-  >('ggml_threadpool_free');
-  late final _ggml_threadpool_free =
-      _ggml_threadpool_freePtr
-          .asFunction<void Function(ffi.Pointer<ggml_threadpool>)>();
+          ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_threadpool>)>>(
+      'ggml_threadpool_free');
+  late final _ggml_threadpool_free = _ggml_threadpool_freePtr
+      .asFunction<void Function(ffi.Pointer<ggml_threadpool>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -12050,11 +10531,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_threadpool_get_n_threadsPtr = _lookup<
-    ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_threadpool>)>
-  >('ggml_threadpool_get_n_threads');
-  late final _ggml_threadpool_get_n_threads =
-      _ggml_threadpool_get_n_threadsPtr
-          .asFunction<int Function(ffi.Pointer<ggml_threadpool>)>();
+          ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ggml_threadpool>)>>(
+      'ggml_threadpool_get_n_threads');
+  late final _ggml_threadpool_get_n_threads = _ggml_threadpool_get_n_threadsPtr
+      .asFunction<int Function(ffi.Pointer<ggml_threadpool>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -12063,11 +10543,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_threadpool_pausePtr = _lookup<
-    ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_threadpool>)>
-  >('ggml_threadpool_pause');
-  late final _ggml_threadpool_pause =
-      _ggml_threadpool_pausePtr
-          .asFunction<void Function(ffi.Pointer<ggml_threadpool>)>();
+          ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_threadpool>)>>(
+      'ggml_threadpool_pause');
+  late final _ggml_threadpool_pause = _ggml_threadpool_pausePtr
+      .asFunction<void Function(ffi.Pointer<ggml_threadpool>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -12076,11 +10555,10 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_threadpool_resumePtr = _lookup<
-    ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_threadpool>)>
-  >('ggml_threadpool_resume');
-  late final _ggml_threadpool_resume =
-      _ggml_threadpool_resumePtr
-          .asFunction<void Function(ffi.Pointer<ggml_threadpool>)>();
+          ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ggml_threadpool>)>>(
+      'ggml_threadpool_resume');
+  late final _ggml_threadpool_resume = _ggml_threadpool_resumePtr
+      .asFunction<void Function(ffi.Pointer<ggml_threadpool>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -12093,23 +10571,18 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_graph_planPtr = _lookup<
-    ffi.NativeFunction<
+      ffi.NativeFunction<
+          ggml_cplan Function(
+            ffi.Pointer<ggml_cgraph>,
+            ffi.Int,
+            ffi.Pointer<ggml_threadpool>,
+          )>>('ggml_graph_plan');
+  late final _ggml_graph_plan = _ggml_graph_planPtr.asFunction<
       ggml_cplan Function(
         ffi.Pointer<ggml_cgraph>,
-        ffi.Int,
+        int,
         ffi.Pointer<ggml_threadpool>,
-      )
-    >
-  >('ggml_graph_plan');
-  late final _ggml_graph_plan =
-      _ggml_graph_planPtr
-          .asFunction<
-            ggml_cplan Function(
-              ffi.Pointer<ggml_cgraph>,
-              int,
-              ffi.Pointer<ggml_threadpool>,
-            )
-          >();
+      )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -12121,15 +10594,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_graph_computePtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cplan>)
-    >
-  >('ggml_graph_compute');
-  late final _ggml_graph_compute =
-      _ggml_graph_computePtr
-          .asFunction<
-            int Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cplan>)
-          >();
+      ffi.NativeFunction<
+          ffi.Int Function(ffi.Pointer<ggml_cgraph>,
+              ffi.Pointer<ggml_cplan>)>>('ggml_graph_compute');
+  late final _ggml_graph_compute = _ggml_graph_computePtr.asFunction<
+      int Function(ffi.Pointer<ggml_cgraph>, ffi.Pointer<ggml_cplan>)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -12144,23 +10613,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_graph_compute_with_ctxPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Int Function(
-        ffi.Pointer<ggml_context>,
-        ffi.Pointer<ggml_cgraph>,
-        ffi.Int,
-      )
-    >
-  >('ggml_graph_compute_with_ctx');
+      ffi.NativeFunction<
+          ffi.Int Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_cgraph>,
+            ffi.Int,
+          )>>('ggml_graph_compute_with_ctx');
   late final _ggml_graph_compute_with_ctx =
-      _ggml_graph_compute_with_ctxPtr
-          .asFunction<
-            int Function(
-              ffi.Pointer<ggml_context>,
-              ffi.Pointer<ggml_cgraph>,
-              int,
-            )
-          >();
+      _ggml_graph_compute_with_ctxPtr.asFunction<
+          int Function(
+            ffi.Pointer<ggml_context>,
+            ffi.Pointer<ggml_cgraph>,
+            int,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -12258,8 +10723,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_cpu_has_avx512_vbmiPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function()>>(
-        'ggml_cpu_has_avx512_vbmi',
-      );
+    'ggml_cpu_has_avx512_vbmi',
+  );
   late final _ggml_cpu_has_avx512_vbmi =
       _ggml_cpu_has_avx512_vbmiPtr.asFunction<int Function()>();
 
@@ -12271,8 +10736,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_cpu_has_avx512_vnniPtr =
       _lookup<ffi.NativeFunction<ffi.Int Function()>>(
-        'ggml_cpu_has_avx512_vnni',
-      );
+    'ggml_cpu_has_avx512_vnni',
+  );
   late final _ggml_cpu_has_avx512_vnni =
       _ggml_cpu_has_avx512_vnniPtr.asFunction<int Function()>();
 
@@ -12284,8 +10749,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_cpu_has_avx512_bf16Ptr =
       _lookup<ffi.NativeFunction<ffi.Int Function()>>(
-        'ggml_cpu_has_avx512_bf16',
-      );
+    'ggml_cpu_has_avx512_bf16',
+  );
   late final _ggml_cpu_has_avx512_bf16 =
       _ggml_cpu_has_avx512_bf16Ptr.asFunction<int Function()>();
 
@@ -12352,8 +10817,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_cpu_has_matmul_int8Ptr =
       _lookup<ffi.NativeFunction<ffi.Int Function()>>(
-        'ggml_cpu_has_matmul_int8',
-      );
+    'ggml_cpu_has_matmul_int8',
+  );
   late final _ggml_cpu_has_matmul_int8 =
       _ggml_cpu_has_matmul_int8Ptr.asFunction<int Function()>();
 
@@ -12430,13 +10895,11 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_get_type_traits_cpuPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Pointer<ggml_type_traits_cpu> Function(ffi.UnsignedInt)
-    >
-  >('ggml_get_type_traits_cpu');
-  late final _ggml_get_type_traits_cpu =
-      _ggml_get_type_traits_cpuPtr
-          .asFunction<ffi.Pointer<ggml_type_traits_cpu> Function(int)>();
+      ffi.NativeFunction<
+          ffi.Pointer<ggml_type_traits_cpu> Function(
+              ffi.UnsignedInt)>>('ggml_get_type_traits_cpu');
+  late final _ggml_get_type_traits_cpu = _ggml_get_type_traits_cpuPtr
+      .asFunction<ffi.Pointer<ggml_type_traits_cpu> Function(int)>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -12456,8 +10919,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_cpu_initPtr =
       _lookup<ffi.NativeFunction<ggml_backend_t Function()>>(
-        'ggml_backend_cpu_init',
-      );
+    'ggml_backend_cpu_init',
+  );
   late final _ggml_backend_cpu_init =
       _ggml_backend_cpu_initPtr.asFunction<ggml_backend_t Function()>();
 
@@ -12469,8 +10932,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_is_cpuPtr =
       _lookup<ffi.NativeFunction<ffi.Bool Function(ggml_backend_t)>>(
-        'ggml_backend_is_cpu',
-      );
+    'ggml_backend_is_cpu',
+  );
   late final _ggml_backend_is_cpu =
       _ggml_backend_is_cpuPtr.asFunction<bool Function(ggml_backend_t)>();
 
@@ -12485,8 +10948,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_cpu_set_n_threadsPtr =
       _lookup<ffi.NativeFunction<ffi.Void Function(ggml_backend_t, ffi.Int)>>(
-        'ggml_backend_cpu_set_n_threads',
-      );
+    'ggml_backend_cpu_set_n_threads',
+  );
   late final _ggml_backend_cpu_set_n_threads =
       _ggml_backend_cpu_set_n_threadsPtr
           .asFunction<void Function(ggml_backend_t, int)>();
@@ -12501,8 +10964,9 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_cpu_set_threadpoolPtr = _lookup<
-    ffi.NativeFunction<ffi.Void Function(ggml_backend_t, ggml_threadpool_t)>
-  >('ggml_backend_cpu_set_threadpool');
+      ffi.NativeFunction<
+          ffi.Void Function(ggml_backend_t,
+              ggml_threadpool_t)>>('ggml_backend_cpu_set_threadpool');
   late final _ggml_backend_cpu_set_threadpool =
       _ggml_backend_cpu_set_threadpoolPtr
           .asFunction<void Function(ggml_backend_t, ggml_threadpool_t)>();
@@ -12522,23 +10986,19 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
   }
 
   late final _ggml_backend_cpu_set_abort_callbackPtr = _lookup<
-    ffi.NativeFunction<
-      ffi.Void Function(
-        ggml_backend_t,
-        ggml_abort_callback,
-        ffi.Pointer<ffi.Void>,
-      )
-    >
-  >('ggml_backend_cpu_set_abort_callback');
+      ffi.NativeFunction<
+          ffi.Void Function(
+            ggml_backend_t,
+            ggml_abort_callback,
+            ffi.Pointer<ffi.Void>,
+          )>>('ggml_backend_cpu_set_abort_callback');
   late final _ggml_backend_cpu_set_abort_callback =
-      _ggml_backend_cpu_set_abort_callbackPtr
-          .asFunction<
-            void Function(
-              ggml_backend_t,
-              ggml_abort_callback,
-              ffi.Pointer<ffi.Void>,
-            )
-          >();
+      _ggml_backend_cpu_set_abort_callbackPtr.asFunction<
+          void Function(
+            ggml_backend_t,
+            ggml_abort_callback,
+            ffi.Pointer<ffi.Void>,
+          )>();
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -12548,8 +11008,8 @@ class GgmlLibrarySharedBindingsByGeneralDeveloper {
 
   late final _ggml_backend_cpu_regPtr =
       _lookup<ffi.NativeFunction<ggml_backend_reg_t Function()>>(
-        'ggml_backend_cpu_reg',
-      );
+    'ggml_backend_cpu_reg',
+  );
   late final _ggml_backend_cpu_reg =
       _ggml_backend_cpu_regPtr.asFunction<ggml_backend_reg_t Function()>();
 }
@@ -12700,43 +11160,37 @@ final class _IO_cookie_io_functions_t extends ffi.Struct {
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef cookie_read_function_t =
-    ffi.NativeFunction<
-      __ssize_t Function(
-        ffi.Pointer<ffi.Void> __cookie,
-        ffi.Pointer<ffi.Char> __buf,
-        ffi.Size __nbytes,
-      )
-    >;
+typedef cookie_read_function_t = ffi.NativeFunction<
+    __ssize_t Function(
+      ffi.Pointer<ffi.Void> __cookie,
+      ffi.Pointer<ffi.Char> __buf,
+      ffi.Size __nbytes,
+    )>;
 typedef __ssize_t = ffi.Long;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 typedef Dart__ssize_t = int;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
-typedef cookie_write_function_t =
-    ffi.NativeFunction<
-      __ssize_t Function(
-        ffi.Pointer<ffi.Void> __cookie,
-        ffi.Pointer<ffi.Char> __buf,
-        ffi.Size __nbytes,
-      )
-    >;
+typedef cookie_write_function_t = ffi.NativeFunction<
+    __ssize_t Function(
+      ffi.Pointer<ffi.Void> __cookie,
+      ffi.Pointer<ffi.Char> __buf,
+      ffi.Size __nbytes,
+    )>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
-typedef cookie_seek_function_t =
-    ffi.NativeFunction<
-      ffi.Int Function(
-        ffi.Pointer<ffi.Void> __cookie,
-        ffi.Pointer<__off64_t> __pos,
-        ffi.Int __w,
-      )
-    >;
+typedef cookie_seek_function_t = ffi.NativeFunction<
+    ffi.Int Function(
+      ffi.Pointer<ffi.Void> __cookie,
+      ffi.Pointer<__off64_t> __pos,
+      ffi.Int __w,
+    )>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef cookie_close_function_t =
-    ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Void> __cookie)>;
+typedef cookie_close_function_t
+    = ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Void> __cookie)>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -12790,12 +11244,12 @@ enum ggml_status {
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
   static ggml_status fromValue(int value) => switch (value) {
-    -2 => GGML_STATUS_ALLOC_FAILED,
-    -1 => GGML_STATUS_FAILED,
-    0 => GGML_STATUS_SUCCESS,
-    1 => GGML_STATUS_ABORTED,
-    _ => throw ArgumentError("Unknown value for ggml_status: $value"),
-  };
+        -2 => GGML_STATUS_ALLOC_FAILED,
+        -1 => GGML_STATUS_FAILED,
+        0 => GGML_STATUS_SUCCESS,
+        1 => GGML_STATUS_ABORTED,
+        _ => throw ArgumentError("Unknown value for ggml_status: $value"),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -12962,40 +11416,40 @@ enum ggml_type {
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
   static ggml_type fromValue(int value) => switch (value) {
-    0 => GGML_TYPE_F32,
-    1 => GGML_TYPE_F16,
-    2 => GGML_TYPE_Q4_0,
-    3 => GGML_TYPE_Q4_1,
-    6 => GGML_TYPE_Q5_0,
-    7 => GGML_TYPE_Q5_1,
-    8 => GGML_TYPE_Q8_0,
-    9 => GGML_TYPE_Q8_1,
-    10 => GGML_TYPE_Q2_K,
-    11 => GGML_TYPE_Q3_K,
-    12 => GGML_TYPE_Q4_K,
-    13 => GGML_TYPE_Q5_K,
-    14 => GGML_TYPE_Q6_K,
-    15 => GGML_TYPE_Q8_K,
-    16 => GGML_TYPE_IQ2_XXS,
-    17 => GGML_TYPE_IQ2_XS,
-    18 => GGML_TYPE_IQ3_XXS,
-    19 => GGML_TYPE_IQ1_S,
-    20 => GGML_TYPE_IQ4_NL,
-    21 => GGML_TYPE_IQ3_S,
-    22 => GGML_TYPE_IQ2_S,
-    23 => GGML_TYPE_IQ4_XS,
-    24 => GGML_TYPE_I8,
-    25 => GGML_TYPE_I16,
-    26 => GGML_TYPE_I32,
-    27 => GGML_TYPE_I64,
-    28 => GGML_TYPE_F64,
-    29 => GGML_TYPE_IQ1_M,
-    30 => GGML_TYPE_BF16,
-    34 => GGML_TYPE_TQ1_0,
-    35 => GGML_TYPE_TQ2_0,
-    39 => GGML_TYPE_COUNT,
-    _ => throw ArgumentError("Unknown value for ggml_type: $value"),
-  };
+        0 => GGML_TYPE_F32,
+        1 => GGML_TYPE_F16,
+        2 => GGML_TYPE_Q4_0,
+        3 => GGML_TYPE_Q4_1,
+        6 => GGML_TYPE_Q5_0,
+        7 => GGML_TYPE_Q5_1,
+        8 => GGML_TYPE_Q8_0,
+        9 => GGML_TYPE_Q8_1,
+        10 => GGML_TYPE_Q2_K,
+        11 => GGML_TYPE_Q3_K,
+        12 => GGML_TYPE_Q4_K,
+        13 => GGML_TYPE_Q5_K,
+        14 => GGML_TYPE_Q6_K,
+        15 => GGML_TYPE_Q8_K,
+        16 => GGML_TYPE_IQ2_XXS,
+        17 => GGML_TYPE_IQ2_XS,
+        18 => GGML_TYPE_IQ3_XXS,
+        19 => GGML_TYPE_IQ1_S,
+        20 => GGML_TYPE_IQ4_NL,
+        21 => GGML_TYPE_IQ3_S,
+        22 => GGML_TYPE_IQ2_S,
+        23 => GGML_TYPE_IQ4_XS,
+        24 => GGML_TYPE_I8,
+        25 => GGML_TYPE_I16,
+        26 => GGML_TYPE_I32,
+        27 => GGML_TYPE_I64,
+        28 => GGML_TYPE_F64,
+        29 => GGML_TYPE_IQ1_M,
+        30 => GGML_TYPE_BF16,
+        34 => GGML_TYPE_TQ1_0,
+        35 => GGML_TYPE_TQ2_0,
+        39 => GGML_TYPE_COUNT,
+        _ => throw ArgumentError("Unknown value for ggml_type: $value"),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -13017,10 +11471,10 @@ enum ggml_prec {
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
   static ggml_prec fromValue(int value) => switch (value) {
-    0 => GGML_PREC_DEFAULT,
-    1 => GGML_PREC_F32,
-    _ => throw ArgumentError("Unknown value for ggml_prec: $value"),
-  };
+        0 => GGML_PREC_DEFAULT,
+        1 => GGML_PREC_F32,
+        _ => throw ArgumentError("Unknown value for ggml_prec: $value"),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -13129,32 +11583,32 @@ enum ggml_ftype {
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
   static ggml_ftype fromValue(int value) => switch (value) {
-    -1 => GGML_FTYPE_UNKNOWN,
-    0 => GGML_FTYPE_ALL_F32,
-    1 => GGML_FTYPE_MOSTLY_F16,
-    2 => GGML_FTYPE_MOSTLY_Q4_0,
-    3 => GGML_FTYPE_MOSTLY_Q4_1,
-    4 => GGML_FTYPE_MOSTLY_Q4_1_SOME_F16,
-    7 => GGML_FTYPE_MOSTLY_Q8_0,
-    8 => GGML_FTYPE_MOSTLY_Q5_0,
-    9 => GGML_FTYPE_MOSTLY_Q5_1,
-    10 => GGML_FTYPE_MOSTLY_Q2_K,
-    11 => GGML_FTYPE_MOSTLY_Q3_K,
-    12 => GGML_FTYPE_MOSTLY_Q4_K,
-    13 => GGML_FTYPE_MOSTLY_Q5_K,
-    14 => GGML_FTYPE_MOSTLY_Q6_K,
-    15 => GGML_FTYPE_MOSTLY_IQ2_XXS,
-    16 => GGML_FTYPE_MOSTLY_IQ2_XS,
-    17 => GGML_FTYPE_MOSTLY_IQ3_XXS,
-    18 => GGML_FTYPE_MOSTLY_IQ1_S,
-    19 => GGML_FTYPE_MOSTLY_IQ4_NL,
-    20 => GGML_FTYPE_MOSTLY_IQ3_S,
-    21 => GGML_FTYPE_MOSTLY_IQ2_S,
-    22 => GGML_FTYPE_MOSTLY_IQ4_XS,
-    23 => GGML_FTYPE_MOSTLY_IQ1_M,
-    24 => GGML_FTYPE_MOSTLY_BF16,
-    _ => throw ArgumentError("Unknown value for ggml_ftype: $value"),
-  };
+        -1 => GGML_FTYPE_UNKNOWN,
+        0 => GGML_FTYPE_ALL_F32,
+        1 => GGML_FTYPE_MOSTLY_F16,
+        2 => GGML_FTYPE_MOSTLY_Q4_0,
+        3 => GGML_FTYPE_MOSTLY_Q4_1,
+        4 => GGML_FTYPE_MOSTLY_Q4_1_SOME_F16,
+        7 => GGML_FTYPE_MOSTLY_Q8_0,
+        8 => GGML_FTYPE_MOSTLY_Q5_0,
+        9 => GGML_FTYPE_MOSTLY_Q5_1,
+        10 => GGML_FTYPE_MOSTLY_Q2_K,
+        11 => GGML_FTYPE_MOSTLY_Q3_K,
+        12 => GGML_FTYPE_MOSTLY_Q4_K,
+        13 => GGML_FTYPE_MOSTLY_Q5_K,
+        14 => GGML_FTYPE_MOSTLY_Q6_K,
+        15 => GGML_FTYPE_MOSTLY_IQ2_XXS,
+        16 => GGML_FTYPE_MOSTLY_IQ2_XS,
+        17 => GGML_FTYPE_MOSTLY_IQ3_XXS,
+        18 => GGML_FTYPE_MOSTLY_IQ1_S,
+        19 => GGML_FTYPE_MOSTLY_IQ4_NL,
+        20 => GGML_FTYPE_MOSTLY_IQ3_S,
+        21 => GGML_FTYPE_MOSTLY_IQ2_S,
+        22 => GGML_FTYPE_MOSTLY_IQ4_XS,
+        23 => GGML_FTYPE_MOSTLY_IQ1_M,
+        24 => GGML_FTYPE_MOSTLY_BF16,
+        _ => throw ArgumentError("Unknown value for ggml_ftype: $value"),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -13487,92 +11941,92 @@ enum ggml_op {
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
   static ggml_op fromValue(int value) => switch (value) {
-    0 => GGML_OP_NONE,
-    1 => GGML_OP_DUP,
-    2 => GGML_OP_ADD,
-    3 => GGML_OP_ADD1,
-    4 => GGML_OP_ACC,
-    5 => GGML_OP_SUB,
-    6 => GGML_OP_MUL,
-    7 => GGML_OP_DIV,
-    8 => GGML_OP_SQR,
-    9 => GGML_OP_SQRT,
-    10 => GGML_OP_LOG,
-    11 => GGML_OP_SIN,
-    12 => GGML_OP_COS,
-    13 => GGML_OP_SUM,
-    14 => GGML_OP_SUM_ROWS,
-    15 => GGML_OP_MEAN,
-    16 => GGML_OP_ARGMAX,
-    17 => GGML_OP_COUNT_EQUAL,
-    18 => GGML_OP_REPEAT,
-    19 => GGML_OP_REPEAT_BACK,
-    20 => GGML_OP_CONCAT,
-    21 => GGML_OP_SILU_BACK,
-    22 => GGML_OP_NORM,
-    23 => GGML_OP_RMS_NORM,
-    24 => GGML_OP_RMS_NORM_BACK,
-    25 => GGML_OP_GROUP_NORM,
-    26 => GGML_OP_MUL_MAT,
-    27 => GGML_OP_MUL_MAT_ID,
-    28 => GGML_OP_OUT_PROD,
-    29 => GGML_OP_SCALE,
-    30 => GGML_OP_SET,
-    31 => GGML_OP_CPY,
-    32 => GGML_OP_CONT,
-    33 => GGML_OP_RESHAPE,
-    34 => GGML_OP_VIEW,
-    35 => GGML_OP_PERMUTE,
-    36 => GGML_OP_TRANSPOSE,
-    37 => GGML_OP_GET_ROWS,
-    38 => GGML_OP_GET_ROWS_BACK,
-    39 => GGML_OP_DIAG,
-    40 => GGML_OP_DIAG_MASK_INF,
-    41 => GGML_OP_DIAG_MASK_ZERO,
-    42 => GGML_OP_SOFT_MAX,
-    43 => GGML_OP_SOFT_MAX_BACK,
-    44 => GGML_OP_ROPE,
-    45 => GGML_OP_ROPE_BACK,
-    46 => GGML_OP_CLAMP,
-    47 => GGML_OP_CONV_TRANSPOSE_1D,
-    48 => GGML_OP_IM2COL,
-    49 => GGML_OP_IM2COL_BACK,
-    50 => GGML_OP_CONV_TRANSPOSE_2D,
-    51 => GGML_OP_POOL_1D,
-    52 => GGML_OP_POOL_2D,
-    53 => GGML_OP_POOL_2D_BACK,
-    54 => GGML_OP_UPSCALE,
-    55 => GGML_OP_PAD,
-    56 => GGML_OP_PAD_REFLECT_1D,
-    57 => GGML_OP_ARANGE,
-    58 => GGML_OP_TIMESTEP_EMBEDDING,
-    59 => GGML_OP_ARGSORT,
-    60 => GGML_OP_LEAKY_RELU,
-    61 => GGML_OP_FLASH_ATTN_EXT,
-    62 => GGML_OP_FLASH_ATTN_BACK,
-    63 => GGML_OP_SSM_CONV,
-    64 => GGML_OP_SSM_SCAN,
-    65 => GGML_OP_WIN_PART,
-    66 => GGML_OP_WIN_UNPART,
-    67 => GGML_OP_GET_REL_POS,
-    68 => GGML_OP_ADD_REL_POS,
-    69 => GGML_OP_RWKV_WKV6,
-    70 => GGML_OP_GATED_LINEAR_ATTN,
-    71 => GGML_OP_UNARY,
-    72 => GGML_OP_MAP_UNARY,
-    73 => GGML_OP_MAP_BINARY,
-    74 => GGML_OP_MAP_CUSTOM1_F32,
-    75 => GGML_OP_MAP_CUSTOM2_F32,
-    76 => GGML_OP_MAP_CUSTOM3_F32,
-    77 => GGML_OP_MAP_CUSTOM1,
-    78 => GGML_OP_MAP_CUSTOM2,
-    79 => GGML_OP_MAP_CUSTOM3,
-    80 => GGML_OP_CROSS_ENTROPY_LOSS,
-    81 => GGML_OP_CROSS_ENTROPY_LOSS_BACK,
-    82 => GGML_OP_OPT_STEP_ADAMW,
-    83 => GGML_OP_COUNT,
-    _ => throw ArgumentError("Unknown value for ggml_op: $value"),
-  };
+        0 => GGML_OP_NONE,
+        1 => GGML_OP_DUP,
+        2 => GGML_OP_ADD,
+        3 => GGML_OP_ADD1,
+        4 => GGML_OP_ACC,
+        5 => GGML_OP_SUB,
+        6 => GGML_OP_MUL,
+        7 => GGML_OP_DIV,
+        8 => GGML_OP_SQR,
+        9 => GGML_OP_SQRT,
+        10 => GGML_OP_LOG,
+        11 => GGML_OP_SIN,
+        12 => GGML_OP_COS,
+        13 => GGML_OP_SUM,
+        14 => GGML_OP_SUM_ROWS,
+        15 => GGML_OP_MEAN,
+        16 => GGML_OP_ARGMAX,
+        17 => GGML_OP_COUNT_EQUAL,
+        18 => GGML_OP_REPEAT,
+        19 => GGML_OP_REPEAT_BACK,
+        20 => GGML_OP_CONCAT,
+        21 => GGML_OP_SILU_BACK,
+        22 => GGML_OP_NORM,
+        23 => GGML_OP_RMS_NORM,
+        24 => GGML_OP_RMS_NORM_BACK,
+        25 => GGML_OP_GROUP_NORM,
+        26 => GGML_OP_MUL_MAT,
+        27 => GGML_OP_MUL_MAT_ID,
+        28 => GGML_OP_OUT_PROD,
+        29 => GGML_OP_SCALE,
+        30 => GGML_OP_SET,
+        31 => GGML_OP_CPY,
+        32 => GGML_OP_CONT,
+        33 => GGML_OP_RESHAPE,
+        34 => GGML_OP_VIEW,
+        35 => GGML_OP_PERMUTE,
+        36 => GGML_OP_TRANSPOSE,
+        37 => GGML_OP_GET_ROWS,
+        38 => GGML_OP_GET_ROWS_BACK,
+        39 => GGML_OP_DIAG,
+        40 => GGML_OP_DIAG_MASK_INF,
+        41 => GGML_OP_DIAG_MASK_ZERO,
+        42 => GGML_OP_SOFT_MAX,
+        43 => GGML_OP_SOFT_MAX_BACK,
+        44 => GGML_OP_ROPE,
+        45 => GGML_OP_ROPE_BACK,
+        46 => GGML_OP_CLAMP,
+        47 => GGML_OP_CONV_TRANSPOSE_1D,
+        48 => GGML_OP_IM2COL,
+        49 => GGML_OP_IM2COL_BACK,
+        50 => GGML_OP_CONV_TRANSPOSE_2D,
+        51 => GGML_OP_POOL_1D,
+        52 => GGML_OP_POOL_2D,
+        53 => GGML_OP_POOL_2D_BACK,
+        54 => GGML_OP_UPSCALE,
+        55 => GGML_OP_PAD,
+        56 => GGML_OP_PAD_REFLECT_1D,
+        57 => GGML_OP_ARANGE,
+        58 => GGML_OP_TIMESTEP_EMBEDDING,
+        59 => GGML_OP_ARGSORT,
+        60 => GGML_OP_LEAKY_RELU,
+        61 => GGML_OP_FLASH_ATTN_EXT,
+        62 => GGML_OP_FLASH_ATTN_BACK,
+        63 => GGML_OP_SSM_CONV,
+        64 => GGML_OP_SSM_SCAN,
+        65 => GGML_OP_WIN_PART,
+        66 => GGML_OP_WIN_UNPART,
+        67 => GGML_OP_GET_REL_POS,
+        68 => GGML_OP_ADD_REL_POS,
+        69 => GGML_OP_RWKV_WKV6,
+        70 => GGML_OP_GATED_LINEAR_ATTN,
+        71 => GGML_OP_UNARY,
+        72 => GGML_OP_MAP_UNARY,
+        73 => GGML_OP_MAP_BINARY,
+        74 => GGML_OP_MAP_CUSTOM1_F32,
+        75 => GGML_OP_MAP_CUSTOM2_F32,
+        76 => GGML_OP_MAP_CUSTOM3_F32,
+        77 => GGML_OP_MAP_CUSTOM1,
+        78 => GGML_OP_MAP_CUSTOM2,
+        79 => GGML_OP_MAP_CUSTOM3,
+        80 => GGML_OP_CROSS_ENTROPY_LOSS,
+        81 => GGML_OP_CROSS_ENTROPY_LOSS_BACK,
+        82 => GGML_OP_OPT_STEP_ADAMW,
+        83 => GGML_OP_COUNT,
+        _ => throw ArgumentError("Unknown value for ggml_op: $value"),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -13643,23 +12097,23 @@ enum ggml_unary_op {
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
   static ggml_unary_op fromValue(int value) => switch (value) {
-    0 => GGML_UNARY_OP_ABS,
-    1 => GGML_UNARY_OP_SGN,
-    2 => GGML_UNARY_OP_NEG,
-    3 => GGML_UNARY_OP_STEP,
-    4 => GGML_UNARY_OP_TANH,
-    5 => GGML_UNARY_OP_ELU,
-    6 => GGML_UNARY_OP_RELU,
-    7 => GGML_UNARY_OP_SIGMOID,
-    8 => GGML_UNARY_OP_GELU,
-    9 => GGML_UNARY_OP_GELU_QUICK,
-    10 => GGML_UNARY_OP_SILU,
-    11 => GGML_UNARY_OP_HARDSWISH,
-    12 => GGML_UNARY_OP_HARDSIGMOID,
-    13 => GGML_UNARY_OP_EXP,
-    14 => GGML_UNARY_OP_COUNT,
-    _ => throw ArgumentError("Unknown value for ggml_unary_op: $value"),
-  };
+        0 => GGML_UNARY_OP_ABS,
+        1 => GGML_UNARY_OP_SGN,
+        2 => GGML_UNARY_OP_NEG,
+        3 => GGML_UNARY_OP_STEP,
+        4 => GGML_UNARY_OP_TANH,
+        5 => GGML_UNARY_OP_ELU,
+        6 => GGML_UNARY_OP_RELU,
+        7 => GGML_UNARY_OP_SIGMOID,
+        8 => GGML_UNARY_OP_GELU,
+        9 => GGML_UNARY_OP_GELU_QUICK,
+        10 => GGML_UNARY_OP_SILU,
+        11 => GGML_UNARY_OP_HARDSWISH,
+        12 => GGML_UNARY_OP_HARDSIGMOID,
+        13 => GGML_UNARY_OP_EXP,
+        14 => GGML_UNARY_OP_COUNT,
+        _ => throw ArgumentError("Unknown value for ggml_unary_op: $value"),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -13685,11 +12139,11 @@ enum ggml_object_type {
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
   static ggml_object_type fromValue(int value) => switch (value) {
-    0 => GGML_OBJECT_TYPE_TENSOR,
-    1 => GGML_OBJECT_TYPE_GRAPH,
-    2 => GGML_OBJECT_TYPE_WORK_BUFFER,
-    _ => throw ArgumentError("Unknown value for ggml_object_type: $value"),
-  };
+        0 => GGML_OBJECT_TYPE_TENSOR,
+        1 => GGML_OBJECT_TYPE_GRAPH,
+        2 => GGML_OBJECT_TYPE_WORK_BUFFER,
+        _ => throw ArgumentError("Unknown value for ggml_object_type: $value"),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -13727,14 +12181,14 @@ enum ggml_log_level {
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
   static ggml_log_level fromValue(int value) => switch (value) {
-    0 => GGML_LOG_LEVEL_NONE,
-    1 => GGML_LOG_LEVEL_DEBUG,
-    2 => GGML_LOG_LEVEL_INFO,
-    3 => GGML_LOG_LEVEL_WARN,
-    4 => GGML_LOG_LEVEL_ERROR,
-    5 => GGML_LOG_LEVEL_CONT,
-    _ => throw ArgumentError("Unknown value for ggml_log_level: $value"),
-  };
+        0 => GGML_LOG_LEVEL_NONE,
+        1 => GGML_LOG_LEVEL_DEBUG,
+        2 => GGML_LOG_LEVEL_INFO,
+        3 => GGML_LOG_LEVEL_WARN,
+        4 => GGML_LOG_LEVEL_ERROR,
+        5 => GGML_LOG_LEVEL_CONT,
+        _ => throw ArgumentError("Unknown value for ggml_log_level: $value"),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -13765,12 +12219,12 @@ enum ggml_tensor_flag {
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
   static ggml_tensor_flag fromValue(int value) => switch (value) {
-    1 => GGML_TENSOR_FLAG_INPUT,
-    2 => GGML_TENSOR_FLAG_OUTPUT,
-    4 => GGML_TENSOR_FLAG_PARAM,
-    8 => GGML_TENSOR_FLAG_LOSS,
-    _ => throw ArgumentError("Unknown value for ggml_tensor_flag: $value"),
-  };
+        1 => GGML_TENSOR_FLAG_INPUT,
+        2 => GGML_TENSOR_FLAG_OUTPUT,
+        4 => GGML_TENSOR_FLAG_PARAM,
+        8 => GGML_TENSOR_FLAG_LOSS,
+        _ => throw ArgumentError("Unknown value for ggml_tensor_flag: $value"),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -13847,6 +12301,7 @@ final class ggml_tensor extends ffi.Struct {
 
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
   @ffi.Size()
+
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
   external int view_offs;
 
@@ -13901,11 +12356,11 @@ enum ggml_op_pool {
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
   static ggml_op_pool fromValue(int value) => switch (value) {
-    0 => GGML_OP_POOL_MAX,
-    1 => GGML_OP_POOL_AVG,
-    2 => GGML_OP_POOL_COUNT,
-    _ => throw ArgumentError("Unknown value for ggml_op_pool: $value"),
-  };
+        0 => GGML_OP_POOL_MAX,
+        1 => GGML_OP_POOL_AVG,
+        2 => GGML_OP_POOL_COUNT,
+        _ => throw ArgumentError("Unknown value for ggml_op_pool: $value"),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -13927,218 +12382,204 @@ enum ggml_sort_order {
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
   static ggml_sort_order fromValue(int value) => switch (value) {
-    0 => GGML_SORT_ORDER_ASC,
-    1 => GGML_SORT_ORDER_DESC,
-    _ => throw ArgumentError("Unknown value for ggml_sort_order: $value"),
-  };
+        0 => GGML_SORT_ORDER_ASC,
+        1 => GGML_SORT_ORDER_DESC,
+        _ => throw ArgumentError("Unknown value for ggml_sort_order: $value"),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_unary_op_f32_t =
-    ffi.Pointer<ffi.NativeFunction<ggml_unary_op_f32_tFunction>>;
+typedef ggml_unary_op_f32_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_unary_op_f32_tFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_unary_op_f32_tFunction =
-    ffi.Void Function(ffi.Int, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>);
+typedef ggml_unary_op_f32_tFunction = ffi.Void Function(
+    ffi.Int, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef Dartggml_unary_op_f32_tFunction =
-    void Function(int, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>);
+typedef Dartggml_unary_op_f32_tFunction = void Function(
+    int, ffi.Pointer<ffi.Float>, ffi.Pointer<ffi.Float>);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_binary_op_f32_t =
-    ffi.Pointer<ffi.NativeFunction<ggml_binary_op_f32_tFunction>>;
+typedef ggml_binary_op_f32_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_binary_op_f32_tFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_binary_op_f32_tFunction =
-    ffi.Void Function(
-      ffi.Int,
-      ffi.Pointer<ffi.Float>,
-      ffi.Pointer<ffi.Float>,
-      ffi.Pointer<ffi.Float>,
-    );
+typedef ggml_binary_op_f32_tFunction = ffi.Void Function(
+  ffi.Int,
+  ffi.Pointer<ffi.Float>,
+  ffi.Pointer<ffi.Float>,
+  ffi.Pointer<ffi.Float>,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef Dartggml_binary_op_f32_tFunction =
-    void Function(
-      int,
-      ffi.Pointer<ffi.Float>,
-      ffi.Pointer<ffi.Float>,
-      ffi.Pointer<ffi.Float>,
-    );
+typedef Dartggml_binary_op_f32_tFunction = void Function(
+  int,
+  ffi.Pointer<ffi.Float>,
+  ffi.Pointer<ffi.Float>,
+  ffi.Pointer<ffi.Float>,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
-typedef ggml_custom1_op_f32_t =
-    ffi.Pointer<ffi.NativeFunction<ggml_custom1_op_f32_tFunction>>;
+typedef ggml_custom1_op_f32_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_custom1_op_f32_tFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
-typedef ggml_custom1_op_f32_tFunction =
-    ffi.Void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>);
+typedef ggml_custom1_op_f32_tFunction = ffi.Void Function(
+    ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
-typedef Dartggml_custom1_op_f32_tFunction =
-    void Function(ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>);
-
-/// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
-
-typedef ggml_custom2_op_f32_t =
-    ffi.Pointer<ffi.NativeFunction<ggml_custom2_op_f32_tFunction>>;
+typedef Dartggml_custom1_op_f32_tFunction = void Function(
+    ffi.Pointer<ggml_tensor>, ffi.Pointer<ggml_tensor>);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_custom2_op_f32_tFunction =
-    ffi.Void Function(
-      ffi.Pointer<ggml_tensor>,
-      ffi.Pointer<ggml_tensor>,
-      ffi.Pointer<ggml_tensor>,
-    );
+typedef ggml_custom2_op_f32_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_custom2_op_f32_tFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef Dartggml_custom2_op_f32_tFunction =
-    void Function(
-      ffi.Pointer<ggml_tensor>,
-      ffi.Pointer<ggml_tensor>,
-      ffi.Pointer<ggml_tensor>,
-    );
-
-/// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
-typedef ggml_custom3_op_f32_t =
-    ffi.Pointer<ffi.NativeFunction<ggml_custom3_op_f32_tFunction>>;
+typedef ggml_custom2_op_f32_tFunction = ffi.Void Function(
+  ffi.Pointer<ggml_tensor>,
+  ffi.Pointer<ggml_tensor>,
+  ffi.Pointer<ggml_tensor>,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_custom3_op_f32_tFunction =
-    ffi.Void Function(
-      ffi.Pointer<ggml_tensor>,
-      ffi.Pointer<ggml_tensor>,
-      ffi.Pointer<ggml_tensor>,
-      ffi.Pointer<ggml_tensor>,
-    );
+typedef Dartggml_custom2_op_f32_tFunction = void Function(
+  ffi.Pointer<ggml_tensor>,
+  ffi.Pointer<ggml_tensor>,
+  ffi.Pointer<ggml_tensor>,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
-typedef Dartggml_custom3_op_f32_tFunction =
-    void Function(
-      ffi.Pointer<ggml_tensor>,
-      ffi.Pointer<ggml_tensor>,
-      ffi.Pointer<ggml_tensor>,
-      ffi.Pointer<ggml_tensor>,
-    );
+typedef ggml_custom3_op_f32_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_custom3_op_f32_tFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_custom1_op_t =
-    ffi.Pointer<ffi.NativeFunction<ggml_custom1_op_tFunction>>;
+typedef ggml_custom3_op_f32_tFunction = ffi.Void Function(
+  ffi.Pointer<ggml_tensor>,
+  ffi.Pointer<ggml_tensor>,
+  ffi.Pointer<ggml_tensor>,
+  ffi.Pointer<ggml_tensor>,
+);
+
+/// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
+typedef Dartggml_custom3_op_f32_tFunction = void Function(
+  ffi.Pointer<ggml_tensor>,
+  ffi.Pointer<ggml_tensor>,
+  ffi.Pointer<ggml_tensor>,
+  ffi.Pointer<ggml_tensor>,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_custom1_op_tFunction =
-    ffi.Void Function(
-      ffi.Pointer<ggml_tensor> dst,
-      ffi.Pointer<ggml_tensor> a,
-      ffi.Int ith,
-      ffi.Int nth,
-      ffi.Pointer<ffi.Void> userdata,
-    );
+typedef ggml_custom1_op_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_custom1_op_tFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef Dartggml_custom1_op_tFunction =
-    void Function(
-      ffi.Pointer<ggml_tensor> dst,
-      ffi.Pointer<ggml_tensor> a,
-      int ith,
-      int nth,
-      ffi.Pointer<ffi.Void> userdata,
-    );
+typedef ggml_custom1_op_tFunction = ffi.Void Function(
+  ffi.Pointer<ggml_tensor> dst,
+  ffi.Pointer<ggml_tensor> a,
+  ffi.Int ith,
+  ffi.Int nth,
+  ffi.Pointer<ffi.Void> userdata,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_custom2_op_t =
-    ffi.Pointer<ffi.NativeFunction<ggml_custom2_op_tFunction>>;
+typedef Dartggml_custom1_op_tFunction = void Function(
+  ffi.Pointer<ggml_tensor> dst,
+  ffi.Pointer<ggml_tensor> a,
+  int ith,
+  int nth,
+  ffi.Pointer<ffi.Void> userdata,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_custom2_op_tFunction =
-    ffi.Void Function(
-      ffi.Pointer<ggml_tensor> dst,
-      ffi.Pointer<ggml_tensor> a,
-      ffi.Pointer<ggml_tensor> b,
-      ffi.Int ith,
-      ffi.Int nth,
-      ffi.Pointer<ffi.Void> userdata,
-    );
-
-/// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
-typedef Dartggml_custom2_op_tFunction =
-    void Function(
-      ffi.Pointer<ggml_tensor> dst,
-      ffi.Pointer<ggml_tensor> a,
-      ffi.Pointer<ggml_tensor> b,
-      int ith,
-      int nth,
-      ffi.Pointer<ffi.Void> userdata,
-    );
+typedef ggml_custom2_op_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_custom2_op_tFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_custom3_op_t =
-    ffi.Pointer<ffi.NativeFunction<ggml_custom3_op_tFunction>>;
+typedef ggml_custom2_op_tFunction = ffi.Void Function(
+  ffi.Pointer<ggml_tensor> dst,
+  ffi.Pointer<ggml_tensor> a,
+  ffi.Pointer<ggml_tensor> b,
+  ffi.Int ith,
+  ffi.Int nth,
+  ffi.Pointer<ffi.Void> userdata,
+);
+
+/// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
+typedef Dartggml_custom2_op_tFunction = void Function(
+  ffi.Pointer<ggml_tensor> dst,
+  ffi.Pointer<ggml_tensor> a,
+  ffi.Pointer<ggml_tensor> b,
+  int ith,
+  int nth,
+  ffi.Pointer<ffi.Void> userdata,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_custom3_op_tFunction =
-    ffi.Void Function(
-      ffi.Pointer<ggml_tensor> dst,
-      ffi.Pointer<ggml_tensor> a,
-      ffi.Pointer<ggml_tensor> b,
-      ffi.Pointer<ggml_tensor> c,
-      ffi.Int ith,
-      ffi.Int nth,
-      ffi.Pointer<ffi.Void> userdata,
-    );
+typedef ggml_custom3_op_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_custom3_op_tFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef Dartggml_custom3_op_tFunction =
-    void Function(
-      ffi.Pointer<ggml_tensor> dst,
-      ffi.Pointer<ggml_tensor> a,
-      ffi.Pointer<ggml_tensor> b,
-      ffi.Pointer<ggml_tensor> c,
-      int ith,
-      int nth,
-      ffi.Pointer<ffi.Void> userdata,
-    );
+typedef ggml_custom3_op_tFunction = ffi.Void Function(
+  ffi.Pointer<ggml_tensor> dst,
+  ffi.Pointer<ggml_tensor> a,
+  ffi.Pointer<ggml_tensor> b,
+  ffi.Pointer<ggml_tensor> c,
+  ffi.Int ith,
+  ffi.Int nth,
+  ffi.Pointer<ffi.Void> userdata,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_log_callback =
-    ffi.Pointer<ffi.NativeFunction<ggml_log_callbackFunction>>;
+typedef Dartggml_custom3_op_tFunction = void Function(
+  ffi.Pointer<ggml_tensor> dst,
+  ffi.Pointer<ggml_tensor> a,
+  ffi.Pointer<ggml_tensor> b,
+  ffi.Pointer<ggml_tensor> c,
+  int ith,
+  int nth,
+  ffi.Pointer<ffi.Void> userdata,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_log_callbackFunction =
-    ffi.Void Function(
-      ffi.UnsignedInt level,
-      ffi.Pointer<ffi.Char> text,
-      ffi.Pointer<ffi.Void> user_data,
-    );
+typedef ggml_log_callback
+    = ffi.Pointer<ffi.NativeFunction<ggml_log_callbackFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef Dartggml_log_callbackFunction =
-    void Function(
-      ggml_log_level level,
-      ffi.Pointer<ffi.Char> text,
-      ffi.Pointer<ffi.Void> user_data,
-    );
+typedef ggml_log_callbackFunction = ffi.Void Function(
+  ffi.UnsignedInt level,
+  ffi.Pointer<ffi.Char> text,
+  ffi.Pointer<ffi.Void> user_data,
+);
+
+/// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
+
+typedef Dartggml_log_callbackFunction = void Function(
+  ggml_log_level level,
+  ffi.Pointer<ffi.Char> text,
+  ffi.Pointer<ffi.Void> user_data,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -14178,40 +12619,38 @@ final class ggml_type_traits extends ffi.Struct {
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_to_float_t =
-    ffi.Pointer<ffi.NativeFunction<ggml_to_float_tFunction>>;
+typedef ggml_to_float_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_to_float_tFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
-typedef ggml_to_float_tFunction =
-    ffi.Void Function(
-      ffi.Pointer<ffi.Void> x,
-      ffi.Pointer<ffi.Float> y,
-      ffi.Int64 k,
-    );
-
-/// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
-
-typedef Dartggml_to_float_tFunction =
-    void Function(ffi.Pointer<ffi.Void> x, ffi.Pointer<ffi.Float> y, int k);
+typedef ggml_to_float_tFunction = ffi.Void Function(
+  ffi.Pointer<ffi.Void> x,
+  ffi.Pointer<ffi.Float> y,
+  ffi.Int64 k,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_from_float_t =
-    ffi.Pointer<ffi.NativeFunction<ggml_from_float_tFunction>>;
+typedef Dartggml_to_float_tFunction = void Function(
+    ffi.Pointer<ffi.Void> x, ffi.Pointer<ffi.Float> y, int k);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_from_float_tFunction =
-    ffi.Void Function(
-      ffi.Pointer<ffi.Float> x,
-      ffi.Pointer<ffi.Void> y,
-      ffi.Int64 k,
-    );
+typedef ggml_from_float_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_from_float_tFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef Dartggml_from_float_tFunction =
-    void Function(ffi.Pointer<ffi.Float> x, ffi.Pointer<ffi.Void> y, int k);
+typedef ggml_from_float_tFunction = ffi.Void Function(
+  ffi.Pointer<ffi.Float> x,
+  ffi.Pointer<ffi.Void> y,
+  ffi.Int64 k,
+);
+
+/// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
+
+typedef Dartggml_from_float_tFunction = void Function(
+    ffi.Pointer<ffi.Float> x, ffi.Pointer<ffi.Void> y, int k);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -14240,12 +12679,13 @@ enum ggml_sched_priority {
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
   static ggml_sched_priority fromValue(int value) => switch (value) {
-    0 => GGML_SCHED_PRIO_NORMAL,
-    1 => GGML_SCHED_PRIO_MEDIUM,
-    2 => GGML_SCHED_PRIO_HIGH,
-    3 => GGML_SCHED_PRIO_REALTIME,
-    _ => throw ArgumentError("Unknown value for ggml_sched_priority: $value"),
-  };
+        0 => GGML_SCHED_PRIO_NORMAL,
+        1 => GGML_SCHED_PRIO_MEDIUM,
+        2 => GGML_SCHED_PRIO_HIGH,
+        3 => GGML_SCHED_PRIO_REALTIME,
+        _ =>
+          throw ArgumentError("Unknown value for ggml_sched_priority: $value"),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -14378,14 +12818,13 @@ enum ggml_backend_buffer_usage {
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
   static ggml_backend_buffer_usage fromValue(int value) => switch (value) {
-    0 => GGML_BACKEND_BUFFER_USAGE_ANY,
-    1 => GGML_BACKEND_BUFFER_USAGE_WEIGHTS,
-    2 => GGML_BACKEND_BUFFER_USAGE_COMPUTE,
-    _ =>
-      throw ArgumentError(
-        "Unknown value for ggml_backend_buffer_usage: $value",
-      ),
-  };
+        0 => GGML_BACKEND_BUFFER_USAGE_ANY,
+        1 => GGML_BACKEND_BUFFER_USAGE_WEIGHTS,
+        2 => GGML_BACKEND_BUFFER_USAGE_COMPUTE,
+        _ => throw ArgumentError(
+            "Unknown value for ggml_backend_buffer_usage: $value",
+          ),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -14419,11 +12858,12 @@ enum ggml_backend_dev_type {
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
   static ggml_backend_dev_type fromValue(int value) => switch (value) {
-    0 => GGML_BACKEND_DEVICE_TYPE_CPU,
-    1 => GGML_BACKEND_DEVICE_TYPE_GPU,
-    2 => GGML_BACKEND_DEVICE_TYPE_ACCEL,
-    _ => throw ArgumentError("Unknown value for ggml_backend_dev_type: $value"),
-  };
+        0 => GGML_BACKEND_DEVICE_TYPE_CPU,
+        1 => GGML_BACKEND_DEVICE_TYPE_GPU,
+        2 => GGML_BACKEND_DEVICE_TYPE_ACCEL,
+        _ => throw ArgumentError(
+            "Unknown value for ggml_backend_dev_type: $value"),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -14511,26 +12951,24 @@ typedef ggml_backend_sched_t = ffi.Pointer<ggml_backend_sched>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_backend_sched_eval_callback =
-    ffi.Pointer<ffi.NativeFunction<ggml_backend_sched_eval_callbackFunction>>;
+typedef ggml_backend_sched_eval_callback
+    = ffi.Pointer<ffi.NativeFunction<ggml_backend_sched_eval_callbackFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_backend_sched_eval_callbackFunction =
-    ffi.Bool Function(
-      ffi.Pointer<ggml_tensor> t,
-      ffi.Bool ask,
-      ffi.Pointer<ffi.Void> user_data,
-    );
+typedef ggml_backend_sched_eval_callbackFunction = ffi.Bool Function(
+  ffi.Pointer<ggml_tensor> t,
+  ffi.Bool ask,
+  ffi.Pointer<ffi.Void> user_data,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef Dartggml_backend_sched_eval_callbackFunction =
-    bool Function(
-      ffi.Pointer<ggml_tensor> t,
-      bool ask,
-      ffi.Pointer<ffi.Void> user_data,
-    );
+typedef Dartggml_backend_sched_eval_callbackFunction = bool Function(
+  ffi.Pointer<ggml_tensor> t,
+  bool ask,
+  ffi.Pointer<ffi.Void> user_data,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -14554,28 +12992,26 @@ final class ggml_backend_graph_copy extends ffi.Struct {
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_backend_eval_callback =
-    ffi.Pointer<ffi.NativeFunction<ggml_backend_eval_callbackFunction>>;
+typedef ggml_backend_eval_callback
+    = ffi.Pointer<ffi.NativeFunction<ggml_backend_eval_callbackFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_backend_eval_callbackFunction =
-    ffi.Bool Function(
-      ffi.Int node_index,
-      ffi.Pointer<ggml_tensor> t1,
-      ffi.Pointer<ggml_tensor> t2,
-      ffi.Pointer<ffi.Void> user_data,
-    );
+typedef ggml_backend_eval_callbackFunction = ffi.Bool Function(
+  ffi.Int node_index,
+  ffi.Pointer<ggml_tensor> t1,
+  ffi.Pointer<ggml_tensor> t2,
+  ffi.Pointer<ffi.Void> user_data,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef Dartggml_backend_eval_callbackFunction =
-    bool Function(
-      int node_index,
-      ffi.Pointer<ggml_tensor> t1,
-      ffi.Pointer<ggml_tensor> t2,
-      ffi.Pointer<ffi.Void> user_data,
-    );
+typedef Dartggml_backend_eval_callbackFunction = bool Function(
+  int node_index,
+  ffi.Pointer<ggml_tensor> t1,
+  ffi.Pointer<ggml_tensor> t2,
+  ffi.Pointer<ffi.Void> user_data,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -14609,18 +13045,18 @@ final class ggml_cplan extends ffi.Struct {
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_abort_callback =
-    ffi.Pointer<ffi.NativeFunction<ggml_abort_callbackFunction>>;
+typedef ggml_abort_callback
+    = ffi.Pointer<ffi.NativeFunction<ggml_abort_callbackFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_abort_callbackFunction =
-    ffi.Bool Function(ffi.Pointer<ffi.Void> data);
+typedef ggml_abort_callbackFunction = ffi.Bool Function(
+    ffi.Pointer<ffi.Void> data);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef Dartggml_abort_callbackFunction =
-    bool Function(ffi.Pointer<ffi.Void> data);
+typedef Dartggml_abort_callbackFunction = bool Function(
+    ffi.Pointer<ffi.Void> data);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
@@ -14655,14 +13091,15 @@ enum ggml_numa_strategy {
   /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
   static ggml_numa_strategy fromValue(int value) => switch (value) {
-    0 => GGML_NUMA_STRATEGY_DISABLED,
-    1 => GGML_NUMA_STRATEGY_DISTRIBUTE,
-    2 => GGML_NUMA_STRATEGY_ISOLATE,
-    3 => GGML_NUMA_STRATEGY_NUMACTL,
-    4 => GGML_NUMA_STRATEGY_MIRROR,
-    5 => GGML_NUMA_STRATEGY_COUNT,
-    _ => throw ArgumentError("Unknown value for ggml_numa_strategy: $value"),
-  };
+        0 => GGML_NUMA_STRATEGY_DISABLED,
+        1 => GGML_NUMA_STRATEGY_DISTRIBUTE,
+        2 => GGML_NUMA_STRATEGY_ISOLATE,
+        3 => GGML_NUMA_STRATEGY_NUMACTL,
+        4 => GGML_NUMA_STRATEGY_MIRROR,
+        5 => GGML_NUMA_STRATEGY_COUNT,
+        _ =>
+          throw ArgumentError("Unknown value for ggml_numa_strategy: $value"),
+      };
 }
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
@@ -14693,36 +13130,34 @@ final class ggml_type_traits_cpu extends ffi.Struct {
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_vec_dot_t =
-    ffi.Pointer<ffi.NativeFunction<ggml_vec_dot_tFunction>>;
+typedef ggml_vec_dot_t
+    = ffi.Pointer<ffi.NativeFunction<ggml_vec_dot_tFunction>>;
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef ggml_vec_dot_tFunction =
-    ffi.Void Function(
-      ffi.Int n,
-      ffi.Pointer<ffi.Float> s,
-      ffi.Size bs,
-      ffi.Pointer<ffi.Void> x,
-      ffi.Size bx,
-      ffi.Pointer<ffi.Void> y,
-      ffi.Size by,
-      ffi.Int nrc,
-    );
+typedef ggml_vec_dot_tFunction = ffi.Void Function(
+  ffi.Int n,
+  ffi.Pointer<ffi.Float> s,
+  ffi.Size bs,
+  ffi.Pointer<ffi.Void> x,
+  ffi.Size bx,
+  ffi.Pointer<ffi.Void> y,
+  ffi.Size by,
+  ffi.Int nrc,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 
-typedef Dartggml_vec_dot_tFunction =
-    void Function(
-      int n,
-      ffi.Pointer<ffi.Float> s,
-      int bs,
-      ffi.Pointer<ffi.Void> x,
-      int bx,
-      ffi.Pointer<ffi.Void> y,
-      int by,
-      int nrc,
-    );
+typedef Dartggml_vec_dot_tFunction = void Function(
+  int n,
+  ffi.Pointer<ffi.Float> s,
+  int bs,
+  ffi.Pointer<ffi.Void> x,
+  int bx,
+  ffi.Pointer<ffi.Void> y,
+  int by,
+  int nrc,
+);
 
 /// GeneralAiSpeechToTextLibraryWhisper Binding By General Corporation & Global Corporation & General Developer
 

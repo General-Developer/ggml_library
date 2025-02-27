@@ -45,7 +45,7 @@ abstract class GgmlLibraryBase implements GgmlLibraryBaseCore {
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   GgmlLibraryBase({String? libraryGgmlPath})
-    : libraryGgmlPath = libraryGgmlPath ?? getLibraryWhisperPathDefault();
+      : libraryGgmlPath = libraryGgmlPath ?? getLibraryWhisperPathDefault();
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   static String getLibraryWhisperPathDefault() {

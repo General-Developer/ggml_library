@@ -45,14 +45,14 @@ import 'base.dart';
 class GgmlLibrary extends GgmlLibraryBase {
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   GgmlLibrary({String? libraryGgmlPath})
-    : super(
-        libraryGgmlPath:
-            libraryGgmlPath ?? GgmlLibraryBase.getLibraryWhisperPathDefault(),
-      );
+      : super(
+          libraryGgmlPath:
+              libraryGgmlPath ?? GgmlLibraryBase.getLibraryWhisperPathDefault(),
+        );
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   static late final GgmlLibrarySharedBindingsByGeneralDeveloper
-  _ggmlLibrarySharedBindingsByGeneralDeveloper;
+      _ggmlLibrarySharedBindingsByGeneralDeveloper;
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   static bool _isEnsureInitialized = false;
@@ -66,8 +66,8 @@ class GgmlLibrary extends GgmlLibraryBase {
     try {
       _ggmlLibrarySharedBindingsByGeneralDeveloper =
           GgmlLibrarySharedBindingsByGeneralDeveloper(
-            await FFIUniverse.open(path: libraryGgmlPath),
-          );
+        await FFIUniverse.open(path: libraryGgmlPath),
+      );
       _isDeviceSupport = true;
     } catch (e) {
       print(e);
@@ -104,11 +104,12 @@ class GgmlLibrary extends GgmlLibraryBase {
 
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   GgmlLibrarySharedBindingsByGeneralDeveloper
-  get ggmlLibrarySharedBindingsByGeneralDeveloper {
+      get ggmlLibrarySharedBindingsByGeneralDeveloper {
     return GgmlLibrary._ggmlLibrarySharedBindingsByGeneralDeveloper;
   }
 
   @override
+
   /// Check Out: https://www.youtube.com/@GENERAL_DEV
   FutureOr<void> initialized() async {}
 }
