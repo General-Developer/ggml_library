@@ -8,14 +8,14 @@ topics:
 environment:
   sdk: '>=3.6.0 <4.0.0'
 dependencies:
-  general_lib: '^0.0.66'
+  general_lib: '^0.0.71'
   path: '^1.9.0'
   ggml_library: '^0.0.10'
 dev_dependencies:
   lints: '^5.0.0'
   test: 'any'
 dependency_overrides:
-  pointycastle: '3.8.0'
+  pointycastle: '4.0.0'
   mime: '^2.0.0'
 flutter:
   uses-material-design: true
